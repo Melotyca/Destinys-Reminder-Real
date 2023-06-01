@@ -58,6 +58,7 @@ label start:
     d "Oh shut it."
     show smile
     d "You almost scared me to death"
+    d "AHHHHH"
 
 
 
