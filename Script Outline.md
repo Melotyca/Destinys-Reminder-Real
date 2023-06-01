@@ -56,7 +56,9 @@
 
 ### Day 3:  
 - Dream 3: The girl tells her she has to be careful. he's really nice and persuasive and she has to watch out not to fall for his tricks like she did
--  
+   - If gabriel was there she gets a bit suspicious of him 
+   - if she was alone she gets confused and theorises who she means
+- Make the right call 
 -  
 
 ### Day 4:  
