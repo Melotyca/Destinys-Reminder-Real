@@ -139,22 +139,22 @@ label start:
 
         label underhiswatch:
             d_t "\"*Under his watch*\" Oh doesn't this just sound dandy. Who could be watching me?"
-            jump achievenents1
+            jump gotowork
 
         label flippinggood:
             d_t "\"*This food is flipping good.*\" Hey if this really predicts the future than atleast the food will be good."
-            jump achievenents1
+            jump gotowork
 
         label jamon:
             d_t "\"*Jam on!*\" Jam? As in music? Does this mean I'll hear some good music?"
-            jump achievenents1
+            jump gotowork
 
         label comfortingstroll:
             d_t "\"*Comforting stroll.*\" Eh I doubt it. As if I'd freely choose to go for a walk."
-            jump achievenents1
+            jump gotowork
             
                  
-    label achievenents1:    
+    label gotowork:    
         d_t "Hmm. What about the rest-"
         g "Destiny!"
         g "Where's the bin? I can't find it anywhere."  
@@ -183,12 +183,13 @@ label start:
         g "Yeah right!"
         d "Hey who knows. But yeah, you're right. Thank you Gabe."
         g "Now let's get going." 
-        g "Before we actually end up being late."  
+        g "Before we actually end up being late." 
+        jump Work1 
 
     label Work1:
         scene bg_office_computer
         d_t "And yet another conspiracy theory..."
-        d_t "How obsessed with a movie do you have to be? \"Watch out! it's the Matrix trying to get me to wake up!\" As if."
+        d_t "How obsessed with a movie do you have to be? \"Watch out! it's the Matrix trying to get you to wake up!\" As if."
         d_t "Is there seriously nothing useful on the internet about something like this?"
         d_t "A medical study on the side effects of Vr games or a rare phenomenon with lack of sleep would really calm my nerves right now."
         d_t "Maybe it's only a harmless little hallucination caused by exessive screen usage"
@@ -207,37 +208,61 @@ label start:
         d "Huh?"
         m "I don't remember \"bumming around on forums for conspiracy theorists\" being in your job description."
         d_t "Crap" 
-        d "Oh that? No, s-sorry I was just taking a quick break. It's almost done. I promise"
+        d "Oh that? No, s-sorry I was just taking a quick break."
         m "Does this mean you've finally finished the Poster?"
         m "It'd better be. We can't have you hand in another Project late."
-        m "Or last minute like last time. It's still a miracle to me how you got that one done in time."
-        m "Make sure you're ready to print an example tomorrow for us to show to the clients."
-        m "And Sullivan" 
-        m "With tomorrow I don't mean 6:30PM, right before the office closes. Is that undersood?"
+        m "Or last minute like last time. It's still a miracle to me how you somehow managed to get that one printed in time."
+        m "Make sure you're ready beforehand this time. I'd highly suggest you print an example tomorrow for us to show to the clients."
+        m "Oh, And Sullivan" 
+        m "With tomorrow I don't mean 6:30PM. The office closes latest at 7:00. If it's not printed by then you have to figure out how to print it."
+        m "Is that undersood?"
         d "Yes. Of course. I'll have it in time this time."
-        m "Great! Now to other matters. I'd like to prepose a promising business opportunity to you."
+        m "Great! Now to other matters."
+        m "I'd like to propose a promising business opportunity to you. And lord knows you need one of those."
         m "Two of them actually, now that I think about it."
         d_t "Ugh. What does he want now."
         m "Firstly, I'd like to introduce you to one of our team leaders Simon."
-        d "Oh?"
-        m "He's looking for someone to fill in as a graphic designer for their current project."
-        m "The woman that was previously in charge of design seems to have quit unexpectedly. Along with a couple of others, Simon mentioned you as a possible replacement."
+        d_t "Oh?"
+        m "He's looking for someone to fill in as graphic designer for their current project."
+        m "The woman that was previously in charge of the designs seems to have quit unexpectedly."
+        m "Along with a couple of other names, Simon mentioned you as a possible replacement."
         m "Whatever his reasons might be."
-        m "So What do you say Sullivan? I will send you the application forms later this afternoon if you decide to take this, how do I put it..."
-        m "*rare* opportunity."
-        d "Yes! Of course! Should I go talk to him quickly?"
+        m "So What do you say Sullivan? I'd say the choice is obvious."
+        m "I will send you the application forms later this afternoon if you decide to take this, how do I put it..."
+        m "Rather rare opportunity."
+        d "Yes! Of course! Should I go talk to him right now?"
         m "No need. I have some files I need to run by him anyways. We can go by his office together afterwards."
-        m "Which brings me to my second preposal."
+        d "Toghether?"
+        m "Yes, which brings me to my second proposal."
         d_t "Oh no here we go."
         m "I would like to invite you to lunch. To talk about some things regarding your current project."
         d_t "What?"
         d "Uhm. Lunch? You want to go eat lunch with me?"
-        m "Yes. Down at the cafeteria. "
+        m "Yes. Down at the cafeteria."
+        m "I thought this would be a wonderful opportunity to have a nice talk about the problems you seem to be having with this poster."
+        menu:
+            "No no it's going fine. I was just taking a break.":
+                jump mattlunchn
+
+            "Oh, sure...": 
+                jump mattlunchy 
         
-    
+    label mattlunchy:
+        m "Wonderfull. I heard today's menu would offer something special."
+        "..."
+        d "OH! You meant right now?"
+        d "Yes! One second please. I need to. Uhm, finish some last tweeks and save my project really quickly."
+        m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done"
+        jump mattlunch
 
-
-
+    label mattlunchn:
+        m "I'm not really asking Sullivan."
+        m "I need to speak with you. Not only about this poster you seem so unexplainably stuck on."
+        d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project really quickly. But after that I'll come right away."
+        m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long."
+        jump mattlunch
+        
+    label mattlunch: 
 
     # This ends the game.
 
