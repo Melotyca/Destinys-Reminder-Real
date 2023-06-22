@@ -13,7 +13,7 @@ define x = Character("?", color="#b6b2b2", what_italic=True )
 # The game starts here.
 
 label start:
-    label Morning1:
+    label wakingup1:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -123,10 +123,39 @@ label start:
         d_t "Although."
         d_t "Achievements..."
         d_t "Let's see."
-        d_t "Yeah, I do think that stain is stying. But what about the other ones."
-        #get to see the screen closer
-        d_t "\"*Under his watch*\" Oh doesn't this just sound dandy. Who would be watching me?"
-        d_t "What about the rest-"
+        d_t "Yeah, I do think that stain is stying. But what could the other ones mean?"
+        menu: 
+            "Under his watch.":
+                jump underhiswatch
+            
+            "This food is flipping good.":
+                jump flippinggood
+
+            "Jam on!":
+                jump jamon
+
+            "Comforting stroll":
+                jump comfortingstroll  
+
+        label underhiswatch:
+            d_t "\"*Under his watch*\" Oh doesn't this just sound dandy. Who could be watching me?"
+            jump achievenents1
+
+        label flippinggood:
+            d_t "\"*This food is flipping good.*\" Hey if this really predicts the future than atleast the food will be good."
+            jump achievenents1
+
+        label jamon:
+            d_t "\"*Jam on!*\" Jam? As in music? Does this mean I'll hear some good music?"
+            jump achievenents1
+
+        label comfortingstroll:
+            d_t "\"*Comforting stroll.*\" Eh I doubt it. As if I'd freely choose to go for a walk."
+            jump achievenents1
+            
+                 
+    label achievenents1:    
+        d_t "Hmm. What about the rest-"
         g "Destiny!"
         g "Where's the bin? I can't find it anywhere."  
         d_t "Shit! I have to hurry."  
@@ -200,7 +229,10 @@ label start:
         m "No need. I have some files I need to run by him anyways. We can go by his office together afterwards."
         m "Which brings me to my second preposal."
         d_t "Oh no here we go."
-        m ""
+        m "I would like to invite you to lunch. To talk about some things regarding your current project."
+        d_t "What?"
+        d "Uhm. Lunch? You want to go eat lunch with me?"
+        m "Yes. Down at the cafeteria. "
         
     
 
