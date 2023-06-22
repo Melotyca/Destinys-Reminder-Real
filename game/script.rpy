@@ -6,7 +6,7 @@
 define d = Character("Destiny", color="#2ace9f")
 define d_t = Character("Destiny", color="#2ace9f", what_italic=True)
 define g = Character("Gabriel", color="#AED628")
-define m = Character("Matt", color="#639af9")
+define m = Character("Matthew", color="#639af9")
 define s = Character("Simon", color= "#ff6961")
 define x = Character("?", color="#b6b2b2", what_italic=True )
 
@@ -99,7 +99,7 @@ label start:
         d "Yes! Found it!" 
         d "Give me a second to throw this on."  
     #(blackspace). 
-        g "Ha ha. No worries, I'll just go ahead and do it." 
+        g "*chuckle*. No worries, I'll just go ahead and do it." 
         g "Besides, our bus leaves in 20 minutes."  
         d "I'll be quick!"  
 
@@ -141,22 +141,30 @@ label start:
         d_t "Oh right. I'm supposed to finish the design for that ad poser this week."  
         d "Hah.. we'll see."
         d "Something's just not right about it yet but I can't figure out what."
-        d "And Matt just gave that preach at the last meeting about being stricter with deadlines from now on." 
+        d "And Matt just gave that speach last meeting about being stricter with deadlines and quality from now on." 
         d "Im screwed."  
         g "Don't be too hard on yourself Destiny."
         g "You've always found a way to get things done till now."  
         d "Yeah like a day past the due date."  
-        g "Oh come on, good work takes time."  
-        d "You're right. Thank you."
-        d "Now let's get going, before actually end up being late."  
+        g "Oh come on, good work takes time."
+        g "How did he say it? *ehem* \"*As one of the most promising companies in our field, we don't tolerate rushed or unfinished work Sullivan!*\"" 
+        g "I can't believe he still refuses to use our firstnames."
+        g "I seriously doubt he's ever heard himself speak." 
+        d "HAHA! That was scarily accurate. Have you secretly been practicing?"
+        g "Yeah right!"
+        d "Hey who knows. But yeah, you're right. Thank you Gabe."
+        g "Now let's get going." 
+        g "Before we actually end up being late."  
 
     label Work1:
         scene bg_office_computer
-        d_t "And another conspiracy theorist..."
-        d_t "\"Watch out! it's the Matrix trying to get me to wake up!\" As if."
-        d_t "Is there seriously nothing else to find about something like this?"
-        d_t "Maybe it's only a hallucination caused by exessive screen usage"
-        d_t "Come on internet do me a soolid won't you?"
+        d_t "And yet another conspiracy theory..."
+        d_t "How obsessed with a movie do you have to be? \"Watch out! it's the Matrix trying to get me to wake up!\" As if."
+        d_t "Is there seriously nothing useful on the internet about something like this?"
+        d_t "A medical study on the side effects of Vr games or a rare phenomenon with lack of sleep would really calm my nerves right now."
+        d_t "Maybe it's only a harmless little hallucination caused by exessive screen usage"
+        d_t "But what if not?"
+        d_t "Come on internet do me a solid won't you?"
 
 #Maybe a section where you can click through "articles". 
 
@@ -165,13 +173,34 @@ label start:
         scene bg_office_hallway
         d "What!?"  
         d_t "Oh shit. How did I not see him coming."   
-        d "Y- Yes?"  
+        d "Y- Yes? Oh, g- good morning Matthew."  
         m "What website is that?"
+        d "Huh?"
         m "I don't remember \"bumming around on forums for conspiracy theorists\" being in your job description."
-        m "Does this mean you've finally finished the Poster?"
         d_t "Crap" 
-        d "No, s-sorry I was just taking a quick break."
-        d "It's almost done. I promise"   
+        d "Oh that? No, s-sorry I was just taking a quick break. It's almost done. I promise"
+        m "Does this mean you've finally finished the Poster?"
+        m "It'd better be. We can't have you hand in another Project late."
+        m "Or last minute like last time. It's still a miracle to me how you got that one done in time."
+        m "Make sure you're ready to print an example tomorrow for us to show to the clients."
+        m "And Sullivan" 
+        m "With tomorrow I don't mean 6:30PM, right before the office closes. Is that undersood?"
+        d "Yes. Of course. I'll have it in time this time."
+        m "Great! Now to other matters. I'd like to prepose a promising business opportunity to you."
+        m "Two of them actually, now that I think about it."
+        d_t "Ugh. What does he want now."
+        m "Firstly, I'd like to introduce you to one of our team leaders Simon."
+        d "Oh?"
+        m "He's looking for someone to fill in as a graphic designer for their current project."
+        m "The woman that was previously in charge of design seems to have quit unexpectedly. Along with a couple of others, Simon mentioned you as a possible replacement."
+        m "Whatever his reasons might be."
+        m "So What do you say Sullivan? I will send you the application forms later this afternoon if you decide to take this, how do I put it..."
+        m "*rare* opportunity."
+        d "Yes! Of course! Should I go talk to him quickly?"
+        m "No need. I have some files I need to run by him anyways. We can go by his office together afterwards."
+        m "Which brings me to my second preposal."
+        d_t "Oh no here we go."
+        m ""
         
     
 
