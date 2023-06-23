@@ -3,11 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define d = Character("Destiny", color="#2ace9f")
-define d_t = Character("Destiny", color="#2ace9f", what_italic=True)
-define g = Character("Gabriel", color="#AED628")
-define m = Character("Matthew", color="#639af9")
-define s = Character("Simon", color= "#ff6961")
+define d = Character("Destiny", color="#1db78b", what_color="#58deb8")
+define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#70a797")
+define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
+define m = Character("Matthew", color="#639af9", what_color="#98baf7")
+define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
 define x = Character("?", color="#b6b2b2", what_italic=True )
 
 # The game starts here.
@@ -71,7 +71,7 @@ label start:
         d_t "Oh god. No more games before bed."
         d_t "What's next. Some NPC walks through my door? As if."
         d_t "This can't be serio-" 
-        "*Knock knock*." 
+        "{i}Knock knock.{/i}" 
         d "AH!" 
     #(cup falls and shatters and spills). 
     #(shattered mug). 
@@ -99,7 +99,7 @@ label start:
         d "Yes! Found it!" 
         d "Give me a second to throw this on."  
     #(blackspace). 
-        g "*chuckle*. No worries, I'll just go ahead and do it." 
+        g "{i}*chuckle*{/i}. No worries, I'll just go ahead and do it." 
         g "Besides, our bus leaves in 20 minutes."  
         d "I'll be quick!"  
 
@@ -138,19 +138,19 @@ label start:
                 jump comfortingstroll  
 
         label underhiswatch:
-            d_t "\"*Under his watch*\" Oh doesn't this just sound dandy. Who could be watching me?"
+            d_t "\"{i}Under his watch{/i}\" Oh doesn't this just sound dandy. Who could be watching me?"
             jump gotowork
 
         label flippinggood:
-            d_t "\"*This food is flipping good.*\" Hey if this really predicts the future than atleast the food will be good."
+            d_t "\"{i}This food is flipping good.{/i}\" Hey if this really predicts the future than atleast the food will be good."
             jump gotowork
 
         label jamon:
-            d_t "\"*Jam on!*\" Jam? As in music? Does this mean I'll hear some good music?"
+            d_t "\"{i}Jam on!{/i}\" Jam? As in music? Does this mean I'll hear some good music?"
             jump gotowork
 
         label comfortingstroll:
-            d_t "\"*Comforting stroll.*\" Eh I doubt it. As if I'd freely choose to go for a walk."
+            d_t "\"{i}Comforting stroll.{/i}\" Eh I doubt it. As if I'd freely choose to go for a walk."
             jump gotowork
             
                  
@@ -176,7 +176,7 @@ label start:
         g "You've always found a way to get things done till now."  
         d "Yeah like a day past the due date."  
         g "Oh come on, good work takes time."
-        g "How did he say it? *ehem* \"*As one of the most promising companies in our field, we don't tolerate rushed or unfinished work Sullivan!*\"" 
+        g "How did he say it? {i}ehem \"As one of the most promising companies in our field, we don't tolerate rushed or unfinished work Sullivan!\"{/i}" 
         g "I can't believe he still refuses to use our firstnames."
         g "I seriously doubt he's ever heard himself speak." 
         d "HAHA! That was scarily accurate. Have you secretly been practicing?"
@@ -252,17 +252,22 @@ label start:
         "..."
         d "OH! You meant right now?"
         d "Yes! One second please. I need to. Uhm, finish some last tweeks and save my project really quickly."
-        m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done"
+        m "Alright. I'll just go ahead. Come meet me in the Cafeteria when you're done"
         jump mattlunch
 
     label mattlunchn:
         m "I'm not really asking Sullivan."
         m "I need to speak with you. Not only about this poster you seem so unexplainably stuck on."
-        d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project really quickly. But after that I'll come right away."
+        d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project. But after that I'll come right away."
         m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long."
         jump mattlunch
-        
-    label mattlunch: 
+
+    label mattlunch:
+
+    label printer1:
+        d_t "I can't believe it's this late already. This day has been a desaster."
+        d_t "Let's just print this application and get it over with."
+
 
     # This ends the game.
 
