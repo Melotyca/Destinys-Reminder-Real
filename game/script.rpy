@@ -20,6 +20,7 @@ label start:
     # images directory to show it.
 
         scene bg_black
+        show girl 
         x "Destiny..."
         x "Destiny!"
         x "You have to listen to me."
@@ -27,6 +28,7 @@ label start:
         x "Please."
         x "Don't trust him. You're in danger"
         x "I can help you."
+        hide girl 
 
         "Ping!"
         d_t "What was that?"
@@ -79,6 +81,7 @@ label start:
         d "Yes yes! On my way."
     #door opens
         scene bg_d_corridor 
+        show gabriel 
         g "I'm sorry. I didn't mean to startle you"  
         d "No, no. It's fine! I just. Uhm. Didn't expect you yet."  
         d_t "Oh god this shirt is ruined." 
@@ -90,6 +93,7 @@ label start:
         scene bg_d_kitchen
         d "Please just ignore the mess. I'm working on it I promise." 
         d "Oh and don't bother with the mug. I'll clean it up later too."  
+        show gabriel
         g "Oh no not the chipmunk mug." 
         g "I really liked that one. I think your mom gave you that right?"  
         d "Mhm. Must've been easter or something like that."  
@@ -162,6 +166,7 @@ label start:
         d "It's next to the counter. Be there in a second!"  
 
         scene bg_d_kitchen
+        show gabriel
         g "Ready to go?"  
         d "Yes! Sorry for the wait."  
         g "No worries."
@@ -199,9 +204,10 @@ label start:
 #Maybe a section where you can click through "articles". 
 
         m "Sullivan!"
+        d "What!?"
 
         scene bg_office_hallway
-        d "What!?"  
+        show matthew  
         d_t "Oh shit. How did I not see him coming."   
         d "Y- Yes? Oh, g- good morning Matthew."  
         m "What website is that?"
