@@ -2,11 +2,12 @@
 
 #Characters
 define d = Character("Destiny", color="#1db78b", what_color="#58deb8")
-define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#70a797")
+define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#618a7f")
 define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
 define m = Character("Matthew", color="#639af9", what_color="#98baf7")
 define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
-define x = Character("?", color="#b6b2b2", what_italic=True )
+define x = Character("?", color="#7b7b7b", what_italic=True )
+define l = Character("Kai", color="#7b7b7b", what_color="#bebebe")
 
 #Variables
 default fix_printer = False
@@ -327,20 +328,39 @@ label start:
             d_t "Damn it. I jammed it"
             d "..."
             d_t "Jammed..."
-            d_t "OH! You little-. Jam on! I get it now."
+            d_t "OH! You little-."
+            d_t "Jam on! I get it now."
             d_t "How does this keep happening?"
-            d_t "I bet you think you're funny right now don't you!"
-
-            d_t "It didn't even print anything yet."
-
-
-
+            d_t "I bet you think you're funny right now don't you! Stupid Screen."
+            d_t "Maybe it still printed some of the pages?"
+            d_t "Shoot!"
+            d_t "None."
+            d_t "I don't think I can fix this myself..."
             menu: 
                 "Get help to fix the printer.":
                     $ fix_printer = True
-
+                    d_t "I have to find someone to help me fix this darn printer"
+                    #goes to look for someone runns into simon
+                    s "Oh! Destiny! Can I help you with something?"
+                    d "Uhm. Yeah."
+                    menu:
+                        "I jammed the printer":
+                            d "I was about to print the forms to join your team but I must have put in too much paper."
+                            d "Now it won't do anything anymore. I think I must've jammed it."
+                        "Someone jammed the printer":
+                            d "I was about to print the forms to join your team but someone must have put in too much paper."
+                            d "There's an error message. I think someone must've jammed it."
+                    d "Do you know who I could go to to help me fix it?"
+                    s "Not that old printer again! We should have replaced that ancient thing years ago."
+                    s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one."
+                    s "I think I know how to get it running again by now. Haha"
+                    d "Wow, Thank you so much Simon! You're a real life saver."
+                    s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
+                    #HAVE TO CONTINUE
                 "Leave it and go home.":
                     $ fix_printer = False
+                    d_t "I don't have the nerve to deal with this right now."
+
 
         label comfortingstroll:
         label evening1:
