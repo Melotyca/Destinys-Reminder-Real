@@ -356,11 +356,21 @@ label start:
                     s "I think I know how to get it running again by now. Haha"
                     d "Wow, Thank you so much Simon! You're a real life saver."
                     s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
+                    s "No one knows why she would just quit so out of the blue. Especially since we are still in the middle of a project at the moment. "
+                    s "Something important must have come up..."
+                    s "But that's in the past now! He have you to help us out soon."
+                    s "I'm looking forward to working with you!"
+                    d "Me too!"
+                    d_t "Anything beats Matt."
+                    s "Now let me help you with that printer. I don't want to keep you here any longer than necessary."
+                    s "Not many people would be willing to stay this late. Do you live close by then?"
+                    d "Yeah. I live just two stops away from here. So it doesn't take long for me to get home at all."
+                    s "Sounds onvenient!"
                     #HAVE TO CONTINUE
                 "Leave it and go home.":
                     $ fix_printer = False
                     d_t "I don't have the nerve to deal with this right now."
-
+                    #HAVE TO CONTINUE
 
         label comfortingstroll:
         label evening1:
