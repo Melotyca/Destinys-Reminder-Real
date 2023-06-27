@@ -302,10 +302,38 @@ label start:
                     d "Yes I promise."
 
             m "Fine. With that settled, I would like to talk to you about this new Job Simon is offering you."      
-
+            #HAVE TO CONTINUE
         label printer1:
-            d_t "I can't believe it's this late already. This day has been a desaster."
+            d_t "I can't believe it's this late already. This day has been a disaster."
             d_t "Let's just print this application and get it over with."
+            d_t "These weird achievements have been messing with my head the entire day. Can't they be a little clearer?"
+            d_t "If I'd known I was supposed to take them so litterally I would have been more careful with my food."
+            d_t "Flipping good. Don't make me laugh. This whole thing could've been avoided."
+            d_t "Matts never going to forgive me for that."
+            d_t "What's next? Jam on."
+            d_t "I'm beginning to think it isn't referring to music. Where would I even hear it from?"
+            d_t "I swear, if this stupid screen is going to make me spill jam on myself or something like that I'm gonna lose it."
+            d_t "I don't need another stai-"
+            "{i}krrrt!{/i}"
+            d_t "What was that?"
+        #shows error message 
+            d_t "Oh no."
+            d_t "No no no"
+            d_t "Not this too"
+            d_t "This can't be happening to me right now!"
+            d_t "Of all the people you could have failed on you just had to choose me?"
+            d "Urgh! Stupid printer!"
+            "BAMM"
+            d_t "Damn it. I jammed it"
+            d "..."
+            d_t "Jammed..."
+            d_t "OH! You little-. Jam on! I get it now."
+            d_t "How does this keep happening?"
+            d_t "I bet you think you're funny right now don't you!"
+
+            d_t "It didn't even print anything yet."
+
+
 
             menu: 
                 "Get help to fix the printer.":
