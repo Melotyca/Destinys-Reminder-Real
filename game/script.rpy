@@ -363,16 +363,23 @@ label start:
                     d "Me too!"
                     d_t "Anything beats Matt."
                     s "Now let me help you with that printer. I don't want to keep you here any longer than necessary."
-                    s "Not many people would be willing to stay this late. Do you live close by then?"
-                    d "Yeah. I live just two stops away from here. So it doesn't take long for me to get home at all."
-                    s "Sounds onvenient!"
+                    #simon helps destiny
+                    s "My appolagies that took a little longer than expected."
+                    s "Not many people would be willing to stay this late. Since I live close by it's not a problem for me to stay a little longer."
+                    s "But I hope you can still get home on time. Do you live somewhere around here?"
+                    d "Thank you so much for the help."
+                    d "Yeah. I live just two stops away from here. So I don't have a long commute at all."
+                    s "Sounds convenient. Well then. I won't keep you any longer."
+                    d "It is, thank you."
+                    d "I'll make sure to fill this out and submit soon. I just have one or two more things to take care of with our current project."
+                    
                     #HAVE TO CONTINUE
                 "Leave it and go home.":
                     $ fix_printer = False
                     d_t "I don't have the nerve to deal with this right now."
                     #HAVE TO CONTINUE
 
-        label comfortingstroll:
+        label stroll:
         label evening1:
             jump day2
         
