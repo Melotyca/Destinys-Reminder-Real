@@ -23,7 +23,7 @@ label start:
     label day1:
         label dream1:
             scene bg_black
-            show girl 
+            show girl
             x "Destiny..."
             x "Destiny!"
             x "You have to listen to me."
