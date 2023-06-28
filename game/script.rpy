@@ -170,7 +170,7 @@ label start:
             d_t "Hmm. What about the rest-"
             g "Destiny!"
             g "Where's the bin? I can't find it anywhere."  
-            d_t "Shit! I have to hurry."  
+            d_t "Shoot! I have to hurry."  
             d "It's next to the counter. Be there in a second!"  
 
             scene bg_d_kitchen
@@ -206,21 +206,25 @@ label start:
         label Work1:
             scene bg_office_computer
             d_t "And yet another conspiracy theory..."
-            d_t "How obsessed with a movie do you have to be? \"Watch out! it's the Matrix trying to get you to wake up!\" As if."
+            d_t "How obsessed with a movie can you be? \"Watch out! it's the Matrix trying to get you to wake up!\" As if."
             d_t "Is there seriously nothing useful on the internet about something like this?"
-            d_t "A medical study on the side effects of Vr games or a rare phenomenon with lack of sleep would really calm my nerves right now."
-            d_t "Maybe it's only a harmless little hallucination caused by exessive screen usage"
-            d_t "But what if not?"
+            d_t "This can't just be me imagining things. I mean it knew I was going to stain my shirt."
+            d_t "I wouldn't even know that myself. Besides none of these dumb theories explain how I can SEE this thing."
+            d_t "It's still there..."
+            d_t "Maybe it's a hallucination? I have been staring at screens a lot lately. And the lack of sleep definetely isn't helping either."
+            d_t "Maybe I should go see a doctor..."
+            d_t "There has to be logical explanation for all of this."
+            d_t "But what if there's not?"
             d_t "Come on internet do me a solid won't you?"
-
-            #Maybe a section where you can click through "articles". 
-
+            #keeps clicking through
+            d_t "Hmm."
+            d_t "\"Electomagnetic transmissions\"... Possible. But could that really make me see things?"
             m "Sullivan!"
             d "What!?"
 
             scene bg_office_hallway
             show matt_neutral
-            d_t "Oh shit. How did I not see him coming."   
+            d_t "Oh shoot. How did I not see him coming."   
             d "Y- Yes? Oh, g- good morning Matthew."  
             m "What website is that?"
             d "Huh?"
@@ -326,15 +330,22 @@ label start:
             d "Urgh! Stupid printer!"
             "BAMM"
             d_t "Damn it. I jammed it"
-            d "..."
+            "..."
             d_t "Jammed..."
+            "..."
             d_t "OH! You little-."
             d_t "Jam on! I get it now."
+            d_t "What on earth is this?! How the hell did it know that?"
             d_t "How does this keep happening?"
-            d_t "I bet you think you're funny right now don't you! Stupid Screen."
-            d_t "Maybe it still printed some of the pages?"
-            d_t "Shoot!"
-            d_t "None."
+            d_t "I can't just be imagining this."
+            d_t "I bet you think you're funny right now don't you, you stupid screen!"
+            d_t "If you already decide to make my life a living nightmare just be direct about it."
+            d_t "Jam on. Flipping good. Why does everything have to have multiple meanings."
+            d_t "Come on. Relax Destiny. Maybe It's not all for nothing."
+            d_t "Maybe it still printed some of the pages."
+            d_t "Of course."
+            d_t "None of them. Why did I think anything would go in favor today."
+            d_t "And I can't even get the paperchute to open."
             d_t "I don't think I can fix this myself..."
             menu: 
                 "Get help to fix the printer.":
@@ -356,30 +367,61 @@ label start:
                     s "I think I know how to get it running again by now. Haha"
                     d "Wow, Thank you so much Simon! You're a real life saver."
                     s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
+                    d "Kai?"
                     s "No one knows why she would just quit so out of the blue. Especially since we are still in the middle of a project at the moment. "
-                    s "Something important must have come up..."
-                    s "But that's in the past now! He have you to help us out soon."
-                    s "I'm looking forward to working with you!"
+                    s "She was always so passionate about what she did. Something important must have come up..."
+                    s "Anyhow. We can only speculate. We have you to help us out soon now!"
+                    s "I'm looking forward to working with you."
                     d "Me too!"
                     d_t "Anything beats Matt."
+                    s "I heard you're still finishing up a poster right now?"
+                    d "It's nothing big but I got tasked with designing an ad poster, yes."
+                    d "I'll most likely be done by tomorrow though."
+                    s "Well then. We'll be collaborating from then on!"
                     s "Now let me help you with that printer. I don't want to keep you here any longer than necessary."
                     #simon helps destiny
-                    s "My appolagies that took a little longer than expected."
-                    s "Not many people would be willing to stay this late. Since I live close by it's not a problem for me to stay a little longer."
-                    s "But I hope you can still get home on time. Do you live somewhere around here?"
-                    d "Thank you so much for the help."
+                    s "My appolagies! That took a little longer than expected."
+                    s "I'm curious now. Not many people would be willing to stay this late." 
+                    s "But since I live close by it's not a problem for me to stay a little longer."
+                    s "Do you live somewhere around here too?"
                     d "Yeah. I live just two stops away from here. So I don't have a long commute at all."
-                    s "Sounds convenient. Well then. I won't keep you any longer."
-                    d "It is, thank you."
-                    d "I'll make sure to fill this out and submit soon. I just have one or two more things to take care of with our current project."
+                    d "I really lucked out with my appartment complex."
+                    d "Not too far and a great view as well."
+                    s "That sound nice! You've been working here for a year now am I right?"
+                    d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
+                    s "Well then this will be a nice first experience for you I presume."
+                    s "You said you'll be on it tomorrow right?"
+                    d "Yes. I'll make sure to fill this out and submit it by tomorrow night."
+                    s "Excellent!"
+                    #phone rings
+                    d "Sorry! That must be Gabriel. I have to go. I'm running late to meet my friend."
+                    d "Thank you so much for helping me with the printer!"
+                    s "Of course. I'm glad I was able to help."
+                    s "See you around Destiny."
+                    d "Have a nice evening!"
+                    jump stroll
                     
-                    #HAVE TO CONTINUE
                 "Leave it and go home.":
                     $ fix_printer = False
-                    d_t "I don't have the nerve to deal with this right now."
-                    #HAVE TO CONTINUE
+                    d_t "Oh screw this. I don't have the nerve to deal with this right now."
+                    d_t "Someone else will have to fix it."
+                    d_t "I bet Gabriel's already waiting for me. I can just print this out tomorrow."
+                    d_t "It's not like I'll be done with the poster before then anyways."
+                    d_t "I can print those together. I don't want to make Gabe wait for too long."
+                    jump stroll
 
         label stroll:
+            g "There you are! What took so long? Did Matt catch you on your way out?"
+            d "Thankfully not. No, I don't think I'd be alive right now if that happened"
+            d "I had some trouble with the printer"
+            if fix_printer==True:
+                d "It Jammed and I had to find someone to help me print the forms I need to finally escape Matt."
+            else:
+                d "It Jammed and I couldn't print the forms to join that new team."
+            g "Did you use the old one in the back on floor 3?"
+            d "Yeah, why? I've never had troubles with it so far."
+            g "Wow you must have had insane luck then. That one is known for eating paper like it's been starving for the last decade."
+            d "Huh. I guess I just got lucky up until now."
         label evening1:
             jump day2
         
