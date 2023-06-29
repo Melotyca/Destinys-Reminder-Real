@@ -7,7 +7,7 @@ define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
 define m = Character("Matthew", color="#639af9", what_color="#98baf7")
 define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
 define x = Character("?", color="#7b7b7b", what_italic=True )
-define l = Character("Kai", color="#7b7b7b", what_color="#bebebe")
+define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
 
 #Variables
 default fix_printer = False
@@ -37,7 +37,7 @@ label start:
             "Ping!"
             d_t "Who, What was that?"
             d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."  
-            # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 06:27). 
+            # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
             d_t "Oh come on. Just let me sleep."  
 
             # (back to blackspace for a little while) 
@@ -48,15 +48,17 @@ label start:
 
             scene bg_d_kitchen
             d_t "Oh boy. I really need to get more sleep today." 
-            #(phone appears, time now 07:03)
+            d_t "I shouldn't have stayed up so late yesterday. What time is Gabe going to be here again?"
+            d_t "Didn't he say he was going to text me?"
+            #(phone appears, time now 07:30)
             #unlock)   
             #(home screen, a couple apps, no notifications waits a little). 
-            #(gets a message from Gabriel (Omw! Hope you didn’t overseep again ;)), ). 
-            d_t "Shoot! I totaly forgot!"
-            d_t "I gotta find something to wear."  
+            #(gets a message from Gabriel (Omw! Hope you didn’t overseep again ;))). 
+            d_t "Shoot! I totaly forgot about time!"
+            d_t "I have to get ready."  
             #(destiny looks around, window, corridor back to kitchen/messy).
 
-            d_t "Jeez, I really have to clean this mess up soon. How did my room become this messy again so fast." 
+            d_t "Jeez, I really need to clean this mess up soon. How did my room become this messy again so fast." 
             d_t "When did I even wear that shirt? God even my desk is filled."
             d_t "Actually, I don't think I've ever seen that screen of Achievements over there."
             d_t "Wait."
@@ -417,7 +419,7 @@ label start:
             if fix_printer==True:
                 d "It Jammed and I had to find someone to help me print the forms I need to finally escape Matt."
             else:
-                d "It Jammed and I couldn't print the forms to join that new team."
+                d "It Jammed so I couldn't print the forms to join that new team."
             g "Did you use the old one in the back on floor 3?"
             d "Yeah, why? I've never had troubles with it so far."
             g "Wow you must have had insane luck then. That one is known for eating paper like it's been starving for the last decade."
@@ -429,8 +431,43 @@ label start:
 #DAY 2
     label day2:
         label dream2:
+            x "Please Destiny I'm trying to help you. You have to listen to me"
+            x "I'm not an illusion. I'm here to help you."
+            x "It doesn't have to happen to you too."
+            x "I know what is going to happen now. I couldn't stop it myself but you can."
+            x "He's after you now. You have to remember."
+            x "Do-* 4jT F0-_r g*3 T"
             jump morning2
         label morning2:
+            d_t "What-"
+            d_t "Why does this feel so familiar. It feels like I'm having a dejavu"
+            d_t "Didn't I have that same strange dream yesterday?"
+            d_t "But... What was it about?"
+            d_t "There was a figure I think."
+            d_t "Arrgh. Why can't I remember. My head feels like it's spinning."
+            d_t "I have to go get something to drink. What time is it even?"
+            # (phone appears(see Her reminder Project due today, Day and time: Tue 06:23). 
+            d_t "Whoa. That's unusually early. No wonder my head feels like a truck ran over it."
+            d_t "I doubt I'll be able to ignore it and go back to sleep. I have to go get a glass of water"
+            #gets up
+            d_t "It didn't go away..."
+            #screen
+            d_t "Huh! It's changed. There's different achievements today."
+            label achievements2: 
+                menu:
+                "\"Stick the landing\"":
+
+                "\"We meet again old foe\"":
+
+                "\"Running, my new hobby!\"":
+
+                "\"Dinner for two\"":
+
+                "\"Knock Knock\"":
+                
+                "Finish checking":
+                    return
+            d_t "Still as unclear as yesterday"
             jump work2
         label work2:
             if fix_printer == True:
