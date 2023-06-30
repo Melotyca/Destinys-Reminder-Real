@@ -453,21 +453,40 @@ label start:
             d_t "It didn't go away..."
             #screen
             d_t "Huh! It's changed. There's different achievements today."
+            d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
+            d_t "Let's see. They did happen in the order they were in yesterday. What does it have to say about today?"
             label achievements2: 
                 menu:
                 "\"Stick the landing\"":
+                    d_t "Stick the landing. Hmm..."
+                    d_t "The first thing today."
+                    d_t "If "
 
                 "\"We meet again old foe\"":
+                    d_t "Here we go. This sounds great already. {i}Old foe{/i}. What could it mean by foe?"
+                    d_t "And an old one? The only foe I have right now that I could think of has to be Matthew."
+                    d_t "God I hope he doesn't bring up that fiasco yesterday."
+                    d_t "In the case I really will run into Matt today unexpectedly it certainly wouldn't hurt to be a little more prepared this time."
+                    d_t ""
 
                 "\"Running, my new hobby!\"":
+                    d_t "Yeah right. Now it's just being unrealistic."
+                    d_t "The last thing I want to do is go for a run today."
+                    d_t "Does this mean I'll be late for something? I don't have anything planned yet other than finishing my poster."
+                    d_t "Maybe I'll be late to printing again. I can't miss the deadline today. I'd better keep a close eye on the time today."
+                    d_t "Let's see maybe I can avoid it? Even if not, at least I know now that I'll probably have to run at some point today."
+                    d_t "I don't think I'll be enjoying running though, that's for sure. {i}New hobby{/i} yeah right."
+                    d_t "I don't know if I can really believe that but I'll definetely put on some more comfortable shoes today."
+                    jump achievements2
 
                 "\"Dinner for two\"":
 
+
                 "\"Knock Knock\"":
                 
-                "Finish checking":
+                "Finish checking achievements":
                     return
-            d_t "Still as unclear as yesterday"
+            d_t "I can prepare a little more than yesterday. Still, they're as unclear as yesterday"
             jump work2
         label work2:
             if fix_printer == True:
