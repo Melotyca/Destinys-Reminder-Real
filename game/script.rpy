@@ -285,19 +285,25 @@ label start:
             d "Yes! One second please. I need to. Uhm, finish some last tweeks and save my project really quickly."
             m "Alright. I'll just go ahead. Come meet me in the Cafeteria when you're done"
             d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with gabe and the others"
-            d_t "Didn't that screen also say something about food?"
+            d_t "Oh yeah, didn't that screen also say something about food?"
             jump mattlunch
 
         label mattlunch_n:
             m "I'm not really asking Sullivan."
             m "I need to speak with you. Not only about your design."
             d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project. But after that I'll come right away."
-            m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long."
+            m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long. I heard todays menu is promising"
             d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with gabe and the others"
-            d_t "Didn't that screen also say something about food?"
+            d_t "Oh yeah, didn't that screen also say something about food?"
             jump mattlunch
 
         label mattlunch:
+            d "Mushrooms and mashed potatoes."
+            m "Looks great doesn't it!"
+            d "Yeah..."
+            m "Being fussy about the food Sullivan?"
+            d "No no. It looks delicious. I just had to uhm, figure out what it was first..."
+            d_t "God I hate mushrooms."
             m "So, Sullivan. This Poster you're working on. How is it coming along? Do you know if you will be done on time?"
             menu: 
                 "It's going great!":
@@ -316,9 +322,48 @@ label start:
                     m "I would have really prefered you finish it today. Just make sure we don't have another situation like last time."
                     d "Yes I promise."
 
-            m "Fine. With that settled, I would like to talk to you about this new Job Simon is offering you."      
+            m "I hope you can keep that promise."
+            "..."
+            m "Is something the matter with your plate? You've been poking around in it like you're trying to excavate something."
+            m "{i} It's starting to make me nervous.{/i}"
+            d "S-sorry. I'll stop."
+            m "Fine. With that settled, I would like to talk to you about this new Job Simon is offering you."
+            m "As I mentioned earlier. Someone from his team quit unexpectedly just last week. They are still in the midst of finishing an important project at the moment."
+            m "Along with the marketing side of things the clients also requested designs for their upcoming business concept."
+            m "But with the person in charge of design gone they have really been struggling to pull everything together."
+            m "Since the deadline set by the client is in 2 weeks they desperately need someone to fill her place."
+            m "And since you will be done with your poster soon. {i}I hope{/i}. You'd be a good candidate to take the offer."
+            m "I have to admit, I'm not too keen on you switching teams already. But I guess after one year you've had enough time to get into the swing of things here."
+            m "So, Sullivan. Since you already agreed to taking this opportunity I hope you do your best to adjust to their work flow quickly."
+            d "I'll give it my all."
+            m "Good. Simon will be happy to hear I've found someone."
+            m "Unlike me, Simon expects a lot more autonomy of his team." 
+            d_t "Thank god. Finally some freedom. I can't deal with another controll freak like Matt."
+            m "I was reluctant to offer you this position since it seems you still need the supervision. But it can't be helped."
+            m "Most of the other viable designers are quite busy with their own projects at the moment."
+            m "I hope you step up to the demand and deliver as demanded."
+            m "I don't want you to make a bad impression on his team. I'm sure you understand that that would also have very undesirable concequences on my side."
+            d "I understand. I won't dissapoint you Matthew. I'm sure having a new work environment will be a great experience for me."
+            m "Are you saying you don't like my way of doing things?"
+            d "No of course not! I just meant it will be good for me to also get a look into how other teams do it around here."
+            m "Alright. If you say so."
+            m "You don't seem to be hungry today do you."
+            d "Yeahhh, I dont' have that big of an apetite right now."
+            d_t "This is so uncomfortable why did he have to do this over lunch."
+            m "There's no shame in addmiting you don't like mushrooms Sullivan. Not like your face does't give it away everytime you bite down on one."
+            d "He he... Sorry. I just can't stand the texture. I think I'll just get up and go and get myse- oh no!"
+            "Clank!"
+            #The plate flips
+            d "I- I'm so sorry Matt..."
+            d "Oh no I didn't mean to-"
+            m "How-"
+            d "I'm sorry I have to go!"
+            #Destiny runs away
             #HAVE TO CONTINUE
         label printer1:
+            d_t "URGH that was so stupid! Why did I just run away!"
+            d_t "God Matt is going to hate me even more now. If that's even possible."
+            d_t "And I didn't get to talk to Simon."
             d_t "I can't believe it's this late already. This day has been a disaster."
             d_t "Let's just print this application and get it over with."
             d_t "These weird achievements have been messing with my head the entire day. Can't they be a little clearer?"
@@ -482,9 +527,12 @@ label start:
                     "\"We meet again old foe\"":
                         d_t "Here we go. This sounds great already. {i}Old foe{/i}. What could it mean by foe?"
                         d_t "And an old one? The only foe I have right now that I could think of has to be Matthew."
-                        d_t "God I hope he doesn't bring up that fiasco yesterday."
-                        d_t "In the case I really will run into Matt today unexpectedly it certainly wouldn't hurt to be a little more prepared this time."
-                        d_t ""
+                        d_t "But I wouldn't really call him a foe. We just don't really see eye to eye."
+                        d_t "He does seem to have it out for me. Why does he always have to be there whenever something goes wrong."
+                        d_t "God I hope he doesn't bring up that fiasco from yesterday."
+                        d_t "But I can prepare a bit now."
+                        d_t "In the case I really will run into Matt today unexpectedly it certainly wouldn't hurt to know what to say."
+                        d_t "Hmm what would be a good excuse for drenching him in stew. That won't "
 
                     "\"Running, my new hobby!\"":
                         d_t "Yeah right. Now it's just being unrealistic."
