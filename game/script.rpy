@@ -36,11 +36,11 @@ label start:
         label morning1:
             "Ping!"
             d_t "Who, What was that?"
-            d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."  
+            d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
+            scene bg_d_window
+            show phone  
             # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
             d_t "Oh come on. Just let me sleep."  
-
-            # (back to blackspace for a little while) 
             d_t "Why can't it be like 4am."
             d_t "Pleaseee... If I stay in bed now I'll be late."
             d_t "I guess I've got no other choice."  
@@ -52,12 +52,13 @@ label start:
             d_t "Didn't he say he was going to text me?"
             #(phone appears, time now 07:30)
             #unlock)   
+            show phone
             #(home screen, a couple apps, no notifications waits a little). 
             #(gets a message from Gabriel (Omw! Hope you didn’t overseep again ;))). 
             d_t "Shoot! I totaly forgot about time!"
             d_t "I have to get ready."  
             #(destiny looks around, window, corridor back to kitchen/messy).
-
+            hide phone
             d_t "Jeez, I really need to clean this mess up soon. How did my room become this messy again so fast." 
             d_t "When did I even wear that shirt? God even my desk is filled."
             d_t "Actually, I don't think I've ever seen that screen of Achievements over there."
@@ -66,8 +67,7 @@ label start:
             #(background gets a bit darker as Achievements stand out.). 
             d_t "What in the-"   
 
-            #(achievement screen:)
-
+            show achievements
             d  "Heh. Heh he..."  
             d_t "A display. Really?"  
             d_t "Oh god. No more games before bed."
@@ -75,6 +75,7 @@ label start:
             d_t "This can't be serio-" 
             "{i}Knock knock.{/i}" 
             d "AH!" 
+            hide achievements
             #(cup falls and shatters and spills). 
             #(shattered mug). 
             g "It's me, Gabe. Is everything alright in there?"   
@@ -298,6 +299,7 @@ label start:
             jump mattlunch
 
         label mattlunch:
+            scene bg_office_cafeteria
             d "Mushrooms and mashed potatoes."
             m "Looks great doesn't it!"
             d "Yeah..."
@@ -361,18 +363,25 @@ label start:
             #Destiny runs away
             #HAVE TO CONTINUE
         label printer1:
+            scene bg_office_computer
+            #later during the day
             d_t "URGH that was so stupid! Why did I just run away!"
             d_t "God Matt is going to hate me even more now. If that's even possible."
-            d_t "And I didn't get to talk to Simon."
+            d_t "I didn't get to talk to Simon."
+            d_t "I hope Matt didn't change his mind about it."
+            d_t "Oh god. What if he told Simon I wasn't a good match."
+            d_t "I have to print and give him the forms as soon as possible!"
+            #see time
             d_t "I can't believe it's this late already. This day has been a disaster."
             d_t "Let's just print this application and get it over with."
+            #goes to printer
+            scene bg_office_printer
             d_t "These weird achievements have been messing with my head the entire day. Can't they be a little clearer?"
             d_t "If I'd known I was supposed to take them so litterally I would have been more careful with my food."
             d_t "Flipping good. Don't make me laugh. This whole thing could've been avoided."
             d_t "Matts never going to forgive me for that."
             d_t "What's next? Jam on."
-            d_t "I'm beginning to think it isn't referring to music. Where would I even hear it from?"
-            d_t "I swear, if this stupid screen is going to make me spill jam on myself or something like that I'm gonna lose it."
+            d_t "I swear, if this stupid screen is going to make me spill jam on myself I'm going to lose it."
             d_t "I don't need another stai-"
             "{i}krrrt!{/i}"
             d_t "What was that?"
@@ -408,9 +417,15 @@ label start:
                 "Get help to fix the printer.":
                     $ fix_printer = True
                     d_t "I have to find someone to help me fix this darn printer"
+                    scene bg_office_hallway
                     #goes to look for someone runns into simon
-                    s "Oh! Destiny! Can I help you with something?"
-                    d "Uhm. Yeah."
+                    s "Oh! You're Destiny right!"
+                    s "I thought Matthew said we would meet after lunch. Did something come up?"
+                    d "You're Simon then! Yeah sorry about that."
+                    d "Uhm, yes."
+                    d "Something came up."
+                    s "What are you doing around here? Can I help you with anything?"
+                    d "Yes actually."
                     menu:
                         "I jammed the printer":
                             d "I was about to print the forms to join your team but I must have put in too much paper."
@@ -420,8 +435,9 @@ label start:
                             d "There's an error message. I think someone must've jammed it."
                     d "Do you know who I could go to to help me fix it?"
                     s "Not that old printer again! We should have replaced that ancient thing years ago."
-                    s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one."
-                    s "I think I know how to get it running again by now. Haha"
+                    s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
+                    scene bg_office_printer
+                    s "I think I know how to get it running again."
                     d "Wow, Thank you so much Simon! You're a real life saver."
                     s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
                     d "Kai?"
@@ -475,6 +491,7 @@ label start:
                     jump stroll
 
         label stroll:
+            scene bg_office_cafeteria
             g "There you are! What took so long? Did Matt catch you on your way out?"
             d "Thankfully not. No, I don't think I'd be alive right now if that happened"
             d "I had some trouble with the printer"
@@ -493,6 +510,7 @@ label start:
 #DAY 2
     label day2:
         label dream2:
+            scene bg_black
             x "Please Destiny I'm trying to help you. You have to listen to me"
             x "I'm not an illusion. I'm here to help you."
             x "It doesn't have to happen to you too."
@@ -501,6 +519,7 @@ label start:
             x "Do-* 4jT F0-_r g*3 T"
             jump morning2
         label morning2:
+            scene bg_d_window
             d_t "What-"
             d_t "Why does this feel so familiar. It feels like I'm having a dejavu"
             d_t "Didn't I have that same strange dream yesterday?"
@@ -513,6 +532,7 @@ label start:
             d_t "I doubt I'll be able to ignore it and go back to sleep. I have to go get a glass of water"
             #gets up
             d_t "It didn't go away..."
+            show achievements
             #screen
             d_t "But it's changed! There's different achievements today."
             d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
