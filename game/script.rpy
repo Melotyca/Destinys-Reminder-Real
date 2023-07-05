@@ -350,6 +350,7 @@ label start:
             m "Are you saying you don't like my way of doing things?"
             d "No of course not! I just meant it will be good for me to also get a look into how other teams do it around here."
             m "Alright. If you say so."
+            "..."
             m "You don't seem to be hungry today do you."
             d "Yeahhh, I dont' have that big of an apetite right now."
             d_t "This is so uncomfortable why did he have to do this over lunch."
@@ -635,6 +636,7 @@ label start:
             d_t "So much for getting more sleep today. I still have almost an hour until I have to get up."
             d_t "But I doubt I'll be able to ignore this headache and go back to sleep. I have to go get a glass of water"
             #gets up
+            "!"
             d_t "Seriously!?"
             d_t "That screen is still here!"
             d_t "Wait! It's changed. There's different achievements today."
@@ -693,6 +695,7 @@ label start:
                         d_t "Well, I don't think that would be significant enough to be on here."
                         d_t "Maybe I'll be visiting someone."
                         d_t "Not that I'm planning to right now..."
+                        jump achievements2
 
                     "Finish checking achievements":
                         return
