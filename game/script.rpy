@@ -517,7 +517,7 @@ label start:
                     d "The short one please. I just want to get home after today."
                     d_t "With that screen mentioning the stroll, I don't think I can trust it."
                     g "The short one it is then."
-
+            scene bg_street
             g "How was your day, if we ignore the obvious fopa at lunch?"
             d "It was fine. I didn't get to work on the poster as much as I'd liked though. I have a lot to do tomorrow."
             g "Why's that? Did something come up? I thought you kept your scedule as free as possible specifically to be able to work on it a lot today."
@@ -645,8 +645,17 @@ label start:
                         d_t "dinner for two"
                      
                     "\"Knock Knock\"":
-                        d_t "What"
-                    
+                        d_t "Let's hope this is refering to a door. Maybe I'm getting a package delivered."
+                        d_t "Did I order anything recently?"
+                        d_t "Hmmm. Maybe it's my new coffee machine. It's about time that arrived."
+                        d_t "I've been starting to think they straight up just lost the package."
+                        d_t "It's supposed to happen pretty late in the day though. Maybe it's not the mail."
+                        d_t "Could someone be coming to visit?"
+                        d_t "Ugh. Is it going to be doordashers?"
+                        d_t "Well, I don't think that would be significant enough to be on here."
+                        d_t "Maybe I'll be visiting someone."
+                        d_t "Not that I'm planning to right now..."
+                        
                     "Finish checking achievements":
                         return
             d_t "I can prepare a little more than yesterday. Still, they're as unclear as yesterday"
