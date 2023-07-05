@@ -300,6 +300,7 @@ label start:
 
         label mattlunch:
             scene bg_office_cafeteria
+            show matt_neut
             d "Mushrooms and mashed potatoes."
             m "Looks great doesn't it!"
             d "Yeah..."
@@ -419,6 +420,10 @@ label start:
                     d_t "I have to find someone to help me fix this darn printer"
                     scene bg_office_hallway
                     #goes to look for someone runns into simon
+                    d_t "Maybe I'll find someone around here."
+                    "BUMP"
+                    show simon_neut
+                    d "Oops Sorry!"
                     s "Oh! You're Destiny right!"
                     s "I thought Matthew said we would meet after lunch. Did something come up?"
                     d "You're Simon then! Yeah sorry about that."
@@ -437,6 +442,7 @@ label start:
                     s "Not that old printer again! We should have replaced that ancient thing years ago."
                     s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
                     scene bg_office_printer
+                    show simon_neut
                     s "I think I know how to get it running again."
                     d "Wow, Thank you so much Simon! You're a real life saver."
                     s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
@@ -492,7 +498,10 @@ label start:
 
         label stroll:
             scene bg_office_cafeteria
+            show gabe_happy
             g "There you are! What took so long? Did Matt catch you on your way out? I heard what happened over lunch."
+            hide gabe_happy
+            show gabe_neut
             d "Thankfully not. No, I don't think I'd be alive right now if that happened"
             g "I think Matt would have crucified you right on the spot."
             g "Did you stay longer to finish your project?"
@@ -501,8 +510,12 @@ label start:
                 d "It Jammed and I had to find someone to help me print the forms I need to finally escape Matt."
             else:
                 d "It Jammed so I couldn't print the forms to join that new team."
+            hide gabe_neut
+            show gabe_conf
             g "Did you use the old one in the back on floor 3?"
             d "Yeah, why? I've never had troubles with it so far."
+            hide gabe_conf
+            show gabe_neut
             g "Wow you must have had insane luck then. That one is known for eating paper like it's been starving for the last decade."
             d "Huh. I guess I just got lucky up until now."
             d "But I guess that luck has run out now."
@@ -512,26 +525,39 @@ label start:
                 "Take the long way.":
                     d "I want to go the long way. I need some movement to clear my head."
                     d_t "If that screen is to trust just this once this stroll will be nice."
+                    hide gabe_neut
+                    show gabe_happy
                     g "The long one it is then."
                 "Take the short way.":
                     d "The short one please. I just want to get home after today."
                     d_t "With that screen mentioning the stroll, I don't think I can trust it."
+                    hide gabe_neut
+                    show gabe_happy
                     g "The short one it is then."
             scene bg_street
+            show gabe_neut
             g "How was your day, if we ignore the obvious fopa at lunch?"
             d "It was fine. I didn't get to work on the poster as much as I'd liked though. I have a lot to do tomorrow."
+            hide gabe_neut
+            show gabe_conf
             g "Why's that? Did something come up? I thought you kept your scedule as free as possible specifically to be able to work on it a lot today."
             d "It's not that. I didn't have anything else planned."
             d "I just wasn't able to focus at all."
             d "My thoughts were all over the place the entire day. Just never on work."
+            hide gabe_conf
+            show gabe_conc
             g "Got something on your mind Destiny? If there's something bothering you maybe talking anout it will help."
             d_t "Can I tell him about the screen?"
             menu: 
                 "Tell him":
                     d "Have you ever started seeing things from looking at screens too much?"
+                    hide gabe_conc
+                    show gabe_conf
                     g "What do you mean? Like hallucinations?"
                     d "Yeah. Like a screen with legitemate text."
                     g "What!?"
+                    hide gabe_conf
+                    show gabe_conc
                     g "Have you been hallucinating.?"
                     d "Maybe?"
                     g "Destiny, I think you seriously need to get some rest. You've been overworking yourself too much."
@@ -539,11 +565,17 @@ label start:
                     g "When was the last time you've taken a day off or just slept for a solid 8 hours?"
                     d "..."
                     d "Quite a while ago..."
+                    hide gabe_conc
+                    show gabe_neut
                     g "Okay. Why don't we make sure you get home a little earlier today and get a good night of sleep."        
                     g "I'm sure you're just overworked and maybe also a bit dehydrated. Did you have enough water today."
                     d "Now that I think about it, no I haven't really had too much to drink today."
                     d_t "But the screen was there even in the morning."
+                    hide gabe_neut
+                    show gabe_happy
                     g "See. I'm sure you'll feel better once you take a small break and have something to drink."
+                    hide gabe_happy
+                    show gabe_neut
                     g "And please make sure to go see a doctor if it gets worse, alright?"
                     
 
@@ -554,11 +586,17 @@ label start:
                     g "When was the last time you've taken a day off or just slept for a solid 8 hours?"
                     d "..."
                     d "Quite a while ago..."
+                    hide gabe_conc
+                    show gabe_neut
                     g "Okay. Why don't we make sure you get home a little earlier today and get a good night of sleep."        
                     g "Maybe you're also a bit dehydrated. Did you have enough water today."
                     d "Now that I think about it, no I haven't really had too much to drink today."
+                    hide gabe_neut
+                    show gabe_happy
                     g "I'm sure you'll feel better once you take a small break and have something to drink."
 
+            hide gabe_happy
+            show gabe_neut
             g "We can't have you getting sick from working too much now can we?"
             d "Thank you Gabe."
             g "Just tell if there's something I can do for you. You can call me whenever."
@@ -655,7 +693,7 @@ label start:
                         d_t "Well, I don't think that would be significant enough to be on here."
                         d_t "Maybe I'll be visiting someone."
                         d_t "Not that I'm planning to right now..."
-                        
+
                     "Finish checking achievements":
                         return
             d_t "I can prepare a little more than yesterday. Still, they're as unclear as yesterday"
