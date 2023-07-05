@@ -492,9 +492,11 @@ label start:
 
         label stroll:
             scene bg_office_cafeteria
-            g "There you are! What took so long? Did Matt catch you on your way out?"
+            g "There you are! What took so long? Did Matt catch you on your way out? I heard what happened over lunch."
             d "Thankfully not. No, I don't think I'd be alive right now if that happened"
-            d "I had some trouble with the printer"
+            g "I think Matt would have crucified you right on the spot."
+            g "Did you stay longer to finish your project?"
+            d "No, I still have to work on it tomorrow. I had some trouble with the printer"
             if fix_printer==True:
                 d "It Jammed and I had to find someone to help me print the forms I need to finally escape Matt."
             else:
@@ -503,6 +505,71 @@ label start:
             d "Yeah, why? I've never had troubles with it so far."
             g "Wow you must have had insane luck then. That one is known for eating paper like it's been starving for the last decade."
             d "Huh. I guess I just got lucky up until now."
+            d "But I guess that luck has run out now."
+            d "Let's just get going. I want to keep the chances of running into Matt or anyone was there to witness happened today to a low."
+            g "Do you want to take the long or the short route?"
+            menu:
+                "Take the long way.":
+                    d "I want to go the long way. I need some movement to clear my head."
+                    d_t "If that screen is to trust just this once this stroll will be nice."
+                    g "The long one it is then."
+                "Take the short way.":
+                    d "The short one please. I just want to get home after today."
+                    d_t "With that screen mentioning the stroll, I don't think I can trust it."
+                    g "The short one it is then."
+
+            g "How was your day, if we ignore the obvious fopa at lunch?"
+            d "It was fine. I didn't get to work on the poster as much as I'd liked though. I have a lot to do tomorrow."
+            g "Why's that? Did something come up? I thought you kept your scedule as free as possible specifically to be able to work on it a lot today."
+            d "It's not that. I didn't have anything else planned."
+            d "I just wasn't able to focus at all."
+            d "My thoughts were all over the place the entire day. Just never on work."
+            g "Got something on your mind Destiny? If there's something bothering you maybe talking anout it will help."
+            d_t "Can I tell him about the screen?"
+            menu: 
+                "Tell him":
+                    d "Have you ever started seeing things from looking at screens too much?"
+                    g "What do you mean? Like hallucinations?"
+                    d "Yeah. Like a screen with legitemate text."
+                    g "What!?"
+                    g "Have you been hallucinating.?"
+                    d "Maybe?"
+                    g "Destiny, I think you seriously need to get some rest. You've been overworking yourself too much."
+                    g "Staring at that screen all day every day can't be good for you."
+                    g "When was the last time you've taken a day off or just slept for a solid 8 hours?"
+                    d "..."
+                    d "Quite a while ago..."
+                    g "Okay. Why don't we make sure you get home a little earlier today and get a good night of sleep."        
+                    g "I'm sure you're just overworked and maybe also a bit dehydrated. Did you have enough water today."
+                    d "Now that I think about it, no I haven't really had too much to drink today."
+                    d_t "But the screen was there even in the morning."
+                    g "See. I'm sure you'll feel better once you take a small break and have something to drink."
+                    g "And please make sure to go see a doctor if it gets worse, alright?"
+                    
+
+                "Be dismissive":
+                    d "I think I might have just not slept enough."
+                    d "Usually runnign on little sleep isn't a problem for me but this Project has been keeping me up more nights than I'd like"
+                    g "Sounds to me like you're overworking yourself."
+                    g "When was the last time you've taken a day off or just slept for a solid 8 hours?"
+                    d "..."
+                    d "Quite a while ago..."
+                    g "Okay. Why don't we make sure you get home a little earlier today and get a good night of sleep."        
+                    g "Maybe you're also a bit dehydrated. Did you have enough water today."
+                    d "Now that I think about it, no I haven't really had too much to drink today."
+                    g "I'm sure you'll feel better once you take a small break and have something to drink."
+
+            g "We can't have you getting sick from working too much now can we?"
+            d "Thank you Gabe."
+            g "Just tell if there's something I can do for you. You can call me whenever."
+            g "Oh! Looks like we're on our street already."
+            g "Time really flew by us this time didn't it!"
+            d "Here already? Wow."
+            g "We must've been walking extra fast. But now go and get some sleep."
+            g "And don't so much about tomorrow. I'm sure you'll get everything done on time."
+            d "See you tomorrow Gabriel."
+            g "See you tomorrow!"
+                
         label evening1:
             jump day2
         
@@ -523,29 +590,39 @@ label start:
             d_t "What-"
             d_t "Why does this feel so familiar. It feels like I'm having a dejavu"
             d_t "Didn't I have that same strange dream yesterday?"
-            d_t "But... What was it about?"
-            d_t "There was a figure I think."
             d_t "Arrgh. Why can't I remember. My head feels like it's spinning."
             d_t "I have to go get something to drink. What time is it even?"
             # (phone appears(see Her reminder Project due today, Day and time: Tue 06:23). 
             d_t "Whoa. That's unusually early. No wonder my head feels like a truck ran over it."
-            d_t "I doubt I'll be able to ignore it and go back to sleep. I have to go get a glass of water"
+            d_t "So much for getting more sleep today. I still have almost an hour until I have to get up."
+            d_t "But I doubt I'll be able to ignore this headache and go back to sleep. I have to go get a glass of water"
             #gets up
-            d_t "It didn't go away..."
+            d_t "Seriously!?"
+            d_t "That screen is still here!"
+            d_t "Wait! It's changed. There's different achievements today."
+            d_t "This can't just be from over working myself anymore."
+            d_t "The screen that's always there but even worse all of the achievements came true somehow"
+            d_t "It looks exactly the same as yesterday except for the text."
+            d_t "What does it say this time?"
             show achievements
             #screen
-            d_t "But it's changed! There's different achievements today."
-            d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
-            d_t "Let's see. They did happen in the order they were in yesterday. What does it have to say about today?"
+            d_t "I was hoping it would just go away overnight."
+            d_t "Clearly that was too optimistic of me."
+            d_t "But they did all come true didn't they?"
+            d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day unlike yesterday."
+            d_t "Let's see. They happened in the order they were writen in right?"
+            d_t "What does my looming spector have to say about today?"
             label achievements2: 
                 menu:
                     "\"Stick the landing\"":
                         d_t "Stick the landing. Hmm..."
                         d_t "The first thing today."
+                        d_t "What landing is there to stick?"
+                        d_t ""
                         d_t "If "
 
                     "\"We meet again old foe\"":
-                        d_t "Here we go. This sounds great already. {i}Old foe{/i}. What could it mean by foe?"
+                        d_t "Here we go. The second one and this sounds great already. {i}Old foe{/i}. What could it mean by foe?"
                         d_t "And an old one? The only foe I have right now that I could think of has to be Matthew."
                         d_t "But I wouldn't really call him a foe. We just don't really see eye to eye."
                         d_t "He does seem to have it out for me. Why does he always have to be there whenever something goes wrong."
