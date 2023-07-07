@@ -682,7 +682,8 @@ label start:
                         jump achievements2
 
                     "\"Dinner for two\"":
-                        d_t "dinner for two"
+                        d_t "A dinner for two. Huh at least this one sounds pretty straight forward."
+                        d_t "I dont see how this could be anything other than a literal dinner for two people."
                      
                     "\"Knock Knock\"":
                         d_t "Let's hope this is refering to a door. Maybe I'm getting a package delivered."
@@ -702,6 +703,10 @@ label start:
             d_t "I can prepare a little more than yesterday. Still, they're as unclear as yesterday"
             jump work2
         label work2:
+            scene bg_office_computer
+            d_t "Okay! Time to finish this darn poster."
+            d_t "I can't allow myself to be distracted today. "
+            #have to continue
             if fix_printer == True:
                 jump printer2fixed
             else:
@@ -709,6 +714,82 @@ label start:
         label printer2fixed:
             jump running
         label printer2unfixed:
+            scene bg_office_printer
+            "Trrrkkk"
+            d_t "Not you again!"
+            d_t "Oh no"
+            d_t "No... Stupid printer! I'm such an idiot. Why didn't I just have it fixed yesterday? It's always the printers that doom me."
+            d_t "Darn it! Seriously?! No one else needed to print anything since yesterday?"
+            d_t "I should have just done it then. Stupid! Oh come on. I'm going to be late now!"
+            d_t "Matt is going to murder me."
+            d_t "I don't have time for this right now"
+            d_t "I'll be beating myself up enough over this later. Right now I just have to find someone to help me."
+            d_t "Fast."
+            scene bg_office_hallway
+            d_t "I'm sure I'll find someone around here!"
+            "BUMP"
+            show simon_neut
+            s "Oops Sorry!"
+            d "Sorry! I didn't s-"
+            s "Wait! You're Destiny!"
+            d "What?"
+            s "You are Destiny, no? The graphic designer Matthew said he would interduce to me yesterday, the one that would start working for us?"
+            d "Oh yeah! That's me."
+            d "You must be Simon! Sorry about that."
+            d "Uhm. Something err... came up yesterday."
+            s "Oh don't worry about it. This kind of stuff happens. I'm glad I get to meet you today!"
+            s "What are you doing in such a hurry? I hope I'm not bothering you."
+            d "No no! I'm glad I ran into someone here!"
+            d_t "Isn't this just Perfect! He'll have a horrible first impression of me now!"
+            d "Uh, I was just about to print the final design of my project but I think someone before me must have put in too much paper heh..."
+            d "I tried taking the paperchute out but it won't budge."
+            d "Printing the poster is the last thing I have to but I'm starting to run late again."
+            s "Right! Matt mentioned you were just about to finish your project. Has he sent you the application forms yet?"
+            s "Oh sorry!"
+            s "Yes. First we deal with the printer!"
+            s "I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
+            scene bg_office_printer
+            show simon_neut
+            s "I think I know how to get it running again."
+            s "Now we just have to wait for your print to finish."
+            d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I handed in another project late."
+            s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
+            d "Kai?"
+            s "Yes. She did our designs up until now."
+            s "I'm sure Matthew told you about her. No one knows why she would just quit so out of the blue. Especially since we are still in the middle of a project at the moment. "
+            s "She was always so passionate about what she did. Something important must have come up..."
+            s "Anyhow. We can only speculate. But I'm glad we have you to help us out soon now!"
+            s "We've really been struggling without her around."
+            s "I'm looking forward to working with you."
+            d "Me too!"
+            d_t "Anything beats Matt."
+            s "So, this is that project you were still finishing up?"
+            d "It's nothing big but I got tasked with designing an ad poster, yes."
+            d "I'm glad I got it done today. "
+            s "Well then. Seems like we'll be collaborating from now on. How exciting!"
+            s "Matthew told me a few things about you already. You've been working here for about a year, no?"
+            d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
+            s "Matthew tends to be a bit too careful with handing out jobs"
+            s "In my oppinion the only way to get experience is to do the thing you want to learn."
+            s "Is view on the matter seems to be a bit more uptight."
+            d "A little yes haha."
+            s "Well then this will be a good new experience for you!"
+            s "Did you also move here before starting work for Matthew?"
+            s "Do you live somewhere around here too?"
+            d "Yeah. I moved into one of the newer appartment complexes just two stops away."
+            s "Wow, you must be in the ones close to the park then. I've heard only great things about them."
+            s "How do you like the area? In my oppinion it's one of the best. Especially if you work in the city."
+            d "I like it a lot actually! I have a great view of the park and the city from my appartment. And my neighbours are fantastic."
+            s "Sounds lovely."
+            "Bing!"
+            d "Oh! That must be my print!"
+            d "Thank you so much for helping me with the printer!"
+            s "Of course. I'm glad I was able to help."
+            s "I see you've printed the application as well! Don't forget to hand it in untill tonight."
+            s "I'm looking forward to having you on my team!"
+            d "Yes me too. I'm sorry I have to hurry back now."
+            s "See you around Destiny."
+            d "See you around!"
             jump running
         label running:
             if dinner_plans== True:
