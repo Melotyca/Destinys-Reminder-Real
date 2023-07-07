@@ -448,7 +448,8 @@ label start:
                     d "Wow, Thank you so much Simon! You're a real life saver."
                     s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
                     d "Kai?"
-                    s "No one knows why she would just quit so out of the blue. Especially since we are still in the middle of a project at the moment. "
+                    s "Yes. She did our designs up until now."
+                    s "I'm sure Matthew told you about her. No one knows why she would just quit so out of the blue. Especially since we are still in the middle of a project at the moment. "
                     s "She was always so passionate about what she did. Something important must have come up..."
                     s "Anyhow. We can only speculate. But I'm glad we have you to help us out soon now!"
                     s "We've really been struggling without her around."
@@ -684,18 +685,21 @@ label start:
                     "\"Dinner for two\"":
                         d_t "A dinner for two. Huh at least this one sounds pretty straight forward."
                         d_t "I dont see how this could be anything other than a literal dinner for two people."
+                        d_t "Now who could it be with?"
                      
                     "\"Knock Knock\"":
-                        d_t "Let's hope this is refering to a door. Maybe I'm getting a package delivered."
+                        d_t "Let's hope this is refering to a door. I honestly can't imagine anything else I'd be knocking on."
+                        d_t "Oh! It might not be me knocking. Maybe I'm getting a package delivered."
                         d_t "Did I order anything recently?"
                         d_t "Hmmm. Maybe it's my new coffee machine. It's about time that arrived."
-                        d_t "I've been starting to think they straight up just lost the package."
-                        d_t "It's supposed to happen pretty late in the day though. Maybe it's not the mail."
+                        d_t "I've been starting to think they lost the package."
+                        d_t "No. It's supposed to happen pretty late in the day. It's probably not the mail."
                         d_t "Could someone be coming to visit?"
-                        d_t "Ugh. Is it going to be doordashers?"
-                        d_t "Well, I don't think that would be significant enough to be on here."
+                        d_t "Ugh. Is it going to be doordashers? I have heard some of the kids around the block have started going around the appartments recently."
+                        d_t "Well, I don't think that would be significant enough to be on here. But who knows. That stain in the morning wasn't too significant either."
                         d_t "Maybe I'll be visiting someone."
                         d_t "Not that I'm planning to right now..."
+                        d_t "I guess I'll just have to see. I don't think I can figure out what this means right now."
                         jump achievements2
 
                     "Finish checking achievements":
@@ -751,6 +755,8 @@ label start:
             scene bg_office_printer
             show simon_neut
             s "I think I know how to get it running again."
+            "WHAM"
+            s "There!"
             s "Now we just have to wait for your print to finish."
             d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I handed in another project late."
             s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
