@@ -358,7 +358,7 @@ label start:
             d "He he... Sorry. I just can't stand the texture. I think I'll just get up and go and get myse- oh no!"
             "Clank!"
             #The plate flips
-            d "I- I'm so sorry Matt..."
+            d "OH. I- I'm so sorry Matt..."
             d "Oh no I didn't mean to-"
             m "How-"
             d "I'm sorry I have to go!"
@@ -501,12 +501,16 @@ label start:
         label stroll:
             scene bg_office_cafeteria
             show gabe_happy
-            g "There you are! What took so long? Did Matt catch you on your way out? I heard what happened over lunch."
+            g "There you are! What took so long? I heard what happened over lunch."
+            g "You should have seen his face! It was hillarious."
+            g "From an outside perspective of course. I'm sure you must have been fearing for your life."
+            g "He was furious. The way he stormed out of the cafeteria left everyone dead silent."
+            g "Did Matt catch you on your way out?"
             hide gabe_happy
             show gabe_neut
             d "Thankfully not. No, I don't think I'd be alive right now if that happened"
             g "I think Matt would have crucified you right on the spot."
-            g "Did you stay longer to finish your project?"
+            g "Did you stay longer to finish your project then?"
             d "No, I still have to work on it tomorrow. I had some trouble with the printer"
             if fix_printer==True:
                 d "It Jammed and I had to find someone to help me print the forms I need to finally escape Matt."
@@ -640,37 +644,65 @@ label start:
             "!"
             d_t "Seriously!?"
             d_t "That screen is still here!"
-            d_t "Wait! It's changed. There's different achievements today."
-            d_t "This can't just be from over working myself anymore."
-            d_t "The screen that's always there but even worse all of the achievements came true somehow"
-            d_t "It looks exactly the same as yesterday except for the text."
-            d_t "What does it say this time?"
+            d_t "Hold on! It's changed. There's different achievements today."
             show achievements
-            #screen
-            d_t "I was hoping it would just go away overnight."
+            d_t "This can't just be from over working myself anymore."
+            d_t "There's no way fatigue can cause something like this."
+            d_t "That screen was there the whole time yesterday too. That's not even the worst of it." 
+            d_t "All of the achievements came true somehow"
+            d_t "What are you? And why do you know what I'm going to do?"
+            d_t "It looks exactly the same as yesterday except for the text."
+            d_t "I was honestly hoping it would just go away overnight."
             d_t "Clearly that was too optimistic of me."
             d_t "But they did all come true didn't they?"
-            d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day unlike yesterday."
+            d_t "Hmm."
+            d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
             d_t "Let's see. They happened in the order they were writen in right?"
             d_t "What does my looming spector have to say about today?"
+            default matt_excuse = 0
             label achievements2: 
                 menu:
                     "\"Stick the landing\"":
                         d_t "Stick the landing. Hmm..."
-                        d_t "The first thing today."
+                        d_t "The first thing today. Yesterday it was about coffee."
                         d_t "What landing is there to stick?"
-                        d_t ""
-                        d_t "If "
+                        d_t "Will this be about my breakfast again?"
+                        d_t "Oh no. Not today. I'll make sure I don't eat anything sticky. Lord knows in how many {i}lovely{/i} ways sticking a landing can be interpreted."
+                        d_t "Maybe dropping a jammy toast. Or Having an egg stick in the pan."
+                        d_t "No none of that today."
+                        d_t "I guess I'll just have some coffee today."
+                        d_t "I really hope that's enough to avoid any major disasters. I mean hey, sticking the landing could also mean something good!"
+                        jump achievements2
+                       
 
                     "\"We meet again old foe\"":
-                        d_t "Here we go. The second one and this sounds great already. {i}Old foe{/i}. What could it mean by foe?"
-                        d_t "And an old one? The only foe I have right now that I could think of has to be Matthew."
-                        d_t "But I wouldn't really call him a foe. We just don't really see eye to eye."
+                        d_t "Here we go. Only the second one of the day and this already sounds great. {i}Old foe{/i}. Who could it mean by foe?"
+                        d_t "And an old one? The only foe I have right now, that I could think of, has to be Matthew."
+                        d_t "But I wouldn't really call him a foe. We just don't really see eye to eye. Besides I'm barely supposed to see him today."
+                        d_t "I just have to finish my poster and print it on time and then he'll have nothing to hold against me anymore."
+                        d_t "Ugh. Easier said than done though."
                         d_t "He does seem to have it out for me. Why does he always have to be there whenever something goes wrong."
-                        d_t "God I hope he doesn't bring up that fiasco from yesterday."
-                        d_t "But I can prepare a bit now."
-                        d_t "In the case I really will run into Matt today unexpectedly it certainly wouldn't hurt to know what to say."
-                        d_t "Hmm what would be a good excuse for drenching him in stew. That won't "
+                        d_t "God I hope he doesn't bring up that fiasco from yesterday. Please just let today's work go smoothly"
+                        d_t "Maybe I can prepare a bit now."
+                        d_t "In the case I really will run into Matt today it certainly wouldn't hurt to know what to say."
+                        d_t "Hmm what would be a good excuse for absolutely drenching him in stew and running away."
+                        menu:
+                            "Nausia":
+                                d_t "I could say those mushrooms suddenly made me really nausious."
+                                d_t "Maybe he'll buy it. I mean I did run to the bathrooms to hide."
+                                d_t "Plus, I'm sure he can't really blame me for that. I doubt he'd rather had had me trow up in the cafeteria..."
+                                d_t "Ew." 
+                                d_t "No, that'll do. He won't ask too many questions after that."
+                                $ matt_excuse = 1
+                            "Getting tissues":
+                                d_t "I could tell him i wanted to go get tissues to help him clean up."
+                                d_t "I mean I did run in the direction of the bathrooms. I could have just as well wanted to go get something to wipe off the mushrooms."
+                                d_t "Might not have been the most efficient way to do so but Gabe said Matt stormed out of the cafeteria too."
+                                d_t "I could just say I went to go get tissues but couldn't find him when I got back."
+                                d_t "It's risky but it'll work I think."
+                                d_t "It's the best I've got right now."
+                                $ matt_excuse = 2  
+                        jump achievements2
 
                     "\"Running, my new hobby!\"":
                         d_t "Yeah right. Now it's just being unrealistic."
@@ -683,9 +715,9 @@ label start:
                         jump achievements2
 
                     "\"Dinner for two\"":
-                        d_t "A dinner for two. Huh at least this one sounds pretty straight forward."
+                        d_t "A dinner for two. Huh, at least this one sounds pretty straight forward."
                         d_t "I dont see how this could be anything other than a literal dinner for two people."
-                        d_t "Now who could it be with?"
+                        d_t "Now who could it be with? "
                      
                     "\"Knock Knock\"":
                         d_t "Let's hope this is refering to a door. I honestly can't imagine anything else I'd be knocking on."
