@@ -245,7 +245,7 @@ label start:
             d "Sorry..."
             m "Oh, And Sullivan" 
             d "Yes?"
-            m "With tomorrow I don't mean 6:30PM. The office closes at 7:00. If it's not printed by then, then you have to figure out how to print it."
+            m "With tomorrow I don't mean 6:30PM. The office closes at 7:00PM. If it's not printed by then, you have to figure out how to print it."
             m "Is that undersood?"
             d "Yes. Of course. I'll have it in time this time."
             m "Great! Now to other matters."
@@ -335,7 +335,7 @@ label start:
             m "Along with the marketing side of things the clients also requested designs for their upcoming business concept."
             m "But with the person in charge of design gone they have really been struggling to pull everything together."
             m "Since the deadline set by the client is in 2 weeks they desperately need someone to fill her place."
-            m "And since you will be done with your poster soon. {i}I hope{/i}. You'd be a good candidate to take the offer."
+            m "And since you will be done with your poster soon. {i}I'd hope{/i}. You'd be a good candidate to take the offer."
             m "I have to admit, I'm not too keen on you switching teams already. But I guess after one year you've had enough time to get into the swing of things here."
             m "So, Sullivan. Since you already agreed to taking this opportunity I hope you do your best to adjust to their work flow quickly."
             d "I'll give it my all."
@@ -736,18 +736,58 @@ label start:
 
                     "Finish checking achievements":
                         return
-            d_t "I can prepare a little more than yesterday. Still, they're as unclear as yesterday"
+            d_t "It's not a lot of preparation. I'm pretty certain on some of them but why do they have to be so darn vague."
+            d_t "And why now of all times? I wish I had more time to figure out where this is all coming from. But I'm neck deep in work right now."
+            d_t "Still, there has to be a reason for this right? Let's hope today goes more smoothly than yesterday." 
+            d_t "Maybe I'll have some time to be able to figure out why this is happening to me after I'm done with my project"
+            d_t "Ughh. Time to get ready for work I guess."
             jump work2
         label work2:
             scene bg_office_computer
-            d_t "Okay! Time to finish this darn poster."
-            d_t "I can't allow myself to be distracted today. "
+            d_t "Okay! I'm almost done with this darn poster!"
+            d_t "I can't allow myself to be distracted now."
             #have to continue
+            d_t "Phew that's it I think. It's not getting better than this."
+            d_t "Alright! Time to print this baby and drop it off over in the meeting room."
+            d_t "Oh shoot! It's already 5:00PM. Darn. Time really flew by me today."
+            d_t "It should be fine though. I just have to print it. That won't take too long and then I'm done for today."
+            d_t "Hey that went better than expected! I don't think I had any major hickups today. Other than maybe the one or two times the program crashed on me."
+            d_t "But that's to be expected by now."
+            d_t "Strange..."
+            d_t "I though I'd have to deal with those stupid achievements all day. But come to think of it I don't think I've had a single one of them happen yet."
+            d_t "Nothing about sticking or foes. Or does the program count?"
+            d_t "Eh it doesn't matter. Seems like I was just reading into it way too hard yesterday."
+            d_t "Time to go print this bad boy."
+            scene bg_office_hallway
+            show gabe_happy
+            g "Oh Hi! Didn't expect to still see you today."
+            d "Gabe! Hi."
+            g "Hey, I see you in the cafeteria today. Did you skip lunch to work on the poster?"
+            d "Yeah. Heh... I had to crunch a bit. But hey! I got it done!"
+            g "No surprises there haha. I knew you'd still get it done on time!"
+            g "That's the regular Destiny for you right there. A bit last minute. But you always manage to stick the landing somehow!"
+            d "Hold on, what did you just say?"
+            g "Uhm, that I'm amazed that you always stick the landing somehow."
+            g "Is something the matter Destiny?"
+            d "Oh, no no. Everything's alright Haha. I just didn't catch what you just said."
+            d_t "Does this mean I wasn't overthinking it yesterday?"
+            d "I guess I am always a bit fasionably late."
+            d_t "What do I do now? Are all the others also going to come true?"
+            g "Late but with the best work!"
+            g "Are you sure everything's fine? You look a bit worried."
+            d "Sorry. Really, I'm fine. I still have to print it out and what if the clients don't like it you know."
+            d "Hey, who knows. Maybe this is the one where it gets me. Where something goes wrong last minute or it's just not good enough."
+            d_t "I wish I could tell him about what's really bothering me. But not now"
+            g "Oh come on now. You don't have to worry about that now. You got it done. There's not much more you can do now."
+            g "Besides, I'm sure the clients will love your work."
+            g "But now go and print it! I don't want to be the reason you don't make it on time."
+            d "Yes! Right! Gotta go."
             if fix_printer == True:
                 jump printer2fixed
             else:
                 jump printer2unfixed
         label printer2fixed:
+
             jump running
         label printer2unfixed:
             scene bg_office_printer
