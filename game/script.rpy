@@ -780,21 +780,85 @@ label start:
             d_t "I wish I could tell him about what's really bothering me. But not now"
             g "Oh come on now. You don't have to worry about that now. You got it done. There's not much more you can do now."
             g "Besides, I'm sure the clients will love your work."
-            g "But now go and print it! I don't want to be the reason you don't make it on time."
+            g "But now go and print it! I don't want to be the reason you don't make it on time, okay?"
             d "Yes! Right! Gotta go."
             if fix_printer == True:
                 jump printer2fixed
             else:
                 jump printer2unfixed
+
         label printer2fixed:
+            scene bg_office_printer
+            d_t "Here we are. Alright!"
+            d_t "I just have to print this file right here, then I'll finally be done with this."
+            "..."
+            "Bing!"
+            d_t "Oh! That must be my print!"
+            d_t "And another win for miss Destiny Sullivan!"
+            d_t "Today's going smoother than expected. All that's left now is to drop it off at the meeting room."
+            d_t "Maybe I'll actually be able to leave on time today!"
+            scene bg_office_hallway
+            m "Sullivan!"
+            show matt_neut
+            d "H-Hey Matthew... long time no see."
+            m "Yeah. {i}Not that I mind.{/i}"
+            d "Look, uhm Matthew. I'm-"
+            m "Can you please explain the absolute disrespect and mockery I had to endure yesterday. What's wrong with you? Are you a child? No reasonable adult just runs off like that."
+            m "Yeah jada jada- Mistakes happen. But that? Seriously."
+            m "I expected better."
+            if matt_excuse == 1:
+                d "I'm really sorry Matthew. Truly. I didn't mean to just sprint out on you like that."
+                d "But there was something about those mushrooms. I got so nausious all of a sudden. It felt like my stomach was going on a rollercoaster ride."
+                m "..."
+                d "I was scared I was going to throw up. And I didn't want to cause a scene in the cafeteria so I ran to the bathrooms"
+                m "Well a scene it was."
+                d "Sorry..."
+                d "Uhm, I came looking for you to apolagze after I felt a little better. But I couln't find you in the cafeteria anymore."
+                m "Sure."
+                d "I'm very sorry."
+                m "We will seriously have to talk about your attitude. I understand feeling unwell but nonetheless your behavior was disrespectful and plain rude."
+                d "I-"
+
+            elif matt_excuse == 2:
+                d "I'm really sorry Matthew. Truly. I didn't mean to just sprint out on you like that."
+                d "I was actually looking for something to help you wipe off the stew from your shirt."
+                m "..."
+                d "I thought I'd run to get some from the washrooms. There's always tissues there"
+                m "Tissues?"
+                d "Yeah..."
+                d "Uhm, I came looking for you to apolagze and clean up. But I couln't find you in the cafeteria anymore."
+                m "And you expect me to believe that."
+                d "Sorry. I-"
+                m "We will seriously have to talk about your attitude. I could understand feeling unwell. But this blaitant excuse?"
+                m "This level of disrespect and ridicule is unacceptable."
+                d "I-"
+
+            else:
+                d "I- Uhm. I'm sorry."
+
+
+            g "Destiny!"
+            d "Gabe?"
+            show gabe_neut
+            g "Oh, afternoon Matthew."
+            m "Anderson."
+            g "I wasn't expecting to see you guys here."
+            g "Actually, Destiny I have something I have to discuss with you."
+
+
 
             jump running
         label printer2unfixed:
             scene bg_office_printer
+            d_t "Here we are. Alright!"
+            d_t "I just have to print this file right here, then we'll be-"
             "Trrrkkk"
-            d_t "Not you again!"
+            d_t "..."
+            d "WHAT?"
+            d "Not you again!"
             d_t "Oh no"
-            d_t "No... Stupid printer! I'm such an idiot. Why didn't I just have it fixed yesterday? It's always the printers that doom me."
+            d_t "No... Stupid printer! I'm such an idiot. Why didn't I just have it fixed yesterday? Of course this is what's going to screw me over." 
+            d_t "It's always the printers that doom me."
             d_t "Darn it! Seriously?! No one else needed to print anything since yesterday?"
             d_t "I should have just done it then. Stupid! Oh come on. I'm going to be late now!"
             d_t "Matt is going to murder me."
@@ -830,7 +894,7 @@ label start:
             "WHAM"
             s "There!"
             s "Now we just have to wait for your print to finish."
-            d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I handed in another project late."
+            d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I hand in another project late."
             s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
             d "Kai?"
             s "Yes. She did our designs up until now."

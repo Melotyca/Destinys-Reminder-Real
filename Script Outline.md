@@ -68,11 +68,11 @@
 
 ## Characters
 
-- Destiny: 
+- Destiny Sullivan: 
    - works at a grafics design company
    - is messy and forgetful
    - lives alone in an appartment
-- Gabriel: 
+- Gabriel Anderson: 
    - friend of destiny
    - works at the same company but in a different team
    - very friendly and aloof
@@ -100,7 +100,7 @@
 ## Possible choices (Relevant to text progression)
 - fix_printer y/n
 - tell gabe about seeing a screen y/n
-- Choose what to say to matt (if you see him) 0 none/1 nausia/2
+- Choose what to say to matt (if you see him) 0 none/1 nausia/2 tissues
 - dinner_plans y/n
 - Name dog (enter a name)
 - open_door y/n
