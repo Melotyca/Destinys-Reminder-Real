@@ -1037,11 +1037,11 @@ label start:
             d_t "Oh yeah, time. What time is it?" 
             d_t "6:30PM already?! Wow! I really thought I'd be done earlier today."
 
-
             if dinner_plans== True:
                 jump dinnerfor2gabe
             else:
                 jump dinnerfor2dog
+
         label dinnerfor2gabe:
             scene bg_d_corridor
             g "Hey! It's me Gabe!"
@@ -1049,11 +1049,31 @@ label start:
             show gabe_neut
             g "So, how about we get cooking "
             jump day3
+
         label dinnerfor2dog:
+            #HAVE TO CONTINUE
+            "*Knock Knock*"
+            d_t "Huh?"
+            d_t "Oh right. The \"knock knock\" one."
+            d_t "Let's go see who it could be-"
+            #Achievements glitch to Don't open the door.
+            d_t "Wh- What was that?"
+            d_t "No I must have just imagined it. I'll just look who's outside the door."
+            #look outside (noone)
+            d_t "What in the?"
+            d_t "Did they leave something at the door?"
+            d_t "Maybe I cant see it from here I'll just go see-"
+            #screen permanently glitches to DONT
+            d_t "UHM. WHAT? There it is again! What the F-"
+            #Glitches to dont open it. and be quiet
             menu:
                 "Open the door.":
                     $ open_door= True
-                "Keep it closed"
+                "Keep it closed":
+                    d_t "Oh hell no! What is going on!?"
+                    d_t "This is seriously starting to freak me out!"
+                    d_t "Why is all this happening!"
+
             jump day3
 
 #DAY 3
