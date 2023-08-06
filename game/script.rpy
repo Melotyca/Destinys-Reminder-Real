@@ -884,7 +884,20 @@ label start:
             g "I'm pretty certain he can't do that just because of one incident. Higherups have to look over things like that. And an accident happen you know."
             d "How are you not scared of him?"
             d "I was about to cry. I could have never stood up to him like that."
-            g ""
+            g "Oh hes not that scary. He's more like a dog."
+            g "All bark no bite."
+            g "He talks a lot and likes to pressure people but other than being mean he rarely does anything really."
+            g "Besides what's he got on me? I just needed to talk to you about something important. The worst he could have done was refuse to let me talk to you."
+            d "I don't know how you do it. Wow."
+            d "Speaking of it. What did you want to talk to me about?"
+            g "Oh, uhm nothing if I'm being honest. I didn't want you getting mauled out by Matt."
+            g "Saving a friend from a ferral creature sounds personal and urgent enought to me."
+            d "Tell that to Matt haha."
+            g "Seems i came at exactly the right moment."
+            g "Well actually, I was looking for you."
+            d "Oh?"
+            g "I wanted to ask you If you wanted to make dinner together tonight."
+            g "To sort of celebrate you finally being done with this poster."
 
 
 
