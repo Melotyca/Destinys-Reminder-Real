@@ -724,7 +724,7 @@ label start:
                     "\"Dinner for two\"":
                         d_t "A dinner for two. Huh, at least this one sounds pretty straight forward."
                         d_t "I dont see how this could be anything other than a literal dinner for two people."
-                        d_t "Now who could it be with? "
+                        d_t "Now who could it be with?"
                      
                     "\"Knock Knock\"":
                         d_t "Let's hope this is refering to a door. I honestly can't imagine anything else I'd be knocking on."
@@ -758,33 +758,37 @@ label start:
             d_t "Alright! Time to print this baby and drop it off over in the meeting room."
             d_t "Oh shoot! It's already 5:00PM. Darn. Time really flew by me today."
             d_t "It should be fine though. I just have to print it. That won't take too long and then I'm done for today."
-            d_t "Hey that went better than expected! I don't think I had any major hickups today. Other than maybe the one or two times the program crashed on me."
+            d_t "Hey that went better than expected! I don't think I had any major hickups today."
+            d_t "Other than maybe the one or two times the program crashed on me."
             d_t "But that's to be expected by now."
             d_t "Strange..."
             d_t "I though I'd have to deal with those stupid achievements all day. But come to think of it I don't think I've had a single one of them happen yet."
-            d_t "Nothing about sticking or foes. Or does the program count?"
-            d_t "Eh it doesn't matter. Seems like I was just reading into it way too hard yesterday."
+            d_t "Nothing about sticking or foes. Also no running yet."
+            d_t "Eh it doesn't matter. I'm just glad all of that is over now. Seems like I was just reading into it way too hard yesterday."
             d_t "Time to go print this bad boy."
             scene bg_office_hallway
             show gabe_happy
             g "Oh Hi! Didn't expect to still see you today."
             d "Gabe! Hi."
-            g "Hey, I see you in the cafeteria today. Did you skip lunch to work on the poster?"
-            d "Yeah. Heh... I had to crunch a bit. But hey! I got it done!"
-            g "No surprises there haha. I knew you'd still get it done on time!"
-            g "That's the regular Destiny for you right there. A bit last minute. But you always manage to stick the landing somehow!"
+            g "Hey, I didn't see you in the cafeteria today. Did you skip lunch to work on the poster?"
+            d "Yeah. Heh... I had to crunch a bit. Plus I wanted to minimize my chances of running into Matt. But hey! I got it done!"
+            g "Congrats! No surprises there though haha. I knew you'd get it done on time!"
+            g "That's the regular Destiny for you right there. Always a bit last minute. But you never fail to stick the landing somehow!"
+            d "Huh!?"
             d "Hold on, what did you just say?"
-            g "Uhm, that I'm amazed that you always stick the landing somehow."
-            g "Is something the matter Destiny?"
-            d "Oh, no no. Everything's alright Haha. I just didn't catch what you just said."
+            g "Uhm..." 
+            g "I just said that I'm amazed how you always stick the landing somehow."
+            g "I meant that as a compliment. I'm sorry did I say something bad?"
+            d "Oh, no no! Everything's alright Heh. I didn't catch what you said just then."
             d_t "Does this mean I wasn't overthinking it yesterday?"
-            d "I guess I am always a bit fasionably late."
-            d_t "What do I do now? Are all the others also going to come true?"
+            g "Oh thank god. You looked so shocked. Had me worried there for a second."
+            d "I guess I am always a bit fasionably late, eh?"
+            d_t "What do I do now? Are all the others also going to come true? It's so late in the day already."
             g "Late but with the best work!"
-            g "Are you sure everything's fine? You look a bit worried."
-            d "Sorry. Really, I'm fine. I still have to print it out and what if the clients don't like it you know."
-            d "Hey, who knows. Maybe this is the one where it gets me. Where something goes wrong last minute or it's just not good enough."
-            d_t "I wish I could tell him about what's really bothering me. But not now"
+            g "Are you sure everything's fine? You look upset."
+            d "Sorry. Really, I'm fine. Don't worry it's nothing."
+            d "I was just thinking about how I still have to print it out. And what if the clients don't like it."
+            d "Hey, who knows. Maybe this is the one where all of the rushing gets me. Where something goes wrong last minute or it's just not good enough."
             g "Oh come on now. You don't have to worry about that now. You got it done. There's not much more you can do now."
             g "Besides, I'm sure the clients will love your work."
             g "But now go and print it! I don't want to be the reason you don't make it on time, okay?"
@@ -908,24 +912,35 @@ label start:
             g "You know. To celebrate you finally being done with this poster."
             g "You've looked so distressed lately. I thought you could use a nice relaxing evening."
             d_t "This has to be the dinner for two!"
-            g "What do you say? We could meet at your place and cook something nice."
+            g "We could meet at your place and cook something nice."
             d "That does sound relaxing."
             d_t "Hold on! What would happen if I said no?"
             d_t "All of the other achievements came true so far. If this really is the dinner for two then doesn't this mean I wouldn't be able to say no?"
             d_t "This is the first time I've gotten the choice. But... this has to be the dinner for two."
             d_t "Shoot!"
             d_t "Cooking together sounds so nice. But this might be my only chance to prove the screen wrong!"
+            g "So, What do you say? Do you want to cook together?"
             menu:
-                "Agree to have dinner."
+                "Agree to have dinner together.":
+                    $ dinner_plans = True
+                    d_t "Oh screw this. Why should I miss out on something I really want to do just to prove some stupid imaginary screen wrong?"
+                    d_t "If that's what these dumb achievements want then so be it."
+                    d "Yes! I'd love to! That sounds like exactly what I need."
+                    g "Great! I've already got something in mind we could make. I"
+                    #HAVE TO CONTINUE
 
-                "Make up an excuse why you can't."
-            
-           
-
-
-
-
+                "Make up an excuse.":
+                    $ dinner_plans = False
+                    d_t "I'm sorry GHabe. But this might be my only chance at finding out what this all means."
+                    d "I'd love to... but ugh, I'm just so tired after the last few days."
+                    d "Let's do something on the weekend! I doubt I'd be fun company right now. I want to actually be able to help you in the kitchen when we do it haha. I think today I'd just doze off every couple of minutes."
+                    g "Oh, Of course! I understand. Get some rest today. You've deserved it." 
+                    g "Does Saturday night sound good then?"
+                    d "For sure!"
+                    #HAVE TO CONTINUE
+                
             jump running
+
         label printer2unfixed:
             scene bg_office_printer
             d_t "Here we are. Alright!"
@@ -933,7 +948,8 @@ label start:
             "Trrrkkk"
             d_t "..."
             d "WHAT?"
-            d "Not you again!"
+            d "Not again."
+            d "Not {i}you{/i} again!"
             d_t "Oh no"
             d_t "No... Stupid printer! I'm such an idiot. Why didn't I just have it fixed yesterday? Of course this is what's going to screw me over." 
             d_t "It's always the printers that doom me."
@@ -1013,13 +1029,25 @@ label start:
             d "Yes me too. I'm sorry I have to hurry back now."
             s "See you around Destiny."
             d "See you around!"
+            d_t "Alright time to drop this poster off at the conference room!"
             jump running
+
         label running:
+            d_t "Phew. Glad I got that one done on time."
+            d_t "Oh yeah, time. What time is it?" 
+            d_t "6:30PM already?! Wow! I really thought I'd be done earlier today."
+
+
             if dinner_plans== True:
                 jump dinnerfor2gabe
             else:
                 jump dinnerfor2dog
         label dinnerfor2gabe:
+            scene bg_d_corridor
+            g "Hey! It's me Gabe!"
+            d "One second, be right there!"
+            show gabe_neut
+            g "So, how about we get cooking "
             jump day3
         label dinnerfor2dog:
             menu:
