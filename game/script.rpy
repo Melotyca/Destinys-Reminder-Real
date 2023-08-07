@@ -632,8 +632,8 @@ label start:
             x "Please Destiny I'm trying to help you. You have to listen to me"
             x "I'm not an illusion. I'm here to help you."
             x "It doesn't have to happen to you too."
-            x "I know what is going to happen now. I couldn't stop it myself but you can."
-            x "He's after you now. You have to remember."
+            x "I know about your future. I know what you need to do now. I couldn't stop it myself but you can."
+            x "He's after you. You have to remember m3."
             x "Do-* 4jT F0-_r g*3 T"
             jump morning2
         label morning2:
@@ -1055,33 +1055,50 @@ label start:
             "*Knock Knock*"
             d_t "Huh?"
             d_t "Oh right. The \"knock knock\" one."
-            d_t "Let's go see who it could be-"
+            d_t "Who it could be-"
             #Achievements glitch to Don't open the door.
             d_t "Wh- What was that?"
+            d_t "-"
             d_t "No I must have just imagined it. I'll just look who's outside the door."
             #look outside (noone)
-            d_t "What in the?"
+            d_t "What in the...?"
             d_t "Did they leave something at the door?"
-            d_t "Maybe I cant see it from here I'll just go see-"
+            d_t "Maybe they-, I cant see it from here I'll have to go and check-"
             #screen permanently glitches to DONT
-            d_t "UHM. WHAT? There it is again! What the F-"
+            d_t "EHM?" 
+            d_t "WHAT!?"
+            d_t "I knew I saw something!"
             #Glitches to dont open it. and be quiet
+            d_t "What the F-"
             menu:
                 "Open the door.":
                     $ open_door= True
+                    d "He- Hello? Is someone there?"
+                    d_t "They didn't leave anything..."
                 "Keep it closed":
-                    d_t "Oh hell no! What is going on!?"
+                    d_t "Oh hell no! What the hell is going on!?"
                     d_t "This is seriously starting to freak me out!"
-                    d_t "Why is all this happening!"
+                    d_t "Who was that?!"
 
             jump day3
 
 #DAY 3
     label day3:
         label dream3:
+            x "He was here!" 
+            x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
+            x "He's going to keep trying to get close to you. You can't let him win."
+            x "Get help! I'm begging you. Don't do as he sais."
+            x "He's trying to get you to like him."
+            x "To trust him"
+            x "He won't save you."
+            x "He's keeping me caged."
+            x "I (an '7 e5c *p 3"
+            x "-"
             jump morning3
-        label morning3: 
+        label morning3:
             if dinner_plans==False:
+                d_t 
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
