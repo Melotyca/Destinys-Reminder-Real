@@ -38,9 +38,9 @@
    - if yes she runs into Matt (foe) on the way out and gets caught up in a conversation about the girl that just quit but gets saved by gabriel and invites him over for dinner since she saw the achievement.
    - if not then she has to get person Xs help to fix the printer that's still broken (foe) doesn't invite gabriel
 - Running, my new hobby! 
-   - Has to run after the dog that has her prints (get to name the dog yayyy) 
+   - Has to run after the cat that has her prints (get to name it) / Has to hurry home to meet gabe
 - Dinner for two 
-   - Either dog or gabriel(and the dog but he doesnt count in this case lmao) dependign on what you did with the printer 
+   - Either cat or gabriel
 - Knock knock/Don’t let him in (glitchy) 
    – someone knocks at her door but noone is visible from the doorspy
    - If alone:

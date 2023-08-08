@@ -630,8 +630,10 @@ label start:
         label dream2:
             scene bg_black
             x "Please Destiny I'm trying to help you. You have to listen to me"
+            d "What?"
             x "I'm not an illusion. I'm here to help you."
             x "It doesn't have to happen to you too."
+            d "I-"
             x "I know about your future. I know what you need to do now. I couldn't stop it myself but you can."
             x "He's after you. You have to remember m3."
             x "Do-* 4jT F0-_r g*3 T"
@@ -808,7 +810,7 @@ label start:
             d_t "And another win for miss Destiny Sullivan!"
             d_t "Today's going smoother than expected. All that's left now is to drop it off at the meeting room."
             d_t "Maybe I'll actually be able to leave on time today!"
-            scene bg_office_hallway
+            scene bg_office_cafeteria
             m "Sullivan!"
             show matt_neut
             d "H-Hey Matthew... long time no see."
@@ -887,7 +889,7 @@ label start:
             m "Don't think you can get outt of this one so easily."
             d "I'm sorry. Of course."
             d "See you around."
-            scene bg_office_computer
+            scene bg_office_hallway
             g "Phew! That was a close one. Looked like Matt was really out for blood this time. Looks like he took it quite personally"
             d "Oh yeah 100%. I was scared he was about to end my carreer right there on the spot."
             d "I'm done for. He's going to fire me!"
@@ -926,19 +928,34 @@ label start:
                     d_t "Oh screw this. Why should I miss out on something I really want to do just to prove some stupid imaginary screen wrong?"
                     d_t "If that's what these dumb achievements want then so be it."
                     d "Yes! I'd love to! That sounds like exactly what I need."
-                    g "Great! I've already got something in mind we could make. I"
-                    #HAVE TO CONTINUE
+                    g "Great! I've already got something in mind we could make. I have almost everything at home too."
+                    d "Ohhh, sounds promising. What is it?"
+                    g "It's a surprise but I'm sure you'll like it!"
+                    g "I'm actually already done for today so I can go get the last few ingredients on my way home."
+                    d "I still have to get this to the conference room and clean up a bit around my desk. How about we meet at my place at 7:00PM?"
+                    g "Works for me."
+                    g "See you at 7 then!"
+                    d "Seeya."
 
                 "Make up an excuse.":
                     $ dinner_plans = False
-                    d_t "I'm sorry GHabe. But this might be my only chance at finding out what this all means."
-                    d "I'd love to... but ugh, I'm just so tired after the last few days."
-                    d "Let's do something on the weekend! I doubt I'd be fun company right now. I want to actually be able to help you in the kitchen when we do it haha. I think today I'd just doze off every couple of minutes."
+                    d_t "I'm sorry Gabe. But this might be my only chance at finding out what this all means."
+                    d "I'd love to... but, I'm just so tired and exhausted from the last few days."
+                    d "I barely got any sleep yesterday and I think I'd better just go to bed extra early today."
+                    d "Let's do something on the weekend! I doubt I'd be fun company right now. I want to actually be able to help you in the kitchen when we do it haha. "
+                    d "I think today I'd just doze off every couple of minutes."
                     g "Oh, Of course! I understand. Get some rest today. You've deserved it." 
-                    g "Does Saturday night sound good then?"
-                    d "For sure!"
-                    #HAVE TO CONTINUE
-                
+                    d "Thanks."
+                    g "Does Saturday night sound good? I don't have any plans over the weekend so whenever's good"
+                    d "No Saturday sounds great. For sure!"
+                    g "Nice. I'm actually already done for today so I'll catch you tomorrow for lunch?"
+                    d "Yeah, of course. The table in the back, as usual."
+                    g "Exactly."
+                    g "Have a nice evening then Destiny!"
+                    g "And go to bed extra early today."
+                    d "I will! Thank you."
+                    d "See you tomorrow."
+                    g "Seeya."   
             jump running
 
         label printer2unfixed:
@@ -1033,13 +1050,33 @@ label start:
             jump running
 
         label running:
-            d_t "Phew. Glad I got that one done on time."
+            scene bg_black
+            scene bg_office_computer
+            d_t "Whew. Glad I got that done now. I feel liberated. And I dropped it off on time too for once!"
             d_t "Oh yeah, time. What time is it?" 
             d_t "6:30PM already?! Wow! I really thought I'd be done earlier today."
-
             if dinner_plans== True:
+                d_t "Oh no! I have to hurry. I almost forgot."
+                d_t "I told Gabe he could be at my place at 7."
+                d_t "Darn! Looks like I'll have to run afterall."
+                d_t "I guess that screen was right. There's no denying it. I can't escape them so easily it seems."
+                d_t "Well, at least I was able to mentally prepare myself this time."
+                d_t "Oh come on me! A little jog won't kill me."
+                d_t "UGH. That doesn't it's going to be fun!"
                 jump dinnerfor2gabe
             else:
+                d_t "Oh well, it can't be helped. At least I get to finally go home now."
+                scene bg_street
+                d_t "It's only Tuesday and this week has already been way too long."
+                d_t "I wonder what's going to happen to the rest of the achievements now. Especially the dinner one."
+                d_t "Maybe it was wrong this time. I can just refuse-"
+                "Mrauw"
+                d "Hey Kitty! Aw, you're a cute one."
+                d_t "It looks a bit "
+                d_t "Oops! My Folder!"
+                #she spills her folder
+                d_
+
                 jump dinnerfor2dog
 
         label dinnerfor2gabe:
@@ -1098,7 +1135,7 @@ label start:
             jump morning3
         label morning3:
             if dinner_plans==False:
-                d_t 
+            
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
