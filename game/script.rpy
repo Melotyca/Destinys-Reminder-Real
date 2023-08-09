@@ -8,6 +8,8 @@ define m = Character("Matthew", color="#639af9", what_color="#98baf7")
 define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
 define x = Character("?", color="#7b7b7b", what_italic=True )
 define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
+define c = Character("Cat", color="#7b7b7b", what_color="#bebebe" )
+define c_n = Character("[catname]", color="#7b7b7b", what_color="#bebebe" )
 
 #Variables
 default fix_printer = False
@@ -1070,14 +1072,55 @@ label start:
                 d_t "It's only Tuesday and this week has already been way too long."
                 d_t "I wonder what's going to happen to the rest of the achievements now. Especially the dinner one."
                 d_t "Maybe it was wrong this time. I can just refuse-"
-                "Mrauw"
-                d "Hey Kitty! Aw, you're a cute one."
-                d_t "It looks a bit "
-                d_t "Oops! My Folder!"
-                #she spills her folder
-                d_
+                "Meowww!"
+                d "Oh hey there Kitty!"
+                c "Prrrt"
+                d "Aww, aren't you a cute one!"
+                d "Oh but you're all scraggly looking. What happened to you?"
+                c "mEEEwr"
+                d "You don't have a collar do you?"
+                d "Oops, Sorry!"
+                c "Hssss"
+                "Thudd"
+                d "Ah no my folder!"
+                d "N- No not that! Spit that out!"
+                c "mrrr"
+                #the cat runs away
+                d "Hey! No, come back here! That's my-"
+                scene bg_ally
+                d "HAH! Got you you little rascal!"
+                c "awrr"
+                d "Now give me back that forms."
+                "Tug!"
+                d "There"
+                d "Looks like you made me run for it after all. Darn it. And here I was, planing on exactly not doing that today."
+                d "You must be a secret little agent."
+                d_t "Another one happened."
+                "..."
+                d "And of course you just had to take me to the dimmest, dirtiest allyway you could find eh?"
+                d_t "Creepy..."
+                d "Is this where you live?"
+                c "Mwrrm"
+                d "Hmmm, I can't just leave you here now... This place reaks."
+                d "How about we try to find your owner."
+                d "{i}If you have one{/i}"
+                d_t "It's late already."
+                d "We'll try to find your owner tomorrow, for now you're coming with me. What do you say little guy?"
+                c "Meowww!"
+                d "Ha ha. You're adorable ehm-"
+                python:
+                    catname = renpy.input("What should I call you?", length=32)
+                    catname = povname.strip()
 
-                jump dinnerfor2dog
+                    if not povname:
+                        povname = "Kitty"
+                d "[catname]!"
+                d "Let's get you cleaned up [catname]."
+                "Clank!"
+                d "!"
+                d "What was that?"
+                d "Let's just get out of here. This place is freaking me out."
+                jump dinnerfor2cat
 
         label dinnerfor2gabe:
             scene bg_d_corridor
@@ -1087,7 +1130,7 @@ label start:
             g "So, how about we get cooking "
             jump day3
 
-        label dinnerfor2dog:
+        label dinnerfor2cat:
             #HAVE TO CONTINUE
             "*Knock Knock*"
             d_t "Huh?"
@@ -1123,13 +1166,18 @@ label start:
     label day3:
         label dream3:
             x "He was here!" 
+            d "Who was-"
             x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
+            d "Who are you!"
             x "He's going to keep trying to get close to you. You can't let him win."
-            x "Get help! I'm begging you. Don't do as he sais."
+            x "Get help! I'm begging you. Don't do as he says."
+            d "I-"
             x "He's trying to get you to like him."
             x "To trust him"
+            d "Who are you talking about?"
             x "He won't save you."
-            x "He's keeping me caged."
+            x "He's keepin-g me (agEd."
+            x "He*L 9 m-e."
             x "I (an '7 e5c *p 3"
             x "-"
             jump morning3
