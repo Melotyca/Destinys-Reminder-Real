@@ -9,7 +9,8 @@ define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
 define x = Character("?", color="#7b7b7b", what_italic=True )
 define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
 define c = Character("Cat", color="#7b7b7b", what_color="#bebebe" )
-define c_n = Character("[catname]", color="#7b7b7b", what_color="#bebebe" )
+define c_n = Character("[catname]", color="#aa811a", what_color="#c6a141" )
+define o = Character("Officer R.", color="#005af7", what_color="#357cff")
 
 #Variables
 default fix_printer = False
@@ -1249,6 +1250,12 @@ label start:
         label callgabealone:
             jump work3
         label callpolice:
+            "Click"
+            x "Hello. Officer Rogan speaking. How may I be of assistance today."
+            d "H- Hello officer Rogan. My name is D-destiny Sullivan. I, Uhm, live at Oakland street 17. The big apartment building across from the city park."
+            o "Yes madam. What seems to be the problem?"
+            d "I, I would like to report unusual concerning behavior in my apartment complex."
+            o "Of course. What behavior exactly have you noticed that is distressing to you?"
             jump work3
         label work3:
             if call_police==True:
