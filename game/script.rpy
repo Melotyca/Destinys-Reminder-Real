@@ -1119,7 +1119,8 @@ label start:
                 "Clank!"
                 d "!"
                 d "What was that?"
-                d "Let's just get out of here. This place is freaking me out."
+                d "..."
+                d "Let's just get out of here. This place is starting to freaking me out."
                 jump dinnerfor2cat
 
         label dinnerfor2gabe:
@@ -1127,16 +1128,57 @@ label start:
             g "Hey! It's me Gabe!"
             d "One second, be right there!"
             show gabe_neut
-            g "So, how about we get cooking "
+            g "So, want to get to cooking? I brought all the ingredients."
+            d "Yes! Let's go."
+            scene bg_d_kitchen
+            g "I brought everything we need to make your favorite noodle soup!"
+            d "You know me too well! Thank you so much Gabriel!"
+            g "It's my pleasure."
+            g "How about I start with preparing the broth? Then you can already get to chopping the vegetables."
+            d "Perfect."
+            #Skips to right before they're done.
+            "*Knock Knock*"
+            d "Shoot! Gabe can you go see who it is quickly? I just put the chicken in the pan."
+            g "Yeah of course. One second."
+            #Achievements glitch but no altered text
+            g "Huh? Doesn't seem to be anyone there!"
+            g "I'll have a look if they left anything outside!"
+            #Achievements glitch but no altered text
+            d_t "Oh right! The knocking. I wonder who it was."
+            show gabe_conf
+            g "Weird. There wasn't anyone outside. And they didn't leave anything either."
+            d "Strange."
+            d "It must have been some doordashers then."
+            g "Probably."
+ 
             jump day3
 
         label dinnerfor2cat:
             #HAVE TO CONTINUE
+            scene bg_d_kitchen
+            d "Alrighty! Here we are."
+            c "mrrr"
+            d "Make yourself at home [catname]. But don't go around destroying anything alright?"
+            c "Meowww!"
+            d "Oh! You must be hungry! Let's see what I have for you."
+            d "Hmmm. Looks like I have some tuna in my pantry. Do you like tuna?"
+            c "MEEEwr!"
+            d "Haha, someone's enthusiastic!"
+            d "Wow, come to think of it I'm starving too!"
+            d_t "I barely had anything to eat today."
+            d "Time to make me some dinner too, no?"
+            c "Prrrr"
+
+
+            
             "*Knock Knock*"
             d_t "Huh?"
             d_t "Oh right. The \"knock knock\" one."
+            c "Mrrauw?"
+            d "You stay here little guy."
             d_t "Who it could be-"
             #Achievements glitch to Don't open the door.
+            d "!"
             d_t "Wh- What was that?"
             d_t "-"
             d_t "No I must have just imagined it. I'll just look who's outside the door."
@@ -1144,12 +1186,15 @@ label start:
             d_t "What in the...?"
             d_t "Did they leave something at the door?"
             d_t "Maybe they-, I cant see it from here I'll have to go and check-"
+            c "HSSSr!"
             #screen permanently glitches to DONT
             d_t "EHM?" 
             d_t "WHAT!?"
             d_t "I knew I saw something!"
             #Glitches to dont open it. and be quiet
+            c "mEEEwr"
             d_t "What the F-"
+            d "{i}Shhh. [catname] it's ok.{/i}"
             menu:
                 "Open the door.":
                     $ open_door= True
@@ -1157,14 +1202,17 @@ label start:
                     d_t "They didn't leave anything..."
                 "Keep it closed":
                     d_t "Oh hell no! What the hell is going on!?"
-                    d_t "This is seriously starting to freak me out!"
+                    d_t "I'm not opening that door."
+                    d_t "This is crazy!"
                     d_t "Who was that?!"
+                    #Glitches to stay inside tonight.
 
             jump day3
 
 #DAY 3
     label day3:
         label dream3:
+            scene bg_black
             x "He was here!" 
             d "Who was-"
             x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
@@ -1175,15 +1223,17 @@ label start:
             x "He's trying to get you to like him."
             x "To trust him"
             d "Who are you talking about?"
-            x "He won't save you."
+            x "You can't trust him. He won't save you."
             x "He's keepin-g me (agEd."
             x "He*L 9 m-e."
+            d "Wait!"
             x "I (an '7 e5c *p 3"
             x "-"
             jump morning3
         label morning3:
             if dinner_plans==False:
-            
+                scene bg_d_window
+                d "AH!"
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
