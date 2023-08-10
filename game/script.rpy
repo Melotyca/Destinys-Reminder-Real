@@ -1099,14 +1099,18 @@ label start:
                 d_t "Another one happened."
                 "..."
                 d "And of course you just had to take me to the dimmest, dirtiest allyway you could find eh?"
-                d_t "Creepy..."
+                d_t "Creepy... "
+                d_t "Why do I feel like I'm being watched?"
                 d "Is this where you live?"
                 c "Mwrrm"
-                d "Hmmm, I can't just leave you here now... This place reaks."
-                d "How about we try to find your owner."
-                d "{i}If you have one{/i}"
+                d "Hmmm, I can't just leave you here now... This place reaks. {i}And something is very off about it.{/i}"
+                d "How about we try to find your owner!"
+                d "{i}If you even have one{/i}"
                 d_t "It's late already."
-                d "We'll try to find your owner tomorrow, for now you're coming with me. What do you say little guy?"
+                "Rustle"
+                #Achievements glitch
+                d "Yeah, no. I'm not staying here any longer than I need to."
+                d "We'll try to find them tomorrow, for now you're coming with me. What do you say little guy?"
                 c "Meowww!"
                 d "Ha ha. You're adorable ehm-"
                 python:
@@ -1118,10 +1122,11 @@ label start:
                 d "[catname]!"
                 d "Let's get you cleaned up [catname]."
                 "Clank!"
+                #screen glitches to just RUN for a sec
                 d "!"
-                d "What was that?"
-                d "..."
-                d "Let's just get out of here. This place is starting to freaking me out."
+                d "What was that? Did that just say-"
+                d "Oh we have to get out of here ASAP. That's freaking creepy."
+                d "This place is starting to give me the chills."
                 jump dinnerfor2cat
 
         label dinnerfor2gabe:
@@ -1177,6 +1182,7 @@ label start:
             d_t "Oh right. The \"knock knock\" one."
             c "Mrrauw?"
             d "You stay here little guy."
+            scene bg_d_corridor
             d_t "Who it could be-"
             #Achievements glitch to Don't open the door.
             d "!"
@@ -1251,11 +1257,16 @@ label start:
             jump work3
         label callpolice:
             "Click"
-            x "Hello. Officer Rogan speaking. How may I be of assistance today."
-            d "H- Hello officer Rogan. My name is D-destiny Sullivan. I, Uhm, live at Oakland street 17. The big apartment building across from the city park."
-            o "Yes madam. What seems to be the problem?"
-            d "I, I would like to report unusual concerning behavior in my apartment complex."
-            o "Of course. What behavior exactly have you noticed that is distressing to you?"
+            x "Hello. Officer Rogan speaking. How may I be of assistance?"
+            d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I have the feeling someone might have followed me to my apartment yesterday."
+            d "I-I heard knocking but when I checked no one was there."
+            o "Alright miss Sullivan. Let's take a deep breath. What makes you believe you were followed?"
+            d "It's hard to explain but on my way home I chased after a stray into an empty ally but after I while I started getting the feeling that I was being watched."
+            d "And then the knocking. I- I'm scared someone might have followed me home."
+            d_t "I can't tell him about the screen or my dream. I think they'd call me a psychiatrist if they found out I was warned by a flying screen only I can see."
+            o "Can you give us any descriptions towards this person? Did you possibly catch a glance at them?"
+            d "No. Not that I could remember."
+
             jump work3
         label work3:
             if call_police==True:
