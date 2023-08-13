@@ -681,6 +681,8 @@ label start:
                 d "I-"
                 x "I know about your future. I know what you need to do now. I couldn't stop it myself but you can."
                 x "He's after you. You have to remember m3."
+                d "Who?"
+                x "D0n*T oq3n 1 T"
                 x "Do-* 4jT F0-_r g*3 T"
                 jump morning2
             label morning2:
@@ -1357,21 +1359,53 @@ label start:
                 menu:
                     "Open the door.":
                         $ open_door= True
-                        d "Screw it I'm not scared of that stupid screen."
+                        d "Screw it I'm not going to be scared by that stupid screen!"
                         d "You can't tell me what to do."
                         #Opens door
+                        #Achievements permanently glitch unreadable
                         d "He- Hello? Is someone there?"
                         "..."
-                        d_t "No one?"
+                        d "No one?"
                         d_t "..."
                         d_t "They didn't leave anything either..."
+                        d_t "No package, no letter."
+                        d "Hello?!"
+                        "..."
+                        d_t "Nothing..."
+                        #goes back in
+                        c_n "HrshSSSS"
+                        d "What's wrong [catname]? There's no one there."
+                        c_n "Meowww!"
+                        d "You're right let's go back."
+                        d "This is rediculous. This whole thing is starting to scare the heck out of me."
+                        d "This stupid screen told me to keep the door closed but there was no one there."
+                        d "What is it trying to keep me from?"
+                        d_t "Who?"
+                        c_n "mEEEwr"
+                        d "Ok ok I'm coming. I want to get away from that door just as much as you do."
+                        d_t "Who was that?"
+                        d_t "What does that weird screen know that I don't?"
+                        d "That door staying closed for the rest of the night."
+                        d_t "And locked for as long as possible."
+
                     "Keep it closed":
                         d_t "Oh hell no! What the hell is going on!?"
                         d_t "I'm not opening that door."
                         d_t "This is crazy!"
+                        d_t "Why does the text suddenly change?"
                         d_t "Who was that?!"
-                        #Glitches to stay inside tonight.
-
+                        d_t "What does this-"
+                        #Glitches to stay inside. Don't go out again.
+                        d_t "I- I"
+                        d_t "Why is this happening to me?"
+                        d_t "What is it trying to keep me from?"
+                        d_t "Who?"
+                        d_t "I-"
+                        c_n "mrrwm"
+                        d "[catname]?"
+                        c_n "Meow"
+                        d "I'm sorry [catname], l-let's go back."
+                        d_t "And keep that door locked for as long as possible."
                 jump day3
     #DAY 3
     label day3:
@@ -1392,12 +1426,16 @@ label start:
             x "He*L 9 m-e."
             d "Wait!"
             x "I (an '7 e5c *p 3"
+            d "No, don't go!"
             x "-"
             jump morning3
         label morning3:
             if dinner_plans==False:
                 scene bg_d_window
                 d "AH!"
+                d "Not again!"
+                d "It's the girl from last time!"
+                
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
