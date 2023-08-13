@@ -1,23 +1,25 @@
 ﻿#Destinys Reminder
 
 #Characters
-    define d = Character("Destiny", color="#1db78b", what_color="#58deb8")
-    define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#618a7f")
-    define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
-    define m = Character("Matthew", color="#639af9", what_color="#98baf7")
-    define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
-    define x = Character("?", color="#7b7b7b", what_italic=True )
-    define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
-    define c = Character("Cat", color="#7b7b7b", what_color="#bebebe" )
-    define c_n = Character("[catname]", color="#aa811a", what_color="#c6a141" )
-    define o = Character("Officer R.", color="#005af7", what_color="#357cff")
+define d = Character("Destiny", color="#1db78b", what_color="#58deb8")
+define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#618a7f")
+define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
+define m = Character("Matthew", color="#639af9", what_color="#98baf7")
+define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
+define x = Character("?", color="#7b7b7b", what_italic=True )
+define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
+define c = Character("Cat", color="#7b7b7b", what_color="#bebebe" )
+define c_n = Character("[catname]", color="#aa811a", what_color="#c6a141" )
+define o = Character("Officer R.", color="#005af7", what_color="#357cff")
+
 #Variables
-    default fix_printer = False
-    default dinner_plans = False
-    default open_door = False
-    default call_police = False
+default fix_printer = False
+default dinner_plans = False
+default open_door = False
+default call_police = False
 #GAME
-    label start:
+label start:
+    label game:
     #DAY 1
         label day1:
             label dream1:
@@ -787,7 +789,7 @@
                             jump achievements2
 
                         "Finish checking achievements":
-                            return
+                            d_t "That's got to be enough for now."
                 d_t "It's not a lot of preparation. I'm pretty certain on some of them but why do they have to be so darn vague."
                 d_t "And why now of all times? I wish I had more time to figure out where this is all coming from. But I'm neck deep in work right now."
                 d_t "Still, there has to be a reason for this right? Let's hope today goes more smoothly than yesterday." 
@@ -830,7 +832,7 @@
                 g "Uhm..." 
                 g "I just said that I'm amazed how you always stick the landing somehow."
                 hide gabe_conf
-                shoe gabe_conc
+                show gabe_conc
                 g "I meant that as a compliment. I'm sorry did I say something bad?"
                 d "Oh, no no! Everything's alright Heh. I didn't catch what you said just then."
                 d_t "Does this mean I wasn't overthinking it yesterday?"
@@ -1239,10 +1241,10 @@
                     d "Ha ha. You're adorable ehm-"
                     python:
                         catname = renpy.input("What should I call you?", length=32)
-                        catname = povname.strip()
+                        catname = catname.strip()
 
-                        if not povname:
-                            povname = "Kitty"
+                        if not catname:
+                            catname = "Kitty"
                     d "[catname]!"
                     d "Let's get you cleaned up [catname]."
                     "Clank!"
@@ -1291,24 +1293,24 @@
                 #HAVE TO CONTINUE
                 scene bg_d_kitchen
                 d "Alrighty! Here we are."
-                c "mrrr"
+                c_n "mrrr"
                 d "Make yourself at home [catname]. But don't go around destroying anything alright?"
-                c "Meowww!"
+                c_n "Meowww!"
                 d "Oh! You must be hungry! Let's see what I have for you."
                 d "Hmmm. Looks like I have some tuna in my pantry. Do you like tuna?"
-                c "MEEEwr!"
+                c_n "MEEEwr!"
                 d "Haha, someone's enthusiastic!"
                 d "Wow, come to think of it I'm starving too!"
                 d_t "I barely had anything to eat today."
                 d "Time to make me some dinner too, no?"
-                c "Prrrr"
+                c_n "Prrrr"
 
 
                 
                 "*Knock Knock*"
                 d_t "Huh?"
                 d_t "Oh right. The \"knock knock\" one."
-                c "Mrrauw?"
+                c_n "Mrrauw?"
                 d "You stay here little guy."
                 scene bg_d_corridor
                 d_t "Who it could be-"
@@ -1321,13 +1323,13 @@
                 d_t "What in the...?"
                 d_t "Did they leave something at the door?"
                 d_t "Maybe they-, I cant see it from here I'll have to go and check-"
-                c "HSSSr!"
+                c_n "HSSSr!"
                 #screen permanently glitches to DONT
                 d_t "EHM?" 
                 d_t "WHAT!?"
                 d_t "I knew I saw something!"
                 #Glitches to dont open it. and be quiet
-                c "mEEEwr"
+                c_n "mEEEwr"
                 d_t "What the F-"
                 d "{i}Shhh. [catname] it's ok.{/i}"
                 menu:
