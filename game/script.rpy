@@ -230,10 +230,16 @@
                 d "Y- Yes? Oh, g- good morning Matthew."  
                 m "What website is that?"
                 d "Huh?"
+                hide matt_neut
+                show matt_mad
                 m "I don't remember \"bumming around on forums for conspiracy theorists\" being in your job description."
                 d_t "Crap."
                 d "Oh that? No, s-sorry I was just taking a quick break."
+                hide matt_mad
+                show matt_conf
                 m "Does this mean you've finally finished the Poster?"
+                hide matt_conf
+                show matt_neut
                 m "It'd better be. We can't have you hand in another Project late."
                 m "Or last minute like last time. It's still a miracle to me how you somehow managed to get that one printed in time."
                 m "Make sure you're ready ahead of time. I'd highly suggest you print an example latest tomorrow. So we can show it to our clients in time."
@@ -241,10 +247,18 @@
                 d "Sorry..."
                 m "Oh, And Sullivan" 
                 d "Yes?"
+                hide matt_neut
+                show matt_mad
                 m "With tomorrow I don't mean 6:30PM. The office closes at 7:00PM. If it's not printed by then, you have to figure out how to print it."
+                hide matt_mad
+                show matt_conf
                 m "Is that undersood?"
                 d "Yes. Of course. I'll have it in time this time."
+                hide matt_conf
+                show matt_happy
                 m "Great! Now to other matters."
+                hide matt_happy
+                show matt_neut
                 m "I'd like to propose a promising business opportunity to you. And lord knows you need one of those."
                 m "Two of them actually, now that I think about it."
                 m "Today must be your lucky day."
@@ -257,7 +271,11 @@
                 m "Whatever his reasons might be."
                 m "So What do you say Sullivan? The desicion is quite obvious in my oppinion."
                 m "I will send you the application forms later this afternoon if you decide to take this-, how do I put it..."
+                hide matt_neut
+                show matt_mad
                 m "{i}Rather rare opportunity.{/i}"
+                hide matt_mad 
+                show matt_neut
                 d "Yes! Of course! Should I go talk to him right now?"
                 m "No need. I have some files I need to run by him anyways. We can go by his office together afterwards."
                 d "Toghether?"
@@ -275,6 +293,8 @@
                     "Oh, sure...": 
                         jump mattlunch_y            
             label mattlunch_y:
+                hide matt_neut
+                show matt_happy
                 m "Wonderfull. I heard today's menu would offer something special."
                 "..."
                 d "OH! You meant right now?"
@@ -284,9 +304,13 @@
                 d_t "Oh yeah, didn't that screen also say something about food?"
                 jump mattlunch
             label mattlunch_n:
+                hide matt_neut
+                show matt_mad
                 m "I'm not really asking Sullivan."
                 m "I need to speak with you. Not only about your design."
                 d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project. But after that I'll come right away."
+                hide matt_mad
+                show matt_neut
                 m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long. I heard todays menu is promising"
                 d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with gabe and the others"
                 d_t "Oh yeah, didn't that screen also say something about food?"
@@ -295,8 +319,12 @@
                 scene bg_office_cafeteria
                 show matt_neut
                 d "Mushrooms and mashed potatoes."
+                hide matt_neut
+                show matt_happy
                 m "Looks great doesn't it!"
                 d "Yeah..."
+                hide matt_happy
+                show matt_neut
                 m "Being fussy about the food Sullivan?"
                 d "No no. It looks delicious. I just had to uhm, figure out what it was first..."
                 d_t "God I hate mushrooms."
@@ -306,23 +334,32 @@
                         d "Oh yeah, It's going great haha. I'm s-sorry about before. I'm actually almost done."
                         d_t "Please just don't ask about specifics"
                         d "I just have one or two more little graphics to make. And maybe some last minute text editing."
-                        m "Will you be able to have it done today? So it can be printed tomorrow. "
+                        m "Will you be able to have it done today? So it can be printed tomorrow."
                         m "I would really prefer you finish it today, so we don't have another situation like last time."
+                        hide matt_neut 
+                        show matt_conf
                         m "But with the pace you're working at it looks like you won't be able to finish today. "
                         d "No... I'm sorry."
                         d "I'll have it tomorrow evening. Promised"
+                        hide matt_conf
 
                     "About that...":
                         d "Yeah, about that. I don't think I'll be able to finish it today."
                         d "I'll have it in time. I promise. But I've been having some difficulty with the programm lately"
                         m "I would have really prefered you finish it today. Just make sure we don't have another situation like last time."
                         d "Yes I promise."
+                        hide matt_neut
 
+                show matt_neut
                 m "I hope you can keep that promise."
                 "..."
                 m "Is something the matter with your plate? You've been poking around in it like you're trying to excavate something."
+                hide matt_neut
+                show matt_conf
                 m "{i} It's starting to make me nervous.{/i}"
                 d "S-sorry. I'll stop."
+                hide matt_conf
+                show matt_neut
                 m "Fine. With that settled, I would like to talk to you about this new Job Simon is offering you."
                 m "As I mentioned earlier. Someone from his team quit unexpectedly just last week. They are still in the midst of finishing an important project at the moment."
                 m "Along with the marketing side of things the clients also requested designs for their upcoming business concept."
@@ -330,19 +367,33 @@
                 m "Since the deadline set by the client is in 2 weeks they desperately need someone to fill her place."
                 m "And you will be done with your poster soon. {i}I'd hope{/i}. You'd be a good candidate to take the offer."
                 m "I have to admit, I'm not too keen on you switching teams already. But Simon insisted I ask you to take the position."
+                hide matt_neut
+                show matt_conf
                 m "Beats me why he would request you specifically but I guess after one year you've had enough time to get into the swing of things here."
+                hide matt_conf
+                show matt_neut
                 m "So, Sullivan. Since you already agreed to taking this opportunity I hope you do your best to adjust to their work flow quickly."
                 d "I'll give it my all."
+                hide matt_neut
+                show matt_happy
                 m "Good. Simon will be happy to hear I've found someone."
+                hide matt_happy
+                show matt_neut
                 m "Unlike me, Simon expects a lot more autonomy of his team." 
                 d_t "Thank god. Finally some freedom. I can't deal with another controll freak like Matt."
                 m "I was reluctant to offer you this position since it seems you still need the supervision. But it can't be helped."
                 m "If he insists then I won't tell him otherwhise. Most of the other viable designers are quite busy with their own projects at the moment anyways."
                 m "I hope you step up to the job and deliver as demanded."
+                hide matt_neut
+                show matt_mad
                 m "I don't want you to make a bad impression on his team. I'm sure you understand that that would also have very undesirable concequences on my side."
                 d "I understand. I won't dissapoint you Matthew. I'm sure having a new work environment will be a great experience for me."
+                hide matt_mad
+                show matt_conf
                 m "Are you saying you don't like my way of doing things?"
                 d "No of course not! I just meant it will be good for me to also get a look into how other teams do it around here."
+                hide matt_conf
+                show matt_neut
                 m "Alright. If you say so."
                 "..."
                 m "You don't seem to be hungry today do you."
@@ -350,14 +401,14 @@
                 d_t "This is so uncomfortable why did he have to do this over lunch."
                 m "There's no shame in addmiting you don't like mushrooms Sullivan. Not like your face does't give it away everytime you bite down on one."
                 d "He he... Sorry. I just can't stand the texture. I think I'll just get up and go and get myse- oh no!"
+                hide matt_neut
+                show matt_spill
                 "Clank!"
                 #The plate flips
                 d "OH. I- I'm so sorry Matt..."
                 d "Oh no I didn't mean to-"
                 m "How-"
                 d "I'm sorry I have to go!"
-                #Destiny runs away
-                #HAVE TO CONTINUE
             label printer1:
                 scene bg_office_computer
                 #later during the day
@@ -620,6 +671,7 @@
         label day2:
             label dream2:
                 scene bg_black
+                show girl
                 x "Please Destiny I'm trying to help you. You have to listen to me"
                 d "What?"
                 x "I'm not an illusion. I'm here to help you."
@@ -763,25 +815,41 @@
                 show gabe_happy
                 g "Oh Hi! Didn't expect to still see you today."
                 d "Gabe! Hi."
+                hide gabe_happy
+                show gabe_conf
                 g "Hey, I didn't see you in the cafeteria today. Did you skip lunch to work on the poster?"
                 d "Yeah. Heh... I had to crunch a bit. Plus I wanted to minimize my chances of running into Matt. But hey! I got it done!"
+                hide gabe_conf
+                show gabe_happy
                 g "Congrats! No surprises there though haha. I knew you'd get it done on time!"
                 g "That's the regular Destiny for you right there. Always a bit last minute. But you never fail to stick the landing somehow!"
                 d "Huh!?"
                 d "Hold on, what did you just say?"
+                hide gabe_happy
+                show gabe_conf
                 g "Uhm..." 
                 g "I just said that I'm amazed how you always stick the landing somehow."
+                hide gabe_conf
+                shoe gabe_conc
                 g "I meant that as a compliment. I'm sorry did I say something bad?"
                 d "Oh, no no! Everything's alright Heh. I didn't catch what you said just then."
                 d_t "Does this mean I wasn't overthinking it yesterday?"
+                hide gabe_conc
+                show gabe_neut
                 g "Oh thank god. You looked so shocked. Had me worried there for a second."
                 d "I guess I am always a bit fasionably late, eh?"
                 d_t "What do I do now? Are all the others also going to come true? It's so late in the day already."
+                hide gabe_neut
+                show gabe_happy
                 g "Late but with the best work!"
+                hide gabe_happy
+                show gabe_conc
                 g "Are you sure everything's fine? You look upset."
                 d "Sorry. Really, I'm fine. Don't worry it's nothing."
                 d "I was just thinking about how I still have to print it out. And what if the clients don't like it."
                 d "Hey, who knows. Maybe this is the one where all of the rushing gets me. Where something goes wrong last minute or it's just not good enough."
+                hide gabe_conc
+                show gabe_neut
                 g "Oh come on now. You don't have to worry about that now. You got it done. There's not much more you can do now."
                 g "Besides, I'm sure the clients will love your work."
                 g "But now go and print it! I don't want to be the reason you don't make it on time, okay?"
@@ -804,6 +872,8 @@
                 m "Sullivan!"
                 show matt_neut
                 d "H-Hey Matthew... long time no see."
+                hide matt_neut
+                show matt_mad
                 m "Yeah. {i}Not that I mind.{/i}"
                 d "Look, uhm Matthew. I'm-"
                 m "Can you please explain the absolute disrespect and mockery I had to endure yesterday. What's wrong with you? Are you a child? No reasonable adult just runs off like that."
@@ -814,30 +884,45 @@
                     d "But there was something about those mushrooms. I got so nausious all of a sudden. It felt like my stomach Had turned on it's head."
                     m "..."
                     d "I was scared I was going to throw up right there if I stayed any longer. And I didn't want to cause a scene in the cafeteria so I ran to the bathrooms"
+                    hide matt_mad
+                    show matt_conf
                     m "Well a scene it was."
                     d "Sorry..."
+                    hide matt_conf
+                    show matt_mad
                     m "I looked like a darn fool."
                     d "Uhm, I came looking for you to apolagze after I felt a little better. But I couln't find you in the cafeteria anymore."
+                    hide matt_mad
+                    show matt_conf
                     m "Sure."
                     d "I'm very sorry."
                     d "Really."
+                    hide matt_conf
+                    show matt_mad
                     m "We will seriously have to talk about your attitude. I understand feeling unwell but nonetheless your behavior was disrespectful and plain rude."
                     d "I-"
+                    hide matt_mad
 
                 elif matt_excuse == 2:
                     d "I'm really sorry Matthew. Truly. I didn't mean to just sprint out on you like that."
                     d "I was actually looking for something to help you wipe off the stew from your shirt."
                     m "..."
                     d "I thought I'd run to get some from the washrooms. There's always tissues there."
+                    hide matt_mad
+                    show matt_conf
                     m "Tissues?"
                     d "Yeah..."
                     m "Really?"
                     d "Uhm, I came looking for you to apolagze and clean up. But I couln't find you in the cafeteria anymore."
+                    hide matt_conf
+                    show matt_mad
                     m "And you expect me to believe that."
                     d "Sorry. I-"
                     m "We will seriously have to talk about your attitude. I could understand feeling unwell or something like that. But blaitantly lying?"
                     m "This level of disrespect is unacceptable."
                     d "I-"
+                    hide matt_mad
+                    
 
                 else:
                     d "I- Uhm. I'm sorry. I don't know what got into me."
@@ -848,24 +933,42 @@
                     m "No no. You listen."
                     m "We will seriously have to talk about your attitude. I could understand feeling unwell or something like that. But pulling off a stunt like that and then not even having an explanation for it?"
                     m "This level of disrespect is unacceptable."
+                    hide matt_mad
 
 
 
+                show matt_neut
                 g "Destiny!"
                 d "Gabe?"
-                show gabe_neut
+                hide matt_neut
+                show matt_neut at right
+                show gabe_neut at left
                 g "Oh, afternoon Matthew."
                 m "Anderson."
                 g "I wasn't expecting to see you two here."
+                hide matt_neut 
+                show matt_mad at right
                 m "My thoughts exactly."
+                hide matt_mad
+                show matt_neut at right
                 g "Actually, Destiny I was looking for you. I have something I have to discuss with you."
                 d "Wha-"
+                hide matt_neut 
+                show matt_mad at right
                 m "Actually we are in the middle of a conversation at the moment. So If you'd excuse us."
+                hide gabe_neut
+                show gabe_conc at left
                 g "I'm terribly sorry Matthew. Seems you two are having quite the serious talk but it's something quite personal and urgent."
                 g "Could I borrow her for a minute?"
+                hide matt_mad
+                show matt_conf at right
                 m "What could be so important that you need her right this instant?"
+                hide gabe_conc
+                show gabe_neut at left
                 g "Like I said it's a personal matter. But I assure you I wouldn't be barging in like this if it wasn't important."
                 d "Gabe, it's alright I'll-"
+                hide matt_conf
+                show matt_neut at right
                 m "Fine. We'll continue this conversation some other time. I don't have the nerve for this right now. I'm quite {i}busy{/i} at the moment anyways."
                 m "Besides, I doubt the time we have left today would suffice to discuss what needs to be adressed."
                 m "For your sake I hope you at least finished your project already."
@@ -876,32 +979,51 @@
                 d "S-sure."
                 g "See you around Matthew."
                 m "Yeah, see you around. Same goes for you Sullivan."
+                hide matt_neut
+                show matt_mad at right
                 m "Don't think you can get outt of this one so easily."
                 d "I'm sorry. Of course."
                 d "See you around."
                 scene bg_office_hallway
+                show gabe_neut
                 g "Phew! That was a close one. Looked like Matt was really out for blood this time. Looks like he took it quite personally"
                 d "Oh yeah 100%. I was scared he was about to end my carreer right there on the spot."
                 d "I'm done for. He's going to fire me!"
                 g "Hey, take a deep breath. Surely they're not going to fire you."
+                hide gabe_neut
+                show gabe_conf
                 g "I'm pretty certain he can't do that just because of one incident. Higherups have to look over things like that. And an accident happen you know."
+                hide gabe_conf
+                show gabe_neut
                 d "How are you not scared of him?"
                 d "I was about to cry. I could have never stood up to him like that."
                 g "Oh hes not that scary. He's more like a dog."
+                hide gabe_neut
+                show gabe_happy
                 g "All bark no bite."
+                hide gabe_happy
+                show gabe_neut
                 g "He talks a lot and likes to pressure people but other than being mean he rarely does anything really."
                 g "Besides what's he got on me? I just needed to talk to you about something important. The worst he could have done was refuse to let me talk to you."
                 d "I don't know how you do it. Wow."
                 d "Speaking of it. What did you want to talk to me about?"
                 g "Oh, uhm nothing if I'm being honest. I didn't want you getting mauled out by Matt."
+                hide gabe_neut
+                show gabe_happy
                 g "Saving a friend from a ferral creature sounds personal and urgent enought to me."
                 d "Tell that to Matt haha."
+                hide gabe_happy
+                show gabe_neut
                 g "Seems i came at exactly the right moment."
                 g "Well, I was actually looking for you."
                 d "Oh?"
                 g "I forgot to ask you something before."
                 g "Would be interested in making dinner together again tonight."
+                hide gabe_neut
+                show gabe_happy
                 g "You know. To celebrate you finally being done with this poster."
+                hide gabe_happy
+                show gabe_neut
                 g "You've looked so distressed lately. I thought you could use a nice relaxing evening."
                 d_t "This has to be the dinner for two!"
                 g "We could meet at your place and cook something nice."
@@ -918,14 +1040,21 @@
                         d_t "Oh screw this. Why should I miss out on something I really want to do just to prove some stupid imaginary screen wrong?"
                         d_t "If that's what these dumb achievements want then so be it."
                         d "Yes! I'd love to! That sounds like exactly what I need."
+                        hide gabe_neut
+                        show gabe_happy
                         g "Great! I've already got something in mind we could make. I have almost everything at home too."
                         d "Ohhh, sounds promising. What is it?"
                         g "It's a surprise but I'm sure you'll like it!"
+                        hide gabe_happy
+                        show gabe_neut
                         g "I'm actually already done for today so I can go get the last few ingredients on my way home."
                         d "I still have to get this to the conference room and clean up a bit around my desk. How about we meet at my place at 7:00PM?"
                         g "Works for me."
+                        hide gabe_neut
+                        show gabe_happy
                         g "See you at 7 then!"
                         d "Seeya."
+                        hide gabe_happy
 
                     "Make up an excuse.":
                         $ dinner_plans = False
@@ -934,12 +1063,20 @@
                         d "I barely got any sleep yesterday and I think I'd better just go to bed extra early today."
                         d "Let's do something on the weekend! I doubt I'd be fun company right now. I want to actually be able to help you in the kitchen when we do it haha. "
                         d "I think today I'd just doze off every couple of minutes."
+                        hide gabe_neut
+                        show gabe_happy
                         g "Oh, Of course! I understand. Get some rest today. You've deserved it." 
                         d "Thanks."
+                        hide gabe_happy
+                        show gabe_conf
                         g "Does Saturday night sound good? I don't have any plans over the weekend so whenever's good"
-                        d "No Saturday sounds great. For sure!"
+                        d "No no, Saturday sounds great. For sure!"
+                        hide gabe_conf
+                        show gabe_happy
                         g "Nice. I'm actually already done for today so I'll catch you tomorrow for lunch?"
                         d "Yeah, of course. The table in the back, as usual."
+                        hide gabe_happy
+                        show gabe_neut
                         g "Exactly."
                         g "Have a nice evening then Destiny!"
                         g "And go to bed extra early today."
@@ -1123,15 +1260,21 @@
                 g "So, want to get to cooking? I brought all the ingredients."
                 d "Yes! Let's go."
                 scene bg_d_kitchen
+                show gabe_neut
                 g "I brought everything we need to make your favorite noodle soup!"
                 d "You know me too well! Thank you so much Gabriel!"
+                hide gabe_neut
+                show gabe_happy
                 g "It's my pleasure."
+                hide gabe_happy
+                show gabe_neut
                 g "How about I start with preparing the broth? Then you can already get to chopping the vegetables."
                 d "Perfect."
                 #Skips to right before they're done.
                 "*Knock Knock*"
                 d "Shoot! Gabe can you go see who it is quickly? I just put the chicken in the pan."
                 g "Yeah of course. One second."
+                hide gabe_neut
                 #Achievements glitch but no altered text
                 g "Huh? Doesn't seem to be anyone there!"
                 g "I'll have a look if they left anything outside!"
