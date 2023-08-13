@@ -1,16 +1,16 @@
 ﻿#Destinys Reminder
 
 #Characters
-define d = Character("Destiny", color="#1db78b", what_color="#58deb8")
-define d_t = Character("Destiny", color="#1db78b", what_italic=True, what_color="#618a7f")
-define g = Character("Gabriel", color="#AED628", what_color="#cae66d")
-define m = Character("Matthew", color="#639af9", what_color="#98baf7")
-define s = Character("Simon", color= "#ff6961", what_color="#ff9e98")
-define x = Character("?", color="#7b7b7b", what_italic=True )
-define k = Character("Kai", color="#7b7b7b", what_color="#bebebe")
-define c = Character("Cat", color="#7b7b7b", what_color="#bebebe" )
-define c_n = Character("[catname]", color="#aa811a", what_color="#c6a141" )
-define o = Character("Officer R.", color="#005af7", what_color="#357cff")
+define d = Character("Destiny", color="#0d8361", what_color="#1db78b")
+define d_t = Character("Destiny", color="#0d8361", what_italic=True, what_color="#618a7f")
+define g = Character("Gabriel", color="#789711", what_color="#AED628")
+define m = Character("Matthew", color="#3365bb", what_color="#639af9")
+define s = Character("Simon", color= "#be352e", what_color="#ff6961")
+define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7b1" )
+define k = Character("Kai", color="#444444", what_color="#7b7b7b")
+define c = Character("Cat", color="#444444", what_color="#7b7b7b" )
+define c_n = Character("[catname]", color="#866510", what_color="#aa811a" )
+define o = Character("Officer R.", color="#002d7b", what_color="#0f54d6")
 
 #Variables
 default fix_printer = False
@@ -1267,7 +1267,7 @@ label start:
                 d "You know me too well! Thank you so much Gabriel!"
                 hide gabe_neut
                 show gabe_happy
-                g "It's my pleasure."
+                g "Please, it's nothing."
                 hide gabe_happy
                 show gabe_neut
                 g "How about I start with preparing the broth? Then you can already get to chopping the vegetables."
@@ -1279,64 +1279,92 @@ label start:
                 hide gabe_neut
                 #Achievements glitch but no altered text
                 g "Huh? Doesn't seem to be anyone there!"
-                g "I'll have a look if they left anything outside!"
+                g "I'll have a look if they're still outside!"
                 #Achievements glitch but no altered text
-                d_t "Oh right! The knocking. I wonder who it was."
+                d_t "Oh right! The knocking. I wonder who it is."
                 show gabe_conf
-                g "Weird. There wasn't anyone outside. And they didn't leave anything either."
+                g "Weird. There wasn't anyone outside. I checked the hallway but I couldn't see anyone there either."
                 d "Strange."
-                d "It must have been some doordashers then."
-                g "Probably."
+                d "It was probably just some doordashers. My neighbour recently mentioned something like that."
+                g "Possible."
+                g "I wouldn't put it past those little kids from floor 2 to go around pranking people."
+                d "Tell me about it. I always hear them screaming and running around when I get back from work."
+                d "Hey! The soup's almost done! Want to hand me those spring onions you chopped?"
+                g "Here. I'll go set the table."
+                #skips to after theyve eaten.
+                #Have to continue
     
                 jump day3
             label dinnerfor2cat:
-                #HAVE TO CONTINUE
                 scene bg_d_kitchen
                 d "Alrighty! Here we are."
                 c_n "mrrr"
-                d "Make yourself at home [catname]. But don't go around destroying anything alright?"
+                d "Make yourself at home [catname]."
+                d "But don't you dare go around destroying things alright?"
                 c_n "Meowww!"
+                d "What's the matter?"
                 d "Oh! You must be hungry! Let's see what I have for you."
-                d "Hmmm. Looks like I have some tuna in my pantry. Do you like tuna?"
+                d "Hmmm. Looks like I have some tuna in my pantry."
+                d "Do you like tuna?"
                 c_n "MEEEwr!"
                 d "Haha, someone's enthusiastic!"
-                d "Wow, come to think of it I'm starving too!"
-                d_t "I barely had anything to eat today."
-                d "Time to make me some dinner too, no?"
+                d "Let me get a plate to put it on."
+                d "Wow, now that I'm thinking about it, I'm starving too!"
+                d "I barely had anything to eat today."
+                d "And you had me running around half the block."
+                d "Time to make myself some dinner too, no?"
+                d "Since the can's already open, how about a tuna sandwich?"
                 c_n "Prrrr"
-
-
-                
+                d "Now that's a happy cat. Here [catname], enjoy."
+                d "You're really taking care of the achievements for me today..."
+                d_t "And here I thought I could actually evade them for once."
+                d_t "This isn't quite what I imagined when I read \"Dinner for two\""
+                d_t "But I suppose that's to be expected by now. It's not like they were any more straight forward yesterday."
+                c_n "MreEEEau"
+                d "Done already?"
+                d "You must have been starving!"
+                d "Here, let me just take that plate over to the sink so I can wash it later."
                 "*Knock Knock*"
                 d_t "Huh?"
-                d_t "Oh right. The \"knock knock\" one."
+                d_t "I'm not expecting anyone."
+                d_t "Oh right. The last achievement.\"knock knock\""
                 c_n "Mrrauw?"
-                d "You stay here little guy."
+                d "It's alright."
+                d "You stay here [catname]."
                 scene bg_d_corridor
                 d_t "Who it could be-"
                 #Achievements glitch to Don't open the door.
                 d "!"
                 d_t "Wh- What was that?"
                 d_t "-"
-                d_t "No I must have just imagined it. I'll just look who's outside the door."
+                d_t "No, I must have just imagined it. I'll just look who's outside the door."
                 #look outside (noone)
                 d_t "What in the...?"
-                d_t "Did they leave something at the door?"
-                d_t "Maybe they-, I cant see it from here I'll have to go and check-"
+                d_t "Did they leave already?"
+                d_t "Maybe they-, I cant see from here I'll have to go and check-"
                 c_n "HSSSr!"
                 #screen permanently glitches to DONT
                 d_t "EHM?" 
                 d_t "WHAT!?"
+                d_t "Wh- What is THAT? How is it-"
                 d_t "I knew I saw something!"
                 #Glitches to dont open it. and be quiet
                 c_n "mEEEwr"
                 d_t "What the F-"
-                d "{i}Shhh. [catname] it's ok.{/i}"
+                d "{i}Shhh. [catname] it's ok. Quiet.{/i}"
+                c "{i}mrrrr{/i}"
+                d "{i}What is this?{/i}"
                 menu:
                     "Open the door.":
                         $ open_door= True
+                        d "Screw it I'm not scared of that stupid screen."
+                        d "You can't tell me what to do."
+                        #Opens door
                         d "He- Hello? Is someone there?"
-                        d_t "They didn't leave anything..."
+                        "..."
+                        d_t "No one?"
+                        d_t "..."
+                        d_t "They didn't leave anything either..."
                     "Keep it closed":
                         d_t "Oh hell no! What the hell is going on!?"
                         d_t "I'm not opening that door."
