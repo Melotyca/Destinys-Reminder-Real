@@ -802,7 +802,18 @@ label start:
                 scene bg_office_computer
                 d_t "Okay! I'm almost done with this darn poster!"
                 d_t "I can't allow myself to be distracted now."
-                #have to continue
+                d_t "Although those achievements do make me wonder..."
+                d_t "I feel like I've heard someone say something about knowing the future."
+                d_t "But who was that?"
+                d_t "Did I maybe just read that online somewhere?"
+                d_t "Yesterday was so weird too."
+                d_t "That one about being watched..."
+                d_t "Something is off about it. I don't know why but I get this sinking feeling in my stomach anytime I see that screen."
+                d_t "These things it's saying. They looked so inocent but some of them went completely the other way."
+                d_t "Who knows maybe this will all clear up today."
+                d "No more procrastinating Destiny!"
+                d "Time to get this all out of my head and this project done!"
+                #htransitiones to after she's done
                 d_t "Phew that's it I think. It's not getting better than this."
                 d_t "Alright! Time to print this baby and drop it off over in the meeting room."
                 d_t "Oh shoot! It's already 5:00PM. Darn. Time really flew by me today."
@@ -1381,6 +1392,7 @@ label start:
                         d "This stupid screen told me to keep the door closed but there was no one there."
                         d "What is it trying to keep me from?"
                         d_t "Who?"
+                        d "Why does the text suddenly start changing now!?"
                         c_n "mEEEwr"
                         d "Ok ok I'm coming. I want to get away from that door just as much as you do."
                         d_t "Who was that?"
@@ -1392,7 +1404,7 @@ label start:
                         d_t "Oh hell no! What the hell is going on!?"
                         d_t "I'm not opening that door."
                         d_t "This is crazy!"
-                        d_t "Why does the text suddenly change?"
+                        d_t "Why does the text suddenly start changing now?"
                         d_t "Who was that?!"
                         d_t "What does this-"
                         #Glitches to stay inside. Don't go out again.
@@ -1442,25 +1454,39 @@ label start:
                     "Call the police.":
                         $ call_police= True
                         jump call_police
-                    
-
             else:
                 jump callgabedinner
         label callgabedinner:
             jump work3
         label callgabealone:
+            "Click"
+            g "Oh hi Destiny! I wasn't expecting to get a call from you this early!"
+            g "What's up?"
+            d "Hi Gabe. I'm sorry. Did I wake you up?"
+
             jump work3
         label callpolice:
             "Click"
-            x "Hello. Officer Rogan speaking. How may I be of assistance?"
-            d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I have the feeling someone might have followed me to my apartment yesterday."
+            x "Hello? Officer Rogan speaking. How may I help you today?"
+            d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I'm very sorry to bother you with something like this."
+            d "But I have the feeling someone might have followed me to my apartment yesterday."
             d "I-I heard knocking but when I checked no one was there."
-            o "Alright miss Sullivan. Let's take a deep breath. What makes you believe you were followed?"
-            d "It's hard to explain but on my way home I chased after a stray into an empty ally but after I while I started getting the feeling that I was being watched."
-            d "And then the knocking. I- I'm scared someone might have followed me home."
-            d_t "I can't tell him about the screen or my dream. I think they'd call me a psychiatrist if they found out I was warned by a flying screen only I can see."
-            o "Can you give us any descriptions towards this person? Did you possibly catch a glance at them?"
-            d "No. Not that I could remember."
+            o "Alright miss Sullivan. Let's take a deep breath. Where do you live currently?"
+            d "Ehm, I live at Parkerstreet 7. In that big apartment-building, oh er, on floor 3."
+            o "Thank you very much. And what makes you believe you were followed"
+            d "It's hard to explain b-but on my way home I had to chase after a stray that had gotten hold of some of my documents."
+            d "And after I followed it into an empty ally, I uhm, was starting to get the feeling that I was being watched."
+            o "Please continue. What caused that feeling of being watched? Did you see anyone or hear something?"
+            d "There was just this thud, like something had been knocked over. Maybe a can."
+            d "And, and then that knocking. I- I'm scared someone might have followed me home."
+            o "Alright madam, it sounds to me like the knocking you heard might have been a nasty prank or something of the sort. But I understand your concern."
+            o "I checked the report about your neighbourhood and we have actually had a person reported missing in the last couple of days."
+            o "There is already an officer stationed nearby but I will make sure to assign someone to keep a closer eye on your street and building from now on."
+            o "Thank you for notifying us miss Sullivan. It is possible that the knocking might be connected to the recent dissapearence."
+            d "Oh? Th- Thank you."
+            o "If I might ask madam. Did you perhaps catch a glance at what might have caused the noise you heard or who was knocking at your door?"
+            o "If these two incidences really are connected it would be of great help to us to have a description of the person that you suspect followed you."
+            d "Oh, Uhm. No, I'm sorry. I didn't see anyone. At least not that I could remember."
 
             jump work3
         label work3:
