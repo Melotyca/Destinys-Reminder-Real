@@ -6,7 +6,7 @@ define d_t = Character("Destiny", color="#0d8361", what_italic=True, what_color=
 define g = Character("Gabriel", color="#789711", what_color="#AED628")
 define m = Character("Matthew", color="#3365bb", what_color="#639af9")
 define s = Character("Simon", color= "#be352e", what_color="#ff6961")
-define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7b1" )
+define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7b" )
 define k = Character("Kai", color="#444444", what_color="#7b7b7b")
 define c = Character("Cat", color="#444444", what_color="#7b7b7b" )
 define c_n = Character("[catname]", color="#866510", what_color="#aa811a" )
