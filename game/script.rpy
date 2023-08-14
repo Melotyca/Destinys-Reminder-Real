@@ -1,16 +1,16 @@
 ﻿#Destinys Reminder
 
 #Characters
-define d = Character("Destiny", color="#0d8361", what_color="#1db78b")
-define d_t = Character("Destiny", color="#0d8361", what_italic=True, what_color="#618a7f")
-define g = Character("Gabriel", color="#789711", what_color="#AED628")
-define m = Character("Matthew", color="#3365bb", what_color="#639af9")
-define s = Character("Simon", color= "#be352e", what_color="#ff6961")
-define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7b" )
+define d = Character("Destiny", color="#067b6d", what_color="#1db7a5")
+define d_t = Character("Destiny", color="#067b6d", what_italic=True, what_color="#79b0a3cb")
+define g = Character("Gabriel", color="#627e05", what_color="#84a41b")
+define m = Character("Matthew", color="#1346a0", what_color="#4c77c1")
+define s = Character("Simon", color= "#b01d1d", what_color="#c64e48")
+define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7bb5" )
 define k = Character("Kai", color="#444444", what_color="#7b7b7b")
 define c = Character("Cat", color="#444444", what_color="#7b7b7b" )
-define c_n = Character("[catname]", color="#866510", what_color="#aa811a" )
-define o = Character("Officer R.", color="#002d7b", what_color="#0f54d6")
+define c_n = Character("[catname]", color="#673b05", what_color="#aa811a" )
+define o = Character("Officer R.", color="#001f55", what_color="#315089")
 
 #Variables
 default fix_printer = False
