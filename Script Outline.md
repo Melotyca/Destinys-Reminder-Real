@@ -57,12 +57,19 @@
 ### Day 3:  
 - Dream 3: The girl tells her she has to be careful. he's really nice and persuasive and she has to watch out not to fall for his tricks like she did
    - If gabriel was there she gets a bit suspicious of him 
-   - if she was alone she gets confused and theorises who she means
+   - if she was alone she gets confused and theorises who she means/ is scred
 - Make the right call 
+   - she realizes she has to make a call and gets to decide between gabriel and the police if she was alone
+   - If she was with gabe she decides to call gabe 
 - Restart
+   - once she gets to the office she starts talking with simon about the work she should be doing and the office space she gets for it. He tells her she can have kai's old place and should make herself at home. she finds some ominous notes tucked away
 - Ignorance is bliss (was)
+   - Matthew brings up that kai has gone missing. that they dont have much information so they are asking around the office if anyone knows anything
 - Hands up everyone
-- 
+   - there is a "party" at the office and everyone chats. someone makes a toast and if she called the police she gets a call from the police. that they saw a suspicious individual roaming around her appartment building.
+- Where is waldo?
+   - if she opened the door and did not call the police the cat has gone missing. showing someone was in her appartment
+   - if she called the police or gabe was there her phone goes missing for a while but simon "Finds" it
 
 ### Day 4:  
 
