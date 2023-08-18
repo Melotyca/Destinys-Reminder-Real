@@ -1426,7 +1426,7 @@ label start:
             x "He was here!" 
             d "Who was-"
             x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
-            d "Who are you!"
+            d "Who are you!?"
             x "He's going to keep trying to get close to you. You can't let him win."
             x "Get help! I'm begging you. Don't do as he says."
             d "I-"
@@ -1447,6 +1447,67 @@ label start:
                 d "AH!"
                 d "Not again!"
                 d "It's the girl from last time!"
+                d_t "I knew there was something stragne about that dream yesterday."
+                d_t "Didn't it mention something about knowing what is going to happen?"
+                d_t "No. I can't forget it this time!"
+                d_t "She was trying to tell me something. Warn me. Something like he was here..."
+                d_t "That's right! She said I coulnd't trust him and that he was here."
+                d_t "Yesterday? The knocking?"
+                d_t "Who was here? Urgh why is this so hard to remember. She must have meant the knocking"
+                d_t "..."
+                d_t "Get help..."
+                d_t "I should... get help?"
+                d_t "Who is this person?"
+                d "!"
+                d "The achievements!"
+                #look at achievements
+                d_t "I have to figure out what they mean today."
+                label achievements3:
+                    default call_c = 0
+                    default restart_c = 0
+                    default ignorance_c = 0
+                    default handsup_c = 0
+                    default waldo_c = 0
+                    default check_a3 = 0 
+                    menu:
+                        "Make the right call":
+                            d_t "I have to decide something. "
+                            $ call_c = 1
+                            if call_c == 1:
+                                pass
+                            else:
+                                $ check_a3 + 1  
+                             
+
+                        "Restart":
+                            $ restart_c = 1
+                            if restart_c_c == 1:
+                                pass
+                            else:
+                                $ check_a3 + 1
+
+                        "Ignorance is bliss":
+                            $ ignorance_c = 1
+                            if ignorance_c == 1:
+                                pass
+                            else:
+                                $ check_a3 + 1 
+
+                        "Hands up everyone":
+                            $ handsup_c = 1
+                            if handsup_c == 1:
+                                pass
+                            else:
+                                $ check_a3 + 1 
+
+                        "Where is waldo?":
+                            $ waldo_c = 1
+                            if waldo_c == 1:
+                                pass
+                            else:
+                                $ check_a3 + 1 
+                        "Finish checking achievements":
+                            
                 
                 menu:
                     "Call Gabriel.":
@@ -1495,10 +1556,12 @@ label start:
             d "Sure. I will call you if I notice anything."
             o "I understand this must be quite a frightning situation for you but we are doing our best to keep you safe."
             d "Thank you officer."
-            o "No worries madam. We will also let you know as soon as we know more."
+            o "No worries madam. We will also make sure to let you know as soon as we know more."
             o "But for now I hope you have a pleasant and uneventful day miss Sullivan."
+            d "Yes."
             d "Again, thank you officer. Goodbye."
-            
+            "Click"
+
 
 
 

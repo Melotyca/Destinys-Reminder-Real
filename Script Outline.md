@@ -59,7 +59,10 @@
    - If gabriel was there she gets a bit suspicious of him 
    - if she was alone she gets confused and theorises who she means
 - Make the right call 
--  
+- Restart
+- Ignorance is bliss (was)
+- Hands up everyone
+- 
 
 ### Day 4:  
 
