@@ -1480,13 +1480,28 @@ label start:
             d "There was just this thud, like something had been knocked over. Maybe a can."
             d "And, and then that knocking. I- I'm scared someone might have followed me home."
             o "Alright madam, it sounds to me like the knocking you heard might have been a nasty prank or something of the sort. But I understand your concern."
-            o "I checked the report about your neighbourhood and we have actually had a person reported missing in the last couple of days."
-            o "There is already an officer stationed nearby but I will make sure to assign someone to keep a closer eye on your street and building from now on."
+            o "We have had a similar complaint just recently so we will make sure to look into it."
+            d "Huh? Someone had this happen too?"
+            o "Yes, it seems. I checked the report about your neighbourhood and we have actually had a person reported missing in the last couple of days."
+            o "Don't worry, there is already an officer stationed nearby and I will make sure to assign someone to keep a closer eye on your street and building from now on."
+            d "Oh, Th- Thank you."
             o "Thank you for notifying us miss Sullivan. It is possible that the knocking might be connected to the recent dissapearence."
-            d "Oh? Th- Thank you."
-            o "If I might ask madam. Did you perhaps catch a glance at what might have caused the noise you heard or who was knocking at your door?"
-            o "If these two incidences really are connected it would be of great help to us to have a description of the person that you suspect followed you."
-            d "Oh, Uhm. No, I'm sorry. I didn't see anyone. At least not that I could remember."
+            d "You think?"
+            o "If I might ask madam. Did you perhaps catch a glance at who might have caused the noise you heard or the person that was knocking at your door?"
+            o "If these two incidences really are connected it would be of great help to us to have a description of the person that you suspect might have followed you."
+            d "Oh, Uhm. No, I'm sorry. I, I didn't see anyone. At least not that I could remember."
+            o "Not to worry miss Sullivan, we are keeping an eye on you, so you can go about your as usual for now."
+            o "We would advise however, that you avoid entering more secluded places or walking alone. And of course, you should stay attentive and notify us if there are any more strange occurrences."
+            d "Sure. I will call you if I notice anything."
+            o "I understand this must be quite a frightning situation for you but we are doing our best to keep you safe."
+            d "Thank you officer."
+            o "No worries madam. We will also let you know as soon as we know more."
+            o "But for now I hope you have a pleasant and uneventful day miss Sullivan."
+            d "Again, thank you officer. Goodbye."
+            
+
+
+
 
             jump work3
         label work3:
