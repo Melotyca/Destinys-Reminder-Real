@@ -718,7 +718,7 @@ label start:
                 default matt_excuse = 0
                 label achievements2: 
                     menu:
-                        "\"Stick the landing\"":
+                        "Stick the landing":
                             d_t "Stick the landing. Hmm..."
                             d_t "The first thing today. Yesterday it was about coffee."
                             d_t "What landing is there to stick?"
@@ -731,7 +731,7 @@ label start:
                             jump achievements2
                         
 
-                        "\"We meet again old foe\"":
+                        "We meet again old foe":
                             d_t "Here we go. Only the second one of the day and this already sounds great. {i}Old foe{/i}. Who could it mean by foe?"
                             d_t "And an old one? The only foe I have right now, that I could think of, has to be Matthew."
                             d_t "But I wouldn't really call him a foe. We just don't really see eye to eye. Besides I'm barely supposed to see him today."
@@ -760,7 +760,7 @@ label start:
                                     $ matt_excuse = 2  
                             jump achievements2
 
-                        "\"Running, my new hobby!\"":
+                        "Running, my new hobby!":
                             d_t "Yeah right. Now it's just being unrealistic."
                             d_t "The last thing I want to do is go for a run today."
                             d_t "Does this mean I'll be late for something? I don't have anything planned yet other than finishing my poster."
@@ -770,12 +770,12 @@ label start:
                             d_t "I don't know if I can really believe that but I'll definetely put on some more comfortable shoes today."
                             jump achievements2
 
-                        "\"Dinner for two\"":
+                        "Dinner for two":
                             d_t "A dinner for two. Huh, at least this one sounds pretty straight forward."
                             d_t "I dont see how this could be anything other than a literal dinner for two people."
                             d_t "Now who could it be with?"
                         
-                        "\"Knock Knock\"":
+                        "Knock Knock":
                             d_t "Let's hope this is refering to a door. I honestly can't imagine anything else I'd be knocking on."
                             d_t "Oh! It might not be me knocking. Maybe I'm getting a package delivered."
                             d_t "Did I order anything recently?"
@@ -1461,54 +1461,14 @@ label start:
                 d "!"
                 d "The achievements!"
                 #look at achievements
-                d_t "I have to figure out what they mean today."
-                label achievements3:
-                    default call_c = 0
-                    default restart_c = 0
-                    default ignorance_c = 0
-                    default handsup_c = 0
-                    default waldo_c = 0
-                    default check_a3 = 0 
-                    menu:
-                        "Make the right call":
-                            d_t "I have to decide something. "
-                            $ call_c = 1
-                            if call_c == 1:
-                                pass
-                            else:
-                                $ check_a3 + 1  
-                             
-
-                        "Restart":
-                            $ restart_c = 1
-                            if restart_c_c == 1:
-                                pass
-                            else:
-                                $ check_a3 + 1
-
-                        "Ignorance is bliss":
-                            $ ignorance_c = 1
-                            if ignorance_c == 1:
-                                pass
-                            else:
-                                $ check_a3 + 1 
-
-                        "Hands up everyone":
-                            $ handsup_c = 1
-                            if handsup_c == 1:
-                                pass
-                            else:
-                                $ check_a3 + 1 
-
-                        "Where is waldo?":
-                            $ waldo_c = 1
-                            if waldo_c == 1:
-                                pass
-                            else:
-                                $ check_a3 + 1 
-                        "Finish checking achievements":
-                            
-                
+                d_t "\"Make the right call\""
+                d_t "The girl in my dream said I should get help. Does that mean call for help?"
+                d_t "Are these achievements and those strange dreams connected?"
+                d_t "She was saying someone was here. And the screen knew that too. Am I going crazy?"
+                d_t "This has to be connected somehow. There has to be something I can do to get this to stop."
+                d_t "I don't even feel safe in my own home anymore."
+                d_t "What if she was right and there really was someone here?"
+                d_t "I think I should call someone..."
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
@@ -1516,16 +1476,38 @@ label start:
                         $ call_police= True
                         jump call_police
             else:
+                d "AH!"
+                d "Not again!"
+                d "It's the girl from last time!"
+                d_t "I knew there was something stragne about that dream yesterday."
+                d_t "Didn't it mention something about knowing what is going to happen?"
+                d_t "No. I can't forget it this time!"
+                d_t "She was trying to tell me something. Warn me. Something like he was here..."
+                d_t "Who was here?"
+                d_t "Gabe? Gabe was here but he's here all the time. maybe she meant the knocking?"
+                d_t "Argh why is this so hard to remember. She said something else too."
+                d_t "What was it..."
+                d_t "He's dangerous..."
+                d_t "Oh. Right... She said something about him trying to get close to me."
+                d_t "That he's dangerous..."
+                d_t "She can't have meant Gabriel right? He was here to help."
+                d_t "Ugh, why am I even thinking about this so much. It was just a stupid dream."
+                d "!"
+                d "The achievements!"
+                d_t "Right! They'll still tell me what's going to happen!"
+                d_t "Let's see here"
+                #look at achievements
+                d_t "\"Make the right call\""
+                d_t "Well I was planning on calling Gabriel anyways this morning. Sounds like that's exactly the right idea!"
                 jump callgabedinner
         label callgabedinner:
-            jump work3
+            jump achievements3
         label callgabealone:
             "Click"
             g "Oh hi Destiny! I wasn't expecting to get a call from you this early!"
             g "What's up?"
             d "Hi Gabe. I'm sorry. Did I wake you up?"
-
-            jump work3
+            jump achievements3
         label callpolice:
             "Click"
             x "Hello? Officer Rogan speaking. How may I help you today?"
@@ -1562,10 +1544,53 @@ label start:
             d "Again, thank you officer. Goodbye."
             "Click"
 
+                
+        label achievements3:
+            default call_c = 0
+            default restart_c = 0
+            default ignorance_c = 0
+            default handsup_c = 0
+            default waldo_c = 0
+            default check_a3 = 0 
+            menu:
+                "Make the right call":
+                    d_t "I have to decide something. "
+                    $ call_c = 1
+                    if call_c == 1:
+                        pass
+                    else:
+                        $ check_a3 + 1  
+                            
+                "Restart":
+                    $ restart_c = 1
+                    if restart_c_c == 1:
+                        pass
+                    else:
+                        $ check_a3 + 1
 
+                "Ignorance is bliss":
+                    $ ignorance_c = 1
+                    if ignorance_c == 1:
+                        pass
+                    else:
+                        $ check_a3 + 1 
 
+                "Hands up everyone":
+                    $ handsup_c = 1
+                    if handsup_c == 1:
+                            pass
+                    else:
+                        $ check_a3 + 1 
 
-
+                "Where is waldo?":
+                    $ waldo_c = 1
+                    if waldo_c == 1:
+                        pass
+                    else:
+                        $ check_a3 + 1 
+                "Finish checking achievements":
+                            
+                
             jump work3
         label work3:
             if call_police==True:
