@@ -1542,20 +1542,33 @@ label start:
             d "That-"
             d "Nevermind. It's stupid!"
             g "Destiny. Tell me what's wrong."
-            g "If you tell me what's bothering you so much I might be able to help. You're clearly very upset by all of this."
+            g "If you tell me what's bothering you so much I might be able to help you. You're clearly very upset by all of this."
+            g "I promise you, whatever it is, we can figure it out together. I won't think you're stupid."
             menu:
-                "Tell him about the dreams":
-                    
-                    d "I've been having these weird dreams lately"
+                "Tell him about the dreams": 
+                    d "This is going to sound insane but. I've been having these weird dreams lately"
+                    d "Every morning when I wake up I can remember seeing this girl, talking to me, warning me."
+                    d "She looks scared."
+                    d "I think I've seen her before somewhere but I for the life of me can't figure out who she is."
+                    g "What does she tell you?"
+                    d "Every night she tells me that \"{i}He's dangerous{/i}\" or \"{i}}He's trying to get you{/i}\""
+                    d "I have no idea who {i}He{/i} is supposed to be but it's scaring me."
+                    d "Wh- when I woke up this moring I could remember her saying that {i}He was here{/i}"
+                    d "Someone was here. A-and I don't know who it was but she keeps saying that he's dangerous and that I need to get away from him."
+                    g "Take a deep breath Destiny. Everything is going to be alright. We're going to figure this out ok?"
+                    d "Do you think I'm crazy?"
+                    g "No. No I don't think you're crazy Destiny."
+                    g "I think you're just really scared and had a lot of stress lately."
+                    g "For what it's worth I would be scared too if I had someone knock on my door so late and then dissapear."
 
                 "Avoid the dreams":
-                    "
+                    ""
 
 
             jump achievements3
         label callpolice:
             "Click"
-            x "Hello? Officer Rogan speaking. How may I help you today?"
+            o "Hello? Officer Rogan speaking. How may I help you today?"
             d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I'm very sorry to bother you with something like this."
             d "But I have the feeling someone might have followed me to my apartment yesterday."
             d "I-I heard knocking but when I checked no one was there."

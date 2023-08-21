@@ -1,4 +1,8 @@
-# Destinys Reminder 
+# Destinys Reminder
+useful copypastes:
+\"x\" 
+{i}x{/i}
+$ x = x
 
 ## Outline 
 
