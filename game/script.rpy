@@ -17,6 +17,7 @@ default fix_printer = False
 default dinner_plans = False
 default open_door = False
 default call_police = False
+default gabe_hints = 0
 #GAME
 label start:
     label game:
@@ -610,6 +611,7 @@ label start:
                 d_t "Can I tell him about the screen?"
                 menu: 
                     "Tell him":
+                        $ gabe_hints + 1
                         d "Have you ever started seeing things from looking at screens too much?"
                         hide gabe_conc
                         show gabe_conf
@@ -1491,6 +1493,7 @@ label start:
                 d_t "Oh. Right... She said something about him trying to get close to me."
                 d_t "That he's dangerous..."
                 d_t "She can't have meant Gabriel right? He was here to help."
+                d_t "And the dinner yesterday was so nice."
                 d_t "Ugh, why am I even thinking about this so much. It was just a stupid dream."
                 d "!"
                 d "The achievements!"
@@ -1503,10 +1506,52 @@ label start:
         label callgabedinner:
             jump achievements3
         label callgabealone:
+            $ gabe_hints + 1
             "Click"
-            g "Oh hi Destiny! I wasn't expecting to get a call from you this early!"
-            g "What's up?"
-            d "Hi Gabe. I'm sorry. Did I wake you up?"
+            g "Oh hi Destiny! What a surprise to hear form you so early. It's not even 7 yet."
+            d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
+            g "No no, dont worry. What's up?"
+            d "I'm so glad to hear your voice right now. Yesterday was just... I'm scared Gabriel"
+            g "Whoa whoa! Hold on, what's wrong Destiny? What happened?!"
+            d "I- I feel like someone followed me home yesterday."
+            d "I heard knocking but then there was no one there. I-, what if someone wanted to get into my apartment?"
+            g "Destiny, wait. Give me 3 minutes and then I'll be there and we can talk about this ok?"
+            d "Yeah, thank you Gabe..."
+            g "Alright be right there."
+            "Click"
+            #A couple minutes later
+            scene bg_d_kitchen
+            show gabe_conc
+            g "Ok, ok so, tell me one more time. You think someone followed you here and tried knocking on your door?"
+            d "Yeah..."
+            d "Yesterday I had to chase after this cat because it grabbed one of my papers."
+            d "[catname] is actually still sleeping over there. But I followed [catname] into a dark ally to get the papers back and after a while I felt like I was being watched."
+            d "I heard this weird noise like something was being move so I got out of there as quickly as possible."
+            d "But then after I got home and made dinner for me and [catname] someone knocked on my door. I went to check but there was no one there..."
+            d "I know I sound crazy but I'm so scared."
+            g "No it doesn't sound crazy at all Destiny."
+            g "Did you see anyone in the ally?"
+            d "No."
+            g "And you didn't see anyone outside the door either?"
+            d "No, there was no one."
+            g "Hmmm. Is it possible the cat, uhm what did you say the name was? [catname]? Is it possible [catname] made the noise?"
+            d "I- I don't know."
+            d_t "Ugh this shouldn't be scaring me this much."
+            d_t "If only it wasn't for those horrible dreams and the glitches yesterday."
+            d "I'm sorry Gabe, I know I shouldn't be so scared by something like that it's just that-"
+            d "That-"
+            d "Nevermind. It's stupid!"
+            g "Destiny. Tell me what's wrong."
+            g "If you tell me what's bothering you so much I might be able to help. You're clearly very upset by all of this."
+            menu:
+                "Tell him about the dreams":
+                    
+                    d "I've been having these weird dreams lately"
+
+                "Avoid the dreams":
+                    "
+
+
             jump achievements3
         label callpolice:
             "Click"
@@ -1541,9 +1586,9 @@ label start:
             o "No worries madam. We will also make sure to let you know as soon as we know more."
             o "But for now I hope you have a pleasant and uneventful day miss Sullivan."
             d "Yes."
-            d "Again, thank you officer. Goodbye."
+            d "Again, thank you so much officer. Goodbye."
             "Click"
-
+            #Have to continue
                 
         label achievements3:
             default call_c = 0
