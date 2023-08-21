@@ -1529,11 +1529,19 @@ label start:
             d "I heard this weird noise like something was being move so I got out of there as quickly as possible."
             d "But then after I got home and made dinner for me and [catname] someone knocked on my door. I went to check but there was no one there..."
             d "I know I sound crazy but I'm so scared."
-            g "No it doesn't sound crazy at all Destiny."
+            hide gabe_conc
+            show gabe_neut
+            g "No, you don't sound crazy at all Destiny."
+            hide gabe_neut
+            show gabe_conc
             g "Did you see anyone in the ally?"
             d "No."
+            hide gabe_conc
+            show gabe_conf
             g "And you didn't see anyone outside the door either?"
             d "No, there was no one."
+            hide gabe_conf
+            show gabe_neut
             g "Hmmm. Is it possible the cat, uhm what did you say the name was? [catname]? Is it possible [catname] made the noise?"
             d "I- I don't know."
             d_t "Ugh this shouldn't be scaring me this much."
@@ -1541,11 +1549,14 @@ label start:
             d "I'm sorry Gabe, I know I shouldn't be so scared by something like that it's just that-"
             d "That-"
             d "Nevermind. It's stupid!"
+            hide gabe_neut
+            show gabe_conc
             g "Destiny. Tell me what's wrong."
             g "If you tell me what's bothering you so much I might be able to help you. You're clearly very upset by all of this."
             g "I promise you, whatever it is, we can figure it out together. I won't think you're stupid."
             menu:
                 "Tell him about the dreams": 
+                    $ gabe_hints + 1
                     d "This is going to sound insane but. I've been having these weird dreams lately"
                     d "Every morning when I wake up I can remember seeing this girl, talking to me, warning me."
                     d "She looks scared."
@@ -1557,9 +1568,11 @@ label start:
                     d "Someone was here. A-and I don't know who it was but she keeps saying that he's dangerous and that I need to get away from him."
                     g "Take a deep breath Destiny. Everything is going to be alright. We're going to figure this out ok?"
                     d "Do you think I'm crazy?"
-                    g "No. No I don't think you're crazy Destiny."
+                    g "No. I don't think you're crazy Destiny."
                     g "I think you're just really scared and had a lot of stress lately."
-                    g "For what it's worth I would be scared too if I had someone knock on my door so late and then dissapear."
+                    g "For what it's worth I would be scared too if I had a dream like that after someone knock on my door so late and then disappear."
+                    g "But those dreams do sound strange."
+                    g "You know, sometimes when we think about something a lot during the day or something is is bothering us it can show up in our dreams." 
 
                 "Avoid the dreams":
                     ""
