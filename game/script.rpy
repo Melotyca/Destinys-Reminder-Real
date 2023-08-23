@@ -1660,6 +1660,7 @@ label start:
                     else:
                         $ check_a3 + 1 
                 "Finish checking achievements":
+                    pass
                             
                 
             jump work3
