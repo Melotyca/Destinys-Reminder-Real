@@ -65,6 +65,8 @@ $ x = x
 - Make the right call 
    - she realizes she has to make a call and gets to decide between gabriel and the police if she was alone
    - If she was with gabe she decides to call gabe 
+   - if she was alone and calls gabe he offers to be around more
+   - if she calls the police she finds out about the missing person near her
 - Restart
    - once she gets to the office she starts talking with simon about the work she should be doing and the office space she gets for it. He tells her she can have kai's old place and should make herself at home. she finds some ominous notes tucked away
 - Ignorance is bliss (was)

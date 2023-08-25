@@ -1626,14 +1626,27 @@ label start:
 
             g "Do you think you've calmed down enough to get ready for work?"
             d "Oh right. Yeah I think so."
-            g "Great. I havent had time to put on my shoes yet... so I'll head back now if thats ok."
+            g "Great. Because I havent had time to put on my shoes yet... so I'll head back now if thats ok."
+            d "Huh?"
             d "HAH! you came here in your socks?"
             g "Maybe..."
-            d "Of course. Go get ready too. I'm glad you came over. I don't know if I would have been able to calm down myself."
-            g "Glad to be of help."
+            g "Hey, those 3 minutes wouldn't have been enough for shoes."
+            d "Alright alright. Go get ready too. I'm glad you came over."
+            scene bg_d_corridor
+            g "And remember Destiny. If you feel like you're being watched again feel free to call me."
+            d "I will. Thanks. I don't know if I would have been able to calm down all by myself."
+            g "Glad to have helped."
             g "See you later?"
             d "See you later."
+            scene bg_d_kitchen
+            c_n "Mrrrr"
+            d "Oh hey there [catname]."
+            d "Did you atleast sleep a little better than I did?"
+            c_n "Prrrrrrrr"
+            d "Sounds like a yes to me. I'll go look for your home today dont worry."
+            d_t "Right after I've taken a look at the other achievements for today."
             jump achievements3
+
         label callpolice:
             "Click"
             o "Hello? Officer Rogan speaking. How may I help you today?"
@@ -1669,30 +1682,47 @@ label start:
             d "Yes."
             d "Again, thank you so much officer. Goodbye."
             "Click"
-            #Have to continue
+            d_t "..."
+            d_t "Wow..."
+            d_t "I think I need a minute."
+            d "!"
+            c_n "Mrrrr"
+            d "Oh hey there [catname]."
+            d "Did you atleast sleep a little better than I did?"
+            c_n "Prrrrrrrr"
+            d "Well at least one of us did..."
+            d "Don't worry I promise I'll go looking for your home today."
+            d_t "After I've processed what that officer just told me."
+            d_t "Oh."
+            d_t "And I still have the achievements to check..."
+            jump achievements3
                 
         label achievements3:
-            default call_c = 0
+            d_t "Today's achievements..."
+            d_t "I can't avoid these can I"
+            d_t "The theory's been thuroughly tested now I'd say."
+            d_t "I've got more than enough time to figure out what they mean now."
+            d_t "Where should I start"
             default restart_c = 0
             default ignorance_c = 0
             default handsup_c = 0
             default waldo_c = 0
             default check_a3 = 0 
-            menu:
-                "Make the right call":
-                    d_t "I have to decide something. "
-                    $ call_c = 1
-                    if call_c == 1:
-                        pass
-                    else:
-                        $ check_a3 + 1  
-                            
+            menu:               
                 "Restart":
                     $ restart_c = 1
                     if restart_c_c == 1:
                         pass
                     else:
                         $ check_a3 + 1
+                    d_t "Playing in to the game feeling aren't we."
+                    d_t "I could use a restart though..."
+                    d_t "I am starting with a new project."
+                    d_t "And meeting a new team too."
+                    d_t "Is there anything else \"Restart\" could mean?"
+                    d_t "Ok it could also refer to restarting a computer or some device."
+                    d_t "Or maybe I mess something up and have to restart..."
+                    d_t "Since I already know I'll meet the new project and team today It'd be fair to say "
 
                 "Ignorance is bliss":
                     $ ignorance_c = 1
