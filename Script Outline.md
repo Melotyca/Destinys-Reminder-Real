@@ -118,11 +118,17 @@ $ x = x
 ## Possible choices (Relevant to text progression)
 - fix_printer y/n
 - tell gabe about seeing a screen y/n
-- Choose what to say to matt (if you see him) 0 none/1 nausia/2 tissues
+- Choose what to say to matt (if you see him) 0-none/1-nausia/2-tissues
 - dinner_plans y/n
 - Name dog (enter a name)
 - open_door y/n
 - call_police y/n
+- look_for_cat y/n
+- track_g y/n (you were with gabe)
+- track y/n 
+- track_who 0-gabe/1-Matt/2-Simon
+- gabe_ally y/n (If gabe_hints was 3 or you chose the route with him y is possible esle automatic n)
+
 
 
 

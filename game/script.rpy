@@ -1708,6 +1708,7 @@ label start:
             default handsup_c = 0
             default waldo_c = 0
             default check_a3 = 0 
+        label achievements3menu:
             menu:               
                 "Restart":
                     $ restart_c = 1
@@ -1722,7 +1723,9 @@ label start:
                     d_t "Is there anything else \"Restart\" could mean?"
                     d_t "Ok it could also refer to restarting a computer or some device."
                     d_t "Or maybe I mess something up and have to restart..."
-                    d_t "Since I already know I'll meet the new project and team today It'd be fair to say "
+                    d_t "Since I already know I'll meet the new project and team today I don't think it's too unreasonable to assume it's going to be that."
+                    d_t "But I'm sure it won't hurt to be ready to start over on something and plan in a little extra time for any important tasks I have to do today."
+                    jump achievements3menu
 
                 "Ignorance is bliss":
                     $ ignorance_c = 1
@@ -1730,6 +1733,7 @@ label start:
                         pass
                     else:
                         $ check_a3 + 1 
+                    d_t ""
 
                 "Hands up everyone":
                     $ handsup_c = 1
