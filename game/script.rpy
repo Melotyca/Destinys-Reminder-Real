@@ -1777,9 +1777,41 @@ label start:
         label simonevaded:
         label simonmad:
         label simoncreepy:
-    
+        label night:
+        label catmissing:
     label day4:
+        label dream4:
+        label morning4:
+        label stickwithgabe:
+        label work4track:  
+        label work4:
+        label night4stalk:
+        label evening4:
+        label night4:
 
+    label day5:
+        label dream5:
+        label morning5:
+        label work5:
+        label seedgabe:
+        label seedmatt:
+        label seedsimon:
+        label trustgabe:
+        label leavework:
+        label findkai:
+        label findgabe:
+        label findmatt:
+        label arrestsimon:
+        label catchsimon:
+        label getcaught:
+        
+    label outro:
+        label worst:
+        label bad:
+        label good:
+        label best:
+
+        
 
     
 
