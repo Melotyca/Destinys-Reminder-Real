@@ -1808,7 +1808,7 @@ label start:
                         jump achievements3menu
                 "Finish checking achievements":
                     pass
-            d_t "Why do I always feel dumber after looking at these things?"
+            d_t "Why do I always feel dumber after looking at these?"
             d_t "Checking them yesterday helped a little atleast. I hope today will be the same."
             d_t "I should get ready to go now though. Then I can get an early start on whatever it is Simon will have me work on from now on."
             if dinner_plans== False:
@@ -1823,10 +1823,33 @@ label start:
             jump work3
         label work3:
             scene bg_office_hallway
-            s "There you are Destiny!"
-            s "Wow you came in real early. I think you've got to be the first one here today."
-            s "Glad to see it."
-            
+            d "Hey Simon!"
+            s "Oh! Hi there Destiny!"
+            s "Wow, you came in real early. I think you've got to be the first one here today."
+            s "It's only your first day and you're already outdoing the entire team!"
+            d "Haha, no no it's nothing like that. I just didn't want to be late on my first day on the team."
+            d "And I woke up really early today anyways. Might as well just go to work you know."
+            s "I'm just teasing you."
+            s "But it's true. It's great having such an ambitious teammate again. I'm sure your motivation will rub off on the others."
+            s "You're very simmilar to Kai in that way."
+            d "Really?"
+            s "She was also usually the first one to come in. And she always had this relentless optimism."
+            s "We've missed it since she left."
+            s "But I see Matthew found the perfect replacement for me!"
+            d "Well I hope I can fill such big shoes."
+            d "It sounds like everyone really liked her. It's hard to believe no one knows why she quit."
+            s "Yeah, it was a shock to us all. She just came in one morning and told me she was done."
+            s "I tried asking her why but the next day she didn't come in anymore."
+            d "Strange."
+            s "We still have her desk set up and everything..."
+            s "Actually. That brings me to our next to do."
+            s "Since Kai already started on the designs you will be working on I thought it would be a good idea for you to take over her desk."
+            s "She still has all of her files and notes over there. You should be able to find everything on her computer or on the desk somewhere."
+            s "That way you can get started already by taking a look at everything and familiarising yourself with the style of work she's done so far."
+            d "Sure! That sounds great. I'm sure looking at her work will help me to get a clear idea of what it is I have to do."
+            s W
+
+
 
             if call_police==True:
                 jump partypolice
