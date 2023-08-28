@@ -1486,13 +1486,14 @@ label start:
                 d_t "No. I can't forget it this time!"
                 d_t "She was trying to tell me something. Warn me. Something like he was here..."
                 d_t "Who was here?"
-                d_t "Gabe? Gabe was here but he's here all the time. maybe she meant the knocking?"
+                d_t "Gabe? Gabe was here. But he's here all the time. Maybe she meant the knocking?"
                 d_t "Argh why is this so hard to remember. She said something else too."
                 d_t "What was it..."
                 d_t "He's dangerous..."
                 d_t "Oh. Right... She said something about him trying to get close to me."
                 d_t "That he's dangerous..."
                 d_t "She can't have meant Gabriel right? He was here to help."
+                d_t "He saw that I wa stressed and wanted to help me."
                 d_t "And the dinner yesterday was so nice."
                 d_t "Ugh, why am I even thinking about this so much. It was just a stupid dream."
                 d "!"
@@ -1504,6 +1505,27 @@ label start:
                 d_t "Well I was planning on calling Gabriel anyways this morning. Sounds like that's exactly the right idea!"
                 jump callgabedinner
         label callgabedinner:
+            "Click"
+            g "Oh hi Destiny! What a surprise to hear form you so early. It's not even 7 yet."
+            d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
+            g "No no, dont worry. What's up?"
+            d "Not much actually. I just had a weird dream. But anyways. I was just wondering if you'll be there at the office gettogether?"
+            g "Oh! Yeah for sure. I don't have any other plans yet so I'll probably come by."
+            g "Do you want to meet up later and go together?"
+            d "I was just about to ask that. I think I'll need a little support to stand a chance agains Matthew today."
+            g "Ouch. I almost forgot. Yeah he's still out to get you isn't he?"
+            d "Oh yeah. Maybe I can avoid him a little from now on though. I'm starting on Simons team today remember?"
+            g "Right! I hope that goes well for you. But I'm sure you'll fit in great."
+            d "Thank you Gabe! I'll do my best."
+            g "Hey, since I'm already up now I'll probably try to get a little work done before going in to the office."
+            g "Talk to you later then?"
+            d "Of course. See you Gabe."
+            g "Bye Destiny."
+            "Click"
+            d_t "See, he's so sweet. I don't know what I was thinking. I just have to clear my head. These dreams are getting a little under my skin."
+            d_t "Are they connected to the achievemnts somehow?"
+            d_t "I mean they did show up around the same time..."
+            d_t "Oh yeah! Speaking of achievements. Let's check what's in store for today."
             jump achievements3
         label callgabealone:
             $ gabe_hints + 1
@@ -1703,57 +1725,109 @@ label start:
             d_t "The theory's been thuroughly tested now I'd say."
             d_t "I've got more than enough time to figure out what they mean now."
             d_t "Where should I start"
-            default restart_c = 0
-            default ignorance_c = 0
-            default handsup_c = 0
-            default waldo_c = 0
-            default check_a3 = 0 
         label achievements3menu:
             menu:               
                 "Restart":
-                    $ restart_c = 1
-                    if restart_c_c == 1:
-                        pass
-                    else:
-                        $ check_a3 + 1
                     d_t "Playing in to the game feeling aren't we."
                     d_t "I could use a restart though..."
+                    if dinner_plans == False:
+                        d_t "Not just at work. I would give anything to get away from this whole situation right now."
+                        d_t "As nice as that sounds, I doubt it's going to be anything like that."
+                    else:
+                        pass
                     d_t "I am starting with a new project."
                     d_t "And meeting a new team too."
-                    d_t "Is there anything else \"Restart\" could mean?"
-                    d_t "Ok it could also refer to restarting a computer or some device."
+                    d_t "That's already something. Is there anything else \"Restart\" could mean?"
+                    d_t "Ok it could also be quite literal. Refering to restarting a computer or something like that."
                     d_t "Or maybe I mess something up and have to restart..."
+                    d_t "Hmmm"
                     d_t "Since I already know I'll meet the new project and team today I don't think it's too unreasonable to assume it's going to be that."
                     d_t "But I'm sure it won't hurt to be ready to start over on something and plan in a little extra time for any important tasks I have to do today."
                     jump achievements3menu
 
                 "Ignorance is bliss":
-                    $ ignorance_c = 1
-                    if ignorance_c == 1:
-                        pass
+                    if dinner_plans == False:
+                        d_t "Great another ominous one. As if I wasn't already scared enough of the person that was at my door last night."
+                        d_t "Could this have something to do with finding out about who it was?"
+                        d_t "Or maybe something about the dreams?"
                     else:
-                        $ check_a3 + 1 
-                    d_t ""
+                        d_t "What do I not know, but don't want to know?"
+                        d_t "This could be anything again couldn't it."
+                        d_t "Maybe I find out something about these achievements or these dreams."
+
+                    d_t "In any case, I'm probably going to be in a situation in which I don't know somethnig."
+                    d_t "Or maybe I learn something I didn't want to learn?"
+                    d_t "Which ever it is it looks like it was better not to know..."
+                    d_t "Maybe it's something about where these achievements are from."
+                    d_t "But then again the phrasing that ignorance is bliss is making me hope it's nothing to do with all of this."
+                    d_t "I'd rather not think about all the horrible things that having a floating screen telling me about my future could bring."
+                    d_t "What if predicts an accident or something like that."
+                    d_t "..."
+                    d_t "No, now I'm scaring myself."
+                    d_t "I should just try to find out what these achievemnts do or don't want me to know. Then I can still decide what I do with that information."
+                    jump achievements3menu
 
                 "Hands up everyone":
-                    $ handsup_c = 1
-                    if handsup_c == 1:
-                            pass
+                    d_t "Hands up?"
+                    d_t "As in the police kind of hands up or the party kind of hands up?"
+                    if call_police == True:
+                        d_t "Well I did cal the police. Maybe they'll find someone."
+                        d_t "Oh god this is making me nervous. Are they going to come to the office?"
+                        d_t "I hope it was the right decision to tell the police about this..."
+                        d_t "No! It was! They'll help keep me safe."
                     else:
-                        $ check_a3 + 1 
+                        d_t "There's that party at the office today..."
+                        d_t "Maybe we'll have something to celebrate."
+                        d_t "That sure would be nice."
+                        d_t "I hope it's not the police."
+                        d_t "It sounds like this is about multiple people. If this really is the police coming then it would have to be at the office right?"
+                        d_t "..."
+                        d_t "A robbery?"
+                        d_t "Ok, no. Now I'm just making up things. I doubt anyone would come to a marketing firm to steal anything."
+                        d_t "Not that we'd have anything to steal."
+                        jump achievements3menu
 
                 "Where is waldo?":
-                    $ waldo_c = 1
-                    if waldo_c == 1:
-                        pass
+                    d_t "\"here is waldo\". Isn't that that kids book where you have to find the striped man?"
+                    d_t "What does this have to do with my day?"
+                    if dinner_plans==False:
+                        d_t "Could I be looking for the guy that was supposed to have been at my door?"
+                        d_t "Does this mean he's hiding in plain sight?"
+                        d_t "Oh no. Is he going to be in a crowd somewhere?"
+                        d_t "The party tonight..."
+                        d_t "This has to be a warning about that man. I mean what else could this have to do with anything."
+                        d_t "I'll have to be extra careful."
+                        d_t "But what should I even be looking out for? I don't even know what the darn guy looks like."
+                        d_t "It's not like he's going to show up in a red and white striped shirt."
+                        d_t "Urgh! This is useless. Why does it always tell me things in the most obscure way possible."
                     else:
-                        $ check_a3 + 1 
+                        d_t "Am I going to lose someone in a crowd?"
+                        d_t "It's possible. There's going to be a lot of people at the office party tonight."
+                        d_t "Maybe I'll have to look for Gabe sometime during the event."
+                        d_t "I guess this just means I'll have to keep an extra eye on him."
+                        jump achievements3menu
                 "Finish checking achievements":
                     pass
-                            
-                
+            d_t "Why do I always feel dumber after looking at these things?"
+            d_t "Checking them yesterday helped a little atleast. I hope today will be the same."
+            d_t "I should get ready to go now though. Then I can get an early start on whatever it is Simon will have me work on from now on."
+            if dinner_plans== False:
+                c_n "Meooow"
+                d "Don't worry [catname]. I haven't forgotten about you either. Let's get you something to eat. What do you say?"
+                c_n "MRRREW"
+                d "Oh wow. Lively today."
+                d "I'll have to look into where your owners could be after work today. I completely forgot that we have that dinner tonight."
+                d "I'm sure we'll find them eventually."
+            else:
+                pass
             jump work3
         label work3:
+            scene bg_office_hallway
+            s "There you are Destiny!"
+            s "Wow you came in real early. I think you've got to be the first one here today."
+            s "Glad to see it."
+            
+
             if call_police==True:
                 jump partypolice
             else:
