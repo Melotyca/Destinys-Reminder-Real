@@ -1827,28 +1827,109 @@ label start:
             s "Oh! Hi there Destiny!"
             s "Wow, you came in real early. I think you've got to be the first one here today."
             s "It's only your first day and you're already outdoing the entire team!"
-            d "Haha, no no it's nothing like that. I just didn't want to be late on my first day on the team."
-            d "And I woke up really early today anyways. Might as well just go to work you know."
-            s "I'm just teasing you."
-            s "But it's true. It's great having such an ambitious teammate again. I'm sure your motivation will rub off on the others."
-            s "You're very simmilar to Kai in that way."
+            d "Haha, no no it's nothing like that. I just didn't want to be late on my first day on the team that's all."
+            d "And besides I woke up really early today anyways. Might as well just go to work you know."
+            s "I see. I'm just teasing you don't worry."
+            s "Although I have to admit I am quite impressed. It's great having such an ambitious personality on our team again."
+            s "I'm sure your fresh motivation will rub off on the others."
+            s "You're very simmilar to Kai in that way actually."
             d "Really?"
-            s "She was also usually the first one to come in. And she always had this relentless optimism."
-            s "We've missed it since she left."
+            s "Yeah. She was also usually the first one to come in funnily enough. And she always had this relentless optimism."
+            s "It's like something's been missing since she left..."
             s "But I see Matthew found the perfect replacement for me!"
-            d "Well I hope I can fill such big shoes."
-            d "It sounds like everyone really liked her. It's hard to believe no one knows why she quit."
+            d "Wow. I hope I can fill such big shoes!"
+            d "It sounds like everyone really liked her. I'll try my best to live up to the expectations haha."
+            d "The more I hear about her the more I'm getting curious why she's quit. It sounds like she really found her place here."
             s "Yeah, it was a shock to us all. She just came in one morning and told me she was done."
             s "I tried asking her why but the next day she didn't come in anymore."
             d "Strange."
+            s "I heard she went to talk to Matthew but it doesn't look like he was able to change her mind."
             s "We still have her desk set up and everything..."
-            s "Actually. That brings me to our next to do."
+            s "Actually! That brings me to our next to do."
+            s "It's no use to dwell on the past now."
             s "Since Kai already started on the designs you will be working on I thought it would be a good idea for you to take over her desk."
-            s "She still has all of her files and notes over there. You should be able to find everything on her computer or on the desk somewhere."
-            s "That way you can get started already by taking a look at everything and familiarising yourself with the style of work she's done so far."
+            s "You can pick up right where she left off!"
+            s "She still has all of her files and notes over there. You should be able to find everything on her computer or somewhere on the desk."
+            s "I haven't really had time to take a look at everything yet but since you'll be working on those designs anyways I thought it would be a perfect way to start for you."
+            s "That way you can jump right in by taking a look at everything and familiarising yourself with the style of work she's done so far."
+            s "From what I've seen you should be able to pull it off with ease."
             d "Sure! That sounds great. I'm sure looking at her work will help me to get a clear idea of what it is I have to do."
-            
+            d "I have to admit, I don't think I've seen any of her work yet. So I'm really looking forward to finding out what she's done already."
+            s "Fantastic!"
+            s "In that case what are we waiting for!"
+            s "I'll show you to your new desk and you can get cracking at it."
+            s "It's just over there. Right next to my office."
+            s "I'll be here the entire day so if you have any questions or any trouble feel free to come over and let me know."
+            s "Oh, and I'll stop by in the afternoon again to see how things are going."
+            s "Does that sound alright with you?"
+            d "Yes, definetly. Thank you so much Simon."
+            s "It's no trouble. I'm just making sure you feel welcome as our new member."
+            s "Alright, I'll leave you to it now. Again, if anything should be the matter hit me up."
+            d "Of course. In that case I'll see you later then."
+            scene bg_office_computer
+            d_t "Wow, this desk is nice. There's so much to look at. She really didn't take anything with her."
+            d_t "I should try to take a look at everything."
+            d_t "But what should I look at first?"
+            default deskfold_c= False
+            default deskcomp_c= False
+            default deskcard_c= False
 
+            label kaidesk:
+                if deskfold_c== True and deskcomp_c== True and deskcard_c== True:
+                    jump kaideskdone
+                else:
+                    menu:
+                        "Folder":
+                            $ deskfolderc = True
+                            jump deskfold
+                        "Computer":
+                            $ deskfolderc = True
+                            jump deskcomp
+                        "Postcard":
+                            $ deskfolderc = True
+                            jump deskcard
+            label kaideskdone:
+                menu:
+                    "Folder":
+                        jump deskfold
+                    "Computer":
+                        jump deskcomp
+                    "Postcard":
+                        jump deskcard
+                    "Finish looking":
+                        jump donewithdesk
+            label deskfolder:
+
+            label deskcomputer:
+            
+            label deskpostcard:
+                d_t "Oh, a postcard. I probably shouldn't snoop in other peoples things."
+                d_t "..."
+                d_t "She did leave it here though..."
+                d_t "Screw it. Maybe this will tell me a little bit about her. I am curious to know what she was like after all. Not just her work."
+                d_t "Wait. Is this her on the picture?"
+                d_t "..."
+                d_t "But isn't that-"
+                d_t "Is she the girl from my dreams?!"
+                d_t "But how is that even possible? I can't remember ever seeing her before she started appearing in my sleep."
+                d_t "We've never even talked."
+                d_t "But she looks exactly like her..." 
+                d_t "Why is she suddenly haunting and telling me that someone is after me?"
+                if dinner_plans ==True:
+                    d_t "I really have a weird subconcious. It's kind of freaky."
+                else:
+                    d_t "Were they really just dreams?"
+                    d_t "Can they be? I mean, it's clearly her. Even though I've never seen her from so close before."
+                    d_t "Kai's the one warnign me about all of this."
+                    d_t "Does she know about the achievements?"
+                d_t "-"
+                d_t "Hold on. What does it say on the back?"
+                d_t "!"
+                d_t "Hey! That's my street."
+            label donewithdesk:
+                
+                
+                   
 
 
             if call_police==True:
