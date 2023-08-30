@@ -1,13 +1,13 @@
 ﻿#Destinys Reminder
-
+#Fonts
 #Characters
-define d = Character("Destiny", color="#067b6d", what_color="#1db7a5")
-define d_t = Character("Destiny", color="#067b6d", what_italic=True, what_color="#79b0a3cb")
-define g = Character("Gabriel", color="#627e05", what_color="#84a41b")
-define m = Character("Matthew", color="#1346a0", what_color="#4c77c1")
-define s = Character("Simon", color= "#b01d1d", what_color="#c64e48")
-define x = Character("?", color="#444444", what_italic=True, what_color="#7b7b7bb5" )
-define k = Character("Kai", color="#444444", what_color="#7b7b7b")
+define d = Character("Destiny",who_font="Minako-Regular.ttf", color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5")
+define d_t = Character("Destiny",who_font="Minako-Regular.ttf", color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb")
+define g = Character("Gabriel",who_font="Hey Comic.ttf", color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b")
+define m = Character("Matthew",who_font="Lean.otf", color="#1346a0",what_font="Lean.otf", what_color="#4c77c1")
+define s = Character("Simon",who_font="Typo_Round_Bold_Demo.otf", color= "#b01d1d",what_font="Typo_Round_Bold_Demo.otf", what_color="#c64e48")
+define x = Character("?",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5" )
+define k = Character("Kai",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b")
 define c = Character("Cat", color="#444444", what_color="#7b7b7b" )
 define c_n = Character("[catname]", color="#673b05", what_color="#aa811a" )
 define o = Character("Officer R.", color="#001f55", what_color="#315089")
@@ -1847,7 +1847,7 @@ label start:
             s "She still has all of her files and notes over there. You should be able to find everything on her computer or on the desk somewhere."
             s "That way you can get started already by taking a look at everything and familiarising yourself with the style of work she's done so far."
             d "Sure! That sounds great. I'm sure looking at her work will help me to get a clear idea of what it is I have to do."
-            s W
+            
 
 
 
