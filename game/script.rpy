@@ -1925,7 +1925,10 @@ label start:
                 d_t "-"
                 d_t "Hold on. What does it say on the back?"
                 d_t "!"
-                d_t "Hey! That's my street."
+                d_t "Hey! That's my street!"
+                d_t "Her adress!"
+                d_t "She lives really close to me."
+                
             label donewithdesk:
                 
                 
