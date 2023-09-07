@@ -39,7 +39,8 @@ label start:
                 d_t "Who, What was that?"
                 d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
                 scene bg_d_window
-                show phone  
+                show phone
+                show a_day1  
                 # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
                 d_t "Oh come on. Just let me sleep."  
                 d_t "Why can't it be like 4am."
@@ -48,6 +49,7 @@ label start:
                 d_t "Coffee time!"   
 
                 scene bg_d_kitchen
+                show a_day1
                 d_t "Oh boy. I really need to get more sleep today." 
                 d_t "I shouldn't have stayed up so late yesterday. What time is Gabe going to be here again?"
                 d_t "Didn't he say he was going to text me?"
@@ -68,7 +70,8 @@ label start:
                 #(background gets a bit darker as Achievements stand out.). 
                 d_t "What in the-"   
 
-                show achievements
+                hide a_day1
+                show a_day1 at right
                 d  "Heh. Heh he..."  
                 d_t "A display. Really?"  
                 d_t "Oh god. No more games before bed."
@@ -76,13 +79,15 @@ label start:
                 d_t "This can't be serio-" 
                 "{i}Knock knock.{/i}" 
                 d "AH!" 
-                hide achievements
+                hide a_day1
+                show a_day1
                 #(cup falls and shatters and spills). 
                 #(shattered mug). 
                 g "It's me, Gabe. Is everything alright in there?"   
                 d "Yes yes! On my way."
                 #door opens
                 scene bg_d_corridor 
+                show a_day1
                 show gabe_conc
                 g "I'm sorry. I didn't mean to startle you"  
                 d "No, no. It's fine! I just. Uhm. Didn't expect you yet."  
@@ -99,6 +104,7 @@ label start:
                 d "I still have to get ready. Make yourself at home."  
 
                 scene bg_d_kitchen
+                show a_day1
                 d "Please just ignore the mess. I'm working on it I promise." 
                 d "Oh and don't bother with the mug. I'll clean it up later too."  
                 show gabe_conc
@@ -120,6 +126,7 @@ label start:
                 d "I'll be quick!"  
 
                 scene bg_d_bathroom
+                show a_day1
                 #(Destiny in the mirror, dishevelled).
                 show destiny_neut 
                 d_t "Let's see how this fits." 
@@ -177,6 +184,7 @@ label start:
                 d "It's next to the counter. Be there in a second!"  
 
                 scene bg_d_kitchen
+                show a_day1
                 show gabe_neut
                 g "Ready to go?"  
                 d "Yes! Sorry for the wait."  
@@ -207,6 +215,7 @@ label start:
                 jump Work1 
             label Work1:
                 scene bg_office_computer
+                show a_day1
                 d_t "And yet another conspiracy theory..."
                 d_t "How obsessed with a movie can you be? \"Watch out! it's the Matrix trying to get you to wake up!\" As if."
                 d_t "Is there seriously nothing useful on the internet about something like this?"
@@ -228,6 +237,7 @@ label start:
                 d "What!?"
 
                 scene bg_office_hallway
+                show a_day1
                 show matt_neut
                 d_t "Oh shoot. How did I not see him coming."   
                 d "Y- Yes? Oh, g- good morning Matthew."  
@@ -320,6 +330,7 @@ label start:
                 jump mattlunch
             label mattlunch:
                 scene bg_office_cafeteria
+                show a_day1
                 show matt_neut
                 d "Mushrooms and mashed potatoes."
                 hide matt_neut
@@ -414,6 +425,7 @@ label start:
                 d "I'm sorry I have to go!"
             label printer1:
                 scene bg_office_computer
+                show a_day1
                 #later during the day
                 d_t "URGH that was so stupid! Why did I just run away!"
                 d_t "God Matt is going to hate me even more now. If that's even possible."
@@ -426,6 +438,7 @@ label start:
                 d_t "Let's just print this application and get it over with."
                 #goes to printer
                 scene bg_office_printer
+                show a_day1
                 d_t "These weird achievements have been messing with my head the entire day. Can't they be a little clearer?"
                 d_t "If I'd known I was supposed to take them so litterally I would have been more careful with my food."
                 d_t "Flipping good. Don't make me laugh. This whole thing could've been avoided."
@@ -468,6 +481,7 @@ label start:
                         $ fix_printer = True
                         d_t "I have to find someone to help me fix this darn printer"
                         scene bg_office_hallway
+                        show a_day1
                         #goes to look for someone runns into simon
                         d_t "Maybe I'll find someone around here."
                         "BUMP"
@@ -494,6 +508,7 @@ label start:
                         s "Not that old printer again! We should have replaced that ancient thing years ago."
                         s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
                         scene bg_office_printer
+                        show a_day1
                         show simon_neut
                         s "I think I know how to get it running again."
                         d "Wow, Thank you so much Simon! You're a real life saver."
@@ -555,6 +570,7 @@ label start:
                         jump stroll
             label stroll:
                 scene bg_office_cafeteria
+                show a_day1
                 show gabe_happy
                 g "There you are! What took so long? I heard what happened over lunch."
                 g "You should have seen his face! It was hillarious."
@@ -596,6 +612,7 @@ label start:
                         show gabe_happy
                         g "The short one it is then."
                 scene bg_street
+                show a_day1
                 show gabe_neut
                 g "How was your day, if we ignore the obvious fopa at lunch?"
                 d "It was fine. I didn't get to work on the poster as much as I'd liked though. I have a lot to do tomorrow."
@@ -689,6 +706,7 @@ label start:
                 jump morning2
             label morning2:
                 scene bg_d_window
+                show a_day2
                 d_t "What-"
                 d_t "Why does this feel so familiar. It feels like I'm having a dejavu"
                 d_t "Didn't I have that same strange dream yesterday?"
@@ -703,7 +721,7 @@ label start:
                 d_t "Seriously!?"
                 d_t "That screen is still here!"
                 d_t "Hold on! It's changed. There's different achievements today."
-                show achievements
+                show a_day2 at right
                 d_t "This can't just be from over working myself anymore."
                 d_t "There's no way fatigue can cause something like this."
                 d_t "That screen was there the whole time yesterday too. That's not even the worst of it." 
@@ -802,6 +820,7 @@ label start:
                 jump work2
             label work2:
                 scene bg_office_computer
+                show a_day2
                 d_t "Okay! I'm almost done with this darn poster!"
                 d_t "I can't allow myself to be distracted now."
                 d_t "Although those achievements do make me wonder..."
@@ -829,6 +848,7 @@ label start:
                 d_t "Eh it doesn't matter. I'm just glad all of that is over now. Seems like I was just reading into it way too hard yesterday."
                 d_t "Time to go print this bad boy."
                 scene bg_office_hallway
+                show a_day2
                 show gabe_happy
                 g "Oh Hi! Didn't expect to still see you today."
                 d "Gabe! Hi."
@@ -877,6 +897,7 @@ label start:
                     jump printer2unfixed
             label printer2fixed:
                 scene bg_office_printer
+                show a_day2
                 d_t "Here we are. Alright!"
                 d_t "I just have to print this file right here, then I'll finally be done with this."
                 "..."
@@ -886,6 +907,7 @@ label start:
                 d_t "Today's going smoother than expected. All that's left now is to drop it off at the meeting room."
                 d_t "Maybe I'll actually be able to leave on time today!"
                 scene bg_office_cafeteria
+                show a_day2
                 m "Sullivan!"
                 show matt_neut
                 d "H-Hey Matthew... long time no see."
@@ -1103,6 +1125,7 @@ label start:
                 jump running
             label printer2unfixed:
                 scene bg_office_printer
+                show a_day2
                 d_t "Here we are. Alright!"
                 d_t "I just have to print this file right here, then we'll be-"
                 "Trrrkkk"
@@ -1120,6 +1143,7 @@ label start:
                 d_t "I'll be beating myself up enough over this later. Right now I just have to find someone to help me."
                 d_t "Fast."
                 scene bg_office_hallway
+                show a_day2
                 d_t "I'm sure I'll find someone around here!"
                 "BUMP"
                 show simon_neut
@@ -1145,6 +1169,7 @@ label start:
                 s "Yes. First we deal with the printer!"
                 s "I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
                 scene bg_office_printer
+                show a_day2
                 show simon_neut
                 s "I think I know how to get it running again."
                 "WHAM"
@@ -1196,6 +1221,7 @@ label start:
             label running:
                 scene bg_black
                 scene bg_office_computer
+                show a_day2
                 d_t "Whew. Glad I got that done now. I feel liberated. And I dropped it off on time too for once!"
                 d_t "Oh yeah, time. What time is it?" 
                 d_t "6:30PM already?! Wow! I really thought I'd be done earlier today."
@@ -1211,6 +1237,7 @@ label start:
                 else:
                     d_t "Oh well, it can't be helped. At least I get to finally go home now."
                     scene bg_street
+                    show a_day2
                     d_t "It's only Tuesday and this week has already been way too long."
                     d_t "I wonder what's going to happen to the rest of the achievements now. Especially the dinner one."
                     d_t "Maybe it was wrong this time. I can just refuse-"
@@ -1230,6 +1257,7 @@ label start:
                     #the cat runs away
                     d "Hey! No, come back here! That's my-"
                     scene bg_ally
+                    show a_day2
                     d "HAH! Got you you little rascal!"
                     c "awrr"
                     d "Now give me back that forms."
@@ -1249,7 +1277,11 @@ label start:
                     d "{i}If you even have one{/i}"
                     d_t "It's late already."
                     "Rustle"
-                    #Achievements glitch
+                    hide a_day2
+                    show a_day2_run
+                    d "-"
+                    hide a_day2_run
+                    show a_day2
                     d "Yeah, no. I'm not staying here any longer than I need to."
                     d "We'll try to find them tomorrow, for now you're coming with me. What do you say little guy?"
                     c "Meowww!"
@@ -1271,12 +1303,14 @@ label start:
                     jump dinnerfor2cat
             label dinnerfor2gabe:
                 scene bg_d_corridor
+                show a_day2
                 g "Hey! It's me Gabe!"
                 d "One second, be right there!"
                 show gabe_neut
                 g "So, want to get to cooking? I brought all the ingredients."
                 d "Yes! Let's go."
                 scene bg_d_kitchen
+                show a_day2
                 show gabe_neut
                 g "I brought everything we need to make your favorite noodle soup!"
                 d "You know me too well! Thank you so much Gabriel!"
@@ -1312,6 +1346,7 @@ label start:
                 jump day3
             label dinnerfor2cat:
                 scene bg_d_kitchen
+                show a_day2
                 d "Alrighty! Here we are."
                 c_n "mrrr"
                 d "Make yourself at home [catname]."
@@ -1347,7 +1382,10 @@ label start:
                 d "It's alright."
                 d "You stay here [catname]."
                 scene bg_d_corridor
+                show a_day2
                 d_t "Who it could be-"
+                hide a_day2
+                show a_day2_dontopen
                 #Achievements glitch to Don't open the door.
                 d "!"
                 d_t "Wh- What was that?"
@@ -1358,6 +1396,8 @@ label start:
                 d_t "Did they leave already?"
                 d_t "Maybe they-, I cant see from here I'll have to go and check-"
                 c_n "HSSSr!"
+                hide a_day2_dontopen
+                show a_day2_dont
                 #screen permanently glitches to DONT
                 d_t "EHM?" 
                 d_t "WHAT!?"
@@ -1446,6 +1486,7 @@ label start:
         label morning3:
             if dinner_plans==False:
                 scene bg_d_window
+                show a_day3
                 d "AH!"
                 d "Not again!"
                 d "It's the girl from last time!"
@@ -1543,6 +1584,7 @@ label start:
             "Click"
             #A couple minutes later
             scene bg_d_kitchen
+            show a_day3
             show gabe_conc
             g "Ok, ok so, did I hear that correctly. You think someone followed you here and tried knocking on your door?"
             d "Yeah..."
@@ -1655,12 +1697,14 @@ label start:
             g "Hey, those 3 minutes wouldn't have been enough for shoes."
             d "Alright alright. Go get ready too. I'm glad you came over."
             scene bg_d_corridor
+            show a_day3
             g "And remember Destiny. If you feel like you're being watched again feel free to call me."
             d "I will. Thanks. I don't know if I would have been able to calm down all by myself."
             g "Glad to have helped."
             g "See you later?"
             d "See you later."
             scene bg_d_kitchen
+            show a_day3
             c_n "Mrrrr"
             d "Oh hey there [catname]."
             d "Did you atleast sleep a little better than I did?"
@@ -1823,6 +1867,7 @@ label start:
             jump work3
         label work3:
             scene bg_office_hallway
+            show a_day3
             d "Hey Simon!"
             s "Oh! Hi there Destiny!"
             s "Wow, you came in real early. I think you've got to be the first one here today."
@@ -1867,6 +1912,7 @@ label start:
             s "Alright, I'll leave you to it now. Again, if anything should be the matter hit me up."
             d "Of course. In that case I'll see you later then."
             scene bg_office_computer
+            show a_day3
             d_t "Wow, this desk is nice. There's so much to look at. She really didn't take anything with her."
             d_t "I should try to take a look at everything."
             d_t "But what should I look at first?"
