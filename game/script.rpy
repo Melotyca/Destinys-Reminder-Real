@@ -1024,9 +1024,10 @@ label start:
                 d "I'm sorry. Of course."
                 d "See you around."
                 scene bg_office_hallway
+                show a_day2
                 show gabe_neut
                 g "Phew! That was a close one. Looked like Matt was really out for blood this time. Looks like he took it quite personally"
-                d "Oh yeah 100%. I was scared he was about to end my carreer right there on the spot."
+                d "Oh yeah 100 percent. I was scared he was about to end my carreer right there on the spot."
                 d "I'm done for. He's going to fire me!"
                 g "Hey, take a deep breath. Surely they're not going to fire you."
                 hide gabe_neut
@@ -1517,7 +1518,7 @@ label start:
                         jump callgabealone
                     "Call the police.":
                         $ call_police= True
-                        jump call_police
+                        jump callpolice
             else:
                 d "AH!"
                 d "Not again!"
