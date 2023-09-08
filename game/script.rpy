@@ -24,8 +24,7 @@ label start:
     #DAY 1
         label day1:
             label dream1:
-                scene bg_black
-                show girl
+                scene dream1
                 x "Destiny..."
                 x "Destiny!"
                 x "You have to listen to me."
@@ -691,8 +690,7 @@ label start:
     #DAY 2
         label day2:
             label dream2:
-                scene bg_black
-                show girl
+                scene dream2
                 x "Please Destiny I'm trying to help you. You have to listen to me"
                 d "What?"
                 x "I'm not an illusion. I'm here to help you."
@@ -1465,7 +1463,7 @@ label start:
     #DAY 3
     label day3:
         label dream3:
-            scene bg_black
+            scene dream3
             x "He was here!" 
             d "Who was-"
             x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
@@ -2010,6 +2008,7 @@ label start:
         label catmissing:
     label day4:
         label dream4:
+            scene dream4
         label morning4:
         label stickwithgabe:
         label work4track:  
@@ -2020,6 +2019,7 @@ label start:
 
     label day5:
         label dream5:
+            scene dream5
         label morning5:
         label work5:
         label seedgabe:
