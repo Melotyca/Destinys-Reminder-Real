@@ -1944,8 +1944,13 @@ label start:
                     "Finish looking":
                         jump donewithdesk
             label deskfolder:
+                d_t "Simon said she kept some of her designs in this folder."
+                d_t ""
 
             label deskcomputer:
+                d_t "Let's see what she has saved on her computer."
+                d_t "Wow, clean desktop. I'm impressed."
+                d_t "Alright. Most of this just looks like work in progrresses for previous projects. "
             
             label deskpostcard:
                 d_t "Oh, a postcard. I probably shouldn't snoop in other peoples things."
@@ -1961,18 +1966,52 @@ label start:
                 d_t "But she looks exactly like her..." 
                 d_t "Why is she suddenly haunting and telling me that someone is after me?"
                 if dinner_plans ==True:
-                    d_t "I really have a weird subconcious. It's kind of freaky."
+                    d_t "I really do have a weird subconcious. It's kind of freaky."
                 else:
                     d_t "Were they really just dreams?"
                     d_t "Can they be? I mean, it's clearly her. Even though I've never seen her from so close before."
+                    d_t "I couldn't have possibly known what she'd look like until now."
                     d_t "Kai's the one warnign me about all of this."
+                    d_t "Is she-"
                     d_t "Does she know about the achievements?"
                 d_t "-"
                 d_t "Hold on. What does it say on the back?"
+                d_t "\"Have a great summer this year! Make sure you bring home lot's of good memories when you visit again. -Love, Mom\""
+                d_t "Sweet."
                 d_t "!"
                 d_t "Hey! That's my street!"
-                d_t "Her adress!"
-                d_t "She lives really close to me."
+                d_t "The adress."
+                d_t "She lives really close to me!"
+                if dinner_plans ==True:
+                    d_t "Whoa, it gets even more freaky. Jeez these weird coincidences keep piling up."
+                    d_t "Did I maybe see her on my way home occasionally?"
+                    d_t "That would explain how I know what she looks like..."
+                    d_t "Maybe that's it. I mean it's possible I forgot i saw her since I had nothing really to do with her."
+                    d_t "The mind works in mysterious ways doesn't it."
+                else:
+                    d_t "Oh no."
+                    d_t "She hasn't come in to the office."
+                    d_t "She didn't tell anyone why she was leaving."
+                    d_t "She left all her things."
+                    d_t "The girl that went missing close to me..."
+                    d_t "She didn't know she wouldn't be coming back."
+                    d_t "Kai is the one the police are looking for!"
+                    d_t "But how-"
+                    d_t "Why haven't they questioned Matthew and Simon yet? Shouldn't the police ask her employers? They're the ones in charge of this department."
+                    d_t "Wouldn't they have to ask the team if anyone knew anything?"
+                    d_t "Simon said she suddenly wanted to quit and wouldn't talk about why. Maybe it had something to do with someone from work."
+                    d_t "Even talking to Matthew didn't change her mind."
+                    d_t "Is that he she keeps mentioning working here?"
+                    d_t "..."
+                    d_t "Is he after me now...?"
+                    d_t "Was he at my apartment yesterday?"
+                    d_t "Oh my god. She's been trying to warn me about this. It's happening to me too now."
+                    d_t "Maybe this is how it all started for her."
+                    d_t "I have to find a way to change what she sais is going to happen!"
+                    d_t "But, Argh I can't stop what I'm doing and go on a ghost hunt."
+                    d_t "I have to figure this out along side work somehow. I can't mess this up either."
+                jump kaidesk
+
                 
 
             label donewithdesk:
