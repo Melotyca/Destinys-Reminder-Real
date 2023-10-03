@@ -2094,8 +2094,10 @@ label start:
                     d_t "I'll have to be a bit more careful. That knocking that we heard yesterday. Gabe said no one was there but Kai lived really close to me."
                     d_t "Maybe this whole thing is connected somehow."
                 elif call_police == true:
+                    pass
 
                 else:
+                    pass
                 
                 
                    
