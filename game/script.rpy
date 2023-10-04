@@ -1903,7 +1903,7 @@ label start:
             s "In that case what are we waiting for!"
             s "I'll show you to your new desk and you can get cracking at it."
             s "It's just over there. Right next to my office."
-            s "I'll be here the entire day so if you have any questions or any trouble feel free to come over and let me know."
+            s "I'll be here almost the entire day so if you have any questions or any trouble feel free to come over and let me know."
             s "Oh, and I'll stop by in the afternoon again to see how things are going."
             s "Does that sound alright with you?"
             d "Yes, definetly. Thank you so much Simon."
@@ -1986,18 +1986,26 @@ label start:
                 d_t "What's this about taking time off?"
                 d_t "It's adressed to Matt directly!"
                 d_t "She's bold."
-                d_t "Hold on. But didn't Simon say Kai quitting was out of nowhere?"
-                d_t "This text would explain why she talked to Matt before leaving but he never mentioned her wanting time off."
-                d_t "Also Matt said she quit. There was nothing about a known time off from work."
+                d_t "Hold on. But didn't Simon say Kai quitting came out of nowhere?"
+                d_t "This text would explain why she wanted to talk to Matt before leaving. But neither of them ever mentioned her wanting time off."
+                d_t "Did they lie?"
+                d_t "Matt said she quit. There was nothing about a known time off from work."
+                d_t "Why would he lie about that if he knew. I would have taken the position anyways."
                 d_t "Did she change her mind?"
-                d_t "And why did she go directly to Matt. I'm sure Simon would have asked him for time off for her if she'd told him about it."
-                d_t "That's usually not something you go directly to the head of department for."
-                d_t "What was going on in her life?"
+                d_t "It doesn't look like she ever sent it. Did they talk about something else then?"
+                d_t "Why did she go directly to Matt? I'm sure Simon would have asked him for time off for her if she'd told him about it."
+                d_t "I'm sure he would have understood."
+                d_t "That's usually not something you go directly to the head of department for. I'm sure Matt would have been less than pleased."
+                d_t "What was going on?"
                 d_t "She seems so desperate."
                 d_t "It looks like someone from work was making her uncomfortable."
                 d_t "Very uncomfortable."
+                d_t "Why didn't she just go talk to Simon about feeling unsafe? Something as serious as this should be reported imeduately!"
                 d_t "No stop it Destiny!"
-                d_t "I got the notes I was looking for. I mean this is still her Computer. I shouldn't be looking for more than strictly work related stuff."
+                d_t "I shouldn't even be looking into this. It's none of my business."
+                d_t "I got the notes I was looking for."
+                d_t "This is still her Computer. I shouldn't be looking for more than strictly work related stuff."
+                d_t "Maybe she quit to get away from it all..."
                 
 
             label deskpostcard:
@@ -2087,29 +2095,124 @@ label start:
             label donewithdesk:
                 if dinner_plans == true:
                     d_t "I can't get the thought out of my head that she didn't just quit."
-                    d_t "I feel kind of uneasy sitting at this girls desk. Something is telling me it's not safe here..."
+                    d_t "I feel kind of uneasy sitting at this girls desk. Something's telling me it's not safe here..."
                     d_t "Was she stalked?"
-                    d_t "No one knows where she is."
-                    d_t "It's possible someone from work has something to do with it."
-                    d_t "I'll have to be a bit more careful. That knocking that we heard yesterday. Gabe said no one was there but Kai lived really close to me."
+                    d_t "No one knows where she is. Almost like she just dissapeared."
+                    d_t "It's possible someone from work did something to her."
+                    d_t "I'm sure they wouldn't like me taking her place."
+                    d_t "I have to be a more careful. That knocking that we heard yesterday. Gabe said no one was there."
+                    d_t "But the fact that Kai lived really close to me is giving me the shivers."
                     d_t "Maybe this whole thing is connected somehow."
                 elif call_police == true:
-                    pass
+                    d_t "I can't get the thought out of my head that she didn't just quit."
+                    d_t "I feel kind of uneasy sitting at this girls desk. She dissapeared and now I'm taking her place."
+                    d_t "The police are still looking for her."
+                    d_t "No one knows where she is. I don't believe that."
+                    d_t "It was someone from work."
+                    d_t "Did she run away or was she kidnapped?"
+                    d_t "Which ever it is. I'm sure they wouldn't like me taking her place."
+                    d_t "I have to be a more careful. That knocking yesterday. I'm glad I called the police. Who could it have been?"
+                    d_t "Maybe all of this will help them find her."
+                    d_t "And whoever did this to her..."
+                    d_t "I don't want to end up like Kai."
+                    d_t "I have to figure out how to stop this."
 
                 else:
-                    pass
+                    d_t "I can't get the thought out of my head that she didn't just quit."
+                    d_t "I feel kind of uneasy sitting at this girls desk. Something's telling me it's not safe here..."
+                    d_t "Was she stalked?"
+                    d_t "No one knows where she is. Almost like she just dissapeared."
+                    d_t "It's possible someone from work did something to her."
+                    d_t "I'm sure they wouldn't like me taking her place."
+                    d_t "I have to be a more careful. That knocking yesterday. Were they looking for her?."
+                    d_t "But the fact that Kai lived really close to me is giving me the shivers."
+                    d_t "Maybe this whole thing is connected somehow."
                 
-                
+                d_t "I think I should go talk to Simon today..."
+                d_t "I think he should know about these... "
+                d_t "Strange notes."
+                d_t "It doesn't look like she ever got the chance to tell him about all of this."
+                d_t "I'll go meet him over lunch."
+                d_t "For now all I can really do is just continue were she left off."
+                jump lunch3
+
+            label lunch3:
                    
 
 
-            if call_police==True:
-                jump partypolice
-            else:
-                jump party
+           
         label party:
-            jump simonconvo
-        label partypolice:
+            g "Destiny!"
+            g "There you are!"
+            g "Ive been looking for you. How was your first day in the new Team?"
+            d "Hi Gabe! Oh, It was nice. I got to- eh take a look at Kai's designs and style."
+            g "Was something wrong with them? You don't look too pleased."
+            d "No, no they're great. I just had to navigate her other things too."
+            d "And... She didn't seem too happy before she left."
+            d "Something seemed off."
+            g "Oh"
+            g "Did she not clear her computer before she left?"
+            d "No..."
+            d "It all seemed quite sudden. All of her things were still there."
+            g "What!?"
+            g "She didn't take anything with her?"
+            d "No."
+            g "That does sound weird."
+            "Bump!"
+            s "Oh sorry! Didn't see you there."
+            g "No worries! You're Simon am I right?"
+            s "Yes. How did you know? I don't think we've been interduced yet."
+            g "I'm Gabriel! Destiny here told me she'd be working with you from now on."
+            s "Destiny! Lucky seeing you here again!"
+            s "I was hoping we'd get to talk a bit more during the day but I had some matters to attend to outside of the office this afternoon."
+            s "I wanted to stop by but things took a little longer than expected I'm terribly sorry."
+            d "Don't worry. I was able to settle in fairly well."
+            g "Destiny has told me all about your generous offer to let her take up the task of designing for you guys."
+            s "Oh yeah. It's a shame. The woman that was working for us before quit recently. But I'm sure Destiny will be a fine replacement as far as I'm concerned."
+            d "Actually about that. Gabe could you give us a moment I have something I'd like to ask Simon."
+            g "Sure go ahead I'll be waiting over by the snacks if you need me."
+            d "Thank you."
+            s "What the matter? It sounds serious."
+            d "Maybe. I wanted to ask you about the time before Kai left."
+            d "Thing is I found some notes on her computer. It was a message she wanted to send to Matthew I think."
+            d "In the message she was requesting time off from work."
+            s "Really?"
+            s "Wow. That's the first I've heard of this."
+            d "Matthew never mentioned anything?"
+            s "No, not that I'd remember."
+            s "I know she went to talk to him the day before she quit but he never mentioned anything about such a request."
+            s "Strange. If she'd wanted time off I'd have been glad to negotiate the terms with her."
+            s "She was one of the most hardworking members on our team. Of course I'd have given her time off."
+            s "Are you sure that's what you read in the message?"
+            d "Pretty sure yes. But I don't think she ever sent it."
+            d "I just thought, since you mentioned she went to talk to him, he knew about her request."
+            s "Hmm. Maybe."
+            s "Did she mention why she wanted time off?"
+            d "Something about someone making her uncomfortable I think."
+            s "Oh."
+            s "Did she say who?"
+            d "No. It was really vague. I don't think she wanted Matthew to know who it was."
+            s "I'll go talk to him about it."
+            s "If he knows something about why she quit so suddenly then I'd better ask him about it."
+            s "I'm a bit shocked he didn't tell me about it in the first place."
+            d "Yeah, that does seem a bit strange."
+            s "Thank you for letting me know!"
+            s "I'll have a look into it."
+            d "Of course. I was able to start picking up her work as well by the way."
+            s "Really! Thats awsome. We'll take a look at it tomorrow moring then."
+            d "Sure."
+            if call_police == True:
+                "Ring!"
+                d "Oh! Sorry! That has to be mine."
+                s "Take it. I'll go talk to Matthew while you're busy."
+                d "Thanks!"
+                "Click"
+                d "Destiny Sullivan, who is this?"
+                o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
+
+            else: 
+
+
             jump simonconvo
         label simonconvo:
             if dinner_plans== True:
