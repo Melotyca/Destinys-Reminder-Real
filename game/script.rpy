@@ -2211,6 +2211,7 @@ label start:
                 o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
 
             else: 
+                pass
 
 
             jump simonconvo
