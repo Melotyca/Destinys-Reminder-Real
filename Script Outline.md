@@ -4,6 +4,7 @@ useful copypastes:
 {i}x{/i}
 $ x = x
 
+
 ## Outline 
 
 ### Day 1: Morning with Gabriel, Work, trying to figure out what it is, accident with matt, dinner with gabriel, figuring out what is going on, 
