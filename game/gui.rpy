@@ -55,13 +55,13 @@ define gui.interface_text_color = '#705050'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "CupCakes.otf"
 
 ## The font used for character names.
 define gui.name_text_font = "DejaVuSans.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "Courier Prime Code.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -209,7 +209,7 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cdae9b"
+define gui.choice_button_text_idle_color = "#787878"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 

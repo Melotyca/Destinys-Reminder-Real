@@ -1,16 +1,16 @@
 ﻿#Destinys Reminder
 #Fonts
 #Characters
-define d = Character("Destiny",who_font="Minako-Regular.ttf", color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5")
-define d_t = Character("Destiny",who_font="Minako-Regular.ttf", color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb")
+define d = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5", what_size=38)
+define d_t = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb", what_size=38)
 define g = Character("Gabriel",who_font="Hey Comic.ttf", color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b")
-define m = Character("Matthew",who_font="Lean.otf", color="#1346a0",what_font="Lean.otf", what_color="#4c77c1")
+define m = Character("Matthew",who_font="DraftingMono-Bold.otf", color="#1346a0",what_font="DraftingMono-Bold.otf", what_color="#4c77c1")
 define s = Character("Simon",who_font="Typo_Round_Bold_Demo.otf", color= "#b01d1d",what_font="Typo_Round_Bold_Demo.otf", what_color="#c64e48")
-define x = Character("?",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5" )
+define x = Character("?",who_font="KGRedHands.ttf",who_size=45, color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5",what_size=30 )
 define k = Character("Kai",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b")
-define c = Character("Cat", color="#444444", what_color="#7b7b7b" )
-define c_n = Character("[catname]", color="#673b05", what_color="#aa811a" )
-define o = Character("Officer R.", color="#001f55", what_color="#315089")
+define c = Character("Cat",who_font="gabriele-bad.ttf", color="#444444",what_font="gabriele-bad.ttf", what_color="#7b7b7b" )
+define c_n = Character("[catname]",who_font="gabriele-bad.ttf", color="#673b05",what_font="gabriele-bad.ttf", what_color="#aa811a" )
+define o = Character("Officer R.",who_font="texgyrecursor-bold.otf", color="#001f55", what_font="texgyrecursor-bold.otf", what_color="#315089")
 
 #Variables
 default fix_printer = False
@@ -19,7 +19,17 @@ default open_door = False
 default call_police = False
 default gabe_hints = 0
 #GAME
+    
 label start:
+    d_t "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    d "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    g "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    m "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    s "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    x "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    c "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    o "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
+    c "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
     label game:
     #DAY 1
         label day1:
@@ -2334,11 +2344,8 @@ label start:
                     d_t "The police will get her stuff tomorrow..."
                     d_t "Will message to Matt and the drawings really be able to help them?"
                     d_t "I hope so. I can't really do anything else right now."
-            
-
-
-            else: 
-                pass
+                else: 
+                    pass
 
 
    
