@@ -94,13 +94,13 @@ $ x = x
    - friend of destiny
    - works at the same company but in a different team
    - very friendly and aloof
-- Matt: 
+- Matthew Ledger: 
    - Person in charge of destinys current team or just employees in general
    - very strict
    - generally disliked
-- Person X:
+- Simon Harris:
    - 
-- The Girl:
+- Kai Amari
 - The Dog (gets a name)
 
 ## Backgrounds/Scenes
