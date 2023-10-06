@@ -2404,12 +2404,35 @@ label start:
                     d_t "I haven't had to look for anyone yet."
                     d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
                     d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight at least."
-                    jump simonconvop
+                    jump mattconvop
                 else: 
-                    pass
+                    s "So, have you been enjoying the party? Even though you're not really a party person?"
+                    d "More or less. I'm still a bit shaken from what I found."
+                    d "But I think I'll be able to enjoy myself a bit more, now that I know you'll be looking into it as well."
+                    s "I'm glad to hear it. You know, actually. I think I saw Matthew over there with the drinks. I'll go talk to him."
+                    d "Good luck!"
+                    d_t "I need a moment away from these people."
+                    scene bg_office_hallway
+                    d_t "Much better."
+                    d_t "Jeez I hate crowds."
+                    d_t "Oh! Now that I have a moment to myself."
+                    d_t "What's left for today?"
+                    #look at achievements
+                    d_t "Well the ignorance was definitely bliss."
+                    d_t "Ouch. But after that?"
+                    d_t "Nothing police related has happened yet. Is this really just the party then?"
+                    d_t "So that means..."
+                    d_t "Only the where is Waldo one is left."
+                    d_t "Great of course. The one I was able to decipher the least."
+                    d_t "I haven't had to look for anyone yet."
+                    d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
+                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight at least."
 
-            label simonconvop:
+            label mattconvop:
                 scene bg_office_cafeteria
+                m "Well if it isn't miss Sullivan."
+                d "Oh. E- Evening Matthew."
+
 
 
    
@@ -2470,23 +2493,38 @@ label start:
             k "Tomorrow night. He's planning to follow you on your way home and bring you here too."
             d "He's going to kidnap me!?"
             k "Beat him with his own tactics Destiny!"
-            d "His tactics? Are you crazy?!"
-            k "You can't let him know where you are. Trust me. Play along. He won't expect you to use his tactics against him."
+            d "His tactics? What do you mean? Are you crazy?!"
+            k "You can't let him know where you are. Trust me. Play along. He won't expect you to do what he would."
             d "That's insane!"
-            k "Please. I don't want to end here. This is the only way I know how to get out of this place."
-            k "You're the only person that can figure out where I am."
+            k "Please. I don't want it to end here. This is the only way I know how to get out of this place."
+            k "You're the only person that can find me."
             k "If he knows he can't track you he won't risk it."
             d "Who-"
-            k "If he knows it won't work he'll come here alone. You can find out where he goes."
+            k "If he knows it won't work he'll come here alone. You can find out where he goes. I can helq .Y 0_- "
             d "Who!?"
-            k "It's  * _¨-  /%. -  * ."
+            k "/t's  * _¨-  /%. -  * ."
             d "KAI!"
             k "_.*- ,"
-            d "Stay!"
+            d "No! Stay!"
+            d "Wait!"
 
 
         label morning4:
             scene bg_d_window
+            d "Kai!"
+            d "Tell me-"
+            d "Who-"
+            d "..."
+            d "He's tracking me!"
+            c_n "Hsss!"
+            d "Sorry [catname]."
+            d "!"
+            d_t "\"You remember me don't you\". I do! I have to find her!"
+            d_t "But-"
+            d_t "She said he's tracking me. My phone."
+            d_t "That can't be true can it?"
+            d_t ""
+
         label stickwithgabe:
         label work4track:  
         label work4:
