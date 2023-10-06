@@ -2397,10 +2397,19 @@ label start:
                     d_t "I hope so. I can't really do anything else right now."
                     d_t "What's left for today?"
                     #look at achievements
-                    d_t "I think this call was the hands up."
+                    d_t "I think this call must've been the hands up."
                     d_t "So that means..."
+                    d_t "Only the where is Waldo one is left."
+                    d_t "Great of course. The one I was able to decipher the least."
+                    d_t "I haven't had to look for anyone yet."
+                    d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
+                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight at least."
+                    jump simonconvop
                 else: 
                     pass
+
+            label simonconvop:
+                scene bg_office_cafeteria
 
 
    
@@ -2445,7 +2454,39 @@ label start:
     label day4:
         label dream4:
             scene dream4
+            k "Destiny!"
+            k "I don't have much time."
+            d "Kai! I can remember you! What happened to you?"
+            k "We don't have much time Destiny. He's tracking you."
+            d "What?"
+            d "Who's tracking me? How do you know?"
+            k "It's your phone. He's tracking your phone. You can't have it with you tomorrow."
+            d "How do you know that?"
+            k "You have to trust me on this Destiny."
+            k "He's going to come here again tomorrow."
+            k "He's keeping me locked away. I don't know where but you can!"
+            d "How? What do you mean."
+            k "He only comes here every couple of days. He has to to make sure I'm still here."
+            k "Tomorrow night. He's planning to follow you on your way home and bring you here too."
+            d "He's going to kidnap me!?"
+            k "Beat him with his own tactics Destiny!"
+            d "His tactics? Are you crazy?!"
+            k "You can't let him know where you are. Trust me. Play along. He won't expect you to use his tactics against him."
+            d "That's insane!"
+            k "Please. I don't want to end here. This is the only way I know how to get out of this place."
+            k "You're the only person that can figure out where I am."
+            k "If he knows he can't track you he won't risk it."
+            d "Who-"
+            k "If he knows it won't work he'll come here alone. You can find out where he goes."
+            d "Who!?"
+            k "It's  * _¨-  /%. -  * ."
+            d "KAI!"
+            k "_.*- ,"
+            d "Stay!"
+
+
         label morning4:
+            scene bg_d_window
         label stickwithgabe:
         label work4track:  
         label work4:
