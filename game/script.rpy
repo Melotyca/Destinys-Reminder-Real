@@ -1777,12 +1777,12 @@ label start:
                 
         label achievements3:
             d_t "One more look at today's achievements..."
-            d_t "I can't avoid these can I"
+            d_t "I can't avoid these can I?"
             d_t "The theory's been thuroughly tested by now I'd say."
             d_t "I didn't have too much time to look at them the past two days though."
             d_t "Maybe third time's the charm."
             d_t "I've got more than enough time to figure out what they mean now anyways."
-            d_t "Where should I start"
+            d_t "Where should I start."
         label achievements3menu:
             menu:               
                 "Restart":
@@ -2451,22 +2451,29 @@ label start:
                 d "Did. Ehm, Simon come to talk to you about her?"
                 m "Just now? Yes."
                 m "Not that that's any of your business."
-                m "That's something between us. Since you're just there to fill her place I don't know why you should be concerned with any of it."
+                d "But her message to you-"
+                m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such imprtant manners?"
+                d "What?"
+                m "I don't know what you are talking about but the situation with Kai is something between Simon and me."
+                m "Since you're just there to fill her place I don't know why you should be concerned with any of it."
                 d "Sorry. I just-"
-                m "You what? Thought you should be even more intrusive than already reading the personal notes of a coworker you don't even know."
+                m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know already is."
                 m "I'm sure the instructions you got were to familiarize yourself with her visual style."
+                m "Not to make up stories. And throw dirt on my name."
                 m "I don't know why Simon didn't correct you on your unacceptable behavior."
                 m "But if you were still under my supervision snooping in others personal data would not slide."
                 d "I wasn't trying to. I- I was just looking for more information about the current project."
                 d "I didn't think this would turn into such a big thing."
                 m "Of course you didn't."
                 m "That seems to be a reoccuring theme with you isn't it?"
-                m "Don't think I've forgotten about our little misshap."
+                m "And don't think I've forgotten about our little misshap."
                 if fix_printer
+                #Have to continue
                 
 
             label mattconvo:
                 scene bg_office_cafeteria
+                #Have to continue
 
 
 
@@ -2537,7 +2544,7 @@ label start:
             d "Who-"
             k "If he knows it won't work he'll come here alone. You can find out where he goes. I can helq .Y 0_- "
             d "Who!?"
-            k "/t's  * _¨-  /%. -  * ."
+            k "YOu'l/ k N. w -*"
             d "KAI!"
             k "_.*- ,"
             d "No! Stay!"
@@ -2547,32 +2554,64 @@ label start:
         label morning4:
             scene bg_d_window
             d "Kai!"
-            d "Tell me-"
+            d "Tell me"
             d "Who-"
             d "..."
             d "He's tracking me!"
-            c_n "Hsss!"
-            d "Sorry [catname]."
+            if dinner_plans==False:
+                c_n "Hsss!"
+                d "Sorry [catname]."
             d "!"
-            d_t "\"You remember me don't you\". I do! I have to find her!"
+            d_t "\"You remember me don't you\". I do!"
+            d_t "Kai, I remember you! I have to find her!"
             d_t "But..."
+            d_t "How am I going to do that?"
             d_t "She said he's tracking me. My phone."
-            d_t "But how would he-"
+            d_t "How would he-"
             d_t "I forgot it in the hallway yesterday!"
             d_t "Oh no."
-            d_t "Gabe said it was still laying near where I made the call."
-            d_t "Did someone bug it while we were looking for it?"
-            d_t "But how would they know I'd lose it?"
-            d_t "Can that really be true?"
-            d_t "What she's asking me is insane! I can't just act as if I don't know anything."
+            d_t "Gabe said it was still laying near one of the cubicals."
+            if call_police == True:
+                d_t "I must have forgotten it there when I went out to talk to officer Rogan"
+
+            else: 
+                d_t "I must have forgotten it there when I went out to take a break from all the people."
+            d_t "He must have bugged it while we were looking for it."
+            d_t "Wait, how would they even know I'd lose it?"
+            d_t "That's pure chance."
+            d_t "And how would Kai even know that?"
+            d_t "What she's asking me is insane! I can't just present myself to this creep and go about my day as if nothing happened."
             d_t "Beat him with his own tactics?"
             d_t "Do what he would?"
+            d_t "He's just stalking me apparently."
             d_t "I can't just follow him. That's crazy."
+            d_t "..."
             d_t "How do I know she's not the one leading him to me!"
             d_t "Kai's plan is way too dangerous."
             d_t "How can she be so certain it's going to work?"
             menu:
                 "Trust Kai's plan":
+                    d_t "This is the only way I can help her..."
+                    d_t "He's the only one that knows where she is."
+                    d_t "But following someone to god knows where would be way too dangerous."
+                    d_t "That can't be what she meant."
+                    d_t "How could I use his tactics against him?"
+                    d_t "..."
+                    d "Of course! That's it!"
+                    d "I can find out where he goes by using a tracker! Just like he did."
+                    d "-"
+                    d_t "I don't even know who to track!"
+                    d_t "I'll know. Yeah right. I still have no idea who took her, other than that it's a guy"
+                    if call_police ==Ture:
+                        d_t "According to the police he was here yesterday afternoon."
+
+                    else:
+                        pass
+                    d_t "And he has to have known Kai."
+                    c_n
+
+                    
+                    d_t "Who all was there yesterday and"
 
                 "The plan is too risky":
 
