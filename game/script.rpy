@@ -19,6 +19,9 @@ default dinner_plans = False
 default open_door = False
 default call_police = False
 default gabe_hints = 0
+default trust_kai = False
+default track_who = 0
+default gabe_ally = False
 #GAME
     
 label start:
@@ -2497,12 +2500,14 @@ label start:
             d_t "Finally."
             d_t "No one's getting in now."
             "Rustle"
-            d_t "[catname]! Shoot I forgot to get catfood."
+            d_t "Oh right, [catname]! Shoot I forgot to get them catfood."
             d "[catname]! I'm home."
             "..."
+            d "Sorry I'm so late. I've got some bad news for you little buddy..."
             d "[catname]?"
             d "You were so lively yesterday. Are you mad at me for leaving you all alone for so long?"
             scene bg_d_kitchen
+            d "[catname]?!"
             d "Where-"
             d "AHHH!"
             scene bg_black
@@ -2510,7 +2515,8 @@ label start:
             d "MHHHM"
             s_k "Stop squealing you little brat."
             d "MRRH"
-            s_k "I thought I told you to shut up!"
+            s_k "URGH, Stop that!"
+            s_k "I thought I told you to {i}shut up.{/i}"
             "Whack!"
             jump worst
 
@@ -2589,6 +2595,8 @@ label start:
             d_t "How do I know she's not the one leading him to me!"
             d_t "Kai's plan is way too dangerous."
             d_t "How can she be so certain it's going to work?"
+            d_t "Is she the one behind all of this?"
+            d_t "Or could he be using her to get me to go to him?"
             menu:
                 "Trust Kai's plan":
                     d_t "This is the only way I can help her..."
@@ -2604,16 +2612,22 @@ label start:
                     d_t "I'll know. Yeah right. I still have no idea who took her, other than that it's a guy"
                     if call_police ==Ture:
                         d_t "According to the police he was here yesterday afternoon."
-
                     else:
                         pass
                     d_t "And he has to have known Kai."
-                    c_n
+                    d_t "That's still too many..."
+                    if dinner_plans==False:
+                        c_n "Meow!"
+                        d "Morning [catname]"
+                        d "Sorry for screaming before."
+                        c_n "Prrrr"
+                        d "See I'm just a little lost on what to do right now."
+                        d "I have to find a way to track someone but I don't even know who or how."
+                        c_n "Maaauw"
+                        d ""
 
-                    
-                    d_t "Who all was there yesterday and"
-
-                "The plan is too risky":
+                "Doubt Kai's words":
+                    d_t "I can't trust her. I can't trust anyone."
 
         label stickwithgabe:
         label work4track:  
