@@ -2403,7 +2403,12 @@ label start:
                     d_t "Great of course. The one I was able to decipher the least."
                     d_t "I haven't had to look for anyone yet."
                     d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
-                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight at least."
+                    d_t "And if this Waldo is supposed to be him then I can technically find him tonight right?"
+                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight."
+                    d_t "Well."
+                    d_t "That doesn't really make my sample size that much smaller now that I think about it."
+                    d_t "Oh well it's worth keeping in mind."
+                    d_t "I should go back in."
                     jump mattconvop
                 else: 
                     s "So, have you been enjoying the party? Even though you're not really a party person?"
@@ -2421,17 +2426,47 @@ label start:
                     d_t "Well the ignorance was definitely bliss."
                     d_t "Ouch. But after that?"
                     d_t "Nothing police related has happened yet. Is this really just the party then?"
-                    d_t "So that means..."
-                    d_t "Only the where is Waldo one is left."
-                    d_t "Great of course. The one I was able to decipher the least."
-                    d_t "I haven't had to look for anyone yet."
+                    d_t "Hmm it could also still happen later."
+                    d_t "I doubt it though. Especially because of that last one."
+                    d_t "\"Where is Waldo\""
+                    d_t "That one pretty much requires a crowd." 
+                    d_t "Great. The only one left is the one I was able to decipher the least."
+                    d_t "So far no one has stuck out to me. But maybe that's exactly the point."
                     d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
-                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight at least."
+                    d_t "And if this Waldo is supposed to be him then I can technically find him tonight right?"
+                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight."
+                    d_t "Well."
+                    d_t "That doesn't really make my sample size that much smaller now that I think about it."
+                    d_t "Oh well it's worth keeping in mind."
+                    d_t "I should go back in."
+                    jump mattconvo
 
             label mattconvop:
                 scene bg_office_cafeteria
                 m "Well if it isn't miss Sullivan."
                 d "Oh. E- Evening Matthew."
+                m "{i}Evening.{/i} I heard you settled in fine in your new position."
+                d "Uhm. Yeah I have. Simon gave me Kais old desk."
+                m "Lovely."
+                d "Did. Ehm, Simon come to talk to you about her?"
+                m "Just now? Yes."
+                m "Not that that's any of your business."
+                m "That's something between us. Since you're just there to fill her place I don't know why you should be concerned with any of it."
+                d "Sorry. I just-"
+                m "You what? Thought you should be even more intrusive than already reading the personal notes of a coworker you don't even know."
+                m "I'm sure the instructions you got were to familiarize yourself with her visual style."
+                m "I don't know why Simon didn't correct you on your unacceptable behavior."
+                m "But if you were still under my supervision snooping in others personal data would not slide."
+                d "I wasn't trying to. I- I was just looking for more information about the current project."
+                d "I didn't think this would turn into such a big thing."
+                m "Of course you didn't."
+                m "That seems to be a reoccuring theme with you isn't it?"
+                m "Don't think I've forgotten about our little misshap."
+                if fix_printer
+                
+
+            label mattconvo:
+                scene bg_office_cafeteria
 
 
 
@@ -2520,10 +2555,26 @@ label start:
             d "Sorry [catname]."
             d "!"
             d_t "\"You remember me don't you\". I do! I have to find her!"
-            d_t "But-"
+            d_t "But..."
             d_t "She said he's tracking me. My phone."
-            d_t "That can't be true can it?"
-            d_t ""
+            d_t "But how would he-"
+            d_t "I forgot it in the hallway yesterday!"
+            d_t "Oh no."
+            d_t "Gabe said it was still laying near where I made the call."
+            d_t "Did someone bug it while we were looking for it?"
+            d_t "But how would they know I'd lose it?"
+            d_t "Can that really be true?"
+            d_t "What she's asking me is insane! I can't just act as if I don't know anything."
+            d_t "Beat him with his own tactics?"
+            d_t "Do what he would?"
+            d_t "I can't just follow him. That's crazy."
+            d_t "How do I know she's not the one leading him to me!"
+            d_t "Kai's plan is way too dangerous."
+            d_t "How can she be so certain it's going to work?"
+            menu:
+                "Trust Kai's plan":
+
+                "The plan is too risky":
 
         label stickwithgabe:
         label work4track:  
