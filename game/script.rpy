@@ -2718,8 +2718,8 @@ label start:
                         jump achievements4
 
                     "The lions den":
-                        d_t "That has to be where Kai is."
-                        d_t ""
+                        d_t "The lions den. I'll find it."
+                        d_t "That's where Kai's being kept."
                     "Start the day":
 
 
