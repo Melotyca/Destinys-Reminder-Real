@@ -822,7 +822,7 @@ label start:
                             d_t "I guess I'll just have to see. I don't think I can figure out what this means right now."
                             jump achievements2
 
-                        "Finish checking achievements":
+                        "Start the day":
                             d_t "That's got to be enough for now."
                 d_t "It's not a lot of preparation. I'm pretty certain on some of them but why do they have to be so darn vague."
                 d_t "And why now of all times? I wish I had more time to figure out where this is all coming from. But I'm neck deep in work right now."
@@ -1880,7 +1880,7 @@ label start:
                         d_t "Maybe I'll have to look for Gabe sometime during the event."
                         d_t "I guess this just means I'll have to keep an extra eye on him."
                         jump achievements3menu
-                "Finish checking achievements":
+                "Start the day":
                     pass
             d_t "Why do I always feel dumber after looking at these?"
             d_t "Checking them yesterday helped a little but I still got surprised by some. I hope today will be better."
@@ -2596,9 +2596,10 @@ label start:
             d_t "Kai's plan is way too dangerous."
             d_t "How can she be so certain it's going to work?"
             d_t "Is she the one behind all of this?"
-            d_t "Or could he be using her to get me to go to him?"
+            d_t "Or could he be using her to get to me?"
             menu:
                 "Trust Kai's plan":
+                    $ trust_kai = True
                     d_t "This is the only way I can help her..."
                     d_t "He's the only one that knows where she is."
                     d_t "But following someone to god knows where would be way too dangerous."
@@ -2648,38 +2649,79 @@ label start:
                         d "That's it!"
                         d "Thank you [catname]! You're a genius!"
                         c_n "Pwrrrw"
+                        d_t "I don't have that much time left but maybe I can look at some of the achievements before I go."
+                        jump achievements4
                     else:
                         d_t "And I have to find a way to track them too."
                         d_t "How am I going to do that?"
-                        d_t "I don't just have a live tracking device laying around in my apartment."
+                        d_t "I don't just have a live tracking device laying around my apartment."
                         d_t "Where do you even get one of those?"
-
-
-                        c_n "Meow!"
-                        d "Morning [catname]"
-                        d "Sorry for screaming before."
-                        c_n "Prrrr"
-                        d "See I'm just a little lost on what to do right now."
-                        d "I have to find a way to track someone but I don't even know who or how."
-                        c_n "Maaauw"
-                        d "I know. I know. You don't know what to do either."
-                        d "You must be hungry."
-                        c_n "Mrrw" 
-                        d "I presume that was a yes."
-                        d "I have some more tuna but only one more can."
-                        d "I'll bring home some propper cat food today."
-                        d "{i}If I make it through today...{/i}"
-                        d "I think I also have to pick up some other cat supplies anyways. I don't think you're going away anytime soon."
-                        d "There's a petshop on my way to work. I bet they have-"
-                        d "Chips!"
+                        d_t "I doubt you can buy one in a normal supermarket."
+                        d_t "What's something that the average person would need to be able to track?"
+                        d_t "Hmm..."
+                        d "Pets!"
                         d "I can use the chip from one of those cat-tracking collars!"
                         d "That's it!"
-                        d "Thank you [catname]! You're a genius!"
-                        c_n "Pwrrrw"
-                        jump work4track
+                        d "That's genius!"
+                        d "There's a petshop on my way to work. I can just hop in there and get one."
+                        d "Phew at least that's going to work."
+                        d_t "I don't have that much time left but maybe I can look at some of the achievements before I go."
+                        jump achievements4
 
                 "Doubt Kai's words":
                     d_t "I can't trust her. I can't trust anyone."
+                    d_t "I don't know if what she's saying is even true."
+                    d_t "If I leave my phone at home I won't be able to call the police if something happens."
+                    d_t "I'll be completely defenceless"
+                    d_t "I can't risk it."
+                    d_t "If I fail I'll end up just like her. And for what?"
+                    d_t "I didn't even know her before all of this started."
+                    d_t "I'm not responsible for her safety. I have nothing to do with all of this. I have to keep myself safe first."
+                    d_t "I don't even know who he is. She never told me who was doing this to her."
+                    d_t "So how could I use his tactics against him?"
+                    d_t "I can't do that. I have to go to work today but I'm sure as heck not leaving my phone here."
+                    d_t "Nothing seems wrong with it anyways. I'm not like Kai. If anything seriously bad happens I'll tell Simon or call the police."
+                    d_t "I'll be surounded by so many people all day. There's no chance anyone could kidnap me without someone noticing."
+                    #have to continue
+
+            label achievements4:
+                menu:
+                    "You remember me don't you?":
+                        d_t "Yeah I do this time..."
+                        d_t "I'll get you out of this Kai."
+                        jump achievements4
+
+                    "Taste your own medicine":
+                        d_t "I'll do it Kai."
+                        d_t "I'll make him taste his own medicine."
+                        d_t "This has to work."
+                        jump achievements4
+
+                    "Too close for comfort":
+                        d_t "I'll meet him then?"
+                        d_t "I have to be careful"
+                        d_t "If I want to put a tracker on him I'll have to get close."
+                        d_t "I can't get caught. If he knows I'm trying to find Kai's location he won't go."
+                        jump achievements4
+
+                    "Not alone anymore":
+                        d_t "What?"
+                        d_t "Who's not alone anymore?"
+                        d_t "Should I tell someone?"
+                        d_t "Maybe I can get someone to help me."
+                        if call_police==True:
+                            d_t "If I tell the police my plan now they're going to try to dissuade me."
+                            d_t "But if I know where she is they might be able to help rescue her."
+
+                        else:
+                            d_t "Who can I even trust anymore..."
+                        jump achievements4
+
+                    "The lions den":
+                        d_t "That has to be where Kai is."
+                        d_t ""
+                    "Start the day":
+
 
         label stickwithgabe:
         label work4track:  
