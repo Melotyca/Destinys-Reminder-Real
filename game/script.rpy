@@ -2470,7 +2470,10 @@ label start:
                 m "Of course you didn't."
                 m "That seems to be a reoccuring theme with you isn't it?"
                 m "And don't think I've forgotten about our little misshap."
-                if fix_printer
+                if fix_printer:
+                    pass
+                else:
+                    pass
                 #Have to continue
                 
 
@@ -2721,6 +2724,7 @@ label start:
                         d_t "The lions den. I'll find it."
                         d_t "That's where Kai's being kept."
                     "Start the day":
+                        pass
 
 
         label stickwithgabe:
