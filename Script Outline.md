@@ -91,6 +91,8 @@ $ x = x
    - lives alone in an appartment
    - Work starts at 8:30
    - her bus leaves at 8:00
+   - 
+
 - Gabriel Anderson: 
    - friend of destiny
    - works at the same company but in a different team

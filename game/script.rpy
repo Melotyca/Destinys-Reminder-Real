@@ -1735,7 +1735,7 @@ label start:
             d "But I have the feeling someone might have followed me to my apartment yesterday."
             d "I-I heard knocking but when I checked no one was there."
             o "Alright miss Sullivan. Let's take a deep breath. Where do you live currently?"
-            d "Ehm, I live at Parkerstreet 7. In that big apartment-building, oh er, on floor 3."
+            d "Ehm, I live at Parkerstreet 7. In that big apartment-building, oh er-, on floor 3."
             o "Thank you very much. And what makes you believe you were followed"
             d "It's hard to explain b-but on my way home I had to chase after a stray that had gotten hold of some of my documents."
             d "And after I followed it into an empty ally, I uhm, was starting to get the feeling that I was being watched."
@@ -2509,7 +2509,11 @@ label start:
                         d "Besides. If anyone chose to talk to Matt over me I'd be pretty offended too."
                         g "Wanna go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk it."
-                        #Have to continue
+                        if call_police==True:
+                            jump simonconvop
+                        else:
+                            jump simonconvo
+                        
 
                     "Press on":
                         d "Did you even get a message form Kai?"
@@ -2517,8 +2521,8 @@ label start:
                         d "Did Kai ever ask for time off?"
                         m "Neither did I get a message from Kai nor do I know of her ever asking for time off."
                         m "She came to me on the day that she quit saying that she didn't want to work here anymore. And that I should wait to tell Simon until the next day."
-                        m "Whatever sentimental messages she wrote I never saw any. All I did was do my job."
-                        m "I don't know why you are both now accusing me of having witheld information. But like I already told Simon she had no oblegation to inform him in the first olace. And neither did I."
+                        m "Whatever sentimental messages she wrote on her computer, I never saw any. All I did was do my job."
+                        m "I don't know why you are both now accusing me of having witheld important information. But like I already told Simon she had no oblegation to inform him in the first olace. And neither did I."
                         d "Oh."
                         m "I'll be going now thank you."
                         d "..."
@@ -2537,13 +2541,75 @@ label start:
                         g "Wait they talked?"
                         d "Yep. She went to go talk to him before she quit but it seems like he doesn't want anyone to know what they actually talked about."
                         g "That is weird."
-                        d "He sais we're accusing him of something, but he's the only one making such a big deal out of it."
-                        d "All I wanted to do was ask about the message."
-                        g "Well, I wouldn't put it past Matt to take it as a personal offence. But this is a little extreme, even for him."
+                        d "He sais we're accusing him of something, but he's the one making such a big deal out of us asking him."
+                        d "All I wanted to know was if she'd sent the message."
+                        g "Well, I wouldn't put it past Matt to take you two both asking him about something he doesn't know as a personal offence. But I admit, this is a little extreme even for him."
                         d "Yeah..."
-                        g "Hey, wanna go grab something to eat? I saw some tasty treats over at the snack bar."
+                        g "Hey! You know what will cheer you up?"
+                        g "Let's  go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk it."
-                        #Have to continue
+                        if call_police==True:
+                            jump simonconvop
+                        else:
+                            jump simonconvo
+                        
+
+            label simonconvo:
+                s "Ah, Destiny! I'm glad I caught you again tonight."
+                s "Is something the matter? You look tense."
+                d "Don't worry it's nothing. I'm just a little exhausted that's all."
+                s "Had a long day huh?"
+                d "Yeah. I can't wait to just get home and relax."
+                s "You live on Parkerstreet right?"
+                d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
+                s "It's a lovely area. I think I looked at some apartments there too once. That's wy I was so interested."
+                #have to continue
+                d "Oh no! My phone!"
+                s "What's up?"
+                d "I must have left my phone somewhere!"
+                s "Want me to help you look for it?"
+                d "No it's fine. I don't want to take up even more of your time. I'll go look for it myself."
+                s "As you wish. See you tomorrow then."
+                d "See ya!"
+                
+                
+            label simonconvop:
+                s "Ah, Destiny! I'm glad I caught you again tonight."
+                s "Is something the matter? You look tense."
+                d "Don't worry it's nothing. I'm just a little exhausted that's all."
+                s "Who was that on the phone there before?"
+                d "Oh that? Uhm, no one special. Just ehm-"
+                menu:
+                    "The landlord":
+                        d "It was my landlord. Er- He wanted to know if I'd experienced any doordashers recently..."
+                        s "Your landlord?"
+                    "A neighbour":
+                        d "It was my neighbour. Er- He wanted to know if I'd experienced any doordashers recently..."
+                        s "Your neighbour?"
+
+                d "Yeah. I think there were some kids uhm, going around the past few days."
+                s "Really?"
+                d "Or so I've heard."
+                s "Doordashers? That's rare these days. These aparment buildings are so I guess anyone can stroll in."
+                s "You live on Parkerstreet right?"
+                d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
+                s "I've looked into getting an apartment there too once actually. That's why I was so interested when you mentioned it."
+                s "You live in that big block right in front of the park right?"
+                d "Yeah exactly."
+                s "I think I checked that one out too. Great views. But the bus connection in quite bad isn't it."
+                d "Well, it's not that bad. I just have to walk to the next busstop from the office since my bus doesn't go all the way here."
+                d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
+                d "Oh no! My phone!"
+                s "What's up?"
+                d "I must have left my phone somewhere!"
+                s "Want me to help you look for it?"
+                d "No it's fine. I don't want to take up even more of your time. I'll go look for it myself."
+                s "As you wish. See you tomorrow then."
+                d "See ya!"
+
+
+
+
 
 
 
