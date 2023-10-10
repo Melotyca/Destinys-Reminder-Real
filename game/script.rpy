@@ -1943,7 +1943,7 @@ label start:
             s "It's no trouble. I'm just making sure you feel welcome as our new member."
             s "Alright, I'll leave you to it now. Again, if anything should be the matter hit me up."
             d "Of course. In that case I'll see you later then."
-            scene bg_office_computer
+            scene bg_office_computer_kai
             show a_day3
             d_t "Wow, this desk is nice. There's so much to look at. She really didn't take anything with her."
             d_t "I should try to take a look at everything."
@@ -2281,6 +2281,7 @@ label start:
                 g "She didn't take anything with her?"
                 d "No."
                 g "That does sound weird."
+                d "That's not all she had-"
                 "Bump!"
                 s "Oh sorry! Didn't see you there."
                 g "No worries! You're Simon am I right?"
@@ -2304,14 +2305,18 @@ label start:
                 d "Maybe. I wanted to ask you about the time before Kai left."
                 s "Sure go ahead."
                 d "The thing is, I found some of her old notes on her computer. It was a message she wanted to send to Matthew right before she quit I think."
-                s "A message?"
+                s "You found what?"
                 d "Yeah. In the message she was requesting time off from work."
-                s "Really?"
-                s "Wow. That's the first I've heard of it."
+                s "..."
+                s "That was on her computer?"
+                d "Yeah. You seem surprised."
+                s "Well yes. That's the first I've heard of it."
                 d "Matthew never mentioned anything to you?"
                 s "No, not that I'd remember."
                 s "I know she went to talk to him the day before she quit but he never said anything about such a request."
-                s "Strange. If she'd wanted time off I'd have been glad to negotiate the terms with her."
+                s "He never told me anything about their conversation at all actually. Said it was private."
+                s "She should have come to me first."
+                s "If she'd wanted time off I'd have been glad to negotiate the terms with her."
                 s "She was one of the most hardworking members on our team. Of course I'd have given her time off."
                 s "Are you sure that's what you read?"
                 d "Pretty sure yes. But I don't think she ever sent it."
@@ -2444,7 +2449,7 @@ label start:
                     d_t "I should go back in."
                     jump mattconvo
 
-            label mattconvop:
+            label mattconvo:
                 scene bg_office_cafeteria
                 m "Well if it isn't miss Sullivan."
                 d "Oh. E- Evening Matthew."
@@ -2458,28 +2463,87 @@ label start:
                 m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such imprtant manners?"
                 d "What?"
                 m "I don't know what you are talking about but the situation with Kai is something between Simon and me."
-                m "Since you're just there to fill her place I don't know why you should be concerned with any of it."
+                m "I don't know what motivated him to interogate me again about the conversation we had just before she quit. Because that's behind us now."
+                m "But since you're just there to fill her place I don't know why you should be concerned with any of it."
                 d "Sorry. I just-"
-                m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know already is."
-                m "I'm sure the instructions you got were to familiarize yourself with her visual style."
-                m "Not to make up stories. And throw dirt on my name."
+                m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know?"
+                m "It seems you two really do make a great team but that does not excuse you making up stories and throwing dirt on my name."
                 m "I don't know why Simon didn't correct you on your unacceptable behavior."
-                m "But if you were still under my supervision snooping in others personal data would not slide."
+                m "I can somewhat understand Simons frustration about her coming to talk to me instead of him. But you should leave your nose out of it."
+                s "If you were still under my supervision snooping in others personal data would not slide."
                 d "I wasn't trying to. I- I was just looking for more information about the current project."
                 d "I didn't think this would turn into such a big thing."
                 m "Of course you didn't."
                 m "That seems to be a reoccuring theme with you isn't it?"
                 m "And don't think I've forgotten about our little misshap."
-                if fix_printer:
-                    pass
-                else:
-                    pass
-                #Have to continue
-                
+                m "I just have bigger fish to fry at the moment it seem."
+                m "So if you would excuse me. I would like to preserve my nerves and grab a bite to eat."
+                m "{i}For which I will definitely not need your help{/i}"
+                menu:
+                    "Leave and join Gabe":
+                        g "Jeez what was that? First Simon now you?"
+                        g "Matt's on a killing spree tonight."
+                        d "Yeah..."
+                        d "Something's strange about this whole situation."
+                        g "Really? What's up?"
+                        d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
+                        g "Yeah what about it?"
+                        d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it."
+                        g "She wrote one directly to Matt?"
+                        g "That's some nerves!"
+                        d "Yeah. But the weird thing is Matt is denying ever having known about any of that even though she went to talk to him right before she quit."
+                        g "Wait they talked?"
+                        d "Yep."
+                        g "She must have changed her mind then."
+                        d "Maybe..."
+                        g "Simon seemed stressed too though. What was his problem with Matt?"
+                        d "Really?"
+                        g "Yeah. After they talked he stormed off into the hallway."
+                        d "Well, he also went to Matt to ask about that message. But I think in the end he was more interested in what they actually talked about that day."
+                        g "Why would he get so worked up about that?"
+                        d "I don't know. I guess he thought she should have told him first. But it didn't look like it bothered him that much when I told him about it."
+                        d "Must be something between him and Matt I guess."
+                        g "It's probably some rivalery."
+                        g "Who knows, maybe he secretly wants Matts position and doesn't like people choosing Matt over him."
+                        d "Oh shut up, he's not like that at all."
+                        d "Besides. If anyone chose to talk to Matt over me I'd be pretty offended too."
+                        g "Wanna go grab something to eat? I saw some tasty treats over at the snack bar."
+                        d "Maybe in a minute. Matt's there right now and I don't want to risk it."
+                        #Have to continue
 
-            label mattconvo:
-                scene bg_office_cafeteria
-                #Have to continue
+                    "Press on":
+                        d "Did you even get a message form Kai?"
+                        m "Excuse me?"
+                        d "Did Kai ever ask for time off?"
+                        m "Neither did I get a message from Kai nor do I know of her ever asking for time off."
+                        m "She came to me on the day that she quit saying that she didn't want to work here anymore. And that I should wait to tell Simon until the next day."
+                        m "Whatever sentimental messages she wrote I never saw any. All I did was do my job."
+                        m "I don't know why you are both now accusing me of having witheld information. But like I already told Simon she had no oblegation to inform him in the first olace. And neither did I."
+                        d "Oh."
+                        m "I'll be going now thank you."
+                        d "..."
+                        #goes over to gabe
+                        g "Jeez what was that? First Simon now you?"
+                        g "Matt's on a killing spree tonight."
+                        d "Yeah..."
+                        d "Something's strange about this whole situation."
+                        g "Really? What's up?"
+                        d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
+                        g "Yeah what about it?"
+                        d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it"
+                        g "She wrote one directly to Matt?"
+                        g "That's some nerves!"
+                        d "Yeah. But the weird thing is Matt is saying she never mentioned any of that."
+                        g "Wait they talked?"
+                        d "Yep. She went to go talk to him before she quit but it seems like he doesn't want anyone to know what they actually talked about."
+                        g "That is weird."
+                        d "He sais we're accusing him of something, but he's the only one making such a big deal out of it."
+                        d "All I wanted to do was ask about the message."
+                        g "Well, I wouldn't put it past Matt to take it as a personal offence. But this is a little extreme, even for him."
+                        d "Yeah..."
+                        g "Hey, wanna go grab something to eat? I saw some tasty treats over at the snack bar."
+                        d "Maybe in a minute. Matt's there right now and I don't want to risk it."
+                        #Have to continue
 
 
 
@@ -2675,22 +2739,28 @@ label start:
                     d_t "I can't trust her. I can't trust anyone."
                     d_t "I don't know if what she's saying is even true."
                     d_t "If I leave my phone at home I won't be able to call the police if something happens."
-                    d_t "I'll be completely defenceless"
+                    d_t "I'll be completely defenceless."
                     d_t "I can't risk it."
                     d_t "If I fail I'll end up just like her. And for what?"
                     d_t "I didn't even know her before all of this started."
-                    d_t "I'm not responsible for her safety. I have nothing to do with all of this. I have to keep myself safe first."
-                    d_t "I don't even know who he is. She never told me who was doing this to her."
+                    d_t "I'm not responsible for what happened to her. I have nothing to do with all of this. I have to keep myself safe first."
+                    d_t "I don't even know who this {i}he{/i} is. She never told me who was doing this to her."
                     d_t "So how could I use his tactics against him?"
                     d_t "I can't do that. I have to go to work today but I'm sure as heck not leaving my phone here."
                     d_t "Nothing seems wrong with it anyways. I'm not like Kai. If anything seriously bad happens I'll tell Simon or call the police."
-                    d_t "I'll be surounded by so many people all day. There's no chance anyone could kidnap me without someone noticing."
-                    #have to continue
+                    d_t "I'll be surounded by so many people all day. There's no chance anyone could take me without someone noticing."
+                    d_t "I'll be careful."
+                    #achievements glitch
+                    d "No I'm not looking at you anymore stupid screen!"
+                    d "You're only going to make me more scared. I have to just get through today. Then Everything will be fine"
+                    d_t "It has to be."
+                    jump work4
 
             label achievements4:
                 menu:
                     "You remember me don't you?":
                         d_t "Yeah I do this time..."
+                        d_t "I remember you."
                         d_t "I'll get you out of this Kai."
                         jump achievements4
 
@@ -2701,34 +2771,50 @@ label start:
                         jump achievements4
 
                     "Too close for comfort":
-                        d_t "I'll meet him then?"
+                        d_t "I'll meet him?"
+                        d_t "I guess I'll have to get very close to him to plant the tracker."
                         d_t "I have to be careful"
-                        d_t "If I want to put a tracker on him I'll have to get close."
-                        d_t "I can't get caught. If he knows I'm trying to find Kai's location he won't go."
+                        d_t "I can't get caught. If he knows I'm trying to find Kai's location I'll be in big trouble."
                         jump achievements4
 
                     "Not alone anymore":
                         d_t "What?"
                         d_t "Who's not alone anymore?"
+                        d_t "Does she mean me or herself?"
                         d_t "Should I tell someone?"
                         d_t "Maybe I can get someone to help me."
                         if call_police==True:
                             d_t "If I tell the police my plan now they're going to try to dissuade me."
-                            d_t "But if I know where she is they might be able to help rescue her."
-
+                            d_t "But if I already know where she is they might be able to help rescue her."
                         else:
                             d_t "Who can I even trust anymore..."
                         jump achievements4
 
                     "The lions den":
                         d_t "The lions den. I'll find it."
-                        d_t "That's where Kai's being kept."
+                        d_t "It has to be where Kai's being kept."
+                        d_t "I really hope I find the right person."
+                        jump achievements4
+
                     "Start the day":
-                        pass
-
-
-        label stickwithgabe:
-        label work4track:  
+                        jump work4track
+        label work4track: 
+            scene bg_office_hallway
+            s "Good morning Destiny!"
+            s "Here early again I see."
+            d "Morning Simon."
+            d "Yeah, I wanted to- ehm have enought time to look over what I did yesterday before we talk about it."
+            s "Oh, sure"
+            s "Take your time. Just come over to my office once you're ready."
+            d "Yes. See you then."
+            s "See you later Destiny."
+            scene bg_office_computer_kai
+            d_t "I have to find more clues."
+            if call_police== Tue:
+                d_t "Before the police come to inspect it and take it away."
+                d_t "Oh god. I really should have told Simon they'd come to talk to them today."
+                d_t "This will cause such a scene."
+                d_t "I hope they can find something."
         label work4:
         label night4stalk:
         label evening4:
