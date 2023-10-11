@@ -2292,7 +2292,7 @@ label start:
                 d "Eh, every once in a while is fine."
                 s "I'm glad I ran into you again actually!"
                 s "I was hoping we'd get to talk a bit more during the day but I was stuck in a meeting all afternoon."
-                s "I wanted to stop by after but things took a little longer than expected. I'm terribly sorry."
+                s "I wanted to stop by afterwards. But things took a little longer than expected. I'm terribly sorry."
                 d "Don't worry. I was able to settle in fairly well."
                 g "Destiny has told me all about your generous offer to let her take up the task of designing for your team."
                 g "I heard it had to be quite a hasty desicion"
@@ -2315,13 +2315,12 @@ label start:
                 s "No, not that I'd remember."
                 s "I know she went to talk to him the day before she quit but he never said anything about such a request."
                 s "He never told me anything about their conversation at all actually. Said it was private."
-                s "She should have come to me first."
+                s "I don't get it. She should have come to me first."
                 s "If she'd wanted time off I'd have been glad to negotiate the terms with her."
                 s "She was one of the most hardworking members on our team. Of course I'd have given her time off."
                 s "Are you sure that's what you read?"
                 d "Pretty sure yes. But I don't think she ever sent it."
-                d "Maybe she changed her mind."
-                d "I just thought, since you mentioned she went to talk to him, he knew about her request."
+                d "I just thought, since you mentioned she went to talk to Matt, he knew about her request."
                 s "Hmm. Possible."
                 s "Did she write why she wanted time off?"
                 d "There was something about someone making her uncomfortable."
@@ -2934,7 +2933,8 @@ label start:
                 "It's Matthew":
                     $ track_who = 0
                     d_t "It has to be Matthew."
-                    d_t "He won't tell us what happened in that conversation before Kai quit."
+                    d_t "He won't tell us what happened in that conversation before Kai quit. And sais he never even got a message."
+                    d_t "She must have realized it would be too risky."
                     d_t "And he's saying we're accusing him when all we did was ask."
                     if call_police== True:
                         d_t "He didn't talk to the Team even once about Kai's dissapearence even though I'm sure the police would have contacted him."
@@ -2945,15 +2945,40 @@ label start:
                     d_t "That's why she didn't want to specify who was making her uncomfortable..."
                     d_t "She couldn't have told him."
                     d_t "It was him."
-                    d_t "And he was the one that was trying to change Simons mind when asked for me on his team."
+                    d_t "And he was also the one that was trying to change Simons mind about asking me to be on his team."
                     d_t "I bet he didn't want anyone to snoop around in Kais stuff."
-                    d_t "Maybe the reason Simon got so mad was because he suspected something. Him and Kai were really close. Maybe she didn't want to tell him because it would have meant trouble for him too."
-                    d_t "She was trying to protect Simon from Matt."
+                    d_t "He has the key he could have deleted it whenever he wanted."
+                    d_t "Maybe the reason Simon got so mad was because he suspected something. Him and Kai were really close."
+                    d_t "She probably didn't want to tell him because it would have meant trouble for him too."
+                    d_t "She was trying to protect Simon from having to face Matt."
                     d_t "Why didn't she just call the police on him?"
+                    d_t "I guess they would have believed Matt more than her."
+                    d_t "Trying to frame your super rich boss for something there's no evidence of?."
+                    d_t "I bet that wouldn't have gone over too well."
+                    d_t "He got away with it the first time but I'm going to find where he's keeping Kai and then he's goint to pay."
                 
                 "It's Simon":
                     $ track_who = 1
                     d_t "It's Simon isn't it?"
+                    d_t "That's why Kai went directly to Matt."
+                    d_t "She couldn't ask Simon for time off because he was the reason she wanted it."
+                    d_t "Simon's been acting like nothing was wrong with her because he was the one making her miserable."
+                    d_t "She kept saying in my dreams that he's trying to get close to me. Simon put me at her desk right next to his office. And he's been nothing but friendly and overly helpful."
+                    d_t "That conversation we had yesterday... I knew something rubbed me the wrong way."
+                    d_t "As soon as I mentioned the reason for her message something changed about him. Almost like he was scared or nervous"
+                    d_t "He imediately wanted to go talk to Matt."
+                    d_t "I bet he was scared she did say something about him afterall."
+                    d_t "And then storming off to the offices. It all makes sense now. My phone was still out in the hallway when he went there!"
+                    d_t "He was the first one here today too. He must have deleted everything after storming out or early this morning. No one would question him about it."
+                    d_t "All of those questions he asked me about where I live..."
+                    d_t "God, I was so stupid and naive. He was just trying to figure out how to get to me. It was him at my door."
+                    if call_police== True:
+                        d_t "And it was him that the police saw. Stuck in a meeting all afternoon. Yeah right. That would be the perfect excuse."
+                        d_t "He knows the police are up to something."
+                    else:
+                        pass
+                    d_t "He knows where I live, what route I take, when my busses drive."
+
                 "It's Gabriel":
                     $ track_who = 2
                     d_t "Is it Gabriel?"
