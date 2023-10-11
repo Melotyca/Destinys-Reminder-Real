@@ -127,7 +127,7 @@ $ x = x
 - open_door y/n
 - call_police y/n
 - trust_kai y/n 
-- track_who 0-gabe/1-Matt/2-Simon
+- track_who 0-Matt/1-Simon/2-Gabe
 - gabe_ally y/n (If gabe_hints was 3 or you chose the route with him y is possible esle automatic n)
 
 
