@@ -1300,7 +1300,7 @@ label start:
                     c "Meowww!"
                     d "Ha ha. You're adorable ehm-"
                     python:
-                        catname = renpy.input("What should I call you?", length=32)
+                        catname = renpy.input("What should I call you?", length=15)
                         catname = catname.strip()
 
                         if not catname:
@@ -2632,13 +2632,6 @@ label start:
                 d "Let's go."
                 jump night
 
-
-
-
-
-
-
-   
         label night:
         label catmissing:
             scene bg_d_corridor
@@ -2740,7 +2733,8 @@ label start:
 
             else: 
                 d_t "I must have forgotten it there when I went out to take a break from all the people."
-            d_t "He must have bugged it while we were looking for it."
+
+            d_t "He probably bugged it while we were looking for it."
             d_t "Wait, how would they even know I'd lose it?"
             d_t "That's pure chance."
             d_t "And how would Kai even know that?"
