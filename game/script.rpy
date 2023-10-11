@@ -2816,7 +2816,7 @@ label start:
                         d "That's it!"
                         d "That's genius!"
                         d "There's a petshop on my way to work. I can just hop in there and get one."
-                        d "Phew at least that's going to work."
+                        d "Phew at least that's sorted out now."
                         d_t "I don't have that much time left but maybe I can look at some of the achievements before I go."
                         jump achievements4
 
@@ -2895,11 +2895,70 @@ label start:
             s "See you later Destiny."
             scene bg_office_computer_kai
             d_t "I have to find more clues."
+            d_t "I'm sure she left more than what I found yesterday."
             if call_police== Tue:
-                d_t "Before the police come to inspect it and take it away."
-                d_t "Oh god. I really should have told Simon they'd come to talk to them today."
+                d_t "I have to find them before the police get here."
+                d_t "I'm sure they're going to confiscate all of it."
+                d_t "Oh god. I really should have told Simon I called them."
                 d_t "This will cause such a scene."
-                d_t "I hope they can find something."
+                d_t "I hope they can at least find something."
+            else:
+                pass
+            "Click"
+            d_t "-"
+            d_t "What?! But how can this be?"
+            d_t "It was all right here yesterday!"
+            d_t "No!"
+            d_t "Where is it?"
+            d_t "This can't-"
+            d_t "It's all gone!"
+            d_t "No no no!"
+            d_t "How could they just have dissapeared!?"
+            d_t "..."
+            d_t "It was him."
+            d_t "Oh god, it was him."
+            d_t "He deleted everything."
+            d_t "He-"
+            d_t "The only people that even know about the notes are Matt and Simon"
+            d_t "And I told Gabe about them..."
+            d_t "Nobody else knew about these notes-"
+            d_t "Nobody else could have even known these even existed."
+            d_t "If he would have known about them he would have deleted them right away!"
+            d_t "It has to be one of them!"
+            d_t "But who-"
+            d_t "I can't believe any of them would do such a thing."
+            d_t "Matt, Simon, Gabe..."
+            d_t "One of them is doing all of this."
+            d_t "One of them is keeping Kai hostage."
+            menu:
+                "It's Matthew":
+                    $ track_who = 0
+                    d_t "It has to be Matthew."
+                    d_t "He won't tell us what happened in that conversation before Kai quit."
+                    d_t "And he's saying we're accusing him when all we did was ask."
+                    if call_police== True:
+                        d_t "He didn't talk to the Team even once about Kai's dissapearence even though I'm sure the police would have contacted him."
+                    else:
+                        pass
+                    d_t "He knows where I live..."
+                    d_t "He can look at all of our information. He would have known where Kai lived. He has all the power to be pulling the strings."
+                    d_t "That's why she didn't want to specify who was making her uncomfortable..."
+                    d_t "She couldn't have told him."
+                    d_t "It was him."
+                    d_t "And he was the one that was trying to change Simons mind when asked for me on his team."
+                    d_t "I bet he didn't want anyone to snoop around in Kais stuff."
+                    d_t "Maybe the reason Simon got so mad was because he suspected something. Him and Kai were really close. Maybe she didn't want to tell him because it would have meant trouble for him too."
+                    d_t "She was trying to protect Simon from Matt."
+                    d_t "Why didn't she just call the police on him?"
+                
+                "It's Simon":
+                    $ track_who = 1
+                    d_t "It's Simon isn't it?"
+                "It's Gabriel":
+                    $ track_who = 2
+                    d_t "Is it Gabriel?"
+            
+
         label work4:
         label night4stalk:
         label evening4:
