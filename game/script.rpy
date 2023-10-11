@@ -2562,8 +2562,10 @@ label start:
                 d "Yeah. I can't wait to just get home and relax."
                 s "You live on Parkerstreet right?"
                 d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
-                s "It's a lovely area. I think I looked at some apartments there too once. That's wy I was so interested."
-                #have to continue
+                s "It's a lovely area. I think I looked at some apartments there too once. That's why I was so interested."
+                s "Isn't that the one with the really bad bus connection?"
+                d "Well, it's not that bad. I just have to walk to the next busstop from the office since my bus doesn't go all the way here."
+                d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
                 d "Oh no! My phone!"
                 s "What's up?"
                 d "I must have left my phone somewhere!"
@@ -2571,6 +2573,7 @@ label start:
                 d "No it's fine. I don't want to take up even more of your time. I'll go look for it myself."
                 s "As you wish. See you tomorrow then."
                 d "See ya!"
+                jump findphone
                 
                 
             label simonconvop:
@@ -2596,7 +2599,7 @@ label start:
                 s "I've looked into getting an apartment there too once actually. That's why I was so interested when you mentioned it."
                 s "You live in that big block right in front of the park right?"
                 d "Yeah exactly."
-                s "I think I checked that one out too. Great views. But the bus connection in quite bad isn't it."
+                s "I think I checked that one out too. Great views. But the bus connection is quite bad isn't it."
                 d "Well, it's not that bad. I just have to walk to the next busstop from the office since my bus doesn't go all the way here."
                 d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
                 d "Oh no! My phone!"
@@ -2606,6 +2609,28 @@ label start:
                 d "No it's fine. I don't want to take up even more of your time. I'll go look for it myself."
                 s "As you wish. See you tomorrow then."
                 d "See ya!"
+                jump findphone
+
+            label findphone:
+                g "Hey!"
+                g "Are you looking for something? You've been running around the room like a madwoman."
+                d "I can't find my phone!"
+                d "I think our last bus leaves soon but I can't leave without my phone."
+                g "I'll help you look for it. Together we'll be quicker."
+                g "I'll go check in the hallway."
+                d "Thank you Gabe"
+                #couple minutes later
+                g "Found it!"
+                d "Really!?"
+                d "Oh thank god."
+                d "Where did you find it? I thought I looked everywhere."
+                g "It was on the desk of one of those offices right beside the entrance."
+                d "I must have left it there when I went out..."
+                g "You'd lose your head if it wasn't attached."
+                g "Did you check the time by the way? I think we've got to get going soon."
+                d "Oh, you're right!"
+                d "Let's go."
+                jump night
 
 
 
