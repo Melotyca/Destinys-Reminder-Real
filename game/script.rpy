@@ -2867,7 +2867,7 @@ label start:
                     d "No I'm not looking at you anymore stupid screen!"
                     d "You're only going to make me more scared. I have to just get through today. Then Everything will be fine"
                     d_t "It has to be."
-                    jump work4
+                    jump work4doubt
 
             label achievements4:
                 menu:
@@ -3181,6 +3181,16 @@ label start:
 
 
         label work4:
+        label work4doubt:
+            scene bg_office_hallway
+            s "Good morning Destiny!"
+            s "Here early again I see."
+            d "Morning Simon."
+            d "Yeah, I wanted to- ehm have enought time to look over what I did yesterday before we talk about it."
+            s "Oh, sure"
+            s "Take your time. Just come over to my office once you're ready."
+            d "Yes. See you then."
+            s "See you later Destiny."
         label night4stalk:
         label evening4:
         label night4:
