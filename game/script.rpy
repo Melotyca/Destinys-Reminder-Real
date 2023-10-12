@@ -552,7 +552,7 @@ label start:
                         d "Mostly yeah. I really lucked out with my appartment."
                         d "It's not too far away and I have a great view."
                         s "Wow you live there all by yourself?"
-                        d "Yes but a friend of mine that also works here actually lives there as well!"
+                        d "Yes but a friend of mine that also works here actually lives really close as well!"
                         d "I moved in not long after him."
                         s "ou must be in one of the newer ones close to the park then! I've heard only great things about them."
                         s "You've been working here for a year now am I right?"
@@ -1214,7 +1214,7 @@ label start:
                 s "Do you live somewhere around here? This area is one of the best if you're working in the city."
                 d "Yeah. I moved into one of the newer appartment complexes just two stops away."
                 s "You live there all by your self?"
-                d "No no, actually, a good friend of mine who also works here lives there as well!"
+                d "No no, actually, a good friend of mine who also works here lives really close as well!"
                 d "I moved in shortly after him."
                 s "Wow, you must be in the ones close to the park then. I've heard only great things about them."
                 s "How do you like the area? In my oppinion it's one of the best. Especially if you work in the city."
@@ -2994,6 +2994,13 @@ label start:
                     d_t "Trying to frame your super rich boss for something there's no evidence of?."
                     d_t "I bet that wouldn't have gone over too well."
                     d_t "He got away with it the first time but I'm going to find where he's keeping Kai and then he's goint to pay."
+                    d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
+                    d_t "For now I'll keep working. But if I pretend to give an apology for yesterday maybe I can get close enough to slip the tracker into his coat or pockets."
+                    d_t "It's going to be risky."
+                    if call_police==True:
+                        jump work4police
+                    else:
+                        jump work4
                 
                 "It's Simon":
                     $ track_who = 1
@@ -3019,19 +3026,58 @@ label start:
                         d_t "That's why he had to delet everything before they get here."
                     else:
                         pass
-                    d_t "I gave him everything..."
+                    d_t "I gave him everything he needed..."
                     d_t "He knows where I live, what route I take, when my busses drive."
                     d_t "He even knows that I saw Kai's notes."
-                    d_t ""
+                    d_t "I trusted him!"
+                    d_t "I should have listened to Kai. I should have stayed away from him!"
+                    d_t "I'm not letting this happen a second time!"
+                    d_t "I'm going to find Kai and he's going to pay fro what he's done"
+                    d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
+                    d_t "For now I'll keep working. But if I pretend I have a question about work maybe I can get close enough to slip the tracker into his coat or pockets."
+                    d_t "It's going to be risky."
+                    if call_police==True:
+                        jump work4police
+                    else:
+                        jump work4
 
                 "It's Gabriel":
                     $ track_who = 2
-                    d_t "Is it Gabriel?"
-                    d_t "He was the one that brought me my phone yesterday."
-                    d_t "And "
+                    d_t "It's Gabriel-"
+                    d_t "He was the one that brought me my phone yesterday!"
+                    d_t "And he's been with me almost every day."
+                    d_t "He's been the closest anyone has been these past days. Kai was trying to warn me."
+                    if dinnerplans== True:
+                        d_t "Oh God. When Kai said that he was at my apartment she didn't mean the knocking..."
+                        d_t "The knocking was never anything dangerous!"
+                        d_t "Gabe was!"
+                    else:
+                        pass
+                    d_t "He knows almost everything about my life."
+                    d_t "He knows where I live, what route I take, when our busses drive."
+                    d_t "He knows the apartments like the back of his hand."
+                    if call_police== True:
+                        d_t "He wasn't at lunch either yesterday..."
+                        d_t "He said he brought something but for all I know he could have been at my apartment looking for something."
+                        d_t "Looking for an easy way in maybe."
+                    d_t "Home isn't safe anymore."
+                    d_t "And Kai lived so close to us too..."
+                    d_t "It would have been so easy for him."
+                    d_t "I trusted him!"
+                    d_t "I should have listened to Kai. I should have stayed away from him!"
+                    d_t "I'm not letting this happen a second time!"
+                    d_t "I'm going to find Kai and he's going to pay fro what he's done"
+                    d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
+                    d_t "For now I'll keep working. But if I act as if I want to talk maybe I can get close enough to slip the tracker into his coat or pockets."
+                    d_t "It's going to be risky."
+                    if call_police==True:
+                        jump work4police
+                    else:
+                        jump work4
             
 
         label work4:
+        label work4police:
         label night4stalk:
         label evening4:
         label night4:
