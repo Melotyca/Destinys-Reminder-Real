@@ -3191,6 +3191,59 @@ label start:
             s "Take your time. Just come over to my office once you're ready."
             d "Yes. See you then."
             s "See you later Destiny."
+            scene bg_office_computer_kai
+            d_t "I just have to get throught this."
+            d_t "Nothing bad is going to happen. I'm safe here"
+            if call_police== Tue:
+                d_t "The police will handle this as soon as they get here."
+                d_t "Then I won't have to deal with her weird notes anymore either."
+                d_t "I'm sure they're going to confiscate all of it."
+                d_t "Oh god. I really should have told Simon I called them."
+                d_t "This will cause such a scene."
+                
+            else:
+                pass
+            d_t "I'll just ignore the notes for now. I wasn't supposed to see them anyways."
+            "Click"
+            d_t "-"
+            d_t "What?! But-"
+            d_t "They're gone?!"
+            d_t "This can't-"
+            d_t "It's all gone!"
+            d_t "Did I do something with them yesterday?"
+            d_t "How could they just have dissapeared?"
+            d_t "..."
+            d_t "They were real. Right? They had to be."
+            d_t "I wasn't imagining the messages."
+            d_t "{i}Was I?{/i}"
+            d_t "No. They were real!"
+            if call_police==True:
+                d_t "I told the police about these messages!"
+                d_t "What are they going to do when they get here and there's nothing here."
+                d_t "I'm going to look like a crazy fool-"
+            else:
+            d_t "Where did they go?"
+            d_t "Did someone delet them?"
+            d_t "But why? There wasn't anything destinctive on them."
+            s "Destiny?"
+            d "Ah!"
+            "Crash"
+            d "Sorry!"
+            s "No I'm sorry! I didn't mean to startle you like that! Are you alright?"
+            d "Simon? Yeah I'm ok."
+            d "What is it?"
+            s "Well, I just wanted to ask if you could maybe send me what's left of previous projects on Kai's computer. I want to be able to archive and date all of it correctly."
+            d "S-sure I can do that."
+            d "Right now?"
+            s "If you don't mind. That would be great thank you."
+            d "Of course. I'll send it in a minute."
+            s "Fantastic. Thank you Destiny."
+            d "Any time..."
+            d_t "I have to get my act together. No one's here to hurt me. This is still the same office I've worked at for the last year."
+            d_t "As long as I just do my work as usual and stay collected it's going to be fine."
+            #Achievements start to glitch
+
+
         label night4stalk:
         label evening4:
         label night4:
