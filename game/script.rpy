@@ -3000,27 +3000,35 @@ label start:
                     d_t "It's Simon isn't it?"
                     d_t "That's why Kai went directly to Matt."
                     d_t "She couldn't ask Simon for time off because he was the reason she wanted it."
-                    d_t "Simon's been acting like nothing was wrong with her because he was the one making her miserable."
+                    d_t "That's why he was so shocked when I told him about it. He thought she didn't know it was him."
+                    d_t "Simon's been acting like nothing was wrong with her because he was the one making her miserable. He had to make sure I wouldn't know."
                     d_t "She kept saying in my dreams that he's trying to get close to me. Simon put me at her desk right next to his office. And he's been nothing but friendly and overly helpful."
                     d_t "That conversation we had yesterday... I knew something rubbed me the wrong way."
-                    d_t "As soon as I mentioned the reason for her message something changed about him. Almost like he was scared or nervous"
-                    d_t "He imediately wanted to go talk to Matt."
-                    d_t "I bet he was scared she did say something about him afterall."
+                    d_t "As soon as I mentioned the reason for her message something changed about him. The bubbly exterior cracked. It was almost like he was nervous or scared..."
+                    d_t "He imediately wanted to go talk to Matt too."
+                    d_t "I bet he was scared she really did say something about him afterall."
                     d_t "And then storming off to the offices. It all makes sense now. My phone was still out in the hallway when he went there!"
-                    d_t "He was the first one here today too. He must have deleted everything after storming out or early this morning. No one would question him about it."
+                    d_t "He was the first one here again today too. He had all the time in the world to delete everything."
+                    d_t "I should have known!"
                     d_t "All of those questions he asked me about where I live..."
                     d_t "God, I was so stupid and naive. He was just trying to figure out how to get to me. It was him at my door."
                     if call_police== True:
-                        d_t "And it was him that the police saw. Stuck in a meeting all afternoon. Yeah right. That was the perfect excuse."
+                        d_t "And it was him that the police saw. Stuck in a meeting all afternoon. Yeah right. He left before lunch and wasn't back for ages."
+                        d_t "The police had him busy."
                         d_t "He knows the police are up to something."
                         d_t "That's why he had to delet everything before they get here."
                     else:
                         pass
+                    d_t "I gave him everything..."
                     d_t "He knows where I live, what route I take, when my busses drive."
+                    d_t "He even knows that I saw Kai's notes."
+                    d_t ""
 
                 "It's Gabriel":
                     $ track_who = 2
                     d_t "Is it Gabriel?"
+                    d_t "He was the one that brought me my phone yesterday."
+                    d_t "And "
             
 
         label work4:
