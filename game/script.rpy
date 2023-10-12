@@ -25,15 +25,6 @@ default gabe_ally = False
 #GAME
     
 label start:
-    d_t "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    d "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    g "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    m "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    s "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    x "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    c "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    o "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
-    c "Hello my name is abcdefghijklmnopqrstuvwxyz'?!)()\""
     label game:
     #DAY 1
         label day1:
@@ -2998,9 +2989,10 @@ label start:
                     d_t "For now I'll keep working. But if I pretend to give an apology for yesterday maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
                     if call_police==True:
-                        jump work4police
+                        d_t "And I have to do it before the police get here."
+                        jump trackmatt
                     else:
-                        jump work4
+                        jump trackmatt
                 
                 "It's Simon":
                     $ track_who = 1
@@ -3037,9 +3029,10 @@ label start:
                     d_t "For now I'll keep working. But if I pretend I have a question about work maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
                     if call_police==True:
-                        jump work4police
+                        d_t "And I have to do it before the police get here."
+                        jump tracksimon
                     else:
-                        jump work4
+                        jump tracksimon
 
                 "It's Gabriel":
                     $ track_who = 2
@@ -3071,13 +3064,123 @@ label start:
                     d_t "For now I'll keep working. But if I act as if I want to talk maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
                     if call_police==True:
-                        jump work4police
+                        d_t "And I have to do it before the police get here."
+                        jump trackgabe
                     else:
-                        jump work4
+                        jump trackgabe
             
 
+        label trackmatt:
+            #later that morning
+            scene bg_office_hallway
+            "Knock"
+            d "Matthew?"
+            m "What are {i}you{/i} doing here?"
+            d "I- I wanted to apologize for yesterday. And also what happened before..."
+            m "Yeah right."
+            d "No. Seriously. I shouldn't have looked through Kai's things. But I also shouldn't have jumped to conclusions so quickly yesterday."
+            d "I'm sure you had your reasons for acting the way you did and I should have respected that. I'm very sorry."
+            m "Mhm..."
+            m "Look, I don't know what you're trying to achieve here. But if you think you can just make everything undone with some halfhearted apology then you're mistaken."
+            m "We're going to have to talk about this with Simon now {i}thanks to you{/i}. But I clearly have other more important things to do right now."
+            d "If you want I can put a date in my calendar right now!"
+            d "Hold on let me just-"
+            d "Oh no."
+            d "I forgot. I left my phone at home today!"
+            m "..."
+            d "I'll just have to write it down then."
+            m "Sure."
+            m "Tuseday next week."
+            m "At 10:30. Got that?"
+            d "Oh. But I don't have a pen. Wait I'll just-"
+            "Rustle"
+            m "What are you-!"
+            d "There! You don't mind if I quickly borrow this pen from your bag right?"
+            m "You-"
+            m "Hmpf! Fine!"
+            m "Tuseday at 10:30. Make sure to let Simon know."
+            m "And stop rummaging through other peoples belongings! {i}Give that back.{/i}"
+            "Yank!"
+            d "Oops. Sorry!"
+            d "I'll go tell Simon right away."
+            m "Thank god."
+            scene bg_office_computer_kai
+            d_t "That was nerve wrecking!"
+            d_t "I hope he didn't see I slipped the chip in there when I took the pen out..."
+            d_t "Now I'll just have to wait and pray everything works as planned"
+            d_t "Thinking about how he's acting so innocent after the things he did is making me sick."
+            jump work4
+
+        label tracksimon:
+            #later that morning
+            scene bg_office_hallway
+            "Knock"
+            d "Simon?"
+            s "Oh! Destiny. What's up. Can I help you with anything?"
+            d "Yeah. I actually wanted to ask you what your thoughts would be on an idea I had."
+            d "Can I sit there?"
+            s "Sure let me just get my jacket-"
+            d "Oh don't worry I'll do it."
+            "Rustle"
+            d "There."
+            d "So! What I wanted to know is how you think it would look if I combined the designs Kai already made and added onto some of them to create sort of a gradient between our styles?"
+            s "That sounds like a fantastic idea!"
+            d "Wait I can just show-"
+            d "Oh shoot I forgot."
+            s "?"
+            d "I left my phone at home today!"
+            s "You did?"
+            d "Ah, I can quickly go get the designs if you want."
+            s "..."
+            s "Sure."
+            #goes to get the designs
+            d "Alright. I started on this one already."
+            s "Looks great."
+            s "Are you going to keep working on these today?"
+            d "That was the plan. I can keep you updated if I make any significant changes."
+            s "Sure, I'm here all day again."
+            d "Great! Then I'll probably see you again later."
+            s "Of course whenever you need anything."
+            scene bg_office_computer_kai
+            d_t "That was nerve wrecking!"
+            d_t "I hope he didn't see I slipped the chip in there when I hung up his jacket..."
+            d_t "Now I'll just have to wait and pray everything works as planned."
+            d_t "Thinking about how he's acting so innocent after the things he did is making me sick."
+            jump work4
+            
+        label trackgabe:
+            scene bg_office_hallway
+            d "Gabe?"
+            g "Over here!"
+            g "What's up? Need help with something?"
+            d "Kind of haha."
+            g "What is it?"
+            d "I really need some coffee right now. But I was in such a rush this morning that I forgot I hadn't packed my bag yet this morning..."
+            d "I kind of left all of my things including my phone and wallet at home..."
+            g "You even forgot your phone?"
+            g "Second time in a row. That's a new record!"
+            d "I know... Can I maybe borrow a bit of money to go get a coffee? I swear I'll pay you back."
+            g "Don't worry about it. Of course!"
+            g "One second. My wallet's in my jacket-"
+            d "I got it!"
+            "Rustle"
+            d "Thank you so much Gabe."
+            g "Any time!"
+            g "Do you want to go out to maybe go grab a coffee together again sometime next week?"
+            g "I'd have time pretty much any day."
+            d "Sure! We can go on Monday if you want."
+            g "Sweet! See you around today?"
+            d "Probably. Thanks again. See you later Gabe."
+            g "See ya!"
+            scene bg_office_computer_kai
+            d_t "That was nerve wrecking!"
+            d_t "I hope he didn't see I slipped the chip in there when I took out his wallet..."
+            d_t "Now I'll just have to wait and pray everything works as planned."
+            d_t "Thinking about how he's acting so innocent after the things he did is making me sick."
+            jump work4
+
+
         label work4:
-        label work4police:
         label night4stalk:
         label evening4:
         label night4:
