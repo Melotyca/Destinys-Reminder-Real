@@ -3182,6 +3182,9 @@ label start:
 
         label work4:
             scene bg_office_computer_kai
+            if call_police== True:
+                o 
+            else:
             #Have to continue
 
         label work4doubt:
