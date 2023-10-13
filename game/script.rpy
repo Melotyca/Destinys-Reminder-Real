@@ -3182,8 +3182,45 @@ label start:
 
         label work4:
             scene bg_office_computer_kai
+            #have to continue
             if call_police== True:
-                o 
+                scene bg_office_hallway
+                o "Excuse me Madam. You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
+                d "Officer Rogan! Thank you for your efforts. How can I help you?"
+                o "I am here with a collegue today to look into what you mentioned on the phone."
+                o "He is currently talking to the people you mentioned might be involved in miss Amari's dissapearence."
+                o "I came to take a closer look at the images and messages you spoke of yesterday."
+                d "I-"
+                d "I'm really sorry. I should have sent them to you yesterday but I wasn't sure if it was the right thing to do."
+                d "But this morning... When I got here everything was gone."
+                d "All of it. Someone deleted it."
+                o "Are you sure?"
+                o "None of it is on this device anymore?"
+                d "N-no. Truly, I tried everything but it's just gone!"
+                o "You didn't by chance take a picture of any of it or made a copy?"
+                d "No... I'm so sorry officer. I should have-"
+                o "It's alright miss Sullivan. I believe you. May I take a look at the computer anyways?"
+                o "Maybe we can find some other information that will aid us in finding miss Amari."
+                d "Sure go ahead."
+                "..."
+                o "Alright so it does seem like some files were deleted yesterday evening around seven or eight."
+                o "Do you have any idea who might have had access to this computer during that time frame?"
+                d_t "I can't tell them yet. If they know who I'm suspecting they'll surely take him down to the police station to question him."
+                d_t "If he knows they're on to something he won't risk going to Kai tonight."
+                d_t "I have to stay vague one more time."
+                d "We had a party here last night. There were so many people present yesterday. And everything was open, it could have been anyone."
+                o "I understand."
+                o "I would like to make a copy of the drive of this computer for further investigations and take the rest of the drawings left by her."
+                d "Of course. Take what you need."
+                o "Thank you miss Sullivan. I'm sure we will speak again as soon as we have been able to process the information we have been able to gather here today."
+                o "As far as your safety goes, have you had any more strange happenings? Maybe at the party or on your way home?"
+                d "No not really. Yesterday was alright."
+                o "That's good to hear. As always if anything were to happen make sure to call us."
+                d "Will do officer."
+                o "ALright with that I think we're done here for now."
+                o "I'll take this copy back to the station and my collegue will surely be done soon as well."
+                o "We will notify you of our findings as soon as possible. Have a good day miss Sullivan."
+                d "You too officer."
             else:
             #Have to continue
 
@@ -3225,7 +3262,7 @@ label start:
             d_t "No. They were real!"
             if call_police==True:
                 d_t "I told the police about these messages!"
-                d_t "What are they going to do when they get here and there's nothing here."
+                d_t "What are they going to do when they get here and there's nothing?"
                 d_t "I'm going to look like a crazy fool-"
             else:
             d_t "Where did they go?"
@@ -3236,7 +3273,7 @@ label start:
             "Crash"
             d "Sorry!"
             s "No I'm sorry! I didn't mean to startle you like that! Are you alright?"
-            d "Simon? Yeah I'm ok."
+            d "Oh! Simon? Yeah I'm ok."
             d "What is it?"
             s "Well, I just wanted to ask if you could maybe send me what's left of previous projects on Kai's computer. I want to be able to archive and date all of it correctly."
             d "S-sure I can do that."
