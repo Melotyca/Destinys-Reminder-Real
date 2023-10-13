@@ -3181,6 +3181,9 @@ label start:
 
 
         label work4:
+            scene bg_office_computer_kai
+            #Have to continue
+
         label work4doubt:
             scene bg_office_hallway
             s "Good morning Destiny!"
@@ -3239,12 +3242,90 @@ label start:
             d "Of course. I'll send it in a minute."
             s "Fantastic. Thank you Destiny."
             d "Any time..."
-            d_t "I have to get my act together. No one's here to hurt me. This is still the same office I've worked at for the last year."
+            d_t "I have to get my act together. No one's here to hurt me. This is still the same office I've worked at for the past year."
             d_t "As long as I just do my work as usual and stay collected it's going to be fine."
             #Achievements start to glitch
 
-
         label night4stalk:
+            #Later that day
+            d "Gabe! There you are!"
+            d "Let's go."
+            g "Whoa, why in such a hurry all of a sudden?"
+            d "Today was awful. I just want to go home..."
+            g "What happened? Is there a problem with the project?"
+            d "No, nothing like that."
+            g "Oh?"
+            g "What's the matter then?"
+            d "I don't feel safe here."
+            d "Those things I saw on her computer. They were all gone this morning."
+            d "And no one knowing where she is..."
+            d "It just doesn't sit right with me."
+            d "I shouldn't just be replacing her."
+            d "She said someone from work was pressuring her and now these strange things are starting to happen to me too."
+            d "I think I should just go home."
+            d "I'm scared someone here wants to do the same things to me that they did to her."
+            g "What they did to her? What do you think happened?"
+            g "Do you think she was kidnapped?"
+            d "I don't know!"
+            g "Oh Destiny, I'm sorry."
+            g "Why didn't you tell me about this sooner. If you don't feel comfortable being here, then there's no need to stay."
+            g "It's just work. You can take a day off if that's what you need."
+            g "You could have told Simon you weren't feeling well."
+            d "But I'm scared to go alone."
+            g "I understand. How about I bring you home. I'll keep you company until you're in your apartment."
+            g "I'll make sure no one does anything to you."
+            g "Let's get you Home ok? And once you're there you can lock the door and try to get some sleep."
+            d "Thank you Gabriel..."
+            g "Don't worry about it. I don't mind at all. Besides, I'd be scared too if those things happened to me."
+            g "Now let's go."
+            scene bg_d_corridor
+            g "There we are. Feeling better?"
+            d "Yeah. Thank you for bringing me home."
+            g "Oh it's nothing. I want to know you're safe too."
+            g "Lord knows there's enough creeps out there."
+            g "You should go in now though. And make sure you lock your door."
+            g "Double check it."
+            d "Yeah yeah. I will."
+            d "I'll Triple check it even."
+            g "I'm sure you'll feel a lot safer once you're in the comfort of your own 4 walls again."
+            d "Get home safe too Gabe. Or I'll feel even worse for making you do all this."
+            g "Don't worry about me. I'll be home in no time."
+            g "Night Destiny."
+            d "Goodnight Gabe."
+            "Lock"
+            d_t "Finally."
+            d_t "No one's getting in now."
+            d_t "And nothing bad happened."
+            d_t "I was just overthinking things as per usual."
+            d_t "I should go make myself some dinner."
+            "Rustle"
+            if dinner_plans== False:
+                d_t "Oh right, [catname]! Let's get them some dinner too."
+                d "[catname]! I'm home."
+                "..."
+                d "I've got some good news! It's dinner time."
+                d "?"
+                d "[catname]?"
+                d "You were so lively yesterday. Are you mad at me for leaving you all alone again for so long?"
+                scene bg_d_kitchen
+                d "[catname]?!"
+                d "Where-"
+            else:
+                d_t "What?"
+                d_t "Did I leave the window open?"
+                scene bg_d_kitchen
+                d_t "There's no breeze-"
+            d "AHHH!"
+            scene bg_black
+            "Thud"
+            d "MHHHM"
+            s_k "Stop squealing you little brat."
+            d "MRRH"
+            s_k "URGH, Stop that!"
+            s_k "I thought I told you to {i}shut up.{/i}"
+            "Whack!"
+            jump worst
+            
         label evening4:
         label night4:
 
