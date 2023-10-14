@@ -37,8 +37,8 @@ label start:
                 x "Please."
                 x "Don't trust him. You're in danger"
                 x "I can help you."
-                hide girl 
             label morning1:
+                scene bg_black
                 "Ping!"
                 d_t "Who, What was that?"
                 d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
@@ -708,6 +708,8 @@ label start:
                 x "Do-* 4jT F0-_r g*3 T"
                 jump morning2
             label morning2:
+                scene bg_black
+                "Ping!"
                 scene bg_d_window
                 show a_day2
                 d_t "What-"
@@ -1488,6 +1490,8 @@ label start:
             x "-"
             jump morning3
         label morning3:
+            scene bg_black
+            "Ping!"
             if dinner_plans==False:
                 scene bg_d_window
                 show a_day3
@@ -2737,6 +2741,8 @@ label start:
 
 
         label morning4:
+            scene bg_black
+            "Ping!"
             scene bg_d_window
             d "Kai!"
             d "Tell me"
@@ -3419,6 +3425,8 @@ label start:
                 d_t "You can rent it out for however long you like and everything is sound proof."
                 d_t "And it's so close. It wouldn't take long at all to get there directly from the office!"
                 d_t "The lions den is a recording studio!"
+                d_t "Tomorrow's the day. I can get her!"
+
             elif track_who==1
                 if dinner_plans== True:
                     d_t "That's not too far from my ususal bus stop st the office!"
@@ -3430,6 +3438,9 @@ label start:
                 d_t "There's a storage unit!"
                 d_t "He must have rented a storage unit to keep her locked up. No one checks on those."
                 d_t "The lions den is a storage unit!"
+                d_t "The lions den is a recording studio!"
+                d_t "Tomorrow's the day. I can get her!"
+
             else:
                 d_t "That's really close!"
                 d_t "..."
@@ -3439,12 +3450,45 @@ label start:
                 d_t "Of course he would choose one of those to hide Kai!"
                 d_t "They're cheap and really close. And no one even really lives there. So nobody would notice a thing."
                 d_t "The lions den is an apartment!"
+                d_t "The lions den is a recording studio!"
+                d_t "Tomorrow's the day. I can get her!"
             
-
+            
     label day5:
         label dream5:
             scene dream5
+            k "You listened!"
+            d "I did. I tried my best. I did what you told me to."
+            d "I remembered you Kai."
+            k "Thank you Destin y."
+            k "F or givIng me hope."
+            d "Was he there last night? Did your plan work."
+            k "Yes he was he re. I did my b*st to let you k now."
+            d "So it is you! The screen!"
+            k "Screen... is tHat how it-_"
+            k "It doesn't matTer now. He was h_re. You're- you have t0 follow through wi*th it."
+            k "I, I don''t know h0w much more I can help you."
+            k "I'm so tIred De*tiny."
+            d "Just a little longer. Please, hold on! I'm going to get you out of there!"
+            d "What do I have to do tomorrow to make sure everything works?"
+            k "I, you... yOu have to Trust yourse7f. I trusf you Destiny."
+            k "Please. {i}Th is has to work.{/i}"
+            k "If_it doe sn't-"
+            d "It will!"
+            d "It will work Kai."
+            d "All of your plans and tips have worked so far!"
+            d "We'll get through this."
+            d "You'll get through this."
+            k "I-"
+            d "You'll be ok!"
+            k "Thank you."
+            jump morning5
+
         label morning5:
+            scene bg_black
+            "Ping!"
+            scene bg_d_window
+            
         label work5:
         label seedgabe:
         label seedmatt:
