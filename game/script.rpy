@@ -3182,13 +3182,23 @@ label start:
 
         label work4:
             scene bg_office_computer_kai
+            d_t "I can check if the tracker works..."
+            #Show tracker screen
+            "Ping"
+            d_t "It works!"
+            d_t "That's him. That's where he's at right now!"
+            d_t "Yes!"
+            d_t "Alright, Kai was right. This will work. I'm sure of it"
+            d_t "What do I do now though?"
             d_t "I have to act as normal as possible."
             d_t "Might as well just get some work done then."
             d_t "Maybe I can distract myself a little."
             if call_police== True:
                 scene bg_office_hallway
-                o "Excuse me Madam. You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
-                d "Officer Rogan! Thank you for your efforts. How can I help you?"
+                o "Excuse me Madam."
+                d "!"
+                o "You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
+                d "Officer Rogan! Thank you for your effort. How can I help you?"
                 o "I am here with a collegue today to look into what you mentioned on the phone."
                 o "He is currently talking to the people you mentioned might be involved in miss Amari's dissapearence."
                 o "I came to take a closer look at the images and messages you spoke of yesterday."
@@ -3209,7 +3219,7 @@ label start:
                 o "Do you have any idea who might have had access to this computer during that time frame?"
                 d_t "I can't tell them yet. If they know who I'm suspecting they'll surely take him down to the police station to question him."
                 d_t "If he knows they're on to something he won't risk going to Kai tonight."
-                d_t "I have to stay vague one more time."
+                d_t "I have to stay vague again just one more time."
                 d "We had a party here last night. There were so many people present yesterday. And everything was open, it could have been anyone."
                 o "I understand."
                 o "I would like to make a copy of the drive of this computer for further investigations and take the rest of the drawings left by her."
@@ -3225,7 +3235,28 @@ label start:
                 d "You too officer."
             else:
                 pass
-            #Have to continue
+            #later that day
+            d_t "It's getting late..."
+            if track_who == 0:
+                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Matt knows that and will still try to get me on my way home"
+            elif track_who ==1:
+                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Simon knows that and will still try to get me on my way home"
+            else:
+                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Gabe knows that and will still try to get me on my way home"
+            d_t "Either I leave now and catch him off guard by going early or I wait until after he's gone."
+            menu:
+                "Leave now.":
+                    d_t "Leaving now is the safer option. If I wait there might not be anyone around anymore at some point."
+                    d_t "He might take the chance to wait until it's just us two left."
+                    d_t "He can't do that if I leave early. Then I'll have enough time so see where he goes."
+                    jump night4
+                "Wait until he's gone.":
+                    d_t "Leaving now might be a little too suspicious. If he sees me he might know something is up."
+                    d_t "I can pack up and \"leave\" when I usually would but then wait somewhere in the bathroom until I see he's left the office."
+                    d_t "As soon as he's gone I'll head straight home and check where he went."
+                    jump night4
+
+        
 
         label work4doubt:
             scene bg_office_hallway
@@ -3368,9 +3399,47 @@ label start:
             s_k "I thought I told you to {i}shut up.{/i}"
             "Whack!"
             jump worst
-            
-        label evening4:
+        
         label night4:
+            scene bg_d_kitchen
+            d_t "That worked like a charm."
+            #Achievement glitches to im not alone anymore
+            d_t "!"
+            d_t "It's Kai! The Achievement meant her!"
+            d_t "He's there! I have to see where he went."
+            #Check screen
+            if track_who==0:
+                d_t "That's right behind the office!"
+                d_t "She was so close the entire time?"
+                d_t "What's even back there?"
+                d_t "..."
+                d_t "Sound labs?"
+                d_t "That doesn't seem like Matt at all."
+                d_t "But maybe that's the point! No one would expect him to go there. That's the perfect place to hide someone."
+                d_t "You can rent it out for however long you like and everything is sound proof."
+                d_t "And it's so close. It wouldn't take long at all to get there directly from the office!"
+                d_t "The lions den is a recording studio!"
+            elif track_who==1
+                if dinner_plans== True:
+                    d_t "That's not too far from my ususal bus stop st the office!"
+                    d_t "In the allyway..."
+                else:
+                    d_t "That's the ally where I found [catname]!"
+                d_t "What could even be back there?"
+                d_t "..."
+                d_t "There's a storage unit!"
+                d_t "He must have rented a storage unit to keep her locked up. No one checks on those."
+                d_t "The lions den is a storage unit!"
+            else:
+                d_t "That's really close!"
+                d_t "..."
+                d_t "But that-"
+                d_t "Isn't that where those really dingy apartment no one wants are?"
+                d_t "The ones with barely any sunlight or windows..."
+                d_t "Of course he would choose one of those to hide Kai!"
+                d_t "They're cheap and really close. And no one even really lives there. So nobody would notice a thing."
+                d_t "The lions den is an apartment!"
+            
 
     label day5:
         label dream5:
