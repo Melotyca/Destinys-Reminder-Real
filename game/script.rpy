@@ -3182,7 +3182,9 @@ label start:
 
         label work4:
             scene bg_office_computer_kai
-            #have to continue
+            d_t "I have to act as normal as possible."
+            d_t "Might as well just get some work done then."
+            d_t "Maybe I can distract myself a little."
             if call_police== True:
                 scene bg_office_hallway
                 o "Excuse me Madam. You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
@@ -3222,6 +3224,7 @@ label start:
                 o "We will notify you of our findings as soon as possible. Have a good day miss Sullivan."
                 d "You too officer."
             else:
+                pass
             #Have to continue
 
         label work4doubt:
