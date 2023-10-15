@@ -3606,20 +3606,20 @@ label start:
             scene bg_office_computer_kai
             if track_who== 0:
                 d_t "I have to find a reason to talk to Matt again. I have to somehow subtly let him know that today's the day he should make his move."
-                d_t "Without is seeming weird or completely out of left field..."
+                d_t "Without it seeming weird or completely out of left field..."
                 d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
                 d_t "Actually!"
                 d_t "What if I ask him about coming in on the weekend."
-                d_t "I could ask him for an office key to be able to work tomorrow to finish an important design."
+                d_t "I could ask him if the office is open on Saturdays. Then I could \"finish an important design\"."
                 d_t "That would give a reason and make it seem more natural to mention that I'd also be working late today."
                 d_t "That sounds good. I'll tell him that."
                 jump trickmatt
             elif track_who== 1:
-                d_t "I have to find a reason to talk to Simon again. Maybe something about work again like last time."
+                d_t "I have to find a reason to talk to Simon again. Maybe something about work again, like last time?"
                 d_t "I have to somehow subtly let him know that today's the day he should make his move."
-                d_t "Without is seeming weird or completely out of left field..."
+                d_t "Without it seeming weird or completely out of left field..."
                 d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
@@ -3631,7 +3631,7 @@ label start:
                 jump tricksimon
             else:
                 d_t "I have to find a reason to talk to Gabe again. I have to somehow subtly let him know that today's the day he should make his move."
-                d_t "Without is seeming weird or completely out of left field."
+                d_t "Without it seeming weird or completely out of left field."
                 d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone tonight. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "It's not like I'd have anyone else to walk home with anyways. But still I should make it clear that I'm planning to even go without him."
@@ -3656,6 +3656,8 @@ label start:
             g "It's my pleasure."
             d "Oh! By the way. I'll be working late again today. We probably won't see eachother on our way home. I still have something I want to finish before the weekend."
             g "Again? Wow, you're really putting in the work for this new Project."
+            g "What time are you planning to leave then?"
+            d "I don't know yet. But definitely later than usual."
             g "Make sure you're not overdoing it ok?"
             d "Yeah I know. I'll take more time off next week. I just have to make sure I make a good first impression you know."
             g "I think they're all very impressed already. But I understand. Don't get home too late."
@@ -3669,11 +3671,108 @@ label start:
             d "Thanks. Have a good night too!"
             g "I sure will."
             d_t "We'll see about that."
-            jump leavework
+            jump allies
 
 
         label trickmatt:
+            #Later that day
+            scene bg_office_hallway
+            d "Uhm. Matthew?"
+            m "Again? What is it this time? Can't make it on that day?"
+            d "No, no it's nothing like that. I actually wanted to ask if it's possible I come here to work tomorrow?"
+            m "Excuse me?"
+            d "I have something to finish and I don't think I'll get it done today."
+            d "I've already decided that I'll stay longer tonight but being able to come in tomorrow as well would really help to get this done."
+            m "You're staying late and you want to work on a Saturday?"
+            d "Yes."
+            m "You, Destiny Sullivan. Always last minute Sullivan want to come in on a Saturday?"
+            d "Yes."
+            m "..."
+            m "Sure. Be my guest. Simon must have really done a number on you if you're willing to work on your weekend."
+            m "The doors lock at around 9 tonight but I would imagine by then you'll be gone already."
+            m "Tomorrow morning the front door should be locked but I can give you a temporary code so you can get in."
+            d "Fantastic!"
+            m "{i}What's up with you?{/i}"
+            d "Huh?"
+            m "Nothing. Not that it matters. I'll send you the code tomorrow morning."
+            m "Don't get yourself locked in tonight. What time are you planning to leave?"
+            d "I wont. Don't worry. But I'm not quite sure yet. Thank you Matthew."
+            m "Whatever you say. {i}I don't know what you're trying to pull.{/i}"
+            d "I just want to start out strong that's all."
+            m "Yeah, of course..."
+            m "Is that all?"
+            d "Yeah. Thanks again. I'll be going then."
+            m "Bye."
+            d_t "Oh no he senses something is up. I have to be really careful from now on."
+            jump allies
+
+            
         label tricksimon:
+            d "Hey, Simon. You got a minute?"
+            s "Yeah sure what's up?"
+            d "I started on that idea I showed you yesterday. I'll be on it for a while though."
+            s "Sure that's not a problem. Take your time."
+            d "I just thought since the weekend is coming up and I want to get this done this week I'll be staying a bit later today."
+            s "Oh?"
+            d "Yeah. I'll send it to you once I'm finished but it will probably be a bit later than ususal."
+            s "That's fine. I'll be here a little longer too. But even if I'm gone by then I'll have a look at it as soon as I get the chance."
+            s "Around what time are you planning to leave?"
+            d "I'm not quite sure yet but later than usual that's for certain."
+            s "Alright, thank you for letting me know."
+            s "I have to say you've been really throwing yourself into work these past few days. You've really got a fire for this it seems."
+            d "It's just important to me to do this right. Since I'm picking up on someone elses work."
+            s "Ah, I understand. Don't worry I'm sure Kai would be very happy with the choices you've made so far."
+            d_t "I'm sure she would..."
+            d "Thanks. I'll get back to work then."
+            s "Good luck!"
+            jump allies
+
+        label allies:
+            if call_police==True:
+                scene bg_office_computer_kai
+                d_t "I have everything I need now. The plan is set up."
+                d_t "I should try to get officer Rogan on my side now."
+                d_t "I'm sure that if I tell him everything that's happened and why I didn't tell him right away he'll help me."
+                d_t "I can't tell them about the dreams but I can tell them I got a message from Kai somehow."
+                d_t "I'll have to explain everything but their help would be essential to getting Kai out of there and getting him arrested."  
+                d_t "I hope he believes me..."
+                d_t "I have to atleast try!"
+                "Ring"
+                o "Miss Sullivan! This is officer Rogan speaking. How may I assist you?"
+                d "I have something I need to tell you..."
+                #after explaining everything    
+                o "I see. So you felt you had to act this way to ensure the location of miss Amari could be found..."
+                d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's dissapearence and where he is keeping her."
+                d "I have used a tracking device to locate her. My phone is being tracked as well."
+                d "Which is why I made a plan to misslead him by giving my phone to someone else and use that time to free Kai."
+                o "And you've waited this long to inform us of this plan?"
+                d "Again I'm really sorry I've kept this from you for so long but if you could help me I think this plan could work!"
+                o "I am finding it hard to understand why you have waited this long to inform us but I admit that your plan could indeed work."
+                o "If the location you have found is accurate we could send a squad there to look for miss Amari while using another female officer to lure the culprit somewhere we can safely arrest him."
+                d "Yes! Thank you so much officer."
+                o "I can send over one of my fellow officers to come pick up your phone and get you out of there safely."
+                o "We'll have someone escort you home then."
+                d "Would it be possible I join the team that will look for Kai?"
+                o "Madam I assure you. We are trained safety personnel. We can handle things form this point onwards." 
+                d "I know it's just..."
+                d "If they really find her then I have to talk to her..."
+                d "I know what she went through. She messaged me. Maybe I can help find her."
+                o "I understand your concern miss Sullivan. But such a mission is very dangerous and not suited for civilians."
+                d "I know. But I would rather be there when she's found. I'm sure she would also appreciate seeing the person she contacted there when she gets out."
+                o "You might have a point but I'll repeat. It will be dangerous."
+                d "I understand what you're trying to warn me about. I was prepared to do this on my own but I have the police to help me now. I want to be there."
+                o "Fine. You will need to wait until we have made sure it is safe until you can talk to miss Amari."
+                d "Thank you officer! I don't know what I would do without your help."
+                o "This is my duty miss Sullivan. I will call you once the officers have arrived."
+                o "We will have to be very cautious."
+                d "Understood. I'll be waiting."
+                "Click"
+
+                
+            else:
+                if track_who==2:
+
+                else:
         label trustgabe:
         label leavework:
         label findkai:
