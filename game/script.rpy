@@ -3761,20 +3761,83 @@ label start:
                 d "I know. But I would rather be there when she's found. I'm sure she would also appreciate seeing the person she contacted there when she gets out."
                 o "You might have a point but I'll repeat. It will be dangerous."
                 d "I understand what you're trying to warn me about. I was prepared to do this on my own but I have the police to help me now. I want to be there."
-                o "Fine. You will need to wait until we have made sure it is safe until you can talk to miss Amari."
+                o "Fine. But you will need to wait to talk to miss Amari until we have made sure it is safe."
                 d "Thank you officer! I don't know what I would do without your help."
                 o "This is my duty miss Sullivan. I will call you once the officers have arrived."
                 o "We will have to be very cautious."
                 d "Understood. I'll be waiting."
                 "Click"
-
-                
+                jump trustpolice
             else:
                 if track_who==2:
-
+                    jump trustnoone
                 else:
+                    d_t "I have everything I need now. The plan is set up."
+                    d_t "I should tell Gabe about this"
+                    d_t "Maybe if I tell him everything he'll be willing to help me."
+                    d_t "I'll have to explain everything to him. But with Gabe's help getting Kai out of there and making sure that psycho gets arrested would be so much easier."
+                    d_t "I wouldn't have to do it alone..."  
+                    d_t "I hope he believes me."
+                    d_t "I'm going to sound absolutely crazy. But I have to atleast try!"
+                    scene bg_office_hallway
+                    d "Gabe? Can I talk to you for a minute. It's important."
+                    g "What is it? You look worried."
+                    d "Can we go somewhere else to talk.? Somewhere more private."
+                    g "Uhm, Y-yeah. Sure."
+                    scene bg_office_printer
+                    g "What's going on. What do you want to talk to me about?"
+                    d "I have something to admit to you."
+                    d "About what's been happening this week. With Kai and also some other things..."
+                    #after explaining everything  
+                    g "Ok ok wait!"
+                    g "You have been seeing this floating screen the entire week. Telling you what is going to happen on that day."
+                    g "And you've been seeing Kai in your dreams telling you she was kidnapped and helping you figure out who it is?"
+                    d "I know it sounds crazy but you have to believe me! All of this weird stuff that's been happening. The knocking and Kai's creepy sketches."
+                    d "That message she wrote"
+                    if track_who==0:
+                        d "It's Matt. He did this to her. And I finally know where he took her."
+                    else:
+                        d "It's Simon. He did this to her. And I finally know where he took her."
+                    d "I know how I can get her out of there but I don't know if I can do it on my own..."
+
+                    if gabe_hints==3:
+                        g "I- "
+                        g "I believe you Destiny."
+                        g "None of this makes any sense to me but I believe you. If you're telling me that's what you know then I have to trust that that's true."
+                        g "I just-"
+                        g "How did it come to this?"
+                        g "Why would he do such a thing?"
+                        d "I don't know Gabe."
+                        d "I'm scared too."
+                        d "But that's why I need your help."
+                        d "I can't do this alone."
+                        g "What can I even do?"
+                        d "I need you to take my phone. He's tracking it but once he figures out you have it he'll know we're onto him and won't risk hurting you."
+                        d "You have to leave the office a little later than ususal. I made him think that's what I'd do."
+                        d "While he's waiting for who he thinks is me I'll already be on my way to where he's keeping Kai."
+                        if track_who==0:
+                            d "By the time Matt could even figure out that he's been tricked we'll both already be long gone."
+                        else:
+                            d "By the time Simon could even figure out that he's been tricked we'll both already be long gone."
+                        d "Once Kai is free we can call the cops on him and this whole nightmare will be over!"
+                        g "Are you sure this is going to work?"
+                        d "I- It has to. This is the only way I know to get Kai out of there. If we don't stop him I don't know what would happen to me-"
+                        d "She's always been right so far. It's going to work!"
+                        g "I trust you Destiny."
+                        if track_who==0:
+                            g "If you need my help I'll be there. I'll try to stall for you as much as I can. I'll try to lead Matt away from where you're going."
+                        else:
+                            g "If you need my help I'll be there. I'll try to stall for you as much as I can. I'll try to lead Simon away from where you're going."
+                        g ""
+
+
+                    else:
+                    
+
+        
         label trustgabe:
-        label leavework:
+        label trustpolice:
+        label trustnoone:
         label findkai:
         label findgabe:
         label findmatt:
