@@ -3460,7 +3460,7 @@ label start:
             k "You listened!"
             d "I did. I tried my best. I did what you told me to."
             d "I remembered you Kai."
-            k "Thank you Destin y."
+            k "Thank you Dest i ny."
             k "F or givIng me hope."
             d "Was he there last night? Did your plan work."
             k "Yes he was he re. I did my b*st to let you k now."
@@ -3488,7 +3488,81 @@ label start:
             scene bg_black
             "Ping!"
             scene bg_d_window
+            d_t "This is it!"
+            d_t "It's all come to this. I can't mess this up."
+            d_t "The screen's still here..."
+            d_t "Thank you Kai."
+            d_t "With your help I'll get you out of there today."
+            #look at achievements
+            d_t "\"This is it\""
+            default a5_1= False
+            default a5_2= False
+            default a5_3= False
+            default a5_4= False
+            label achievements5:
+                if a5_1==True and a5_2==True and a5_3==True and a5_4==True:
+
+                else:
+                    menu:
+                        "A known loner":
+                            $ a5_1= True
+                            if track_who==0:
+                                d_t "I have to get Matt to not be at his hideout. I have to get Kai to be alone in there."
+                            elif track_who==1:
+                                d_t "I have to get Simon to not be at his hideout. I have to get Kai to be alone in there."
+                            else:
+                                d_t "I have to get Gabe to not be at his hideout. I have to get Kai to be alone in there."
+                            d_t "If I make it seem like I'll be alone tonight he's sure to want to follow me."
+                            d_t "He's still tracking my phone so if I tell him I'll be alone on my way home he's probably going to follow that to get to me."
+                            d_t "Just like he planned to yesterday."
+                            d_t "If I find a way to make it look like I'm leaving like normal that will hopefully distract him for long enough to go find Kai."
+                            if call_police==True:
+                                d_t "I could get the police to help me trick and catch him."
+                                d_t "If he follows them there will be enough time to free Kai."
+                                d_t "I'll tell him I'll be alone then secretly leave earlier. By the time he'll have figured out that it's not me it'll be too late and the police can arrest him."
+                            else:
+                                d_t "I could sneak it into someones pocket while at work."
+                                d_t "Someone that usually leaves around the same time as me."
+                                d_t "I'll tell him I'll be alone then secretly leave earlier. By the time he'll have figured out that it's not me I'll hopefully already be gone with Kai."
+                            jump achievements5
+                        "Who can you trust?":
+                            $ a5_2= True
+                            if call_police == True:
+                                d_t "I'll explain myself to the police once I've set everything up."
+                                d_t "If I can get officer Rogan to help me we can get Kai and arrest him at the same time."
+                                d_t "I just have to get them to trust me too..."
+                            else:
+                                if track_who== 2:
+                                    d_t "I can't trus anyone."
+                                    d_t "I don't know who I could even tell."
+                                    d_t "No one would believe me..."
+                                    d_t "I'll have to do this alone."
+                                else:
+                                    d_t "Maybe I can get Gabe to help me..."
+                                    d_t "If I had someone to take my phone that knows what's going on they could trap him while he thinks he's following me."
+                                    d_t "Gabe could alert the police once I have Kai and they could arrest him for good."
+                                    d_t "I just don't knoe if Gabe will trust me..."
+                            jump achievements5
+                        "Back on square one":
+                            $ a5_3= True
+                            d_t "Back on square one?"
+                            d_t "Am I going to fail?"
+                            d_t "..."
+                            d_t "No, I can't think like that. It's going to work."
+                            d_t "I don't know how Kai knows what is going to happen. But I have to trust that what she is telling me will work and that her messages are there to help me."
+                            d_t "Square one could be anything."
+                            if track_who==0:
+                                d_t "Maybe it's square one for Matt."
+                            elif track_who==1:
+                                d_t "Maybe it's square one for Simon."
+                            else
+                                d_t "Maybe it's square one for Gabe"
+
+                        "You reap what you sow":
+                            $ a5_4= True
+
             
+
         label work5:
         label seedgabe:
         label seedmatt:
