@@ -3501,7 +3501,8 @@ label start:
             default a5_4= False
             label achievements5:
                 if a5_1==True and a5_2==True and a5_3==True and a5_4==True:
-
+                    d_t "It will work." 
+                    jump getready5
                 else:
                     menu:
                         "A known loner":
@@ -3532,7 +3533,7 @@ label start:
                                 d_t "If I can get officer Rogan to help me we can get Kai and arrest him at the same time."
                                 d_t "I just have to get them to trust me too..."
                             else:
-                                if track_who== 2:
+                                if track_who == 2:
                                     d_t "I can't trus anyone."
                                     d_t "I don't know who I could even tell."
                                     d_t "No one would believe me..."
@@ -3555,13 +3556,37 @@ label start:
                                 d_t "Maybe it's square one for Matt."
                             elif track_who==1:
                                 d_t "Maybe it's square one for Simon."
-                            else
+                            else:
                                 d_t "Maybe it's square one for Gabe"
-
+                            d_t "Maybe things will finally go back to the way they were..."
+                            jump achievements5
                         "You reap what you sow":
                             $ a5_4= True
-
+                            d_t "It all comes down to this doesn't it."
+                            d_t "If I do everything right I'll get to free her."
+                            d_t "But if I don't..."
+                            jump achievements5
             
+        label getready5:
+            scene bg_d_kitchen
+            if dinner_plans ==True:
+                d_t "If there was ever a day for coffee then it's today."
+                d_t "We won't have anymore stains this time around though. I'll make sure of that."
+                jump work5
+            else:
+                d "Good morning [catname]."
+                d "Today's going to be a stressful day..."
+                c_n "Prrrrr"
+                d "Thank you [catname]. I know you don't really have a choice. But you being here makes me feel a little more secure."
+                d "You're just a little kitty but you've really grown on me. I'll miss you when we finally find your real owners."
+                c_n "Meeauw"
+                d "We'll find them. Just like we'll find Kai today."
+                c_n "Mrrm"
+                d "Now let me get you some food. I bet you're hungry already."
+                c_n "MEaUW!"
+                d "Haha now thats my little [catname]. Food really gets you going huh?"
+                jump work5
+
 
         label work5:
         label seedgabe:
