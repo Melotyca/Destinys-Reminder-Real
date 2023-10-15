@@ -3610,6 +3610,12 @@ label start:
                 d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
+                d_t "Actually!"
+                d_t "What if I ask him about coming in on the weekend."
+                d_t "I could ask him for an office key to be able to work tomorrow to finish an important design."
+                d_t "That would give a reason and make it seem more natural to mention that I'd also be working late today."
+                d_t "That sounds good. I'll tell him that."
+                jump trickmatt
             elif track_who== 1:
                 d_t "I have to find a reason to talk to Simon again. Maybe something about work again like last time."
                 d_t "I have to somehow subtly let him know that today's the day he should make his move."
@@ -3618,6 +3624,11 @@ label start:
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
                 d_t "He ususaly stays quite late as well anyways."
+                d_t "Actually!"
+                d_t "What if I just let him know that I'm working on something and am planing to send it to him in the evening."
+                d_t "If I mention that it's probably going to get a bit later he'll know I'm staying without it seeming suspicious."
+                d_t "Yeah, I'll do that."
+                jump tricksimon
             else:
                 d_t "I have to find a reason to talk to Gabe again. I have to somehow subtly let him know that today's the day he should make his move."
                 d_t "Without is seeming weird or completely out of left field."
@@ -3626,8 +3637,41 @@ label start:
                 d_t "It's not like I'd have anyone else to walk home with anyways. But still I should make it clear that I'm planning to even go without him."
                 d_t "The easiet way would probably be to tell him I'll stay late. He usually likes leaving a little early."
                 d_t "That would also buy me a little more time to find Kai before he catches on."
+                d_t "Actually."
+                d_t "I think I can just pay him back for the coffee from yesterday and then add I'll be working late afterwards. That wouldn't be out of character and I think it should do the trick."
+                jump trickgabe
                 
         label trickgabe:
+            #Later that day
+            scene bg_office_hallway
+            d "Hey, Gabe."
+            g "Oh! Destiny. What are you doing here? Need a break from work?"
+            d "After the last couple of days definetely. But no, that'll have to wait for the weekend."
+            d "I actually just wanted to quickly pay you back for the coffee you payed for yesterday. You know. Because I forgot my wallet."
+            g "Oh, right! You don't need to do that. Keep it! It's my treat."
+            d "Are you sure? It's really no problem I have it right here."
+            g "Yeah I'm being serious. You don't have to pay me back for that. See it as a token of our friendship."
+            g "Besides, it wasn't that much anyways. What was it? Like 3 bucks?"
+            d "Thank you Gabe that's so kind of you."
+            g "It's my pleasure."
+            d "Oh! By the way. I'll be working late again today. We probably won't see eachother on our way home. I still have something I want to finish before the weekend."
+            g "Again? Wow, you're really putting in the work for this new Project."
+            g "Make sure you're not overdoing it ok?"
+            d "Yeah I know. I'll take more time off next week. I just have to make sure I make a good first impression you know."
+            g "I think they're all very impressed already. But I understand. Don't get home too late."
+            g "With everything you told me happened recently I just don't like the thought of you staying here so late..."
+            d "It's going to be fine. I'll be around other people most of the time."
+            d "And if something happens I'll call you."
+            g "Okay..."
+            g "But only if you promise!"
+            d "I promise!"
+            g "Alright. Then goodluck tonight."
+            d "Thanks. Have a good night too!"
+            g "I sure will."
+            d_t "We'll see about that."
+            jump leavework
+
+
         label trickmatt:
         label tricksimon:
         label trustgabe:
