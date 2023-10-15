@@ -3472,7 +3472,7 @@ label start:
             d "Just a little longer. Please, hold on! I'm going to get you out of there!"
             d "What do I have to do tomorrow to make sure everything works?"
             k "I, you... yOu have to Trust yourse7f. I trusf you Destiny."
-            k "Please. {i}Th is has to work.{/i}"
+            k "Pl3ase. {i}Th is has to work.{/i}"
             k "If_it doe sn't-"
             d "It will!"
             d "It will work Kai."
@@ -3589,9 +3589,47 @@ label start:
 
 
         label work5:
-        label seedgabe:
-        label seedmatt:
-        label seedsimon:
+            scene bg_office_hallway
+            s "Morning!"
+            d "Morning Simon. I see you're here early again as usual."
+            s "Well, you to I suppose."
+            s "Great work yesterday by the way! I saw what you sent in and it looks fantastic!"
+            s "I'm really looking forward to see what else you'll bring to the table."
+            d "Thank you. I'm glad it's to your liking."
+            d "And I'm glad I found a way to incorprate Kai's work into it too. {i}I hope she doesn't mind...{/i}"
+            s "What was that?"
+            d "Oh it's nothing. I'm just glad I can live up to the standard that Kai set. That's all."
+            s "We'll you're doing more than fine so far. Keep it up!"
+            d "I will!"
+            s "As always if you need anything or are unsure about anything you can always come to me for help."
+            d "Thank you Simon."
+            scene bg_office_computer_kai
+            if track_who== 0:
+                d_t "I have to find a reason to talk to Matt again. I have to somehow subtly let him know that today's the day he should make his move."
+                d_t "Without is seeming weird or completely out of left field..."
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "It has to seem natural."
+                d_t "And I should buy myself more time by saying I'll go quite late."
+            elif track_who== 1:
+                d_t "I have to find a reason to talk to Simon again. Maybe something about work again like last time."
+                d_t "I have to somehow subtly let him know that today's the day he should make his move."
+                d_t "Without is seeming weird or completely out of left field..."
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "It has to seem natural."
+                d_t "And I should buy myself more time by saying I'll go quite late."
+                d_t "He ususaly stays quite late as well anyways."
+            else:
+                d_t "I have to find a reason to talk to Gabe again. I have to somehow subtly let him know that today's the day he should make his move."
+                d_t "Without is seeming weird or completely out of left field."
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone tonight. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "It has to seem natural."
+                d_t "It's not like I'd have anyone else to walk home with anyways. But still I should make it clear that I'm planning to even go without him."
+                d_t "The easiet way would probably be to tell him I'll stay late. He usually likes leaving a little early."
+                d_t "That would also buy me a little more time to find Kai before he catches on."
+                
+        label trickgabe:
+        label trickmatt:
+        label tricksimon:
         label trustgabe:
         label leavework:
         label findkai:
