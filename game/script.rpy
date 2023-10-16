@@ -3873,16 +3873,23 @@ label start:
                         g "See you Destiny..."
                         scene bg_office_computer_kai
                         d_t "I have to do this on my own."
-                        d_t "I was so stupid!"
+                        d_t "That was so stupid!"
                         d_t "I should have known he wouldn't believe me!"
-                        d_t "It sounds absolutely insane. I don't blame him for thinking it's crazy. Anyone would."
-                        d_t "But I can't go back now. I have to follow through wit hte plan."
-                        d_t "I have to get Kai out of there. Even if I have to do it all by myself."
+                        d_t "It sounds absolutely insane. I don't blame him for thinking I'm going crazy. Anyone would."
+                        d_t "I mean even I think I might slowly be going crazy."
+                        d_t "But I can't go back now. I have to follow through wit the plan."
+                        d_t "I have to get Kai out of there. Even if that means I'll have to do it all by myself."
                         jump trustnoone
         
         label trustgabe:
         label trustpolice:
         label trustnoone:
+            scene bg_office_cafeteria
+            #at lunch
+            if track_who==1:
+                d_t "I need to slip my phone to someone that will stay here for a little longer than I'd usually work."
+                d_t 
+            else:
         label findkai:
         label findgabe:
         label findmatt:
