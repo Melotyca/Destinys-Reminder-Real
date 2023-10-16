@@ -3895,13 +3895,13 @@ label start:
 
 
         label trustpolice:
-             if track_who==0:
+            if track_who==0:
                 jump studiopolice
             elif track_who==1:
                 jump storagepolice
             else:
                 jump apartmentpolice
-                 
+
         label trustnoone:
             scene bg_office_cafeteria
             #at lunch
@@ -3936,6 +3936,62 @@ label start:
         label storagealone:
         label storagegabe:
         label storagepolice:
+            #at the scene with the cops.
+            scene bg_ally
+            "*Police radio noises*"
+            o "They're at the storage units now. Which unit is she in."
+            d "I-"
+            #achievements glitch to square ONE
+            d "It's unit one!"
+            d "She's in unit one."
+            o "Alright.{i} Unit one everyone. Be careful there could be traps or sensors.{/i}"
+            d "Are they going in now?"
+            o "Yes they're entering the building now. It shouldn't take too long for them to get to the right unit."
+            o "We'll have to be patient and wait for their response. As soon as they find something they'll let us know."
+            d "She has to be there..."
+            "{cps=1}...{/cps}"
+            "*Radio noise*"
+            d "Did they find her?!"
+            o "Yes she's there!"
+            o "They were able to locate miss Amari! She looks exhausted and frightened but ultimately she seems to be in stable health."
+            d "I have to talk to her!"
+            d "Please! Can I go in?"
+            o "One moment. They're checking the rest of the unit right now."
+            o "Once they're done it's safe for you to go in."
+            d "I have to see her. I have to know she's safe."
+            o "Alright. We can go in."
+            scene bg_room
+            d "Kai?"
+            k "Destiny!"
+            k "You came!"
+            k "You really came!"
+            k "Thank you..."
+            d "So it really was you. You helped me. In those dreams"
+            k "Dreams..."
+            k "You heard me?"
+            d "I did. I don't know how you did it but I saw you Kai. And the screen. It was you wasn't it."
+            k "I don't know how-"
+            k "It worked."
+            o "I'm sorry to interrupt your reunion but we should get miss Amari to a hospital to get her vitals checked and a forensics team here to take care of this place."
+            d "Yes of course officer."
+            k "Thanks."
+            o "We'll take care of the rest."
+            o "Miss Sullivan. We'll take you back to your apartment now."
+            d "But-"
+            o "You'll be pleased to hear that our other team was able to arrest mister Anderson."
+            o "Your intuition was right. He followed us right into the trap."
+            o "Thank you for your help miss Sullivan."
+            d "They have him?"
+            o "Yes. He's in police custody now."
+            k "They got Simon-"
+            d "He's not going to hurt anyone anymore."
+            k "I'm safe."
+            o "You're safe miss Amari."
+            o "So, are you ready to go?"
+            o "We will acompany you both to your destinations. And as for you miss Sullivan there will be an officer stationed at your apartment."
+            o "For your safety and just in case any problems should arise."
+            d "Let's get going then."
+            jump best
 
         label apartmentalone:
         label apartmentpolice:
