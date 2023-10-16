@@ -3801,6 +3801,7 @@ label start:
                     d "I know how I can get her out of there but I don't know if I can do it on my own..."
 
                     if gabe_hints==3:
+                        $ gabe_ally= True
                         g "I- "
                         g "I believe you Destiny."
                         g "None of this makes any sense to me but I believe you. If you're telling me that's what you know then I have to trust that that's true."
@@ -3882,7 +3883,25 @@ label start:
                         jump trustnoone
         
         label trustgabe:
+            scene bg_office_computer_kai
+            #check phone
+            d_t "It's about time I prepare to go..."
+            d_t "4:30PM. Yeah, it's go time."
+            #text gabe I'm going now good luck
+            if track_who==0:
+                jump studiogabe
+            else:
+                jump storagegabe
+
+
         label trustpolice:
+             if track_who==0:
+                jump studiopolice
+            elif track_who==1:
+                jump storagepolice
+            else:
+                jump apartmentpolice
+                 
         label trustnoone:
             scene bg_office_cafeteria
             #at lunch
@@ -3896,13 +3915,35 @@ label start:
             d_t "I'll have to wait until the afternoon to start the plan."
             #later that day
             scene bg_office_computer_kai
-            
-        label findkai:
-        label findgabe:
-        label findmatt:
-        label arrestsimon:
-        label catchsimon:
-        label getcaught:
+            #check computer
+            d_t "It's about time I prepare to go..."
+            d_t "4:30PM. Yeah, it's go time."
+            if track_who==0:
+                d_t "The sound studio is right here so I won't have too much of a buffer."
+                d_t "That just means I have to make sure everything has to go smoothly."
+                jump studioalone
+            elif track_who==1:
+                d_t "The storage rental is not too far away so I won't have too much of a buffer."
+                d_t "That just means I have to make sure everything has to go smoothly."
+                jump storagealone
+            else: 
+                d_t "The apartment is quite a good distance away so I'll have a bit of a buffer."
+                d_t "But if Gabe figures out I'm gone while I'm still on my way there I could be in a fair bit of trouble."
+                d_t "That just means I have to make sure everything has to go smoothly." 
+                jump apartmentalone          
+        
+        
+        label storagealone:
+        label storagegabe:
+        label storagepolice:
+
+        label apartmentalone:
+        label apartmentpolice:
+
+        label studioalone:
+        label studiogabe:
+        label studiopolice:
+        
         
     label outro:
         label worst:
