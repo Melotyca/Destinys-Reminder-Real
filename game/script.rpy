@@ -3816,24 +3816,69 @@ label start:
                         d "You have to leave the office a little later than ususal. I made him think that's what I'd do."
                         d "While he's waiting for who he thinks is me I'll already be on my way to where he's keeping Kai."
                         if track_who==0:
-                            d "By the time Matt could even figure out that he's been tricked we'll both already be long gone."
+                            d "By the time Matt would even get the chance to figure out that he's been tricked we'll both already be long gone."
                         else:
-                            d "By the time Simon could even figure out that he's been tricked we'll both already be long gone."
+                            d "By the time Simon would even get the chance to figure out that he's been tricked we'll both already be long gone."
                         d "Once Kai is free we can call the cops on him and this whole nightmare will be over!"
                         g "Are you sure this is going to work?"
-                        d "I- It has to. This is the only way I know to get Kai out of there. If we don't stop him I don't know what would happen to me-"
+                        d "I- it has to. This is the only way I know to get Kai out of there. If we don't stop him I don't know what would happen to me-"
                         d "She's always been right so far. It's going to work!"
                         g "I trust you Destiny."
                         if track_who==0:
                             g "If you need my help I'll be there. I'll try to stall for you as much as I can. I'll try to lead Matt away from where you're going."
                         else:
                             g "If you need my help I'll be there. I'll try to stall for you as much as I can. I'll try to lead Simon away from where you're going."
-                        g ""
-
+                        g "But I can't keep him distracted forever."
+                        g "Here take my phone. That way I can contact you if I think he's figured out it's not you he's following."
+                        g "And as soon as you've freed Kai you call me. Ok? I'll let the police know where you are and tell them everything."
+                        g "Try to stay safe Destiny."
+                        d "Thank you Gabriel. I'll do my best. I don't know what I'd do without you."
+                        g "Be careful out there."
+                        d "I will."
+                        jump trustgabe
 
                     else:
-                    
-
+                        g "I- "
+                        g "None of this makes any sense. Why are you telling me this all of a sudden?"
+                        g "I can't believe this. Psychic dreams? A screen?"
+                        g "I've never heard of anything like this."
+                        if track_who==0:
+                            g "And you think Matt kidnapped Kai? He would never do such a thing!"
+                        else:
+                            g "And you think Simon kidnapped Kai? He would never do such a thing!"
+                        g "What would he gain from it?"
+                        d "I don't know!"
+                        d "You have to believe me Gabe! I'm not crazy."
+                        d "I've seen these things. They're real. Kai talked to me. I can get her out of there."
+                        g "Out of where? You don't even really know what is in that place."
+                        g "Destiny, I don't think you're crazy but this isn't right. I think you're scared and overworked and have been for too long now."
+                        g "These nightmares you're discribing. They're making you paranoid. This sounds like some crazy movie plot. Do you have any evidence for what you're claiming he did?"
+                        d "I-"
+                        g "Did you see him at the door? Or did you find the tracker she said he put on your phone?"
+                        d "I don't-"
+                        g "This is all so sudden. I'm worried about you Destiny. I don't think you're ok."
+                        g "If you really think someone is after you we can go to the police together. But I'm not helping you execute some crazy plan to free a woman you don't even know for certain was kidnapped."
+                        d "Gabe..."
+                        g "I'll come to the police station with you tonight. Then we can figure this out with them."
+                        g "I'm sorry Destiny but I don't think-"
+                        d "You don't have to explain it to me. I understand. I know I sound crazy..."
+                        g "Destiny-"
+                        d "No, you're right. It's probably just paranoia. I don't know why any of this is happening to me. I'm scared."
+                        d "I think I need to go talk to someone about this..."
+                        g "Do you want me to take you home?"
+                        d "No. It's fine. I'll stay here. I'm sorry I made you worry."
+                        g "Please, Destiny. If you're not feeling well then take a break."
+                        d "Yeah... I'll be fine."
+                        d "See you later Gabe."
+                        g "See you Destiny..."
+                        scene bg_office_computer_kai
+                        d_t "I have to do this on my own."
+                        d_t "I was so stupid!"
+                        d_t "I should have known he wouldn't believe me!"
+                        d_t "It sounds absolutely insane. I don't blame him for thinking it's crazy. Anyone would."
+                        d_t "But I can't go back now. I have to follow through wit hte plan."
+                        d_t "I have to get Kai out of there. Even if I have to do it all by myself."
+                        jump trustnoone
         
         label trustgabe:
         label trustpolice:
