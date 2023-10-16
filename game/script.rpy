@@ -3886,10 +3886,17 @@ label start:
         label trustnoone:
             scene bg_office_cafeteria
             #at lunch
+            d_t "I need to slip my phone to someone that will stay here for a little longer than I'd usually work."
+            d_t "Someone that doesn't move around too much..."
             if track_who==1:
-                d_t "I need to slip my phone to someone that will stay here for a little longer than I'd usually work."
-                d_t 
+                d_t "I can give it to Matt. He's quite stationary. And his office is pretty close to mine."
             else:
+                d_t "I can give it to Simon. He's quite stationary. And his office is right next to mine."
+            d_t "I'll slip him the phone and then go back to my desk. Leaving now would be too suspicious. I can't risk getting caught not being here while my phone is here."
+            d_t "I'll have to wait until the afternoon to start the plan."
+            #later that day
+            scene bg_office_computer_kai
+            
         label findkai:
         label findgabe:
         label findmatt:
