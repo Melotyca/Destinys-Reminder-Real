@@ -40,7 +40,7 @@ label start:
             label morning1:
                 scene bg_black
                 "Ping!"
-                d_t "Who, What was that?"
+                d_t "Who, what was that?"
                 d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
                 scene bg_d_window
                 show phone
@@ -48,7 +48,7 @@ label start:
                 # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
                 d_t "Oh come on. Just let me sleep."  
                 d_t "Why can't it be like 4am."
-                d_t "Pleaseee... If I stay in bed now I'll be late."
+                d_t "Pleaseee... If I stay in bed now, I'll be late."
                 d_t "I guess I've got no other choice."  
                 d_t "Coffee time!"   
 
@@ -61,8 +61,8 @@ label start:
                 #unlock)   
                 show phone
                 #(home screen, a couple apps, no notifications waits a little). 
-                #(gets a message from Gabriel (Omw! Hope you didn’t overseep again ;))). 
-                d_t "Shoot! I totaly forgot about time!"
+                #(gets a message from Gabriel (Omw! Hope you didn’t oversleep again ;))). 
+                d_t "Shoot! I totally forgot about time!"
                 d_t "I have to get ready."  
                 #(destiny looks around, window, corridor back to kitchen/messy).
                 hide phone
@@ -119,7 +119,7 @@ label start:
                 d "Mhm. Must've been easter or something like that."  
                 d_t "Shoot! What am I going to wear now?"  
                 #Narrator: Destiny starts rummaging through her room. 
-                g "I don't mind cleaning up a bit. I'll just take care of these shards if that's allright."  
+                g "I don't mind cleaning up a bit. I'll just take care of these shards if that's all right."  
                 d "Yes! Found it!" 
                 d "Give me a second to throw this on."  
                 #(blackspace). 
@@ -134,7 +134,7 @@ label start:
                 #(Destiny in the mirror, dishevelled).
                 show destiny_neut 
                 d_t "Let's see how this fits." 
-                d_t "Anything it better than this desaster right now."
+                d_t "Anything it better than this disaster right now."
                 d_t "Jeez its worse than I thought. The coffee really went everywhere."
                 d_t "Better tidy this mess of a haircut up a bit too while I'm at it."
                 d_t "I have to find a brush."
@@ -144,14 +144,14 @@ label start:
                 d_t "What even is that. I can't touch it. Just text."
                 d_t "It's saying something about a Stain."
                 d_t "Hah! What a coincidence!"
-                d_t "Kinda ceepy though..."
-                d_t "Wasn't that text there before I even spilled my mug? But why would that be an achievemnt?"
+                d_t "Kind of creepy though..."
+                d_t "Wasn't that text there before I even spilled my mug? But why would that be an achievement?"
                 d_t "Oh no I'm officially going insane."  
                 d_t "I really should have slept longer. Maybe the last couple of all-nighters are starting to get to me."
                 d_t "Although."
                 d_t "Achievements..."
                 d_t "Let's see."
-                d_t "Yeah, I do think that stain is stying. But what could the other ones mean?"
+                d_t "Yeah, I do think that stain is staying. But what could the other ones mean?"
                 menu: 
                     "Under his watch.":
                         jump underhiswatch
@@ -170,7 +170,7 @@ label start:
                     jump gotowork
 
                 label flippinggood:
-                    d_t "\"{i}This food is flipping good.{/i}\" Hey if this really predicts the future than atleast the food will be good."
+                    d_t "\"{i}This food is flipping good.{/i}\" Hey if this really predicts the future than at least the food will be good."
                     jump gotowork
 
                 label jamon:
@@ -198,8 +198,8 @@ label start:
                 d_t "Oh right. I'm supposed to finish the design for that ad poser this week."  
                 d "Hah.. we'll see."
                 d "Something's just not right about it yet but I can't figure out what."
-                d "And Matt just gave that speach last meeting about being stricter with deadlines and quality from now on." 
-                d "Im screwed."  
+                d "And Matt just gave that speech last meeting about being stricter with deadlines and quality from now on." 
+                d "I'm screwed."  
                 g "Don't be too hard on yourself Destiny."
                 g "You've always found a way to get things done till now."  
                 d "Yeah like a day past the due date." 
@@ -209,11 +209,11 @@ label start:
                 hide gabe_happy
                 show gabe_neut
                 g "How did he say it? {i}ehem \"As one of the most promising companies in our field, we don't tolerate rushed or unfinished work Sullivan!\"{/i}" 
-                g "I can't believe he still refuses to use our firstnames."
+                g "I can't believe he still refuses to use our first names."
                 g "I seriously doubt he's ever heard himself speak." 
                 d "HAHA! That was scarily accurate. Have you secretly been practicing?"
                 g "Yeah right!"
-                d "Hey who knows. But yeah, you're right. Thank you Gabe."
+                d "Hey who knows. But yeah, you're right. Thank you, Gabe."
                 g "Now let's get going." 
                 g "Before we actually end up being late." 
                 jump Work1 
@@ -226,7 +226,7 @@ label start:
                 d_t "This can't just be me imagining things. I mean it knew I was going to stain my shirt."
                 d_t "I wouldn't even know that myself. Besides none of these dumb theories explain how I can SEE this thing."
                 d_t "It's still there..."
-                d_t "Maybe it's a hallucination? I have been staring at screens a lot lately. And the lack of sleep definetely isn't helping either."
+                d_t "Maybe it's a hallucination? I have been staring at screens a lot lately. And the lack of sleep definitely isn't helping either."
                 d_t "Maybe I should go see a doctor..."
                 d_t "I'm sure there has to be logical explanation for all of this."
                 d_t "Maybe it'll just go away. It's starting to creep me out a bit. I'm sure if I just get enough rest tonight it will be fine."
@@ -236,7 +236,7 @@ label start:
                 d_t "Come on internet do me a solid won't you?"
                 #keeps clicking through
                 d_t "I'm not being unreasonable. I'm sure someone has had this before. I just need to search harder."
-                d_t "\"Electomagnetic transmissions\"... Possible. What do they say about seeing text?"
+                d_t "\"Electromagnetic transmissions\"... Possible. What do they say about seeing text?"
                 m "Sullivan!"
                 d "What!?"
 
@@ -257,9 +257,9 @@ label start:
                 m "Does this mean you've finally finished the Poster?"
                 hide matt_conf
                 show matt_neut
-                m "It'd better be. We can't have you hand in another Project late."
-                m "Or last minute like last time. It's still a miracle to me how you somehow managed to get that one printed in time."
-                m "Make sure you're ready ahead of time. I'd highly suggest you print an example latest tomorrow. So we can show it to our clients in time."
+                m "It'd better be. We can't have you handed in another Project late."
+                m "Or last-minute like last time. It's still a miracle to me how you somehow managed to get that one printed in time."
+                m "Make sure you're ready ahead of time. I'd highly suggest you print an example latest tomorrow. So, we can show it to our clients in time."
                 m "Although, today would be much better..."
                 d "Sorry..."
                 m "Oh, And Sullivan" 
@@ -269,7 +269,7 @@ label start:
                 m "With tomorrow I don't mean 6:30PM. The office closes at 7:00PM. If it's not printed by then, you have to figure out how to print it."
                 hide matt_mad
                 show matt_conf
-                m "Is that undersood?"
+                m "Is that understood?"
                 d "Yes. Of course. I'll have it in time this time."
                 hide matt_conf
                 show matt_happy
@@ -286,7 +286,7 @@ label start:
                 m "The woman that was previously in charge of design seems to have quit unexpectedly."
                 m "I suggested some great options, but Simon mentioned you as a possible replacement."
                 m "Whatever his reasons might be."
-                m "So What do you say Sullivan? The desicion is quite obvious in my oppinion."
+                m "So, what do you say Sullivan? The decision is quite obvious in my opinion."
                 m "I will send you the application forms later this afternoon if you decide to take this-, how do I put it..."
                 hide matt_neut
                 show matt_mad
@@ -295,7 +295,7 @@ label start:
                 show matt_neut
                 d "Yes! Of course! Should I go talk to him right now?"
                 m "No need. I have some files I need to run by him anyways. We can go by his office together afterwards."
-                d "Toghether?"
+                d "Together?"
                 m "Yes, which brings me to my second proposal."
                 d_t "Oh no here we go."
                 m "I would like to invite you to lunch. To talk about some things regarding your current project."
@@ -312,12 +312,12 @@ label start:
             label mattlunch_y:
                 hide matt_neut
                 show matt_happy
-                m "Wonderfull. I heard today's menu would offer something special."
+                m "Wonderful. I heard today's menu would offer something special."
                 "..."
                 d "OH! You meant right now?"
-                d "Yes! One second please. I need to. Uhm, finish some last tweeks and save my project really quickly."
-                m "Alright. I'll just go ahead. Come meet me in the Cafeteria when you're done"
-                d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with gabe and the others"
+                d "Yes! One second please. I need to. Uhm, finish some last tweaks and save my project really quickly."
+                m "Alright. I'll just go ahead. Come meet me in the cafeteria when you're done"
+                d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with Gabe and the others"
                 d_t "Oh yeah, didn't that screen also say something about food?"
                 jump mattlunch
             label mattlunch_n:
@@ -325,11 +325,11 @@ label start:
                 show matt_mad
                 m "I'm not really asking Sullivan."
                 m "I need to speak with you. Not only about your design."
-                d "Sorry. Yes of course. Uhm, I need to finish some last tweeks and save my project. But after that I'll come right away."
+                d "Sorry. Yes of course. Uhm, I need to finish some last tweaks and save my project. But after that I'll come right away."
                 hide matt_mad
                 show matt_neut
-                m "Fine. I'll just go ahead. Come meet me in the Cafeteria when you're done. Don't make me wait too long. I heard todays menu is promising"
-                d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with gabe and the others"
+                m "Fine. I'll just go ahead. Come meet me in the cafeteria when you're done. Don't make me wait too long. I heard todays menu is promising"
+                d_t "How does he always catch me in the worst moments possible. And here I was looking forward to lunch with Gabe and the others"
                 d_t "Oh yeah, didn't that screen also say something about food?"
                 jump mattlunch
             label mattlunch:
@@ -351,7 +351,7 @@ label start:
                     "It's going great!":
                         d "Oh yeah, It's going great haha. I'm s-sorry about before. I'm actually almost done."
                         d_t "Please just don't ask about specifics"
-                        d "I just have one or two more little graphics to make. And maybe some last minute text editing."
+                        d "I just have one or two more little graphics to make. And maybe some last-minute text editing."
                         m "Will you be able to have it done today? So it can be printed tomorrow."
                         m "I would really prefer you finish it today, so we don't have another situation like last time."
                         hide matt_neut 
@@ -363,8 +363,8 @@ label start:
 
                     "About that...":
                         d "Yeah, about that. I don't think I'll be able to finish it today."
-                        d "I'll have it in time. I promise. But I've been having some difficulty with the programm lately"
-                        m "I would have really prefered you finish it today. Just make sure we don't have another situation like last time."
+                        d "I'll have it in time. I promise. But I've been having some difficulty with the program lately"
+                        m "I would have really preferred you finish it today. Just make sure we don't have another situation like last time."
                         d "Yes I promise."
                         hide matt_neut
 
@@ -387,10 +387,10 @@ label start:
                 m "I have to admit, I'm not too keen on you switching teams already. But Simon insisted I ask you to take the position."
                 hide matt_neut
                 show matt_conf
-                m "Beats me why he would request you specifically but I guess after one year you've had enough time to get into the swing of things here."
+                m "Beats me why he would request you specifically, but I guess after one year you've had enough time to get into the swing of things here."
                 hide matt_conf
                 show matt_neut
-                m "So, Sullivan. Since you already agreed to taking this opportunity I hope you do your best to adjust to their work flow quickly."
+                m "So, Sullivan. Since you already agreed to taking this opportunity I hope you do your best to adjust to their workflow quickly."
                 d "I'll give it my all."
                 hide matt_neut
                 show matt_happy
@@ -398,14 +398,14 @@ label start:
                 hide matt_happy
                 show matt_neut
                 m "Unlike me, Simon expects a lot more autonomy of his team." 
-                d_t "Thank god. Finally some freedom. I can't deal with another controll freak like Matt."
+                d_t "Thank god. Finally, some freedom. I can't deal with another control freak like Matt."
                 m "I was reluctant to offer you this position since it seems you still need the supervision. But it can't be helped."
-                m "If he insists then I won't tell him otherwhise. Most of the other viable designers are quite busy with their own projects at the moment anyways."
+                m "If he insists then I won't tell him otherwise. Most of the other viable designers are quite busy with their own projects at the moment anyways."
                 m "I hope you step up to the job and deliver as demanded."
                 hide matt_neut
                 show matt_mad
-                m "I don't want you to make a bad impression on his team. I'm sure you understand that that would also have very undesirable concequences on my side."
-                d "I understand. I won't dissapoint you Matthew. I'm sure having a new work environment will be a great experience for me."
+                m "I don't want you to make a bad impression on his team. I'm sure you understand that that would also have very undesirable consequences on my side."
+                d "I understand. I won't disappoint you Matthew. I'm sure having a new work environment will be a great experience for me."
                 hide matt_mad
                 show matt_conf
                 m "Are you saying you don't like my way of doing things?"
@@ -415,9 +415,9 @@ label start:
                 m "Alright. If you say so."
                 "..."
                 m "You don't seem to be hungry today do you."
-                d "Yeahhh, I dont' have that big of an apetite right now."
+                d "Yeahhh, I don't have that big of an appetite right now."
                 d_t "This is so uncomfortable why did he have to do this over lunch."
-                m "There's no shame in addmiting you don't like mushrooms Sullivan. Not like your face does't give it away everytime you bite down on one."
+                m "There's no shame in admitting you don't like mushrooms Sullivan. Not like your face doesn't give it away every time you bite down on one."
                 d "He he... Sorry. I just can't stand the texture. I think I'll just get up and go and get myse- oh no!"
                 hide matt_neut
                 show matt_spill
@@ -444,7 +444,7 @@ label start:
                 scene bg_office_printer
                 show a_day1
                 d_t "These weird achievements have been messing with my head the entire day. Can't they be a little clearer?"
-                d_t "If I'd known I was supposed to take them so litterally I would have been more careful with my food."
+                d_t "If I'd known I was supposed to take them so literally I would have been more careful with my food."
                 d_t "Flipping good. Don't make me laugh. This whole thing could've been avoided."
                 d_t "Matts never going to forgive me for that."
                 d_t "What's next? Jam on."
@@ -478,7 +478,7 @@ label start:
                 d_t "Maybe it still printed some of the pages."
                 d_t "Of course."
                 d_t "None of them. Why did I think anything would go in favor today."
-                d_t "And I can't even get the paperchute to open."
+                d_t "And I can't even get the paper chute to open."
                 d_t "I don't think I can fix this myself..."
                 menu: 
                     "Get help to fix the printer.":
@@ -486,7 +486,7 @@ label start:
                         d_t "I have to find someone to help me fix this darn printer"
                         scene bg_office_hallway
                         show a_day1
-                        #goes to look for someone runns into simon
+                        #goes to look for someone runs into simon
                         d_t "Maybe I'll find someone around here."
                         "BUMP"
                         show simon_neut
@@ -497,16 +497,16 @@ label start:
                         s "I thought Matthew said we would meet after lunch to talk about switching teams. Did something come up?"
                         d "You're Simon then! Yeah sorry about that."
                         d "Uhm, yes."
-                        d "Something came up. I apolagize. You've heard a lot about me?"
-                        s "Yes! your work speaks for it's self. Speaking of. I thought Matthew said you were still finishing up a project"
+                        d "Something came up. I apologize. You've heard a lot about me?"
+                        s "Yes! your work speaks for itself. Speaking of. I thought Matthew said you were still finishing up a project"
                         s "What are you doing around here? Can I help you with anything?"
                         d "Yes actually."
                         menu:
                             "I jammed the printer":
-                                d "I was about to print the forms to join your team but I must have put in too much paper."
+                                d "I was about to print the forms to join your team, but I must have put in too much paper."
                                 d "Now it won't do anything anymore. I think I must've jammed it."
                             "Someone jammed the printer":
-                                d "I was about to print the forms to join your team but someone must have put in too much paper."
+                                d "I was about to print the forms to join your team, but someone must have put in too much paper."
                                 d "There's an error message. I think someone must've jammed it."
                         d "Do you know who I could go to to help me fix it?"
                         s "Not that old printer again! We should have replaced that ancient thing years ago."
@@ -528,28 +528,28 @@ label start:
                         s "I'm looking forward to working with you."
                         d "Me too!"
                         d_t "Anything beats Matt."
-                        s "So, about that project you're still finishing up rigth now?"
+                        s "So, about that project you're still finishing up right now?"
                         d "It's nothing big but I got tasked with designing an ad poster, yes."
                         d "I'll most likely be done by tomorrow though."
                         s "Well then. We'll be collaborating from then on!"
                         s "Now let me help you with that printer. I don't want to keep you here any longer than necessary."
                         #simon helps destiny
-                        s "My appolagies! That took a little longer than expected."
+                        s "My apologies! That took a little longer than expected."
                         s "I'm curious now. Not many people would be willing to stay this late." 
                         s "But since I live close by it's not a problem for me to stay a little longer."
                         s "Do you live somewhere around here too?"
                         d "Yeah. I live just two stops away from here. So I don't have a long commute at all."
-                        s "Do you like the area? In my oppinion it's one of the best if you work in the city."
-                        d "Mostly yeah. I really lucked out with my appartment."
+                        s "Do you like the area? In my opinion it's one of the best if you work in the city."
+                        d "Mostly yeah. I really lucked out with my apartment."
                         d "It's not too far away and I have a great view."
                         s "Wow you live there all by yourself?"
                         d "Yes but a friend of mine that also works here actually lives really close as well!"
                         d "I moved in not long after him."
-                        s "ou must be in one of the newer ones close to the park then! I've heard only great things about them."
+                        s "You must be in one of the newer ones close to the park then! I've heard only great things about them."
                         s "You've been working here for a year now am I right?"
                         d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
                         s "Matthew tends to be a bit too careful with handing out jobs"
-                        s "In my oppinion the only way to get experience is to do the thing you want to learn."
+                        s "In my opinion the only way to get experience is to do the thing you want to learn."
                         s "Is view on the matter seems to be a bit more uptight."
                         d "A little yes haha."
                         s "Well then this will be a good new experience for you!"
@@ -577,7 +577,7 @@ label start:
                 show a_day1
                 show gabe_happy
                 g "There you are! What took so long? I heard what happened over lunch."
-                g "You should have seen his face! It was hillarious."
+                g "You should have seen his face! It was hilarious."
                 g "From an outside perspective of course. I'm sure you must have been fearing for your life."
                 g "He was furious. The way he stormed out of the cafeteria left everyone dead silent."
                 g "Did Matt catch you on your way out?"
@@ -618,17 +618,17 @@ label start:
                 scene bg_street
                 show a_day1
                 show gabe_neut
-                g "How was your day, if we ignore the obvious fopa at lunch?"
+                g "How was your day, if we ignore the obvious faux pas at lunch?"
                 d "It was fine. I didn't get to work on the poster as much as I'd liked though. I have a lot to do tomorrow."
                 hide gabe_neut
                 show gabe_conf
-                g "Why's that? Did something come up? I thought you kept your scedule as free as possible specifically to be able to work on it a lot today."
+                g "Why's that? Did something come up? I thought you kept your schedule as free as possible specifically to be able to work on it a lot today."
                 d "It's not that. I didn't have anything else planned."
                 d "I just wasn't able to focus at all."
                 d "My thoughts were all over the place the entire day. Just never on work."
                 hide gabe_conf
                 show gabe_conc
-                g "Got something on your mind Destiny? If there's something bothering you maybe talking anout it will help."
+                g "Got something on your mind Destiny? If there's something bothering you maybe talking about it will help."
                 d_t "Can I tell him about the screen?"
                 menu: 
                     "Tell him":
@@ -637,7 +637,7 @@ label start:
                         hide gabe_conc
                         show gabe_conf
                         g "What do you mean? Like hallucinations?"
-                        d "Yeah. Like a screen with legitemate text."
+                        d "Yeah. Like a screen with legitimate text."
                         g "What!?"
                         hide gabe_conf
                         show gabe_conc
@@ -664,7 +664,7 @@ label start:
 
                     "Be dismissive":
                         d "I think I might have just not slept enough."
-                        d "Usually runnign on little sleep isn't a problem for me but this Project has been keeping me up more nights than I'd like"
+                        d "Usually running on little sleep isn't a problem for me but this Project has been keeping me up more nights than I'd like"
                         g "Sounds to me like you're overworking yourself."
                         g "When was the last time you've taken a day off or just slept for a solid 8 hours?"
                         d "..."
@@ -681,7 +681,7 @@ label start:
                 hide gabe_happy
                 show gabe_neut
                 g "We can't have you getting sick from working too much now can we?"
-                d "Thank you Gabe."
+                d "Thank you, Gabe."
                 g "Just tell if there's something I can do for you. You can call me whenever."
                 g "Oh! Looks like we're on our street already."
                 g "Time really flew by us this time didn't it!"
@@ -701,7 +701,7 @@ label start:
                 x "I'm not an illusion. I'm here to help you."
                 x "It doesn't have to happen to you too."
                 d "I-"
-                x "I know about your future. I know what you need to do now. I couldn't stop it myself but you can."
+                x "I know about your future. I know what you need to do now. I couldn't stop it myself, but you can."
                 x "He's after you. You have to remember m3."
                 d "Who?"
                 x "D0n*T oq3n 1 T"
@@ -713,7 +713,7 @@ label start:
                 scene bg_d_window
                 show a_day2
                 d_t "What-"
-                d_t "Why does this feel so familiar. It feels like I'm having a dejavu"
+                d_t "Why does this feel so familiar. It feels like I'm having a deja vu"
                 d_t "Didn't I have that same strange dream yesterday?"
                 d_t "Arrgh. Why can't I remember. My head feels like it's spinning."
                 d_t "I have to go get something to drink. What time is it even?"
@@ -738,8 +738,8 @@ label start:
                 d_t "But they did all come true didn't they?"
                 d_t "Hmm."
                 d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
-                d_t "Let's see. They happened in the order they were writen in right?"
-                d_t "What does my looming spector have to say about today?"
+                d_t "Let's see. They happened in the order they were written in right?"
+                d_t "What does my looming specter have to say about today?"
                 default matt_excuse = 0
                 label achievements2: 
                     menu:
@@ -768,15 +768,15 @@ label start:
                             d_t "In the case I really will run into Matt today it certainly wouldn't hurt to know what to say."
                             d_t "Hmm what would be a good excuse for absolutely drenching him in stew and running away."
                             menu:
-                                "Nausia":
-                                    d_t "I could say those mushrooms suddenly made me really nausious."
+                                "Nausea":
+                                    d_t "I could say those mushrooms suddenly made me really nauseous."
                                     d_t "Maybe he'll buy it. I mean I did run to the bathrooms to hide."
-                                    d_t "Plus, I'm sure he can't really blame me for that. I doubt he'd rather had had me trow up in the cafeteria..."
+                                    d_t "Plus, I'm sure he can't really blame me for that. I doubt he'd rather had had me throw up in the cafeteria..."
                                     d_t "Ew." 
                                     d_t "No, that'll do. He won't ask too many questions after that."
                                     $ matt_excuse = 1
                                 "Getting tissues":
-                                    d_t "I could tell him i wanted to go get tissues to help him clean up."
+                                    d_t "I could tell him I wanted to go get tissues to help him clean up."
                                     d_t "I mean I did run in the direction of the bathrooms. I could have just as well wanted to go get something to wipe off the mushrooms."
                                     d_t "Might not have been the most efficient way to do so but Gabe said Matt stormed out of the cafeteria too."
                                     d_t "I could just say I went to go get tissues but couldn't find him when I got back."
@@ -792,23 +792,23 @@ label start:
                             d_t "Maybe I'll be late to printing again. I can't miss the deadline today. I'd better keep a close eye on the time today."
                             d_t "Let's see maybe I can avoid it? Even if not, at least I know now that I'll probably have to run at some point today."
                             d_t "I don't think I'll be enjoying running though, that's for sure. {i}New hobby{/i} yeah right."
-                            d_t "I don't know if I can really believe that but I'll definetely put on some more comfortable shoes today."
+                            d_t "I don't know if I can really believe that but I'll definitely put on some more comfortable shoes today."
                             jump achievements2
 
                         "Dinner for two":
                             d_t "A dinner for two. Huh, at least this one sounds pretty straight forward."
-                            d_t "I dont see how this could be anything other than a literal dinner for two people."
+                            d_t "I don't see how this could be anything other than a literal dinner for two people."
                             d_t "Now who could it be with?"
                         
                         "Knock Knock":
-                            d_t "Let's hope this is refering to a door. I honestly can't imagine anything else I'd be knocking on."
+                            d_t "Let's hope this is referring to a door. I honestly can't imagine anything else I'd be knocking on."
                             d_t "Oh! It might not be me knocking. Maybe I'm getting a package delivered."
                             d_t "Did I order anything recently?"
                             d_t "Hmmm. Maybe it's my new coffee machine. It's about time that arrived."
                             d_t "I've been starting to think they lost the package."
                             d_t "No. It's supposed to happen pretty late in the day. It's probably not the mail."
                             d_t "Could someone be coming to visit?"
-                            d_t "Ugh. Is it going to be doordashers? I have heard some of the kids around the block have started going around the appartments recently."
+                            d_t "Ugh. Is it going to be door dashers? I have heard some of the kids around the block have started going around the apartments recently."
                             d_t "Well, I don't think that would be significant enough to be on here. But who knows. That stain in the morning wasn't too significant either."
                             d_t "Maybe I'll be visiting someone."
                             d_t "Not that I'm planning to right now..."
@@ -835,7 +835,7 @@ label start:
                 d_t "Yesterday was so weird too."
                 d_t "That one about being watched..."
                 d_t "Something is off about it. I don't know why but I get this sinking feeling in my stomach anytime I see that screen."
-                d_t "These things it's saying. They looked so inocent but some of them went completely the other way."
+                d_t "These things it's saying. They looked so innocent but some of them went completely the other way."
                 d_t "Who knows maybe this will all clear up today."
                 d "No more procrastinating Destiny!"
                 d "Time to get this all out of my head and this project done!"
@@ -844,12 +844,12 @@ label start:
                 d_t "Alright! Time to print this baby and drop it off over in the meeting room."
                 d_t "Oh shoot! It's already 5:00PM. Darn. Time really flew by me today."
                 d_t "It should be fine though. I just have to print it. That won't take too long and then I'm done for today."
-                d_t "Hey that went better than expected! I don't think I had any major hickups today."
+                d_t "Hey that went better than expected! I don't think I had any major hiccups today."
                 d_t "Other than maybe the one or two times the program crashed on me."
                 d_t "But that's to be expected by now."
                 d_t "Strange..."
-                d_t "I though I'd have to deal with those stupid achievements all day. But come to think of it I don't think I've had a single one of them happen yet."
-                d_t "Nothing about sticking or foes. Also no running yet."
+                d_t "I thought I'd have to deal with those stupid achievements all day. But come to think of it I don't think I've had a single one of them happen yet."
+                d_t "Nothing about sticking or foes. Also, no running yet."
                 d_t "Eh it doesn't matter. I'm just glad all of that is over now. Seems like I was just reading into it way too hard yesterday."
                 d_t "Time to go print this bad boy."
                 scene bg_office_hallway
@@ -860,11 +860,11 @@ label start:
                 hide gabe_happy
                 show gabe_conf
                 g "Hey, I didn't see you in the cafeteria today. Did you skip lunch to work on the poster?"
-                d "Yeah. Heh... I had to crunch a bit. Plus I wanted to minimize my chances of running into Matt. But hey! I got it done!"
+                d "Yeah. Heh... I had to crunch a bit. Plus, I wanted to minimize my chances of running into Matt. But hey! I got it done!"
                 hide gabe_conf
                 show gabe_happy
                 g "Congrats! No surprises there though haha. I knew you'd get it done on time!"
-                g "That's the regular Destiny for you right there. Always a bit last minute. But you never fail to stick the landing somehow!"
+                g "That's the regular Destiny for you right there. Always a bit last-minute. But you never fail to stick the landing somehow!"
                 d "Huh!?"
                 d "Hold on, what did you just say?"
                 hide gabe_happy
@@ -879,7 +879,7 @@ label start:
                 hide gabe_conc
                 show gabe_neut
                 g "Oh thank god. You looked so shocked. Had me worried there for a second."
-                d "I guess I am always a bit fasionably late, eh?"
+                d "I guess I am always a bit fashionably late, eh?"
                 d_t "What do I do now? Are all the others also going to come true? It's so late in the day already."
                 hide gabe_neut
                 show gabe_happy
@@ -921,13 +921,13 @@ label start:
                 m "Yeah. {i}Not that I mind.{/i}"
                 d "Look, uhm Matthew. I'm-"
                 m "Can you please explain the absolute disrespect and mockery I had to endure yesterday. What's wrong with you? Are you a child? No reasonable adult just runs off like that."
-                m "Yeah Mistakes happen jada jada-. But that? Seriously. Stand up to apolagize like the grownup you are."
+                m "Yeah Mistakes happen jada jada-. But that? Seriously. Stand up to apologize like the grownup you are."
                 m "I expected better."
                 if matt_excuse == 1:
-                    d "I'm really sorry Matthew. Truly. I didn't mean to just sprint out on you like that. It's not that I wanted to avoid apolagizing."
-                    d "But there was something about those mushrooms. I got so nausious all of a sudden. It felt like my stomach Had turned on it's head."
+                    d "I'm really sorry Matthew. Truly. I didn't mean to just sprint out on you like that. It's not that I wanted to avoid apologizing."
+                    d "But there was something about those mushrooms. I got so nauseous all of a sudden. It felt like my stomach Had turned on its head."
                     m "..."
-                    d "I was scared I was going to throw up right there if I stayed any longer. And I didn't want to cause a scene in the cafeteria so I ran to the bathrooms"
+                    d "I was scared I was going to throw up right there if I stayed any longer. And I didn't want to cause a scene in the cafeteria, so I ran to the bathrooms"
                     hide matt_mad
                     show matt_conf
                     m "Well a scene it was."
@@ -935,7 +935,7 @@ label start:
                     hide matt_conf
                     show matt_mad
                     m "I looked like a darn fool."
-                    d "Uhm, I came looking for you to apolagze after I felt a little better. But I couln't find you in the cafeteria anymore."
+                    d "Uhm, I came looking for you to apologize after I felt a little better. But I couldn't find you in the cafeteria anymore."
                     hide matt_mad
                     show matt_conf
                     m "Sure."
@@ -957,12 +957,12 @@ label start:
                     m "Tissues?"
                     d "Yeah..."
                     m "Really?"
-                    d "Uhm, I came looking for you to apolagze and clean up. But I couln't find you in the cafeteria anymore."
+                    d "Uhm, I came looking for you to apologize and clean up. But I couldn't find you in the cafeteria anymore."
                     hide matt_conf
                     show matt_mad
                     m "And you expect me to believe that."
                     d "Sorry. I-"
-                    m "We will seriously have to talk about your attitude. I could understand feeling unwell or something like that. But blaitantly lying?"
+                    m "We will seriously have to talk about your attitude. I could understand feeling unwell or something like that. But blatantly lying?"
                     m "This level of disrespect is unacceptable."
                     d "I-"
                     hide matt_mad
@@ -970,9 +970,9 @@ label start:
 
                 else:
                     d "I- Uhm. I'm sorry. I don't know what got into me."
-                    m "That makes the two of us. What posessed you to think storming off would be a good idea?"
+                    m "That makes the two of us. What possessed you to think storming off would be a good idea?"
                     m "First you ruin my shirt and then you bolt out like that would fix the situation."
-                    m "Not only did I look like a darn fool with stew all over his shirt, which i guess can happen. But you also refused to take responsibility for your actions by hiding in some bathroom stall somewhere I presume."
+                    m "Not only did I look like a darn fool with stew all over his shirt, which I guess can happen. But you also refused to take responsibility for your actions by hiding in some bathroom stall somewhere I presume."
                     d "I-"
                     m "No no. You listen."
                     m "We will seriously have to talk about your attitude. I could understand feeling unwell or something like that. But pulling off a stunt like that and then not even having an explanation for it?"
@@ -1014,7 +1014,7 @@ label start:
                 hide matt_conf
                 show matt_neut at right
                 m "Fine. We'll continue this conversation some other time. I don't have the nerve for this right now. I'm quite {i}busy{/i} at the moment anyways."
-                m "Besides, I doubt the time we have left today would suffice to discuss what needs to be adressed."
+                m "Besides, I doubt the time we have left today would suffice to discuss what needs to be addressed."
                 m "For your sake I hope you at least finished your project already."
                 d "Yes! Uh- I have the print right here actually. I was just about to bring it to the conference room."
                 m "Then you'd better get on with that as soon as whatever this {i}urgency{/i} is has been dealt with"
@@ -1025,14 +1025,14 @@ label start:
                 m "Yeah, see you around. Same goes for you Sullivan."
                 hide matt_neut
                 show matt_mad at right
-                m "Don't think you can get outt of this one so easily."
+                m "Don't think you can get out of this one so easily."
                 d "I'm sorry. Of course."
                 d "See you around."
                 scene bg_office_hallway
                 show a_day2
                 show gabe_neut
                 g "Phew! That was a close one. Looked like Matt was really out for blood this time. Looks like he took it quite personally"
-                d "Oh yeah 100 percent. I was scared he was about to end my carreer right there on the spot."
+                d "Oh yeah 100 percent. I was scared he was about to end my career right there on the spot."
                 d "I'm done for. He's going to fire me!"
                 g "Hey, take a deep breath. Surely they're not going to fire you."
                 hide gabe_neut
@@ -1042,7 +1042,7 @@ label start:
                 show gabe_neut
                 d "How are you not scared of him?"
                 d "I was about to cry. I could have never stood up to him like that."
-                g "Oh hes not that scary. He's more like a dog."
+                g "Oh he's not that scary. He's more like a dog."
                 hide gabe_neut
                 show gabe_happy
                 g "All bark no bite."
@@ -1055,11 +1055,11 @@ label start:
                 g "Oh, uhm nothing if I'm being honest. I didn't want you getting mauled out by Matt."
                 hide gabe_neut
                 show gabe_happy
-                g "Saving a friend from a ferral creature sounds personal and urgent enought to me."
+                g "Saving a friend from a feral creature sounds personal and urgent enough to me."
                 d "Tell that to Matt haha."
                 hide gabe_happy
                 show gabe_neut
-                g "Seems i came at exactly the right moment."
+                g "Seems I came at exactly the right moment."
                 g "Well, I was actually looking for you."
                 d "Oh?"
                 g "I forgot to ask you something before."
@@ -1092,7 +1092,7 @@ label start:
                         g "It's a surprise but I'm sure you'll like it!"
                         hide gabe_happy
                         show gabe_neut
-                        g "I'm actually already done for today so I can go get the last few ingredients on my way home."
+                        g "I'm actually already done for today, so I can go get the last few ingredients on my way home."
                         d "I still have to get this to the conference room and clean up a bit around my desk. How about we meet at my place at 7:00PM?"
                         g "Works for me."
                         hide gabe_neut
@@ -1114,11 +1114,11 @@ label start:
                         d "Thanks."
                         hide gabe_happy
                         show gabe_conf
-                        g "Does Saturday night sound good? I don't have any plans over the weekend so whenever's good"
+                        g "Does Saturday night sound good? I don't have any plans over the weekend so when ever's good"
                         d "No no, Saturday sounds great. For sure!"
                         hide gabe_conf
                         show gabe_happy
-                        g "Nice. I'm actually already done for today so I'll catch you tomorrow for lunch?"
+                        g "Nice. I'm actually already done for today, so I'll catch you tomorrow for lunch?"
                         d "Yeah, of course. The table in the back, as usual."
                         hide gabe_happy
                         show gabe_neut
@@ -1162,13 +1162,13 @@ label start:
                 d "Oh really? Yeah, that's me."
                 d "You must be Simon then! Sorry about not showing up yesterday."
                 d "Uhm. Something err... came up."
-                s "Oh don't worry about it. This kind of stuff happens. I'm glad I finally get to meet you today! Your work really speaks for it's self."
+                s "Oh don't worry about it. This kind of stuff happens. I'm glad I finally get to meet you today! Your work really speaks for itself."
                 d "Wow, thank you!"
                 s "What are you doing in such a hurry? I hope I'm not bothering you."
                 d "No no! I'm glad I ran into someone here!"
                 d_t "Isn't this just Perfect! He'll have a horrible first impression of me now!"
-                d "Uh, I was just about to print the final design of my project but I think someone before me must have put in too much paper heh..."
-                d "I tried taking the paperchute out but it won't budge."
+                d "Uh, I was just about to print the final design of my project, but I think someone before me must have put in too much paper heh..."
+                d "I tried taking the paper chute out, but it won't budge."
                 d "Printing the poster is the last thing I have to but I'm starting to run late again."
                 s "Right! Matt mentioned you were just about to finish your project. Has he sent you the application forms yet?"
                 s "Oh sorry!"
@@ -1181,7 +1181,7 @@ label start:
                 "WHAM"
                 s "There!"
                 s "Now we just have to wait for your print to finish."
-                d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I hand in another project late."
+                d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I handed in another project late."
                 s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
                 d "Kai?"
                 s "Yes. She did our designs up until now."
@@ -1199,25 +1199,25 @@ label start:
                 s "Matthew told me a few things about you already. You've been working here for about a year, no?"
                 d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
                 s "Matthew tends to be a bit too careful with handing out jobs"
-                s "In my oppinion the only way to get experience is to do the thing you want to learn."
+                s "In my opinion the only way to get experience is to do the thing you want to learn."
                 s "Is view on the matter seems to be a bit more uptight."
                 d "A little yes haha."
                 s "Well then this will be a good new experience for you!"
                 s "Did you also move here before starting work for Matthew?"
                 s "Do you live somewhere around here? This area is one of the best if you're working in the city."
-                d "Yeah. I moved into one of the newer appartment complexes just two stops away."
-                s "You live there all by your self?"
+                d "Yeah. I moved into one of the newer apartment complexes just two stops away."
+                s "You live there all by yourself?"
                 d "No no, actually, a good friend of mine who also works here lives really close as well!"
                 d "I moved in shortly after him."
                 s "Wow, you must be in the ones close to the park then. I've heard only great things about them."
-                s "How do you like the area? In my oppinion it's one of the best. Especially if you work in the city."
-                d "I like it a lot actually! I have a great view of the park and the city from my appartment. And my neighbours are fantastic."
+                s "How do you like the area? In my opinion it's one of the best. Especially if you work in the city."
+                d "I like it a lot actually! I have a great view of the park and the city from my apartment. And my neighbors are fantastic."
                 s "Sounds lovely."
                 "Bing!"
                 d "Oh! That must be my print!"
                 d "Thank you so much for helping me with the printer!"
                 s "Of course. I'm glad I was able to help."
-                s "I see you've printed the application as well! Don't forget to hand it in untill tonight."
+                s "I see you've printed the application as well! Don't forget to hand it in until tonight."
                 s "I'm looking forward to having you on my team!"
                 d "Yes me too. I'm sorry I have to hurry back now."
                 s "See you around Destiny."
@@ -1234,7 +1234,7 @@ label start:
                 if dinner_plans== True:
                     d_t "Oh no! I have to hurry. I almost forgot."
                     d_t "I told Gabe he could be at my place at 7."
-                    d_t "Darn! Looks like I'll have to run afterall."
+                    d_t "Darn! Looks like I'll have to run after all."
                     d_t "I guess that screen was right. There's no denying it. I can't escape them so easily it seems."
                     d_t "Well, at least I was able to mentally prepare myself this time."
                     d_t "Oh come on me! A little jog won't kill me."
@@ -1257,28 +1257,28 @@ label start:
                     d "Oops, Sorry!"
                     c "Hssss"
                     "Thudd"
-                    d "Ah no my folder!"
+                    d "Ah no my, folder!"
                     d "N- No not that! Spit that out!"
                     c "mrrr"
                     #the cat runs away
                     d "Hey! No, come back here! That's my-"
                     scene bg_ally
                     show a_day2
-                    d "HAH! Got you you little rascal!"
+                    d "HAH! Got you, you little rascal!"
                     c "awrr"
                     d "Now give me back that forms."
                     "Tug!"
                     d "There"
-                    d "Looks like you made me run for it after all. Darn it. And here I was, planing on exactly not doing that today."
+                    d "Looks like you made me run for it after all. Darn it. And here I was, planning on exactly not doing that today."
                     d "You must be a secret little agent."
                     d_t "Another one happened."
                     "..."
-                    d "And of course you just had to take me to the dimmest, dirtiest allyway you could find eh?"
+                    d "And of course you just had to take me to the dimmest, dirtiest alleyway you could find eh?"
                     d_t "Creepy... "
                     d_t "Why do I feel like I'm being watched?"
                     d "Is this where you live?"
                     c "Mwrrm"
-                    d "Hmmm, I can't just leave you here now... This place reaks. {i}And something is very off about it.{/i}"
+                    d "Hmmm, I can't just leave you here now... This place reeks. {i}And something is very off about it.{/i}"
                     d "How about we try to find your owner!"
                     d "{i}If you even have one{/i}"
                     d_t "It's late already."
@@ -1338,15 +1338,15 @@ label start:
                 #Achievements glitch but no altered text
                 d_t "Oh right! The knocking. I wonder who it is."
                 show gabe_conf
-                g "Weird. There wasn't anyone outside. I checked the hallway but I couldn't see anyone there either."
+                g "Weird. There wasn't anyone outside. I checked the hallway, but I couldn't see anyone there either."
                 d "Strange."
-                d "It was probably just some doordashers. My neighbour recently mentioned something like that."
+                d "It was probably just some door dashers. My neighbor recently mentioned something like that."
                 g "Possible."
                 g "I wouldn't put it past those little kids from floor 2 to go around pranking people."
                 d "Tell me about it. I always hear them screaming and running around when I get back from work."
                 d "Hey! The soup's almost done! Want to hand me those spring onions you chopped?"
                 g "Here. I'll go set the table."
-                #skips to after theyve eaten.
+                #skips to after they've eaten.
                 
     
                 jump day3
@@ -1400,7 +1400,7 @@ label start:
                 #look outside (noone)
                 d_t "What in the...?"
                 d_t "Did they leave already?"
-                d_t "Maybe they-, I cant see from here I'll have to go and check-"
+                d_t "Maybe they-, I can't see from here I'll have to go and check-"
                 c_n "HSSSr!"
                 hide a_day2_dontopen
                 show a_day2_dont
@@ -1436,7 +1436,7 @@ label start:
                         d "What's wrong [catname]? There's no one there."
                         c_n "Meowww!"
                         d "You're right let's go back."
-                        d "This is rediculous. This whole thing is starting to scare the heck out of me."
+                        d "This is ridiculous. This whole thing is starting to scare the heck out of me."
                         d "This stupid screen told me to keep the door closed but there was no one there."
                         d "What is it trying to keep me from?"
                         d_t "Who?"
@@ -1498,11 +1498,11 @@ label start:
                 d "AH!"
                 d "Not again!"
                 d "It's the girl from last time!"
-                d_t "I knew there was something stragne about that dream yesterday."
+                d_t "I knew there was something strange about that dream yesterday."
                 d_t "Didn't it mention something about knowing what is going to happen?"
                 d_t "No. I can't forget it this time!"
                 d_t "She was trying to tell me something. Warn me. Something like he was here..."
-                d_t "That's right! She said I coulnd't trust him and that he was here."
+                d_t "That's right! She said I couldn't trust him and that he was here."
                 d_t "Yesterday? The knocking?"
                 d_t "Who was here? Urgh why is this so hard to remember. She must have meant the knocking"
                 d_t "..."
@@ -1531,7 +1531,7 @@ label start:
                 d "AH!"
                 d "Not again!"
                 d "It's the girl from last time!"
-                d_t "I knew there was something stragne about that dream yesterday."
+                d_t "I knew there was something strange about that dream yesterday."
                 d_t "Didn't it mention something about knowing what is going to happen?"
                 d_t "No. I can't forget it this time!"
                 d_t "She was trying to tell me something. Warn me. Something like he was here..."
@@ -1543,7 +1543,7 @@ label start:
                 d_t "Oh. Right... She said something about him trying to get close to me."
                 d_t "That he's dangerous..."
                 d_t "She can't have meant Gabriel right? He was here to help."
-                d_t "He saw that I wa stressed and wanted to help me."
+                d_t "He saw that I was stressed and wanted to help me."
                 d_t "And the dinner yesterday was so nice."
                 d_t "Ugh, why am I even thinking about this so much. It was just a stupid dream."
                 d "!"
@@ -1557,39 +1557,39 @@ label start:
                 jump callgabedinner
         label callgabedinner:
             "Click"
-            g "Oh hi Destiny! What a surprise to hear form you so early. It's not even 7 yet."
+            g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
-            g "No no, dont worry. What's up?"
-            d "Not much actually. I just had a weird dream. But anyways. I was just wondering if you'll be there at the office gettogether?"
-            g "Oh! Yeah for sure. I don't have any other plans yet so I'll probably come by."
+            g "No no, don't worry. What's up?"
+            d "Not much actually. I just had a weird dream. But anyways. I was just wondering if you'll be there at the office get-together?"
+            g "Oh! Yeah for sure. I don't have any other plans yet, so I'll probably come by."
             g "Do you want to meet up later and go together?"
-            d "I was just about to ask that. I think I'll need a little support to stand a chance agains Matthew today."
+            d "I was just about to ask that. I think I'll need a little support to stand a chance against Matthew today."
             g "Ouch. I almost forgot. Yeah he's still out to get you isn't he?"
             d "Oh yeah. Maybe I can avoid him a little from now on though. I'm starting on Simons team today remember?"
             g "Right! I hope that goes well for you. But I'm sure you'll fit in great."
-            d "Thank you Gabe! I'll do my best."
-            g "Hey, since I'm already up now I'll probably try to get a little work done before going in to the office."
+            d "Thank you, Gabe! I'll do my best."
+            g "Hey, since I'm already up now I'll probably try to get a little work done before going into the office."
             g "Talk to you later then?"
-            d "Of course. See you Gabe."
+            d "Of course. See you, Gabe."
             g "Bye Destiny."
             "Click"
             d_t "See, he's so sweet. I don't know what I was thinking. I just have to clear my head. These dreams are getting a little under my skin."
-            d_t "Are they connected to the achievemnts somehow?"
+            d_t "Are they connected to the achievements somehow?"
             d_t "I mean they did show up around the same time..."
             d_t "Oh yeah! Speaking of achievements. Let's check what's in store for today."
             jump achievements3
         label callgabealone:
             $ gabe_hints + 1
             "Click"
-            g "Oh hi Destiny! What a surprise to hear form you so early. It's not even 7 yet."
+            g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
-            g "No no, dont worry. What's up?"
+            g "No no, don't worry. What's up?"
             d "I'm so glad to hear your voice right now. Yesterday was just... I'm scared Gabe."
             g "Whoa whoa! Hold on, what's wrong Destiny? Did something happen?!"
             d "I- I feel like someone followed me home yesterday."
             d "I heard knocking but then there was no one there. I-, what if someone wanted to get into my apartment?"
             g "Destiny, wait. Give me 3 minutes and I'll be there. Then we can talk about this in person ok?"
-            d "Yeah, thank you Gabe..."
+            d "Yeah, thank you, Gabe..."
             g "Alright be right there."
             "Click"
             #A couple minutes later
@@ -1602,7 +1602,7 @@ label start:
             d "[catname] is actually still sleeping over there. But when I finally got them back I felt like I was being watched."
             d "There was this weird noise like something was being moved or pushed over so I got out of there as quickly as possible."
             d "But then after I got home and made dinner for me and [catname] someone knocked on my door."
-            d "I went to check who it was but there was no one there..."
+            d "I went to check who it was, but there was no one there..."
             d "I know I sound crazy but I'm so scared."
             hide gabe_conc
             show gabe_neut
@@ -1624,7 +1624,7 @@ label start:
             d_t "If only it wasn't for those horrible dreams and the glitches yesterday."
             d "I'm sorry Gabe, I know I shouldn't be so scared because something like that it's just that-"
             d "That-"
-            d "Nevermind. It's stupid!"
+            d "Never mind. It's stupid!"
             hide gabe_neut
             show gabe_conc
             g "Destiny. You can tell me what's wrong."
@@ -1641,8 +1641,8 @@ label start:
                     g "What does she tell you?"
                     d "Every night she tells me something like \"{i}He's dangerous{/i}\" or \"{i}}He's trying to get you{/i}\""
                     d "I have no idea who {i}He{/i} is but it's scaring me."
-                    d "Wh- when I woke up this moring I could remember her saying that {i}He was here{/i}"
-                    d "Someone clearly was here. A-and I don't know who it was but she keeps saying that he's dangerous and that I need to get away from him."
+                    d "Wh- when I woke up this morning I could remember her saying that {i}He was here{/i}"
+                    d "Someone clearly was here. A-and I don't know who it was, but she keeps saying that he's dangerous and that I need to get away from him."
                     d "Gabe all of this is scaring me."
                     g "Take a deep breath Destiny. Everything is going to be alright. We're going to figure this out ok?"
                     d "Do you think I'm crazy?"
@@ -1660,10 +1660,10 @@ label start:
                     g "The dreams I mean."
                     d "Dreams that tied into things that happened?"
                     g "Yeah something like that."
-                    d "Maybe. I ususally don't remember my dreams all that well."
-                    g "You know, sometimes when we think about something a lot during the day or something is is bothering us it can show up in our dreams." 
-                    g "I've definetely had that before."
-                    g "I was so worked up about something the netire day that I even dreamed about it that night."
+                    d "Maybe. I usually don't remember my dreams all that well."
+                    g "You know, sometimes when we think about something a lot during the day or something is bothering us it can show up in our dreams." 
+                    g "I've definitely had that before."
+                    g "I was so worked up about something the entire day that I even dreamed about it that night."
                     d "You think this knocking yesterday might've just scared me enough so I dreamt about it?"
                     g "Exactly! That doesn't explain how you've been dreaming about her the past few days though..."
                     d "I'm sorry Gabriel, this is so stupid. You're probably right. I'm blowing this way too out of proportion."
@@ -1675,11 +1675,11 @@ label start:
                     g "They look adorable!"
                     d "Haha. They are!"
                     g "You just let me know whenever you feel like something strange or creepy is going on ok?"
-                    d "Yes. Thank you Gabriel."
+                    d "Yes. Thank you, Gabriel."
 
                 "Avoid the dreams":
                     d "Really it's nothing. I'm just beating myself up for being so creeped out by all of this."
-                    d "I don't ususally get frightened so easily so I'm just confused why this is hitting me so hard right now."
+                    d "I don't usually get frightened so easily so I'm just confused why this is hitting me so hard right now."
                     d "I feel crazy for even thinking someone followed me here."
                     g "I don't think you're crazy Destiny."
                     g "I think you've had a lot to deal with yesterday and a lot of stress on top of that lately."
@@ -1696,11 +1696,11 @@ label start:
                     g "They look adorable!"
                     d "Haha. They are!"
                     g "You just let me know whenever you feel like something strange or creepy is going on ok?"
-                    d "Yes. Thank you Gabriel."
+                    d "Yes. Thank you, Gabriel."
 
             g "Do you think you've calmed down enough to get ready for work?"
             d "Oh right. Yeah I think so."
-            g "Great. Because I havent had time to put on my shoes yet... so I'll head back now if thats ok."
+            g "Great. Because I haven't had time to put on my shoes yet... so I'll head back now if that's ok."
             d "Huh?"
             d "HAH! you came here in your socks?"
             g "Maybe..."
@@ -1717,9 +1717,9 @@ label start:
             show a_day3
             c_n "Mrrrr"
             d "Oh hey there [catname]."
-            d "Did you atleast sleep a little better than I did?"
+            d "Did you at least sleep a little better than I did?"
             c_n "Prrrrrrrr"
-            d "Sounds like a yes to me. I'll go look for your home today dont worry."
+            d "Sounds like a yes to me. I'll go look for your home today don't worry."
             d_t "Right after I've taken a look at the other achievements for today."
             jump achievements3
 
@@ -1730,7 +1730,7 @@ label start:
             d "But I have the feeling someone might have followed me to my apartment yesterday."
             d "I-I heard knocking but when I checked no one was there."
             o "Alright miss Sullivan. Let's take a deep breath. Where do you live currently?"
-            d "Ehm, I live at Parkerstreet 7. In that big apartment-building, oh er-, on floor 3."
+            d "Ehm, I live at Parker-street 7. In that big apartment-building, oh er-, on floor 3."
             o "Thank you very much. And what makes you believe you were followed"
             d "It's hard to explain b-but on my way home I had to chase after a stray that had gotten hold of some of my documents."
             d "And after I followed it into an empty ally, I uhm, was starting to get the feeling that I was being watched."
@@ -1740,10 +1740,10 @@ label start:
             o "Alright madam, it sounds to me like the knocking you heard might have been a nasty prank or something of the sort. But I understand your concern."
             o "We have had a similar complaint just recently so we will make sure to look into it."
             d "Huh? Someone had this happen too?"
-            o "Yes, it seems. I checked the report about your neighbourhood and we have actually had a person reported missing in the last couple of days."
+            o "Yes, it seems. I checked the report about your neighborhood and we have actually had a person reported missing in the last couple of days."
             o "Don't worry, there is already an officer stationed nearby and I will make sure to assign someone to keep a closer eye on your street and building from now on."
             d "Oh, Th- Thank you."
-            o "Thank you for notifying us miss Sullivan. It is possible that the knocking might be connected to the recent dissapearence."
+            o "Thank you for notifying us miss Sullivan. It is possible that the knocking might be connected to the recent disappearence."
             d "You think?"
             o "If I might ask madam. Did you perhaps catch a glance at who might have caused the noise you heard or the person that was knocking at your door?"
             o "If these two incidences really are connected it would be of great help to us to have a description of the person that you suspect might have followed you."
@@ -1751,8 +1751,8 @@ label start:
             o "Not to worry miss Sullivan, we are keeping an eye on you, so you can go about your as usual for now."
             o "We would advise however, that you avoid entering more secluded places or walking alone. And of course, you should stay attentive and notify us if there are any more strange occurrences."
             d "Sure. I will call you if I notice anything."
-            o "I understand this must be quite a frightning situation for you but we are doing our best to keep you safe."
-            d "Thank you officer."
+            o "I understand this must be quite a frightening situation for you but we are doing our best to keep you safe."
+            d "Thank you, officer."
             o "No worries madam. We will also make sure to let you know as soon as we know more."
             o "But for now I hope you have a pleasant and uneventful day miss Sullivan."
             d "Yes."
@@ -1764,7 +1764,7 @@ label start:
             d "!"
             c_n "Mrrrr"
             d "Oh hey there [catname]."
-            d "Did you atleast sleep a little better than I did?"
+            d "Did you at least sleep a little better than I did?"
             c_n "Prrrrrrrr"
             d "Well at least one of us did..."
             d "Don't worry I promise I'll go looking for your home today."
@@ -1776,7 +1776,7 @@ label start:
         label achievements3:
             d_t "One more look at today's achievements..."
             d_t "I can't avoid these can I?"
-            d_t "The theory's been thuroughly tested by now I'd say."
+            d_t "The theory's been thoroughly tested by now I'd say."
             d_t "I didn't have too much time to look at them the past two days though."
             d_t "Maybe third time's the charm."
             d_t "I've got more than enough time to figure out what they mean now anyways."
@@ -1784,7 +1784,7 @@ label start:
         label achievements3menu:
             menu:               
                 "Restart":
-                    d_t "Playing in to the game feeling aren't we."
+                    d_t "Playing into the game feeling aren't we."
                     d_t "I could use a restart though..."
                     if dinner_plans == False:
                         d_t "Not just at work. If restarting meant this weird screen and horrible dreams would go away I'd take it in a heartbeat."
@@ -1794,11 +1794,11 @@ label start:
                     d_t "I am starting with a new project."
                     d_t "And meeting a new team too."
                     d_t "That's already something. Definitely a restart there. Is there anything else \"Restart\" could mean?"
-                    d_t "Ok it could also be quite literal. Refering to restarting a computer or some other device."
+                    d_t "Ok it could also be quite literal. Referring to restarting a computer or some other device."
                     d_t "Or maybe I mess something up and have to restart..."
                     d_t "That does sound like me..."
                     d_t "Hmmm"
-                    d_t "Since I already know I'll be interduced to the new project and team today I don't think it's too unreasonable to assume it's going to be that."
+                    d_t "Since I already know I'll be introduced to the new project and team today I don't think it's too unreasonable to assume it's going to be that."
                     d_t "It's pretty safe to bet on that."
                     d_t "But I'm sure it won't hurt to be prepared if I have to start over on something. Like planning in a little extra time for any important tasks I have to do today."
                     jump achievements3menu
@@ -1823,7 +1823,7 @@ label start:
                     d_t "What if it predicts an accident or something worse..."
                     d_t "..."
                     d_t "No, now I'm scaring myself."
-                    d_t "I should just try to find out what the other achievemnts mean. If I really am Ignorant now then I can't even know about what it would be so why try?"
+                    d_t "I should just try to find out what the other achievements mean. If I really am Ignorant now then I can't even know about what it would be so why try?"
                     d_t "I'll just have to see what comes. Then I can still decide what I do with that information."
                     jump achievements3menu
 
@@ -1851,13 +1851,13 @@ label start:
                         jump achievements3menu
 
                 "Where is waldo?":
-                    d_t "\"Where is waldo\". Isn't that the kids book where you have to find the striped man?"
+                    d_t "\"Where is waldo\". Isn't that the kids' book where you have to find the striped man?"
                     d_t "What does this have to do with anything?"
                     if dinner_plans==False:
                         d_t "Could I be looking for that guy that the girl said at my door?"
                         d_t "Waldo is probably someone else."
                         d_t "Waldo hides in plain sight right?"
-                        d_t "Oh no. Is am I going to have to look for someone in a crowd somewhere?"
+                        d_t "Oh no. Am I going to have to look for someone in a crowd somewhere?"
                         d_t "What if it is that man though"
                         d_t "The party tonight..."
                         d_t "Anyone could be hiding in plain sight."
@@ -1866,7 +1866,7 @@ label start:
                         d_t "I don't even know what the darn guy looks like."
                         d_t "It's not like he's going to show up in a red and white striped shirt."
                         d_t "Definitely not. Why does it always tell me things in the most obscure way possible."
-                        d_t "Waldo. Stupid kids book. Like that's actually going to give me anything to work with."
+                        d_t "Waldo. Stupid kids' book. Like that's actually going to give me anything to work with."
                         d_t "Great sense of humor it's got there."
                         d_t "If it wasn't for it's insane accuracy and scary messages I'd say it's just trying to mess with me."
                     else:
@@ -1896,7 +1896,7 @@ label start:
             scene bg_office_hallway
             show a_day3
             d "Hey Simon!"
-            s "Oh! Hi there Destiny!"
+            s "Oh! Hi there, Destiny!"
             s "Wow, you came in real early. I think you've got to be the first one here today."
             s "It's only your first day and you're already outdoing the entire team!"
             d "Haha, no no it's nothing like that. I just didn't want to be late on my first day on the team that's all."
@@ -1907,7 +1907,7 @@ label start:
             s "I just got here though. You almost beat me to it!"
             s "I have to admit I am quite impressed. It's great having such an ambitious personality on our team again."
             s "I'm sure your fresh motivation will rub off on the others."
-            s "You're very simmilar to Kai in that way actually."
+            s "You're very similar to Kai in that way actually."
             d "Really?"
             s "Yeah. She was also usually the first one to come in funnily enough. And she always had this relentless optimism."
             s "It's like something's been missing since she left..."
@@ -1926,7 +1926,7 @@ label start:
             s "You can pick up right where she left off!"
             s "She still has all of her files and notes over there. You should be able to find everything on her computer or somewhere on the desk."
             s "I haven't really had time to take a look at everything yet but since you'll be working on those designs anyways I thought it would be a perfect way to start for you."
-            s "That way you can jump right in by taking a look at everything and familiarising yourself with the style of work she's done so far."
+            s "That way you can jump right in by taking a look at everything and familiarizing yourself with the style of work she's done so far."
             s "From what I've seen you should be able to pull it off with ease."
             d "You want me to take her desk? I can still work at my old one that's fine I have everything set up there it's really not a problem."
             s "No no. Please I insist. It'd be easier. She's got everything you need."
@@ -1940,7 +1940,7 @@ label start:
             s "I'll be here almost the entire day so if you have any questions or any trouble feel free to come over and let me know."
             s "I am busy over lunch but I'll stop by in the afternoon again to see how things are going."
             s "Does that sound alright with you?"
-            d "Yes, definetly. Thank you so much Simon."
+            d "Yes, definitely. Thank you so much Simon."
             s "It's no trouble. I'm just making sure you feel welcome as our new member."
             s "Alright, I'll leave you to it now. Again, if anything should be the matter hit me up."
             d "Of course. In that case I'll see you later then."
@@ -1995,13 +1995,13 @@ label start:
                 "Shuffle"
                 #CHange drawing
                 d_t "Did Simon look at these before telling me to look at them?"
-                d_t "No. He wouln't tell me to look at something like this."
+                d_t "No. He wouldn't tell me to look at something like this."
                 d_t "This doesn't fit the Kai they've been describing at all."
                 d_t "And these were recent."
                 d_t "Something must have seriously been going wrong right before she left."
                 d_t "This one is dated to the last day Simon said she'd come to work..."
                 d_t "Poor Kai."
-                d_t "I should put this back. I think I've seen enough. Maybe there's some oher designs on the computer."
+                d_t "I should put this back. I think I've seen enough. Maybe there are some other designs on the computer."
                 
 
             label deskcomputer:
@@ -2011,14 +2011,14 @@ label start:
                 d_t "She does have some notes right here though."
                 "Click"
                 d_t "Hmm some about the Project they're working on. It looks like she was planning out some Ideas."
-                d_t "Oh and there's some messages she started to the others!"
+                d_t "Oh and there are some messages she started to the others!"
                 d_t "Maybe she left some notes about her thoughts on the designs."
                 d_t "Oh yeah! I found Gold. She's describing what she thought she'd do for one of the designs that are still missing!"
                 d_t "Let's- oh! That sounds doable!"
                 d_t "For sure."
                 d_t "Huh?"
                 d_t "What's this about taking time off?"
-                d_t "It's adressed to Matt directly!"
+                d_t "It's addressed to Matt directly!"
                 d_t "She's bold."
                 d_t "Hold on. But didn't Simon say Kai quitting came out of nowhere?"
                 d_t "This text would explain why she wanted to talk to Matt before leaving. But neither of them ever mentioned her wanting time off."
@@ -2034,7 +2034,7 @@ label start:
                 d_t "She seems so desperate."
                 d_t "It looks like someone from work was making her uncomfortable."
                 d_t "Very uncomfortable..."
-                d_t "Why didn't she just go talk to Simon about feeling unsafe? Something as serious as this should be reported imeduately!"
+                d_t "Why didn't she just go talk to Simon about feeling unsafe? Something as serious as this should be reported immediately!"
                 d_t "No stop it Destiny!"
                 d_t "I shouldn't even be looking into this. It's none of my business."
                 d_t "I got the notes I was looking for."
@@ -2043,7 +2043,7 @@ label start:
                 
 
             label deskpostcard:
-                d_t "Oh, a postcard. I probably shouldn't snoop in other peoples things."
+                d_t "Oh, a postcard. I probably shouldn't snoop in other people's things."
                 d_t "But..."
                 d_t "She did leave it here though..."
                 d_t "Screw it. Maybe this will tell me a little bit about her. I am curious to know what she was like as a person. Not just her work."
@@ -2057,21 +2057,21 @@ label start:
                 d_t "No, that is her alright. I remember that Face."
                 d_t "Why is she suddenly haunting and telling me that someone is after me?"
                 if dinner_plans ==True:
-                    d_t "I really do have a weird subconcious. It's kind of freaky."
+                    d_t "I really do have a weird subconscious. It's kind of freaky."
                 else:
                     d_t "Were they really just dreams?"
                     d_t "Can they be? I mean, it's clearly her. Even though I've never seen her from so close before."
                     d_t "I couldn't have possibly known what she'd look like until now."
-                    d_t "Kai's the one warnign me about all of this."
+                    d_t "Kai's the one warning me about all of this."
                     d_t "Is she-"
                     d_t "Does she know about the achievements?"
                 d_t "-"
                 d_t "Hold on. What does it say on the back?"
-                d_t "\"Have a great summer this year! Make sure you bring home lot's of good memories when you visit again. -Love, Mom\""
+                d_t "\"Have a great summer this year! Make sure you bring home lots of good memories when you visit again. -Love, Mom\""
                 d_t "Aw, Sweet."
                 d_t "!"
                 d_t "Hey! That's my street!"
-                d_t "The adress."
+                d_t "The address."
                 d_t "She lives really close to me!"
                 if dinner_plans ==True:
                     d_t "Whoa, it gets even more freaky. Jeez these weird coincidences keep piling up."
@@ -2082,7 +2082,7 @@ label start:
                 else:
                     if call_police == True:
                         d_t "Oh no."
-                        d_t "She hasn't come in to the office."
+                        d_t "She hasn't come into the office."
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
                         d_t "And that girl that went missing lived close to me..."
@@ -2105,18 +2105,18 @@ label start:
                         d_t "Oh my god. She's been trying to warn me about this. It's happening to me too now."
                         d_t "It's happening to me too now."
                         d_t "Maybe this is how it all started for her too."
-                        d_t "I have to find a way to change whatever it is she sais is going to happen!"
+                        d_t "I have to find a way to change whatever it is she says is going to happen!"
                         d_t "There has to be a way to get out of this."
                         d_t "I can't just lock myself in at home"
                         d_t "That's not going to keep me safe."
-                        d_t "Plus I really need this job."
+                        d_t "Plus, I really need this job."
                         d_t "I have to tell the police about this."
-                        d_t "I have to figure this out along side work somehow. I can't mess this up."
+                        d_t "I have to figure this out alongside work somehow. I can't mess this up."
                     else:
                         d_t "Oh no."
                         d_t "That knocking-"
                         d_t "She's been warning me."
-                        d_t "She hasn't come in to the office."
+                        d_t "She hasn't come into the office."
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
                         d_t "Kai didn't know she wouldn't be coming back."
@@ -2136,12 +2136,12 @@ label start:
                         d_t "Oh my god. She's been trying to warn me about this and I've ignored all of it." 
                         d_t "It's happening to me too now."
                         d_t "Maybe this is how it all started for her too."
-                        d_t "I have to find a way to change whatever it is she sais is going to happen!"
+                        d_t "I have to find a way to change whatever it is she says is going to happen!"
                         d_t "There has to be a way to get out of this."
                         d_t "I can't just lock myself in at home"
                         d_t "That's not going to keep me safe."
-                        d_t "Plus I really need this job."
-                        d_t "I have to figure this out along side work somehow. I can't mess this up."
+                        d_t "Plus, I really need this job."
+                        d_t "I have to figure this out alongside work somehow. I can't mess this up."
                 jump kaidesk
 
                 
@@ -2149,9 +2149,9 @@ label start:
             label donewithdesk:
                 if dinner_plans == true:
                     d_t "I can't get the thought out of my head that she didn't just quit."
-                    d_t "I feel kind of uneasy sitting at this girls desk. Something's telling me it's not safe here..."
+                    d_t "I feel kind of uneasy sitting at this girl's desk. Something's telling me it's not safe here..."
                     d_t "Was she stalked?"
-                    d_t "No one knows where she is. Almost like she just dissappeared."
+                    d_t "No one knows where she is. Almost like she just disappeared."
                     d_t "It's possible someone from work did something to her."
                     d_t "I'm sure whoever it was wouldn't like me taking her place."
                     d_t "I have to be a more careful. That knocking that we heard yesterday. Gabe said no one was there."
@@ -2159,7 +2159,7 @@ label start:
                     d_t "Maybe this whole thing is connected somehow."
                 elif call_police == true:
                     d_t "Someone here wanted to hurt Kai."
-                    d_t "It doesn't feel right sitting at this her desk. She dissapeared and now I'm taking her place."
+                    d_t "It doesn't feel right sitting at this her desk. She disappeared and now I'm taking her place."
                     d_t "I'm next."
                     d_t "What happened to her?"
                     d_t "The police are still looking for her."
@@ -2176,7 +2176,7 @@ label start:
 
                 else:
                     d_t "Someone here wanted to hurt Kai."
-                    d_t "It doesn't feel right sitting at this her desk. She dissapeared and now I'm taking her place."
+                    d_t "It doesn't feel right sitting at this her desk. She disappeared and now I'm taking her place."
                     d_t "I'm next."
                     d_t "What happened to her?"
                     d_t "No one knows where she is..."
@@ -2202,8 +2202,8 @@ label start:
                 scene bg_office_hallway
                 d "Gabe!"
                 d "Where were you at lunch? I didn't see you anywhere."
-                g "Sorry I totaly forgot to tell you. I brought something to eat today."
-                g "The stuff they were serving at the cafeteria today looked wreched."
+                g "Sorry I totally forgot to tell you. I brought something to eat today."
+                g "The stuff they were serving at the cafeteria today looked wretched."
                 d "Yeah..."
                 d "Have you seen Simon anywhere?"
                 g "Simon?"
@@ -2228,7 +2228,7 @@ label start:
             if open_door == True and call_police == False:
                 g "Destiny!"
                 g "There you are!"
-                g "Ive been looking for you. And? How was your first day in the new Team?"
+                g "I've been looking for you. And? How was your first day in the new Team?"
                 d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
                 g "Was something wrong with them? You don't look too pleased."
                 g "I thought something was off before too. What's wrong?"
@@ -2258,7 +2258,7 @@ label start:
                 g "Oh?"
                 g "What's the matter?"
                 d "I don't feel safe here."
-                d "Those things I saw on her computer and her just dissapearing leaving everything behind."
+                d "Those things I saw on her computer and her just disappearing leaving everything behind."
                 d "It just doesn't sit right with me."
                 d "I shouldn't just be replacing her."
                 d "She said someone from work was pressuring her and now these strange things are starting to happen to me too."
@@ -2272,13 +2272,13 @@ label start:
                 g "This isn't an obligatory event. And even work isn't worth being in danger for."
                 d "I'm scared to go alone."
                 g "Who said you'd be going alone."
-                g "I'll keep you company untill you're home."
+                g "I'll keep you company until you're home."
                 g "Do you want to call the police?"
                 d "No. Not tonight. Maybe tomorrow morning but right now I just want to go home."
                 g "That's ok."
                 g "Let's get you Home. And once you're there you'll lock the door and try to get some sleep."
                 g "If you want I can come over and we can call the police tomorrow."
-                d "Thank you Gabriel."
+                d "Thank you, Gabriel."
                 g "Don't worry about it. I'd be scared too if I was in your position."
                 g "Now let's go."
                 jump catmissing
@@ -2288,7 +2288,7 @@ label start:
             else: 
                 g "Destiny!"
                 g "There you are!"
-                g "Ive been looking for you. And? How was your first day in the new Team?"
+                g "I've been looking for you. And? How was your first day in the new Team?"
                 d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
                 g "Was something wrong with them? You don't look too pleased."
                 g "I thought something was off before too. What's wrong?"
@@ -2309,7 +2309,7 @@ label start:
                 "Bump!"
                 s "Oh sorry! Didn't see you there."
                 g "No worries! You're Simon am I right?"
-                s "Yes. How did you know? I don't think we've been interduced yet."
+                s "Yes. How did you know? I don't think we've been introduced yet."
                 g "I'm Gabriel! Destiny here told me she'd be working with you from now on."
                 s "Ah, Destiny! Lucky seeing you here!"
                 s "I didn't take you as much of a party person."
@@ -2319,14 +2319,14 @@ label start:
                 s "I wanted to stop by afterwards. But it was already so late then. I'm terribly sorry."
                 d "Don't worry. I was able to settle in fairly well."
                 g "Destiny has told me all about your generous offer to let her take up the task of designing for your team."
-                g "I heard it had to be quite a hasty desicion"
+                g "I heard it had to be quite a hasty decision"
                 s "Oh yeah. It's a shame. The woman that was working for us before quit recently. We're still trying to figure everything out." 
                 s "But I'm sure Destiny will be a fine replacement as far as I'm concerned."
                 s "Did you find Kai's designs?"
                 d "Actually about that. Gabe could you give us a moment? I have something I'd like to ask Simon."
                 g "Sure go ahead I'll be waiting over by the snacks if you need me."
                 d "Thank you."
-                s "Oh? What the matter? You sounds rather serious."
+                s "Oh? What the matter? You sound rather serious."
                 d "Maybe. I wanted to ask you about the time before Kai left."
                 s "Oh?"
                 s "Go ahead."
@@ -2368,7 +2368,7 @@ label start:
                 s "I'll have to confront him about it. I think he's here too tonight."
                 d "Of course."
                 d "I was able to start picking up her work as well by the way."
-                s "Really! Thats awesome. We'll take a look at it tomorrow moring ok?"
+                s "Really! That's awesome. We'll take a look at it tomorrow morning ok?"
                 d "Sure."
                 if call_police == True:
                     "Ring!"
@@ -2382,14 +2382,14 @@ label start:
                     scene bg_office_hallway
                     d "So, you were saying?"
                     o "Yes. Sorry for disturbing you madam."
-                    o "But we felt it was necessary to inform that a suspicous individual has been spotted wandering around your apartment today."
+                    o "But we felt it was necessary to inform that a suspicious individual has been spotted wandering around your apartment today."
                     o "One of our officers caught sight of a hooded figure entering the building and inspecting the mailboxes, seemingly looking for something."
                     o "They quickly left however as soon as the officer went to approach them."
-                    o "We believe it was a younger man but would confirm your suspisions miss Sullivan."
+                    o "We believe it was a younger man but would confirm your suspicions miss Sullivan."
                     d "Were they able to see who it was?"
                     o "No. The person was wearing a facemask and had a hood on."
-                    o "We will investegate this person further however."
-                    o "Going off accounts from neighbours we suspect this might the same individual responsible for the recent dissapearance."
+                    o "We will investigate this person further however."
+                    o "Going off accounts from neighbors we suspect this might the same individual responsible for the recent disappearance."
                     o "Since we now have reason to believe these two cases are connected we would like to collect any information you have about a woman called Kai Amari."
                     d_t "It is her!"
                     o "Does the name sound familiar to you?"
@@ -2402,7 +2402,7 @@ label start:
                     d_t "How can I tell him I think she's been captured without telling him about my crazy dreams."
                     o "You two never had any relations before that?"
                     d "No."
-                    o "Did anyone you know ever talk about miss Amaris dissapearence?"
+                    o "Did anyone you know ever talk about miss Amaris disappearence?"
                     d "Well, my boss and my new team leader both told me she quit suddenly and then never came in again."
                     d "I was assigned her desk to look through her started work. When I looked through her notes I found some disturbing images."
                     o "Please, continue."
@@ -2418,9 +2418,9 @@ label start:
                     o "We will come collect the information early tomorrow and keep you informed about any happenings."
                     o "There is a police officer stationed at your building but we would still advise you to have someone you trust accompany you home tonight."
                     d "I will."
-                    o "If you notice anything strange alert us imediately."
-                    d "Yes. Thank you officer."
-                    o "We will likely have to call you again. But untill then, goodbye miss Sullivan."
+                    o "If you notice anything strange alert us immediately."
+                    d "Yes. Thank you, officer."
+                    o "We will likely have to call you again. But until then, goodbye miss Sullivan."
                     d "Goodbye officer Rogan."
                     "Click"
                     d_t "He was there again!"
@@ -2483,20 +2483,20 @@ label start:
                 m "Well if it isn't miss Sullivan."
                 d "Oh. E- Evening Matthew."
                 m "{i}Evening.{/i} I heard you settled in fine in your new position."
-                d "Uhm. Yeah I have. Simon gave me Kais old desk."
+                d "Uhm. Yeah I have. Simon gave me Kai's old desk."
                 m "That much is apparent."
                 d "Did. Ehm, Simon come to talk to you about her?"
                 m "Just now? Yes."
                 m "Not that that's any of your business. Thank you for that."
                 d "But her message to you-"
-                m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such imprtant manners?"
+                m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such important manners?"
                 d "What?"
-                m "I don't know what you are talking about but the situation with Kai is something between Simon and me."
-                m "I don't know what motivated him to interogate me again about the conversation we had just before she quit. Because that's behind us now. I thought it was done the first time it came up."
+                m "I don't know what you are talking about, but the situation with Kai is something between Simon and me."
+                m "I don't know what motivated him to interrogate me again about the conversation we had just before she quit. Because that's behind us now. I thought it was done the first time it came up."
                 m "But since you're just there to fill her place I don't know why you should be concerned with any of it."
                 d "Sorry. I just-"
                 m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know?"
-                m "Has it ever occured to you that some things are not meant to be read by others?"
+                m "Has it ever occurred to you that some things are not meant to be read by others?"
                 m "It seems you two really similar. Only difference was that Kai knew when to be professional." 
                 m "Trying to make a good first impression are we? That does not excuse you making up stories and throwing dirt on my name."
                 m "I don't know why Simon didn't correct you on your unacceptable behavior."
@@ -2506,8 +2506,8 @@ label start:
                 d "I wasn't trying to. I- I was just looking for more information about the current project."
                 d "I didn't think this would turn into such a big thing."
                 m "Of course you didn't."
-                m "That seems to be a reoccuring theme with you."
-                m "And don't think I've forgotten about our little misshap."
+                m "That seems to be a reoccurring theme with you."
+                m "And don't think I've forgotten about our little mishap."
                 m "If I hear about one more action against my name. You'd better be sure the consequences will be grave."
                 m "If you would excuse me. I would like to preserve my nerves tonight and grab a bite to eat."
                 m "{i}For which I will definitely not need your help.{/i}"
@@ -2534,12 +2534,12 @@ label start:
                         d "Well, he also went to Matt to ask about that message. But I think in the end he was more interested in what they actually talked about that day."
                         g "Why would he get so worked up about that?"
                         d "I don't know. I guess he thought she should have told him first. But it didn't look like it bothered him that much when I told him about it."
-                        d "Maybe he told him something but I'm nost sure. Must be something between him and Matt I guess."
-                        g "It's probably some form of rivalery."
+                        d "Maybe he told him something but I'm not sure. Must be something between him and Matt I guess."
+                        g "It's probably some form of rivalry."
                         g "Who knows, maybe he secretly wants Matts position and doesn't like people choosing Matt over him."
                         d "Oh shut up, he's not like that at all."
                         d "Besides. If anyone chose to talk to Matt over me I'd be pretty offended too."
-                        g "Wanna go grab something to eat? I saw some tasty treats over at the snack bar."
+                        g "Want to go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk running into him again."
                         if call_police==True:
                             jump simonconvop
@@ -2554,7 +2554,7 @@ label start:
                         m "Neither did I get a message from Kai nor do I know of her ever asking for time off."
                         m "She came to me on the day that she quit saying that she didn't want to work here anymore. And that I should wait to tell Simon until the next day."
                         m "Whatever sentimental messages she wrote on her computer, I never saw any. All I did was do my job."
-                        m "I don't know why you are both now accusing me of having witheld important information. But like I already told Simon she had no oblegation to inform him in the first olace. And neither did I."
+                        m "I don't know why you are both now accusing me of having withheld important information. But like I already told Simon she had no obligation to inform him in the first place. And neither did I."
                         d "Oh."
                         m "I'll be going now thank you."
                         d "..."
@@ -2573,7 +2573,7 @@ label start:
                         g "Wait they talked?"
                         d "Yep. She went to go talk to him before she quit but it seems like he doesn't want anyone to know what they actually talked about."
                         g "That is weird."
-                        d "He sais we're accusing him of something, but he's the one making such a big deal out of us asking him."
+                        d "He says we're accusing him of something, but he's the one making such a big deal out of us asking him."
                         d "All I wanted to know was if she'd sent the message."
                         g "Well, I wouldn't put it past Matt to take you two both asking him about something he doesn't know as a personal offence. But I admit, this is a little extreme even for him."
                         d "Yeah..."
@@ -2592,11 +2592,11 @@ label start:
                 d "Don't worry it's nothing. I'm just a little exhausted that's all."
                 s "Had a long day huh?"
                 d "Yeah. I can't wait to just get home and relax."
-                s "You live on Parkerstreet right?"
+                s "You live on Parker-street right?"
                 d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
                 s "It's a lovely area. I think I looked at some apartments there too once. That's why I was so interested."
                 s "Isn't that the one with the really bad bus connection?"
-                d "Well, it's not that bad. I just have to walk to the next busstop from the office since my bus doesn't go all the way here."
+                d "Well, it's not that bad. I just have to walk to the next bus stop from the office since my bus doesn't go all the way here."
                 d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
                 d "Oh no! My phone!"
                 s "What's up?"
@@ -2616,23 +2616,23 @@ label start:
                 d "Oh that? Uhm, no one special. Just ehm-"
                 menu:
                     "The landlord":
-                        d "It was my landlord. Er- He wanted to know if I'd experienced any doordashers recently..."
+                        d "It was my landlord. Er- He wanted to know if I'd experienced any door dashers recently..."
                         s "Your landlord?"
-                    "A neighbour":
-                        d "It was my neighbour. Er- He wanted to know if I'd experienced any doordashers recently..."
-                        s "Your neighbour?"
+                    "A neighbor":
+                        d "It was my neighbor. Er- He wanted to know if I'd experienced any door dashers recently..."
+                        s "Your neighbor?"
 
                 d "Yeah. I think there were some kids uhm, going around the past few days."
                 s "Really?"
                 d "Or so I've heard."
-                s "Doordashers? That's rare these days. These aparment buildings are so I guess anyone can stroll in."
-                s "You live on Parkerstreet right?"
+                s "Door dashers? That's rare these days. These apartment buildings are so I guess anyone can stroll in."
+                s "You live on Parker-street right?"
                 d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
                 s "I've looked into getting an apartment there too once actually. That's why I was so interested when you mentioned it."
                 s "You live in that big block right in front of the park right?"
                 d "Yeah exactly."
                 s "I think I checked that one out too. Great views. But the bus connection is quite bad isn't it."
-                d "Well, it's not that bad. I just have to walk to the next busstop from the office since my bus doesn't go all the way here."
+                d "Well, it's not that bad. I just have to walk to the next bus stop from the office since my bus doesn't go all the way here."
                 d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
                 d "Oh no! My phone!"
                 s "What's up?"
@@ -2650,7 +2650,7 @@ label start:
                 d "I think our last bus leaves soon but I can't leave without my phone."
                 g "I'll help you look for it. Together we'll be quicker."
                 g "I'll go check in the hallway."
-                d "Thank you Gabe"
+                d "Thank you, Gabe"
                 #couple minutes later
                 g "Found it!"
                 d "Really!?"
@@ -2683,7 +2683,7 @@ label start:
             d_t "Finally."
             d_t "No one's getting in now."
             "Rustle"
-            d_t "Oh right, [catname]! Shoot I forgot to get them catfood."
+            d_t "Oh right, [catname]! Shoot I forgot to get them cat food."
             d "[catname]! I'm home."
             "..."
             d "Sorry I'm so late. I've got some bad news for you little buddy..."
@@ -2800,7 +2800,7 @@ label start:
                     d_t "And he has to have known Kai."
                     d_t "That's still too many..."
                     d_t "Matt seemed unusually pissed off yesterday when I mentioned the message I found."
-                    d_t "He's always harsh but this was more than his usual selfimportant attitude."
+                    d_t "He's always harsh but this was more than his usual self-important attitude."
                     d_t "He almost looked, well, nervous."
                     d_t "Or maybe not nervous but definitely not happy that it came out that he kept this information from Simon."
                     d_t "I can imagine Simon is also quite pissed."
@@ -2826,10 +2826,10 @@ label start:
                         c_n "Mrrw" 
                         d "I presume that was a yes."
                         d "I have some more tuna but only one more can."
-                        d "I'll bring home some propper cat food today."
+                        d "I'll bring home some proper cat food today."
                         d "{i}If I make it through today...{/i}"
                         d "I think I also have to pick up some other cat supplies anyways. I don't think you're going away anytime soon."
-                        d "There's a petshop on my way to work. I bet they have-"
+                        d "There's a pet shop on my way to work. I bet they have-"
                         d "Chips!"
                         d "I can use the chip from one of those cat-tracking collars!"
                         d "That's it!"
@@ -2849,7 +2849,7 @@ label start:
                         d "I can use the chip from one of those cat-tracking collars!"
                         d "That's it!"
                         d "That's genius!"
-                        d "There's a petshop on my way to work. I can just hop in there and get one."
+                        d "There's a pet shop on my way to work. I can just hop in there and get one."
                         d "Phew at least that's sorted out now."
                         d_t "I don't have that much time left but maybe I can look at some of the achievements before I go."
                         jump achievements4
@@ -2858,7 +2858,7 @@ label start:
                     d_t "I can't trust her. I can't trust anyone."
                     d_t "I don't know if what she's saying is even true."
                     d_t "If I leave my phone at home I won't be able to call the police if something happens."
-                    d_t "I'll be completely defenceless."
+                    d_t "I'll be completely defenseless."
                     d_t "I can't risk it."
                     d_t "If I fail I'll end up just like her. And for what?"
                     d_t "I didn't even know her before all of this started."
@@ -2867,7 +2867,7 @@ label start:
                     d_t "So how could I use his tactics against him?"
                     d_t "I can't do that. I have to go to work today but I'm sure as heck not leaving my phone here."
                     d_t "Nothing seems wrong with it anyways. I'm not like Kai. If anything seriously bad happens I'll tell Simon or call the police."
-                    d_t "I'll be surounded by so many people all day. There's no chance anyone could take me without someone noticing."
+                    d_t "I'll be surrounded by so many people all day. There's no chance anyone could take me without someone noticing."
                     d_t "I'll be careful."
                     #achievements glitch
                     d "No I'm not looking at you anymore stupid screen!"
@@ -2909,8 +2909,8 @@ label start:
                             d_t "Who can I even trust anymore..."
                         jump achievements4
 
-                    "The lions den":
-                        d_t "The lions den. I'll find it."
+                    "The lion's den":
+                        d_t "The lion's den. I'll find it."
                         d_t "It has to be where Kai's being kept."
                         d_t "I really hope I find the right person."
                         jump achievements4
@@ -2922,7 +2922,7 @@ label start:
             s "Good morning Destiny!"
             s "Here early again I see."
             d "Morning Simon."
-            d "Yeah, I wanted to- ehm have enought time to look over what I did yesterday before we talk about it."
+            d "Yeah, I wanted to- ehm have enough time to look over what I did yesterday before we talk about it."
             s "Oh, sure"
             s "Take your time. Just come over to my office once you're ready."
             d "Yes. See you then."
@@ -2947,7 +2947,7 @@ label start:
             d_t "This can't-"
             d_t "It's all gone!"
             d_t "No no no!"
-            d_t "How could they just have dissapeared!?"
+            d_t "How could they just have disappeared!?"
             d_t "..."
             d_t "It was him."
             d_t "Oh god, it was him."
@@ -2968,11 +2968,11 @@ label start:
                 "It's Matthew":
                     $ track_who = 0
                     d_t "It has to be Matthew."
-                    d_t "He won't tell us what happened in that conversation before Kai quit. And sais he never even got a message."
+                    d_t "He won't tell us what happened in that conversation before Kai quit. And says he never even got a message."
                     d_t "She must have realized it would be too risky."
                     d_t "And he's saying we're accusing him when all we did was ask."
                     if call_police== True:
-                        d_t "He didn't talk to the Team even once about Kai's dissapearence even though I'm sure the police would have contacted him."
+                        d_t "He didn't talk to the Team even once about Kai's disappearence even though I'm sure the police would have contacted him."
                     else:
                         pass
                     d_t "He knows where I live..."
@@ -2981,7 +2981,7 @@ label start:
                     d_t "She couldn't have told him."
                     d_t "It was him."
                     d_t "And he was also the one that was trying to change Simons mind about asking me to be on his team."
-                    d_t "I bet he didn't want anyone to snoop around in Kais stuff."
+                    d_t "I bet he didn't want anyone to snoop around in Kai's stuff."
                     d_t "He has the key he could have deleted it whenever he wanted."
                     d_t "Maybe the reason Simon got so mad was because he suspected something. Him and Kai were really close."
                     d_t "She probably didn't want to tell him because it would have meant trouble for him too."
@@ -2990,7 +2990,7 @@ label start:
                     d_t "I guess they would have believed Matt more than her."
                     d_t "Trying to frame your super rich boss for something there's no evidence of?."
                     d_t "I bet that wouldn't have gone over too well."
-                    d_t "He got away with it the first time but I'm going to find where he's keeping Kai and then he's goint to pay."
+                    d_t "He got away with it the first time but I'm going to find where he's keeping Kai and then he's going to pay."
                     d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
                     d_t "For now I'll keep working. But if I pretend to give an apology for yesterday maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
@@ -3010,8 +3010,8 @@ label start:
                     d_t "She kept saying in my dreams that he's trying to get close to me. Simon put me at her desk right next to his office. And he's been nothing but friendly and overly helpful."
                     d_t "That conversation we had yesterday... I knew something rubbed me the wrong way."
                     d_t "As soon as I mentioned the reason for her message something changed about him. The bubbly exterior cracked. It was almost like he was nervous or scared..."
-                    d_t "He imediately wanted to go talk to Matt too."
-                    d_t "I bet he was scared she really did say something about him afterall."
+                    d_t "He immediately wanted to go talk to Matt too."
+                    d_t "I bet he was scared she really did say something about him after all."
                     d_t "And then storming off to the offices. It all makes sense now. My phone was still out in the hallway when he went there!"
                     d_t "He was the first one here again today too. He had all the time in the world to delete everything."
                     d_t "I should have known!"
@@ -3021,7 +3021,7 @@ label start:
                         d_t "And it was him that the police saw. Stuck in a meeting all afternoon. Yeah right. He left before lunch and wasn't back for ages."
                         d_t "The police had him busy."
                         d_t "He knows the police are up to something."
-                        d_t "That's why he had to delet everything before they get here."
+                        d_t "That's why he had to delete everything before they get here."
                     else:
                         pass
                     d_t "I gave him everything he needed..."
@@ -3030,7 +3030,7 @@ label start:
                     d_t "I trusted him!"
                     d_t "I should have listened to Kai. I should have stayed away from him!"
                     d_t "I'm not letting this happen a second time!"
-                    d_t "I'm going to find Kai and he's going to pay fro what he's done"
+                    d_t "I'm going to find Kai and he's going to pay for what he's done"
                     d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
                     d_t "For now I'll keep working. But if I pretend I have a question about work maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
@@ -3046,7 +3046,7 @@ label start:
                     d_t "He was the one that brought me my phone yesterday!"
                     d_t "And he's been with me almost every day."
                     d_t "He's been the closest anyone has been these past days. Kai was trying to warn me."
-                    if dinnerplans== True:
+                    if dinner_plans== True:
                         d_t "Oh God. When Kai said that he was at my apartment she didn't mean the knocking..."
                         d_t "The knocking was never anything dangerous!"
                         d_t "Gabe was!"
@@ -3065,7 +3065,7 @@ label start:
                     d_t "I trusted him!"
                     d_t "I should have listened to Kai. I should have stayed away from him!"
                     d_t "I'm not letting this happen a second time!"
-                    d_t "I'm going to find Kai and he's going to pay fro what he's done"
+                    d_t "I'm going to find Kai and he's going to pay for what he's done"
                     d_t "I can't let him know I figured him out though. I have to do what Kai said. Play dumb and make sure he knows he can't track me."
                     d_t "For now I'll keep working. But if I act as if I want to talk maybe I can get close enough to slip the tracker into his coat or pockets."
                     d_t "It's going to be risky."
@@ -3096,7 +3096,7 @@ label start:
             m "..."
             d "I'll just have to write it down then."
             m "Sure."
-            m "Tuseday next week."
+            m "Tuesday next week."
             m "At 10:30. Got that?"
             d "Oh. But I don't have a pen. Wait I'll just-"
             "Rustle"
@@ -3104,8 +3104,8 @@ label start:
             d "There! You don't mind if I quickly borrow this pen from your bag right?"
             m "You-"
             m "Hmpf! Fine!"
-            m "Tuseday at 10:30. Make sure to let Simon know."
-            m "And stop rummaging through other peoples belongings! {i}Give that back.{/i}"
+            m "Tuesday at 10:30. Make sure to let Simon know."
+            m "And stop rummaging through other people's belongings! {i}Give that back.{/i}"
             "Yank!"
             d "Oops. Sorry!"
             d "I'll go tell Simon right away."
@@ -3205,8 +3205,8 @@ label start:
                 d "!"
                 o "You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
                 d "Officer Rogan! Thank you for your effort. How can I help you?"
-                o "I am here with a collegue today to look into what you mentioned on the phone."
-                o "He is currently talking to the people you mentioned might be involved in miss Amari's dissapearence."
+                o "I am here with a college today to look into what you mentioned on the phone."
+                o "He is currently talking to the people you mentioned might be involved in miss Amari's disappearence."
                 o "I came to take a closer look at the images and messages you spoke of yesterday."
                 d "I-"
                 d "I'm really sorry. I should have sent them to you yesterday but I wasn't sure if it was the right thing to do."
@@ -3235,8 +3235,8 @@ label start:
                 d "No not really. Yesterday was alright."
                 o "That's good to hear. As always if anything were to happen make sure to call us."
                 d "Will do officer."
-                o "ALright with that I think we're done here for now."
-                o "I'll take this copy back to the station and my collegue will surely be done soon as well."
+                o "Alright with that I think we're done here for now."
+                o "I'll take this copy back to the station and my college will surely be done soon as well."
                 o "We will notify you of our findings as soon as possible. Have a good day miss Sullivan."
                 d "You too officer."
             else:
@@ -3244,11 +3244,11 @@ label start:
             #later that day
             d_t "It's getting late..."
             if track_who == 0:
-                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Matt knows that and will still try to get me on my way home"
+                d_t "I'd usually leave in about an hour to catch my bus. But it's possible Matt knows that and will still try to get me on my way home"
             elif track_who ==1:
-                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Simon knows that and will still try to get me on my way home"
+                d_t "I'd usually leave in about an hour to catch my bus. But it's possible Simon knows that and will still try to get me on my way home"
             else:
-                d_t "I'd ususally leave in about an hour to catch my bus. But it's possible Gabe knows that and will still try to get me on my way home"
+                d_t "I'd usually leave in about an hour to catch my bus. But it's possible Gabe knows that and will still try to get me on my way home"
             d_t "Either I leave now and catch him off guard by going early or I wait until after he's gone."
             menu:
                 "Leave now.":
@@ -3269,13 +3269,13 @@ label start:
             s "Good morning Destiny!"
             s "Here early again I see."
             d "Morning Simon."
-            d "Yeah, I wanted to- ehm have enought time to look over what I did yesterday before we talk about it."
+            d "Yeah, I wanted to- ehm have enough time to look over what I did yesterday before we talk about it."
             s "Oh, sure"
             s "Take your time. Just come over to my office once you're ready."
             d "Yes. See you then."
             s "See you later Destiny."
             scene bg_office_computer_kai
-            d_t "I just have to get throught this."
+            d_t "I just have to get through this."
             d_t "Nothing bad is going to happen. I'm safe here"
             if call_police== Tue:
                 d_t "The police will handle this as soon as they get here."
@@ -3294,7 +3294,7 @@ label start:
             d_t "This can't-"
             d_t "It's all gone!"
             d_t "Did I do something with them yesterday?"
-            d_t "How could they just have dissapeared?"
+            d_t "How could they just have disappeared?"
             d_t "..."
             d_t "They were real. Right? They had to be."
             d_t "I wasn't imagining the messages."
@@ -3306,8 +3306,8 @@ label start:
                 d_t "I'm going to look like a crazy fool-"
             else:
             d_t "Where did they go?"
-            d_t "Did someone delet them?"
-            d_t "But why? There wasn't anything destinctive on them."
+            d_t "Did someone delete them?"
+            d_t "But why? There wasn't anything distinctive on them."
             s "Destiny?"
             d "Ah!"
             "Crash"
@@ -3320,7 +3320,7 @@ label start:
             d "Right now?"
             s "If you don't mind. That would be great thank you."
             d "Of course. I'll send it in a minute."
-            s "Fantastic. Thank you Destiny."
+            s "Fantastic. Thank you, Destiny."
             d "Any time..."
             d_t "I have to get my act together. No one's here to hurt me. This is still the same office I've worked at for the past year."
             d_t "As long as I just do my work as usual and stay collected it's going to be fine."
@@ -3355,7 +3355,7 @@ label start:
             g "I understand. How about I bring you home. I'll keep you company until you're in your apartment."
             g "I'll make sure no one does anything to you."
             g "Let's get you Home ok? And once you're there you can lock the door and try to get some sleep."
-            d "Thank you Gabriel..."
+            d "Thank you, Gabriel..."
             g "Don't worry about it. I don't mind at all. Besides, I'd be scared too if those things happened to me."
             g "Now let's go."
             scene bg_d_corridor
@@ -3422,35 +3422,35 @@ label start:
                 d_t "Sound labs?"
                 d_t "That doesn't seem like Matt at all."
                 d_t "But maybe that's the point! No one would expect him to go there. That's the perfect place to hide someone."
-                d_t "You can rent it out for however long you like and everything is sound proof."
+                d_t "You can rent it out for however long you like and everything is soundproof."
                 d_t "And it's so close. It wouldn't take long at all to get there directly from the office!"
-                d_t "The lions den is a recording studio!"
+                d_t "The lion's den is a recording studio!"
                 d_t "Tomorrow's the day. I can get her!"
 
             elif track_who==1
                 if dinner_plans== True:
-                    d_t "That's not too far from my ususal bus stop st the office!"
-                    d_t "In the allyway..."
+                    d_t "That's not too far from my usual bus stop at the office!"
+                    d_t "In the alleyway..."
                 else:
                     d_t "That's the ally where I found [catname]!"
                 d_t "What could even be back there?"
                 d_t "..."
                 d_t "There's a storage unit!"
                 d_t "He must have rented a storage unit to keep her locked up. No one checks on those."
-                d_t "The lions den is a storage unit!"
-                d_t "The lions den is a recording studio!"
+                d_t "The lion's den is a storage unit!"
+                d_t "The lion's den is a recording studio!"
                 d_t "Tomorrow's the day. I can get her!"
 
             else:
                 d_t "That's really close!"
                 d_t "..."
                 d_t "But that-"
-                d_t "Isn't that where those really dingy apartment no one wants are?"
+                d_t "Isn't that where those really dingy apartments no one wants are?"
                 d_t "The ones with barely any sunlight or windows..."
                 d_t "Of course he would choose one of those to hide Kai!"
                 d_t "They're cheap and really close. And no one even really lives there. So nobody would notice a thing."
-                d_t "The lions den is an apartment!"
-                d_t "The lions den is a recording studio!"
+                d_t "The lion's den is an apartment!"
+                d_t "The lion's den is a recording studio!"
                 d_t "Tomorrow's the day. I can get her!"
             
             
@@ -3491,7 +3491,7 @@ label start:
             d_t "This is it!"
             d_t "It's all come to this. I can't mess this up."
             d_t "The screen's still here..."
-            d_t "Thank you Kai."
+            d_t "Thank you, Kai."
             d_t "With your help I'll get you out of there today."
             #look at achievements
             d_t "\"This is it\""
@@ -3522,7 +3522,7 @@ label start:
                                 d_t "If he follows them there will be enough time to free Kai."
                                 d_t "I'll tell him I'll be alone then secretly leave earlier. By the time he'll have figured out that it's not me it'll be too late and the police can arrest him."
                             else:
-                                d_t "I could sneak it into someones pocket while at work."
+                                d_t "I could sneak it into someone's pocket while at work."
                                 d_t "Someone that usually leaves around the same time as me."
                                 d_t "I'll tell him I'll be alone then secretly leave earlier. By the time he'll have figured out that it's not me I'll hopefully already be gone with Kai."
                             jump achievements5
@@ -3534,7 +3534,7 @@ label start:
                                 d_t "I just have to get them to trust me too..."
                             else:
                                 if track_who == 2:
-                                    d_t "I can't trus anyone."
+                                    d_t "I can't trust anyone."
                                     d_t "I don't know who I could even tell."
                                     d_t "No one would believe me..."
                                     d_t "I'll have to do this alone."
@@ -3542,7 +3542,7 @@ label start:
                                     d_t "Maybe I can get Gabe to help me..."
                                     d_t "If I had someone to take my phone that knows what's going on they could trap him while he thinks he's following me."
                                     d_t "Gabe could alert the police once I have Kai and they could arrest him for good."
-                                    d_t "I just don't knoe if Gabe will trust me..."
+                                    d_t "I just don't know if Gabe will trust me..."
                             jump achievements5
                         "Back on square one":
                             $ a5_3= True
@@ -3571,7 +3571,7 @@ label start:
             scene bg_d_kitchen
             if dinner_plans ==True:
                 d_t "If there was ever a day for coffee then it's today."
-                d_t "We won't have anymore stains this time around though. I'll make sure of that."
+                d_t "We won't have any more stains this time around though. I'll make sure of that."
                 jump work5
             else:
                 d "Good morning [catname]."
@@ -3584,7 +3584,7 @@ label start:
                 c_n "Mrrm"
                 d "Now let me get you some food. I bet you're hungry already."
                 c_n "MEaUW!"
-                d "Haha now thats my little [catname]. Food really gets you going huh?"
+                d "Haha now that's my little [catname]. Food really gets you going huh?"
                 jump work5
 
 
@@ -3592,22 +3592,22 @@ label start:
             scene bg_office_hallway
             s "Morning!"
             d "Morning Simon. I see you're here early again as usual."
-            s "Well, you to I suppose."
+            s "Well, you too I suppose."
             s "Great work yesterday by the way! I saw what you sent in and it looks fantastic!"
             s "I'm really looking forward to see what else you'll bring to the table."
             d "Thank you. I'm glad it's to your liking."
-            d "And I'm glad I found a way to incorprate Kai's work into it too. {i}I hope she doesn't mind...{/i}"
+            d "And I'm glad I found a way to incorporate Kai's work into it too. {i}I hope she doesn't mind...{/i}"
             s "What was that?"
             d "Oh it's nothing. I'm just glad I can live up to the standard that Kai set. That's all."
             s "We'll you're doing more than fine so far. Keep it up!"
             d "I will!"
             s "As always if you need anything or are unsure about anything you can always come to me for help."
-            d "Thank you Simon."
+            d "Thank you, Simon."
             scene bg_office_computer_kai
             if track_who== 0:
                 d_t "I have to find a reason to talk to Matt again. I have to somehow subtly let him know that today's the day he should make his move."
                 d_t "Without it seeming weird or completely out of left field..."
-                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totally alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
                 d_t "Actually!"
@@ -3620,22 +3620,22 @@ label start:
                 d_t "I have to find a reason to talk to Simon again. Maybe something about work again, like last time?"
                 d_t "I have to somehow subtly let him know that today's the day he should make his move."
                 d_t "Without it seeming weird or completely out of left field..."
-                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totally alone today. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "And I should buy myself more time by saying I'll go quite late."
-                d_t "He ususaly stays quite late as well anyways."
+                d_t "He usually stays quite late as well anyways."
                 d_t "Actually!"
-                d_t "What if I just let him know that I'm working on something and am planing to send it to him in the evening."
+                d_t "What if I just let him know that I'm working on something and am planning to send it to him in the evening."
                 d_t "If I mention that it's probably going to get a bit later he'll know I'm staying without it seeming suspicious."
                 d_t "Yeah, I'll do that."
                 jump tricksimon
             else:
                 d_t "I have to find a reason to talk to Gabe again. I have to somehow subtly let him know that today's the day he should make his move."
                 d_t "Without it seeming weird or completely out of left field."
-                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totaly alone tonight. Oh you know. Just in case you feel like kidnapping me tonight!\""
+                d_t "I can't just go up to him and tell him \"Hey! I'll be going home totally alone tonight. Oh you know. Just in case you feel like kidnapping me tonight!\""
                 d_t "It has to seem natural."
                 d_t "It's not like I'd have anyone else to walk home with anyways. But still I should make it clear that I'm planning to even go without him."
-                d_t "The easiet way would probably be to tell him I'll stay late. He usually likes leaving a little early."
+                d_t "The easiest way would probably be to tell him I'll stay late. He usually likes leaving a little early."
                 d_t "That would also buy me a little more time to find Kai before he catches on."
                 d_t "Actually."
                 d_t "I think I can just pay him back for the coffee from yesterday and then add I'll be working late afterwards. That wouldn't be out of character and I think it should do the trick."
@@ -3646,15 +3646,15 @@ label start:
             scene bg_office_hallway
             d "Hey, Gabe."
             g "Oh! Destiny. What are you doing here? Need a break from work?"
-            d "After the last couple of days definetely. But no, that'll have to wait for the weekend."
-            d "I actually just wanted to quickly pay you back for the coffee you payed for yesterday. You know. Because I forgot my wallet."
+            d "After the last couple of days definitely. But no, that'll have to wait for the weekend."
+            d "I actually just wanted to quickly pay you back for the coffee you paid for yesterday. You know. Because I forgot my wallet."
             g "Oh, right! You don't need to do that. Keep it! It's my treat."
             d "Are you sure? It's really no problem I have it right here."
             g "Yeah I'm being serious. You don't have to pay me back for that. See it as a token of our friendship."
             g "Besides, it wasn't that much anyways. What was it? Like 3 bucks?"
-            d "Thank you Gabe that's so kind of you."
+            d "Thank you, Gabe that's so kind of you."
             g "It's my pleasure."
-            d "Oh! By the way. I'll be working late again today. We probably won't see eachother on our way home. I still have something I want to finish before the weekend."
+            d "Oh! By the way. I'll be working late again today. We probably won't see each other on our way home. I still have something I want to finish before the weekend."
             g "Again? Wow, you're really putting in the work for this new Project."
             g "What time are you planning to leave then?"
             d "I don't know yet. But definitely later than usual."
@@ -3667,7 +3667,7 @@ label start:
             g "Okay..."
             g "But only if you promise!"
             d "I promise!"
-            g "Alright. Then goodluck tonight."
+            g "Alright. Then good luck tonight."
             d "Thanks. Have a good night too!"
             g "I sure will."
             d_t "We'll see about that."
@@ -3685,7 +3685,7 @@ label start:
             d "I've already decided that I'll stay longer tonight but being able to come in tomorrow as well would really help to get this done."
             m "You're staying late and you want to work on a Saturday?"
             d "Yes."
-            m "You, Destiny Sullivan. Always last minute Sullivan want to come in on a Saturday?"
+            m "You, Destiny Sullivan. Always last-minute Sullivan want to come in on a Saturday?"
             d "Yes."
             m "..."
             m "Sure. Be my guest. Simon must have really done a number on you if you're willing to work on your weekend."
@@ -3696,7 +3696,7 @@ label start:
             d "Huh?"
             m "Nothing. Not that it matters. I'll send you the code tomorrow morning."
             m "Don't get yourself locked in tonight. What time are you planning to leave?"
-            d "I wont. Don't worry. But I'm not quite sure yet. Thank you Matthew."
+            d "I won't. Don't worry. But I'm not quite sure yet. Thank you, Matthew."
             m "Whatever you say. {i}I don't know what you're trying to pull.{/i}"
             d "I just want to start out strong that's all."
             m "Yeah, of course..."
@@ -3714,13 +3714,13 @@ label start:
             s "Sure that's not a problem. Take your time."
             d "I just thought since the weekend is coming up and I want to get this done this week I'll be staying a bit later today."
             s "Oh?"
-            d "Yeah. I'll send it to you once I'm finished but it will probably be a bit later than ususal."
+            d "Yeah. I'll send it to you once I'm finished but it will probably be a bit later than usual."
             s "That's fine. I'll be here a little longer too. But even if I'm gone by then I'll have a look at it as soon as I get the chance."
             s "Around what time are you planning to leave?"
             d "I'm not quite sure yet but later than usual that's for certain."
             s "Alright, thank you for letting me know."
             s "I have to say you've been really throwing yourself into work these past few days. You've really got a fire for this it seems."
-            d "It's just important to me to do this right. Since I'm picking up on someone elses work."
+            d "It's just important to me to do this right. Since I'm picking up on someone else's work."
             s "Ah, I understand. Don't worry I'm sure Kai would be very happy with the choices you've made so far."
             d_t "I'm sure she would..."
             d "Thanks. I'll get back to work then."
@@ -3736,15 +3736,15 @@ label start:
                 d_t "I can't tell them about the dreams but I can tell them I got a message from Kai somehow."
                 d_t "I'll have to explain everything but their help would be essential to getting Kai out of there and getting him arrested."  
                 d_t "I hope he believes me..."
-                d_t "I have to atleast try!"
+                d_t "I have to at least try!"
                 "Ring"
                 o "Miss Sullivan! This is officer Rogan speaking. How may I assist you?"
                 d "I have something I need to tell you..."
                 #after explaining everything    
                 o "I see. So you felt you had to act this way to ensure the location of miss Amari could be found..."
-                d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's dissapearence and where he is keeping her."
+                d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's disappearence and where he is keeping her."
                 d "I have used a tracking device to locate her. My phone is being tracked as well."
-                d "Which is why I made a plan to misslead him by giving my phone to someone else and use that time to free Kai."
+                d "Which is why I made a plan to mislead him by giving my phone to someone else and use that time to free Kai."
                 o "And you've waited this long to inform us of this plan?"
                 d "Again I'm really sorry I've kept this from you for so long but if you could help me I think this plan could work!"
                 o "I am finding it hard to understand why you have waited this long to inform us but I admit that your plan could indeed work."
@@ -3762,7 +3762,7 @@ label start:
                 o "You might have a point but I'll repeat. It will be dangerous."
                 d "I understand what you're trying to warn me about. I was prepared to do this on my own but I have the police to help me now. I want to be there."
                 o "Fine. But you will need to wait to talk to miss Amari until we have made sure it is safe."
-                d "Thank you officer! I don't know what I would do without your help."
+                d "Thank you, officer! I don't know what I would do without your help."
                 o "This is my duty miss Sullivan. I will call you once the officers have arrived."
                 o "We will have to be very cautious."
                 d "Understood. I'll be waiting."
@@ -3778,7 +3778,7 @@ label start:
                     d_t "I'll have to explain everything to him. But with Gabe's help getting Kai out of there and making sure that psycho gets arrested would be so much easier."
                     d_t "I wouldn't have to do it alone..."  
                     d_t "I hope he believes me."
-                    d_t "I'm going to sound absolutely crazy. But I have to atleast try!"
+                    d_t "I'm going to sound absolutely crazy. But I have to at least try!"
                     scene bg_office_hallway
                     d "Gabe? Can I talk to you for a minute. It's important."
                     g "What is it? You look worried."
@@ -3814,7 +3814,7 @@ label start:
                         d "I can't do this alone."
                         g "What can I even do?"
                         d "I need you to take my phone. He's tracking it but once he figures out you have it he'll know we're onto him and won't risk hurting you."
-                        d "You have to leave the office a little later than ususal. I made him think that's what I'd do."
+                        d "You have to leave the office a little later than usual. I made him think that's what I'd do."
                         d "While he's waiting for who he thinks is me I'll already be on my way to where he's keeping Kai."
                         if track_who==0:
                             d "By the time Matt would even get the chance to figure out that he's been tricked we'll both already be long gone."
@@ -3833,7 +3833,7 @@ label start:
                         g "Here take my phone. That way I can contact you if I think he's figured out it's not you he's following."
                         g "And as soon as you've freed Kai you call me. Ok? I'll let the police know where you are and tell them everything."
                         g "Try to stay safe Destiny."
-                        d "Thank you Gabriel. I'll do my best. I don't know what I'd do without you."
+                        d "Thank you, Gabriel. I'll do my best. I don't know what I'd do without you."
                         g "Be careful out there."
                         d "I will."
                         jump trustgabe
@@ -3853,7 +3853,7 @@ label start:
                         d "I've seen these things. They're real. Kai talked to me. I can get her out of there."
                         g "Out of where? You don't even really know what is in that place."
                         g "Destiny, I don't think you're crazy but this isn't right. I think you're scared and overworked and have been for too long now."
-                        g "These nightmares you're discribing. They're making you paranoid. This sounds like some crazy movie plot. Do you have any evidence for what you're claiming he did?"
+                        g "These nightmares you're describing. They're making you paranoid. This sounds like some crazy movie plot. Do you have any evidence for what you're claiming he did?"
                         d "I-"
                         g "Did you see him at the door? Or did you find the tracker she said he put on your phone?"
                         d "I don't-"
@@ -3878,7 +3878,7 @@ label start:
                         d_t "I should have known he wouldn't believe me!"
                         d_t "It sounds absolutely insane. I don't blame him for thinking I'm going crazy. Anyone would."
                         d_t "I mean even I think I might slowly be going crazy."
-                        d_t "But I can't go back now. I have to follow through wit the plan."
+                        d_t "But I can't go back now. I have to follow through with the plan."
                         d_t "I have to get Kai out of there. Even if that means I'll have to do it all by myself."
                         jump trustnoone
         
@@ -3940,7 +3940,7 @@ label start:
             d_t "I hope no one is here."
             d_t "That's the storage units!"
             d_t "I found it!"
-            d_t "Shoot! There's so many..."
+            d_t "Shoot! There are so many..."
             d_t "Which one is he keeping her locked up in? I can't go through all of them."
             #achievements glitch to square ONE
             d_t "Unit one?"
@@ -4012,7 +4012,7 @@ label start:
             d_t "I hope no one is here."
             d_t "That's the storage units!"
             d_t "I found it!"
-            d_t "Shoot! There's so many..."
+            d_t "Shoot! There are so many..."
             d_t "Which one is he keeping her locked up in? I can't go through all of them."
             #achievements glitch to square ONE
             d_t "Unit one?"
@@ -4065,7 +4065,7 @@ label start:
             g "I can't believe it."
             g "Simon?"
             d "Yeah..."
-            d "Thank you Gabe. I don't think words can describe how grateful I am right now."
+            d "Thank you, Gabe. I don't think words can describe how grateful I am right now."
             g "You got her!"
             d "Yeah, I did!"
             d "It all worked. Kai's plan worked."
@@ -4150,7 +4150,7 @@ label start:
             k "I'm safe."
             o "You're safe miss Amari."
             o "So, are you ready to go?"
-            o "We will acompany you both to your destinations. And as for you miss Sullivan there will be an officer stationed at your apartment."
+            o "We will accompany you both to your destinations. And as for you miss Sullivan there will be an officer stationed at your apartment."
             o "For your safety and just in case any problems should arise."
             d "Let's get going then."
             jump best
@@ -4162,7 +4162,7 @@ label start:
             d_t "I hope no one is here."
             d_t "That's the building!"
             d_t "I found it!"
-            d_t "Shoot! There's so many apartments..."
+            d_t "Shoot! There are so many apartments..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
             #achievements glitch to square ONE
             d_t "Number one?"
@@ -4251,10 +4251,10 @@ label start:
             d "She won't survive in there much longer. We have to find her!"
             o "Calm down miss Sullivan. I promise you we'll look for miss Amari."
             o "Thanks to your help we now have her captor."
-            d "But that's nit enough! She's still out there. He's not going to tell you where she is."
+            d "But that's not enough! She's still out there. He's not going to tell you where she is."
             d "What if you don't find her in time?"
             o "We are doing our best to get to her location but for now there is nothing more we can do here."
-            o "We'll take care of the rest. But you sould be brought back to your apartment now."
+            o "We'll take care of the rest. But you should be brought back to your apartment now."
             o "An officer will drive you home and make sure you get there safely."
             d "But-"
             o "Thank you for your help miss Sullivan."
@@ -4275,7 +4275,7 @@ label start:
             d_t "I hope no one is here."
             d_t "That's the building!"
             d_t "I found it!"
-            d_t "Shoot! There's so many studios..."
+            d_t "Shoot! There are so many studios..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
             #achievements glitch to square ONE
             d_t "Number one?"
@@ -4328,7 +4328,7 @@ label start:
             d_t "I hope no one is here."
             d_t "That's the building!"
             d_t "I found it!"
-            d_t "Shoot! There's so many apartments..."
+            d_t "Shoot! There are so many apartments..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
             #achievements glitch to square ONE
             d_t "Number one?"
@@ -4380,7 +4380,7 @@ label start:
             g "I can't believe it..."
             d "Simon?"
             g "Yeah..."
-            d "Thank you Gabe. I don't think words can describe how grateful I am right now."
+            d "Thank you, Gabe. I don't think words can describe how grateful I am right now."
             g "Did you get Kai?"
             d "Gabe I-"
             g "What happened?"
@@ -4396,8 +4396,8 @@ label start:
             d "You're right..."
             d "At least I can finally go home now, knowing no one is going to show up at my door at night."
             g "It's over Destiny. You're safe now."
-            d "Thank you Gabe."
-            d "I don't know what I would hav done without you."
+            d "Thank you, Gabe."
+            d "I don't know what I would have done without you."
             g "I'm just glad you're safe."
             d "See you later tonight maybe? I'll be on my way home now."
             g "Same here. See you later Destiny."
@@ -4449,10 +4449,10 @@ label start:
             d "She won't survive in there much longer. We have to find her!"
             o "Calm down miss Sullivan. I promise you we'll look for miss Amari."
             o "Thanks to your help we now have her captor."
-            d "But that's nit enough! She's still out there. He's not going to tell you where she is."
+            d "But that's not enough! She's still out there. He's not going to tell you where she is."
             d "What if you don't find her in time?"
             o "We are doing our best to get to her location but for now there is nothing more we can do here."
-            o "We'll take care of the rest. But you sould be brought back to your apartment now."
+            o "We'll take care of the rest. But you should be brought back to your apartment now."
             o "An officer will drive you home and make sure you get there safely."
             d "But-"
             o "Thank you for your help miss Sullivan."
