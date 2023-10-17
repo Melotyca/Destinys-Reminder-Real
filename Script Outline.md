@@ -71,11 +71,11 @@ $ x = x
 - Restart
    - once she gets to the office she starts talking with simon about the work she should be doing and the office space she gets for it. He tells her she can have kai's old place and should make herself at home. she finds some ominous notes tucked away
 - Ignorance is bliss (was)
-   - Matthew brings up that kai has gone missing. that they dont have much information so they are asking around the office if anyone knows anything
+   - Matthew brings up that kai has gone missing. that they don't have much information so they are asking around the office if anyone knows anything
 - Hands up everyone
-   - there is a "party" at the office and everyone chats. someone makes a toast and if she called the police she gets a call from the police. that they saw a suspicious individual roaming around her appartment building.
+   - there is a "party" at the office and everyone chats. someone makes a toast and if she called the police she gets a call from the police. that they saw a suspicious individual roaming around her apartment building.
 - Where is waldo?
-   - if she opened the door and did not call the police the cat has gone missing. showing someone was in her appartment
+   - if she opened the door and did not call the police the cat has gone missing. showing someone was in her apartment
    - if she called the police or gabe was there her phone goes missing for a while but simon "Finds" it
 
 ### Day 4:  
