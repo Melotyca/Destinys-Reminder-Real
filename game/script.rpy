@@ -4404,7 +4404,7 @@ label start:
             d "See you."
             "Click"
             jump good
-            
+
         label studiopolice:
             #at the scene with the cops.
             scene bg_street
