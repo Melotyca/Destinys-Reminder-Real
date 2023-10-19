@@ -2451,7 +2451,7 @@ label start:
                     d_t "I should go back in."
                     jump mattconvop
                 else: 
-                    s 2If you'll excuse me I think I just saw him over there.'
+                    s "If you'll excuse me I think I just saw him over there."
                     d "Good luck!"
                     d_t "I need a moment away from these people."
                     scene bg_office_hallway
@@ -3887,7 +3887,7 @@ label start:
             #check phone
             d_t "It's about time I prepare to go..."
             d_t "4:30PM. Yeah, it's go time."
-            #text gabe I'm going now good luck
+            d_t "I'll text gabe I'm going now"
             if track_who==0:
                 jump studiogabe
             else:
