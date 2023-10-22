@@ -2169,13 +2169,13 @@ label start:
                 else:
                     menu:
                         "Folder":
-                            $ deskfolderc = True
+                            $ deskfolder_c = True
                             jump deskfold
                         "Computer":
-                            $ deskfolderc = True
+                            $ deskcomp_c = True
                             jump deskcomp
                         "Postcard":
-                            $ deskfolderc = True
+                            $ deskcard_c = True
                             jump deskcard
             label kaideskdone:
                 menu:
@@ -2187,7 +2187,7 @@ label start:
                         jump deskcard
                     "Finish looking":
                         jump donewithdesk
-            label deskfolder:
+            label deskfold:
                 d_t "Simon said she kept some of her designs in this folder."
                 d_t "I'm curious to see what her style is like."
                 show sketch3
@@ -2216,9 +2216,10 @@ label start:
                 d_t "Poor Kai."
                 d_t "I should put this back. I think I've seen enough. Maybe there are some other designs on the computer."
                 hide sketch3
+                jump kaidesk
                 
 
-            label deskcomputer:
+            label deskcomp:
                 d_t "Let's see what she has saved on her computer."
                 d_t "Wow, clean desktop. I'm impressed."
                 d_t "Alright. Most of this just looks like work in progresses for previous projects."
@@ -2254,9 +2255,10 @@ label start:
                 d_t "I got the notes I was looking for."
                 d_t "This is still her Computer. I shouldn't be looking for more than strictly work related stuff."
                 d_t "Maybe she quit to get away from it all..."
+                jump kaidesk
                 
 
-            label deskpostcard:
+            label deskcard:
                 d_t "Oh, a postcard. I probably shouldn't snoop in other people's things."
                 d_t "But..."
                 d_t "She did leave it here though..."
@@ -3770,6 +3772,7 @@ label start:
                 d_t "What are they going to do when they get here and there's nothing?"
                 d_t "I'm going to look like a crazy fool-"
             else:
+                pass
             d_t "Where did they go?"
             d_t "Did someone delete them?"
             d_t "But why? There wasn't anything distinctive on them."
@@ -3892,7 +3895,7 @@ label start:
                 d_t "The lion's den is a recording studio!"
                 d_t "Tomorrow's the day. I can get her!"
 
-            elif track_who==1
+            elif track_who==1:
                 if dinner_plans== True:
                     d_t "That's not too far from my usual bus stop at the office!"
                     d_t "In the alleyway..."
@@ -3905,7 +3908,6 @@ label start:
                 d_t "The lion's den is a storage unit!"
                 d_t "The lion's den is a recording studio!"
                 d_t "Tomorrow's the day. I can get her!"
-
             else:
                 d_t "That's really close!"
                 d_t "..."
