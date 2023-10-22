@@ -2974,7 +2974,11 @@ label start:
                 hide simon_conf
                 show simon_happy
                 s "It's a lovely area. I think I looked at some apartments there too once. That's why I was so interested."
+                hide simon_happy 
+                show simon_conf
                 s "Isn't that the one with the really bad bus connection?"
+                hide simon_conf
+                show simon_neut
                 d "Well, it's not that bad. I just have to walk to the next bus stop from the office since my bus doesn't go all the way here."
                 d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
                 d "Oh no! My phone!"
@@ -2988,28 +2992,43 @@ label start:
                 
                 
             label simonconvop:
+                show simon_neut
                 s "Ah, Destiny! I'm glad I caught you again tonight."
+                hide simon_neut
+                show simon_conc
                 s "Is something the matter? You look tense."
                 d "Don't worry it's nothing. I'm just a little exhausted that's all."
+                hide simon_conc
+                show simon_conf
                 s "Who was that on the phone there before?"
                 d "Oh that? Uhm, no one special. Just ehm-"
                 menu:
                     "The landlord":
                         d "It was my landlord. Er- He wanted to know if I'd experienced any door dashers recently..."
+                        hide simon_conf
+                        show simon_neut
                         s "Your landlord?"
                     "A neighbor":
                         d "It was my neighbor. Er- He wanted to know if I'd experienced any door dashers recently..."
+                        hide simon_conf
+                        show simon_neut
                         s "Your neighbor?"
 
                 d "Yeah. I think there were some kids uhm, going around the past few days."
                 s "Really?"
                 d "Or so I've heard."
                 s "Door dashers? That's rare these days. These apartment buildings are so I guess anyone can stroll in."
+                hide simon_neut
+                show simon_conf
                 s "You live on Parker-street right?"
                 d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
+                hide simon_conf
+                show simon_happy
                 s "I've looked into getting an apartment there too once actually. That's why I was so interested when you mentioned it."
                 s "You live in that big block right in front of the park right?"
                 d "Yeah exactly."
+                hide simon_happy
+                show simon_neut
                 s "I think I checked that one out too. Great views. But the bus connection is quite bad isn't it."
                 d "Well, it's not that bad. I just have to walk to the next bus stop from the office since my bus doesn't go all the way here."
                 d "Actually! That reminds me. I wasn't planning on staying too long today. Let me check what time it is-"
@@ -3023,18 +3042,31 @@ label start:
                 jump findphone
 
             label findphone:
+                show gabe_neut
                 g "Hey!"
+                hide gabe_neut
+                show gabe_conf
                 g "Are you looking for something? You've been running around the room like a madwoman."
                 d "I can't find my phone!"
                 d "I think our last bus leaves soon but I can't leave without my phone."
+                hide gabe_conf
+                show gabe_happy
                 g "I'll help you look for it. Together we'll be quicker."
+                hide gabe_happy
+                show gabe_neut
                 g "I'll go check in the hallway."
                 d "Thank you, Gabe"
+                scene bg_black
                 #couple minutes later
                 g "Found it!"
+                scene bg_office_cafeteria
+                show a_day3_ignorange
+                show gabe_happy
                 d "Really!?"
                 d "Oh thank god."
                 d "Where did you find it? I thought I looked everywhere."
+                hide gabe_happy
+                show gabe_neut
                 g "It was on the desk of one of those offices right beside the entrance."
                 d "I must have left it there when I went out..."
                 g "You'd lose your head if it wasn't attached."
@@ -3046,18 +3078,27 @@ label start:
         label night:
         label catmissing:
             scene bg_d_corridor
+            show a_day3_ignorance
+            show gabe_neut
             g "There we are. Feeling better?"
             d "Yeah. Thank you for bringing me home."
+            hide gabe_neut
+            show gabe_happy
             g "Oh don't worry it's nothing. I want you to be safe."
+            hide gabe_happy
+            show gabe_neut
             g "Lord knows there's enough creeps out there."
             g "You should go in now though. And make sure you lock your door."
             g "Double check it"
             d "Yeah yeah. I will."
             d "Triple check it even."
             d "Get home safe too Gabe. Or I'll feel even worse for making you do all this."
+            hide gabe_neut
+            show gabe_happy
             g "Don't worry about me. I'll be home in no time."
             g "Night Destiny."
             d "Goodnight Gabe."
+            hide gabe_happy
             "Lock"
             d_t "Finally."
             d_t "No one's getting in now."
@@ -3068,7 +3109,7 @@ label start:
             d "Sorry I'm so late. I've got some bad news for you little buddy..."
             d "[catname]?"
             d "You were so lively yesterday. Are you mad at me for leaving you all alone for so long?"
-            scene bg_d_kitchen
+            scene bg_d_kitchen_n
             d "[catname]?!"
             d "Where-"
             d "AHHH!"
@@ -3123,6 +3164,7 @@ label start:
             scene bg_black
             "Ping!"
             scene bg_d_window
+            show a_day4
             d "Kai!"
             d "Tell me"
             d "Who-"
@@ -3148,7 +3190,7 @@ label start:
                 d_t "I must have forgotten it there when I went out to take a break from all the people."
 
             d_t "He probably bugged it while we were looking for it."
-            d_t "Wait, how would they even know I'd lose it?"
+            d_t "Wait, how would he even know I'd lose it?"
             d_t "That's pure chance."
             d_t "And how would Kai even know that?"
             d_t "What she's asking me is insane! I can't just present myself to this creep and go about my day as if nothing happened."
@@ -3193,9 +3235,14 @@ label start:
                     d_t "Stupid! I should have just gone through all of them."
                     d_t "I'll have to look through all her things again today. I have to find something that will tell me who it is!"
                     if dinner_plans==False:
+                        scene bg_d_kitchen
+                        show a_day4
+                        show cat_happy
                         c_n "Meow!"
                         d "Morning [catname]"
                         d "Sorry for screaming before."
+                        hide cat_happy
+                        show cat_neut
                         c_n "Prrrr"
                         d "See I'm just a little lost on what to do right now."
                         d "I have to find a way to track someone but I don't even know who or how."
@@ -3206,10 +3253,14 @@ label start:
                         d "I presume that was a yes."
                         d "I have some more tuna but only one more can."
                         d "I'll bring home some proper cat food today."
+                        hide cat_neut
+                        show cat_happy
                         d "{i}If I make it through today...{/i}"
                         d "I think I also have to pick up some other cat supplies anyways. I don't think you're going away anytime soon."
                         d "There's a pet shop on my way to work. I bet they have-"
                         d "Chips!"
+                        hide cat_happy
+                        show cat_neut
                         d "I can use the chip from one of those cat-tracking collars!"
                         d "That's it!"
                         d "Thank you [catname]! You're a genius!"
@@ -3224,6 +3275,8 @@ label start:
                         d_t "I doubt you can buy one in a normal supermarket."
                         d_t "What's something that the average person would need to be able to track?"
                         d_t "Hmm..."
+                        scene bg_d_kitchen
+                        show a_day4
                         d "Pets!"
                         d "I can use the chip from one of those cat-tracking collars!"
                         d "That's it!"
@@ -3255,6 +3308,8 @@ label start:
                     jump work4doubt
 
             label achievements4:
+                hide a_day4
+                show a_day4_b
                 menu:
                     "You remember me don't you?":
                         d_t "Yeah I do this time..."
@@ -3298,15 +3353,22 @@ label start:
                         jump work4track
         label work4track: 
             scene bg_office_hallway
+            show a_day4
+            show simon_happy
             s "Good morning Destiny!"
             s "Here early again I see."
+            hide simon_happy
+            show simon_neut
             d "Morning Simon."
             d "Yeah, I wanted to- ehm have enough time to look over what I did yesterday before we talk about it."
             s "Oh, sure"
             s "Take your time. Just come over to my office once you're ready."
             d "Yes. See you then."
+            hide simon_neut
+            show simon_happy
             s "See you later Destiny."
             scene bg_office_computer_kai
+            show a_day4
             d_t "I have to find more clues."
             d_t "I'm sure she left more than what I found yesterday."
             if call_police== Tue:
@@ -3458,38 +3520,61 @@ label start:
         label trackmatt:
             #later that morning
             scene bg_office_hallway
+            show a_day4
             "Knock"
             d "Matthew?"
+            show matt_conf
             m "What are {i}you{/i} doing here?"
             d "I- I wanted to apologize for yesterday. And also what happened before..."
+            hide matt_conf
+            show matt_neut
             m "Yeah right."
             d "No. Seriously. I shouldn't have looked through Kai's things. But I also shouldn't have jumped to conclusions so quickly yesterday."
             d "I'm sure you had your reasons for acting the way you did and I should have respected that. I'm very sorry."
             m "Mhm..."
+            hide matt_neut
+            show matt_mad
             m "Look, I don't know what you're trying to achieve here. But if you think you can just make everything undone with some halfhearted apology then you're mistaken."
             m "We're going to have to talk about this with Simon now {i}thanks to you{/i}. But I clearly have other more important things to do right now."
             d "If you want I can put a date in my calendar right now!"
+            hide matt_mad
+            show matt_neut
             d "Hold on let me just-"
+            hide a_day4
+            show a_day4_now
             d "Oh no."
             d "I forgot. I left my phone at home today!"
+            hide a_day4_now
+            show a_day4
             m "..."
             d "I'll just have to write it down then."
             m "Sure."
             m "Tuesday next week."
+            hide matt_neut
+            show matt_conf
             m "At 10:30. Got that?"
             d "Oh. But I don't have a pen. Wait I'll just-"
             "Rustle"
+            hide matt_conf
+            show matt_mad
             m "What are you-!"
             d "There! You don't mind if I quickly borrow this pen from your bag right?"
             m "You-"
             m "Hmpf! Fine!"
+            hide matt_mad
+            show matt_neut
             m "Tuesday at 10:30. Make sure to let Simon know."
+            hide matt_neut
+            show matt_mad
             m "And stop rummaging through other people's belongings! {i}Give that back.{/i}"
             "Yank!"
             d "Oops. Sorry!"
             d "I'll go tell Simon right away."
+            hide matt_mad
+            show matt_conf
             m "Thank god."
             scene bg_office_computer_kai
+            show a_day4
             d_t "That was nerve wrecking!"
             d_t "I hope he didn't see I slipped the chip in there when I took the pen out..."
             d_t "Now I'll just have to wait and pray everything works as planned"
@@ -3499,6 +3584,7 @@ label start:
         label tracksimon:
             #later that morning
             scene bg_office_hallway
+            show a_day
             "Knock"
             d "Simon?"
             s "Oh! Destiny. What's up. Can I help you with anything?"
