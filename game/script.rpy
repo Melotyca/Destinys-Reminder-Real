@@ -43,7 +43,7 @@ label start:
                 d_t "Who, what was that?"
                 d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
                 scene bg_d_window
-                show phone
+                show phone_day1_1
                 show a_day1  
                 # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
                 d_t "Oh come on. Just let me sleep."  
@@ -59,13 +59,13 @@ label start:
                 d_t "Didn't he say he was going to text me?"
                 #(phone appears, time now 07:30)
                 #unlock)   
-                show phone
+                show phone_day1_2
                 #(home screen, a couple apps, no notifications waits a little). 
                 #(gets a message from Gabriel (Omw! Hope you didn’t oversleep again ;))). 
                 d_t "Shoot! I totally forgot about time!"
                 d_t "I have to get ready."  
                 #(destiny looks around, window, corridor back to kitchen/messy).
-                hide phone
+                hide phone_day1_2
                 d_t "Jeez, I really need to clean this mess up soon. How did my room become this messy again so fast." 
                 d_t "When did I even wear that shirt? God even my desk is filled."
                 d_t "Actually, I don't think I've ever seen that screen of Achievements over there."
@@ -75,7 +75,7 @@ label start:
                 d_t "What in the-"   
 
                 hide a_day1
-                show a_day1 at right
+                show a_day1_b
                 d  "Heh. Heh he..."  
                 d_t "A display. Really?"  
                 d_t "Oh god. No more games before bed."
@@ -83,10 +83,10 @@ label start:
                 d_t "This can't be serio-" 
                 "{i}Knock knock.{/i}" 
                 d "AH!" 
-                hide a_day1
+                hide a_day1_b
                 show a_day1
-                #(cup falls and shatters and spills). 
-                #(shattered mug). 
+                "Crash!"
+                d "Not my mug!"
                 g "It's me, Gabe. Is everything alright in there?"   
                 d "Yes yes! On my way."
                 #door opens
@@ -453,6 +453,7 @@ label start:
                 "{i}krrrt!{/i}"
                 d_t "What was that?"
                 #shows error message 
+                d_t "Error?!"
                 d_t "Oh no."
                 d_t "No no no"
                 d_t "Not this too"
@@ -493,12 +494,22 @@ label start:
                         d "Oops Sorry!"
                         s "Oh! You're Destiny right!"
                         d "Huh?"
+                        hide simon_neut
+                        show simon_happy
                         s "I've heard a lot about you!"
+                        hide simon_happy
+                        show simon_conf
                         s "I thought Matthew said we would meet after lunch to talk about switching teams. Did something come up?"
+                        hide simon_conf
+                        show simon_neut
                         d "You're Simon then! Yeah sorry about that."
                         d "Uhm, yes."
                         d "Something came up. I apologize. You've heard a lot about me?"
+                        hide simon_neut
+                        show simon_happy
                         s "Yes! your work speaks for itself. Speaking of. I thought Matthew said you were still finishing up a project"
+                        hide simon_happy 
+                        show simon_neut
                         s "What are you doing around here? Can I help you with anything?"
                         d "Yes actually."
                         menu:
@@ -509,15 +520,23 @@ label start:
                                 d "I was about to print the forms to join your team, but someone must have put in too much paper."
                                 d "There's an error message. I think someone must've jammed it."
                         d "Do you know who I could go to to help me fix it?"
+                        hide simon_neut
+                        show simon_conf
                         s "Not that old printer again! We should have replaced that ancient thing years ago."
+                        hide simon_conf
+                        show simon_neut
                         s "Wait I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
                         scene bg_office_printer
                         show a_day1
                         show simon_neut
                         s "I think I know how to get it running again."
                         d "Wow, Thank you so much Simon! You're a real life saver."
+                        hide simon_neut
+                        show simon_happy
                         s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
                         d "Kai?"
+                        hide simon_happy
+                        show simon_neut
                         s "Yes. She did our designs up until now."
                         s "I'm sure Matthew told you about her."
                         d "Not really, no."
@@ -525,40 +544,68 @@ label start:
                         s "She was always so passionate about what she did. Something important must have come up..."
                         s "Anyhow. We can only speculate. But I'm glad we have you to help us out soon now!"
                         s "We've really been struggling without her around."
+                        hide simon_neut
+                        show simon_happy
                         s "I'm looking forward to working with you."
                         d "Me too!"
                         d_t "Anything beats Matt."
+                        hide simon_happy
+                        show simon_neut
                         s "So, about that project you're still finishing up right now?"
                         d "It's nothing big but I got tasked with designing an ad poster, yes."
                         d "I'll most likely be done by tomorrow though."
+                        hide simon_neut
+                        show simon_happy
                         s "Well then. We'll be collaborating from then on!"
+                        hide simon_happy
+                        show simon_neut
                         s "Now let me help you with that printer. I don't want to keep you here any longer than necessary."
-                        #simon helps destiny
+                        "Rattle..."
                         s "My apologies! That took a little longer than expected."
+                        hide simon_neut 
+                        show simon_conf
                         s "I'm curious now. Not many people would be willing to stay this late." 
                         s "But since I live close by it's not a problem for me to stay a little longer."
+                        hide simon_conf
+                        show simon_neut
                         s "Do you live somewhere around here too?"
                         d "Yeah. I live just two stops away from here. So I don't have a long commute at all."
                         s "Do you like the area? In my opinion it's one of the best if you work in the city."
                         d "Mostly yeah. I really lucked out with my apartment."
                         d "It's not too far away and I have a great view."
+                        hide simon_neut
+                        show simon_happy
                         s "Wow you live there all by yourself?"
                         d "Yes but a friend of mine that also works here actually lives really close as well!"
                         d "I moved in not long after him."
+                        hide simon_happy
+                        show simon_conf
                         s "You must be in one of the newer ones close to the park then! I've heard only great things about them."
                         s "You've been working here for a year now am I right?"
+                        hide simon_conf
+                        show simon_neut
                         d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
                         s "Matthew tends to be a bit too careful with handing out jobs"
+                        hide simon_neut
+                        show simon_happy
                         s "In my opinion the only way to get experience is to do the thing you want to learn."
-                        s "Is view on the matter seems to be a bit more uptight."
+                        hide simon_happy
+                        show simon_neut
+                        s "His view on the matter seems to be a bit more uptight."
                         d "A little yes haha."
                         s "Well then this will be a good new experience for you!"
+                        hide simon_neut
+                        show simon_conf
                         s "You said you'll be on it tomorrow right?"
                         d "Yes. I'll make sure to fill this out and submit it by tomorrow night."
+                        hide simon_conf
+                        show simon_happy
                         s "Excellent!"
                         "RING!"
                         d "Sorry! That must be Gabriel. I have to go. I'm running late to meet my friend."
                         d "Thank you so much for helping me with the printer!"
+                        hide simon_happy
+                        show simon_neut
                         s "Of course. I'm glad I was able to help."
                         s "See you around Destiny."
                         d "Have a nice evening!"
@@ -717,16 +764,18 @@ label start:
                 d_t "Didn't I have that same strange dream yesterday?"
                 d_t "Arrgh. Why can't I remember. My head feels like it's spinning."
                 d_t "I have to go get something to drink. What time is it even?"
-                # (phone appears(see Her reminder Project due today, Day and time: Tue 06:23). 
+                show phone_day2
                 d_t "Whoa. That's unusually early. No wonder my head feels like a truck ran over it."
                 d_t "So much for getting more sleep today. I still have almost an hour until I have to get up."
                 d_t "But I doubt I'll be able to ignore this headache and go back to sleep. I have to go get a glass of water"
-                #gets up
+                scene bg_d_kitchen
+                show a_day2
                 "!"
                 d_t "Seriously!?"
                 d_t "That screen is still here!"
                 d_t "Hold on! It's changed. There's different achievements today."
-                show a_day2 at right
+                hide a_day2
+                show a_day2_b
                 d_t "This can't just be from over working myself anymore."
                 d_t "There's no way fatigue can cause something like this."
                 d_t "That screen was there the whole time yesterday too. That's not even the worst of it." 
@@ -817,6 +866,8 @@ label start:
 
                         "Start the day":
                             d_t "That's got to be enough for now."
+                hide a_day2_b
+                show a_day2
                 d_t "It's not a lot of preparation. I'm pretty certain on some of them but why do they have to be so darn vague."
                 d_t "And why now of all times? I wish I had more time to figure out where this is all coming from. But I'm neck deep in work right now."
                 d_t "Still, there has to be a reason for this right? Let's hope today goes more smoothly than yesterday." 
@@ -985,34 +1036,34 @@ label start:
                 g "Destiny!"
                 d "Gabe?"
                 hide matt_neut
-                show matt_neut at right
-                show gabe_neut at left
+                show matt_neut_r
+                show gabe_neut_l
                 g "Oh, afternoon Matthew."
                 m "Anderson."
                 g "I wasn't expecting to see you two here."
-                hide matt_neut 
-                show matt_mad at right
+                hide matt_neut_r 
+                show matt_mad_r
                 m "My thoughts exactly."
-                hide matt_mad
-                show matt_neut at right
+                hide matt_mad_r
+                show matt_neut_r
                 g "Actually, Destiny I was looking for you. I have something I have to discuss with you."
                 d "Wha-"
-                hide matt_neut 
-                show matt_mad at right
+                hide matt_neut_r
+                show matt_mad_r
                 m "Actually we are in the middle of a conversation at the moment. So If you'd excuse us."
-                hide gabe_neut
-                show gabe_conc at left
+                hide gabe_neut_l
+                show gabe_conc_l
                 g "I'm terribly sorry Matthew. Seems you two are having quite the serious talk but it's something quite personal and urgent."
                 g "Could I borrow her for a minute?"
-                hide matt_mad
-                show matt_conf at right
+                hide matt_mad_r
+                show matt_conf_r
                 m "What could be so important that you need her right this instant?"
-                hide gabe_conc
-                show gabe_neut at left
+                hide gabe_conc_l
+                show gabe_neut_l
                 g "Like I said it's a personal matter. But I assure you I wouldn't be barging in like this if it wasn't important."
                 d "Gabe, it's alright I'll-"
-                hide matt_conf
-                show matt_neut at right
+                hide matt_conf_r
+                show matt_neut_r
                 m "Fine. We'll continue this conversation some other time. I don't have the nerve for this right now. I'm quite {i}busy{/i} at the moment anyways."
                 m "Besides, I doubt the time we have left today would suffice to discuss what needs to be addressed."
                 m "For your sake I hope you at least finished your project already."
@@ -1023,8 +1074,8 @@ label start:
                 d "S-sure."
                 g "See you around Matthew."
                 m "Yeah, see you around. Same goes for you Sullivan."
-                hide matt_neut
-                show matt_mad at right
+                hide matt_neut_r
+                show matt_mad_r
                 m "Don't think you can get out of this one so easily."
                 d "I'm sorry. Of course."
                 d "See you around."
@@ -1158,14 +1209,24 @@ label start:
                 s "Wait! You're Destiny!"
                 d "What?"
                 s "You are Destiny, no? The graphic designer Matthew said he would interduce to me yesterday, the one that would start working for us?"
+                hide simon_neut
+                show simon_happy
                 s "I've heard so much about you!"
                 d "Oh really? Yeah, that's me."
+                hide simon_happy
+                show simon_neut
                 d "You must be Simon then! Sorry about not showing up yesterday."
                 d "Uhm. Something err... came up."
+                hide simon_neut
+                show simon_happy
                 s "Oh don't worry about it. This kind of stuff happens. I'm glad I finally get to meet you today! Your work really speaks for itself."
                 d "Wow, thank you!"
+                hide simon_happy
+                show simon_conf
                 s "What are you doing in such a hurry? I hope I'm not bothering you."
                 d "No no! I'm glad I ran into someone here!"
+                hide simon_conf
+                show simon_neut
                 d_t "Isn't this just Perfect! He'll have a horrible first impression of me now!"
                 d "Uh, I was just about to print the final design of my project, but I think someone before me must have put in too much paper heh..."
                 d "I tried taking the paper chute out, but it won't budge."
@@ -1173,13 +1234,19 @@ label start:
                 s "Right! Matt mentioned you were just about to finish your project. Has he sent you the application forms yet?"
                 s "Oh sorry!"
                 s "Yes. First we deal with the printer!"
+                hide simon_neut
+                show simon_happy
                 s "I'll help you out. I've had my fair share of unfortunate encounters with that one. Let's go have a look at it."
                 scene bg_office_printer
                 show a_day2
                 show simon_neut
                 s "I think I know how to get it running again."
                 "WHAM"
+                hide simon_neut
+                show simon_happy
                 s "There!"
+                hide simon_happy
+                show simon_neut
                 s "Now we just have to wait for your print to finish."
                 d "Wow, Thank you so much Simon! You're a real life saver. I can't imagine what Matt would do if I handed in another project late."
                 s "Oh don't be like that. It's the least I can do now that I know we'll finally have someone to take Kai's place."
@@ -1189,22 +1256,36 @@ label start:
                 s "She was always so passionate about what she did. Something important must have come up..."
                 s "Anyhow. We can only speculate. But I'm glad we have you to help us out soon now!"
                 s "We've really been struggling without her around."
+                hide simon_neut
+                show simon_happy
                 s "I'm looking forward to working with you."
                 d "Me too!"
                 d_t "Anything beats Matt."
+                hide simon_happy
+                show simon_neut
                 s "So, this is that project you were still finishing up?"
                 d "It's nothing big but I got tasked with designing an ad poster, yes."
                 d "I'm glad I got it done today. "
                 s "Well then. Seems like we'll be collaborating from now on. How exciting!"
                 s "Matthew told me a few things about you already. You've been working here for about a year, no?"
                 d "Yeah. One and a quarter actually. But I haven't really had the chance to work on any big projects yet."
+                hide simon_neut
+                show simon_conf
                 s "Matthew tends to be a bit too careful with handing out jobs"
+                hide simon_conf
+                show simon_happy
                 s "In my opinion the only way to get experience is to do the thing you want to learn."
+                hide simon_happy
+                show simon_neut
                 s "Is view on the matter seems to be a bit more uptight."
                 d "A little yes haha."
                 s "Well then this will be a good new experience for you!"
+                hide simon_neut
+                show simon_conf
                 s "Did you also move here before starting work for Matthew?"
                 s "Do you live somewhere around here? This area is one of the best if you're working in the city."
+                hide simon_conf
+                show simon_neut
                 d "Yeah. I moved into one of the newer apartment complexes just two stops away."
                 s "You live there all by yourself?"
                 d "No no, actually, a good friend of mine who also works here lives really close as well!"
@@ -1212,11 +1293,15 @@ label start:
                 s "Wow, you must be in the ones close to the park then. I've heard only great things about them."
                 s "How do you like the area? In my opinion it's one of the best. Especially if you work in the city."
                 d "I like it a lot actually! I have a great view of the park and the city from my apartment. And my neighbors are fantastic."
+                hide simon_neut
+                show simon_happy
                 s "Sounds lovely."
                 "Bing!"
                 d "Oh! That must be my print!"
                 d "Thank you so much for helping me with the printer!"
                 s "Of course. I'm glad I was able to help."
+                hide simon_happy
+                show simon_neut
                 s "I see you've printed the application as well! Don't forget to hand it in until tonight."
                 s "I'm looking forward to having you on my team!"
                 d "Yes me too. I'm sorry I have to hurry back now."
@@ -1247,24 +1332,34 @@ label start:
                     d_t "It's only Tuesday and this week has already been way too long."
                     d_t "I wonder what's going to happen to the rest of the achievements now. Especially the dinner one."
                     d_t "Maybe it was wrong this time. I can just refuse-"
+                    show cat_happy
                     "Meowww!"
                     d "Oh hey there Kitty!"
+                    hide cat_happy
+                    show cat_neut
                     c "Prrrt"
                     d "Aww, aren't you a cute one!"
                     d "Oh but you're all scraggly looking. What happened to you?"
+                    hide cat neut
+                    show cat_happy
                     c "mEEEwr"
                     d "You don't have a collar do you?"
                     d "Oops, Sorry!"
+                    hide cat_happy
+                    show cat_mad
                     c "Hssss"
                     "Thudd"
                     d "Ah no my, folder!"
                     d "N- No not that! Spit that out!"
+                    hide cat_mad
+                    show cat_neut
                     c "mrrr"
-                    #the cat runs away
+                    hide cat_neut
                     d "Hey! No, come back here! That's my-"
                     scene bg_ally
                     show a_day2
                     d "HAH! Got you, you little rascal!"
+                    show cat_neut
                     c "awrr"
                     d "Now give me back that forms."
                     "Tug!"
@@ -1282,6 +1377,8 @@ label start:
                     d "How about we try to find your owner!"
                     d "{i}If you even have one{/i}"
                     d_t "It's late already."
+                    hide cat_neut
+                    show cat_conc
                     "Rustle"
                     hide a_day2
                     show a_day2_run
@@ -1290,6 +1387,8 @@ label start:
                     show a_day2
                     d "Yeah, no. I'm not staying here any longer than I need to."
                     d "We'll try to find them tomorrow, for now you're coming with me. What do you say little guy?"
+                    hide cat_conc
+                    show cat_happy
                     c "Meowww!"
                     d "Ha ha. You're adorable ehm-"
                     python:
@@ -1301,8 +1400,12 @@ label start:
                     d "[catname]!"
                     d "Let's get you cleaned up [catname]."
                     "Clank!"
+                    hide a_day2
+                    show a_day2_run
                     #screen glitches to just RUN for a sec
                     d "!"
+                    hide a_day2_run
+                    show a_day2
                     d "What was that? Did that just say-"
                     d "Oh we have to get out of here ASAP. That's freaking creepy."
                     d "This place is starting to give me the chills."
@@ -1342,6 +1445,8 @@ label start:
                 d "Strange."
                 d "It was probably just some door dashers. My neighbor recently mentioned something like that."
                 g "Possible."
+                hide gabe_conf
+                show gabe_neut
                 g "I wouldn't put it past those little kids from floor 2 to go around pranking people."
                 d "Tell me about it. I always hear them screaming and running around when I get back from work."
                 d "Hey! The soup's almost done! Want to hand me those spring onions you chopped?"
@@ -1354,6 +1459,7 @@ label start:
                 scene bg_d_kitchen
                 show a_day2
                 d "Alrighty! Here we are."
+                show cat_neut
                 c_n "mrrr"
                 d "Make yourself at home [catname]."
                 d "But don't you dare go around destroying things alright?"
@@ -1362,8 +1468,12 @@ label start:
                 d "Oh! You must be hungry! Let's see what I have for you."
                 d "Hmmm. Looks like I have some tuna in my pantry."
                 d "Do you like tuna?"
+                hide cat_neut
+                show cat_happy
                 c_n "MEEEwr!"
                 d "Haha, someone's enthusiastic!"
+                hide cat_happy
+                show cat_neut
                 d "Let me get a plate to put it on."
                 d "Wow, now that I'm thinking about it, I'm starving too!"
                 d "I barely had anything to eat today."
@@ -1376,9 +1486,13 @@ label start:
                 d_t "And here I thought I could actually evade them for once."
                 d_t "This isn't quite what I imagined when I read \"Dinner for two\""
                 d_t "But I suppose that's to be expected by now. It's not like they were any more straight forward yesterday."
+                hide cat_neut
+                show cat_happy
                 c_n "MreEEEau"
                 d "Done already?"
                 d "You must have been starving!"
+                hide cat_happy
+                show cat_neut
                 d "Here, let me just take that plate over to the sink so I can wash it later."
                 "*Knock Knock*"
                 d_t "Huh?"
@@ -1396,11 +1510,16 @@ label start:
                 d "!"
                 d_t "Wh- What was that?"
                 d_t "-"
-                d_t "No, I must have just imagined it. I'll just look who's outside the door."
+                d_t "No, I must have just imagined it. I'll just look through to who's outside the door."
+                scene bg_black
+                d_t "..."
+                scene bg_d_corridor
+                show a_day2_dontopen
                 #look outside (noone)
                 d_t "What in the...?"
                 d_t "Did they leave already?"
                 d_t "Maybe they-, I can't see from here I'll have to go and check-"
+                show cat_mad
                 c_n "HSSSr!"
                 hide a_day2_dontopen
                 show a_day2_dont
@@ -1410,16 +1529,20 @@ label start:
                 d_t "Wh- What is THAT? How is it-"
                 d_t "I knew I saw something!"
                 #Glitches to dont open it. and be quiet
+                hide cat_mad
+                show cat_conc
                 c_n "mEEEwr"
                 d_t "What the F-"
                 d "{i}Shhh. [catname] it's ok. Quiet.{/i}"
                 c "{i}mrrrr{/i}"
                 d "{i}What is this?{/i}"
+                hide cat_conc
                 menu:
                     "Open the door.":
                         $ open_door= True
                         d "Screw it I'm not going to be scared by that stupid screen!"
                         d "You can't tell me what to do."
+                        "Clank"
                         #Opens door
                         #Achievements permanently glitch unreadable
                         d "He- Hello? Is someone there?"
@@ -1431,7 +1554,9 @@ label start:
                         d "Hello?!"
                         "..."
                         d_t "Nothing..."
+                        "Lock"
                         #goes back in
+                        show cat_mad
                         c_n "HrshSSSS"
                         d "What's wrong [catname]? There's no one there."
                         c_n "Meowww!"
@@ -1441,6 +1566,8 @@ label start:
                         d "What is it trying to keep me from?"
                         d_t "Who?"
                         d "Why does the text suddenly start changing now!?"
+                        hide cat_mad
+                        show cat_conc
                         c_n "mEEEwr"
                         d "Ok ok I'm coming. I want to get away from that door just as much as you do."
                         d_t "Who was that?"
@@ -1457,12 +1584,11 @@ label start:
                         d_t "What does this-"
                         #Glitches to stay inside. Don't go out again.
                         d_t "I- I"
-                        d_t "Why is this happening to me?"
-                        d_t "What is it trying to keep me from?"
-                        d_t "Who?"
-                        d_t "I-"
+                        show cat_conc
                         c_n "mrrwm"
                         d "[catname]?"
+                        hide cat_conc 
+                        show cat_neut
                         c_n "Meow"
                         d "I'm sorry [catname], l-let's go back."
                         d_t "And keep that door locked for as long as possible."
@@ -1511,7 +1637,8 @@ label start:
                 d_t "Who is this person?"
                 d "!"
                 d "The achievements!"
-                #look at achievements
+                hide a_day3
+                show a_day3_b
                 d_t "\"Make the right call\""
                 d_t "The girl in my dream said I should get help. Does that mean call for help?"
                 d_t "Are these achievements and those strange dreams connected?"
@@ -1521,6 +1648,8 @@ label start:
                 d_t "I thought it might just be in my head. But that knocking yesterday was real."
                 d_t "What if she was right and there really was someone here?"
                 d_t "I think I should call someone..."
+                hide a_day3_b
+                show a_day3
                 menu:
                     "Call Gabriel.":
                         jump callgabealone
@@ -1528,6 +1657,8 @@ label start:
                         $ call_police= True
                         jump callpolice
             else:
+                scene bg_d_window
+                show a_day3
                 d "AH!"
                 d "Not again!"
                 d "It's the girl from last time!"
@@ -1551,12 +1682,16 @@ label start:
                 d_t "Right! They'll still tell me what's going to happen!"
                 d_t "Eh, creepy..."
                 d_t "Let's see here."
-                #look at achievements
+                hide a_day3
+                show a_day3_b
                 d_t "\"Make the right call\""
                 d_t "Well I was planning on calling Gabriel anyways. Sounds like that's exactly the right idea!"
+                hide a_day3_b
+                show a_day3
                 jump callgabedinner
         label callgabedinner:
             "Click"
+            show phone_g
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1573,6 +1708,7 @@ label start:
             d "Of course. See you, Gabe."
             g "Bye Destiny."
             "Click"
+            hide phone_g
             d_t "See, he's so sweet. I don't know what I was thinking. I just have to clear my head. These dreams are getting a little under my skin."
             d_t "Are they connected to the achievements somehow?"
             d_t "I mean they did show up around the same time..."
@@ -1581,6 +1717,7 @@ label start:
         label callgabealone:
             $ gabe_hints + 1
             "Click"
+            show phone_g
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1592,6 +1729,7 @@ label start:
             d "Yeah, thank you, Gabe..."
             g "Alright be right there."
             "Click"
+            hide phone_g
             #A couple minutes later
             scene bg_d_kitchen
             show a_day3
@@ -1630,6 +1768,8 @@ label start:
             g "Destiny. You can tell me what's wrong."
             g "If you tell me what's bothering you so much I might be able to help you."
             g "You're clearly very upset over all of this."
+            hide gabe_conc
+            show gabe_neut
             g "I promise you, whatever it is, we can figure it out together. I don't think you're stupid."
             menu:
                 "Tell him about the dreams": 
@@ -1638,6 +1778,8 @@ label start:
                     d "Every morning when I wake up I can remember seeing this girl, talking to me, warning me."
                     d "She looks scared."
                     d "I think I've seen her before somewhere but I for the life of me can't figure out who she is."
+                    hide gabe_neut
+                    show gabe_conc
                     g "What does she tell you?"
                     d "Every night she tells me something like \"{i}He's dangerous{/i}\" or \"{i}}He's trying to get you{/i}\""
                     d "I have no idea who {i}He{/i} is but it's scaring me."
@@ -1646,13 +1788,21 @@ label start:
                     d "Gabe all of this is scaring me."
                     g "Take a deep breath Destiny. Everything is going to be alright. We're going to figure this out ok?"
                     d "Do you think I'm crazy?"
+                    hide gabe_conc
+                    show gabe_neut
                     g "No. I don't think you're crazy Destiny."
                     g "I think you've had a lot to deal with yesterday and a lot of stress on top of that lately."
                     g "For what it's worth I would be scared too if I had dreams like that after someone knocks on my door."
+                    hide gabe_neut
+                    show gabe_conc
                     g "Did you see anything weird when you checked the door?"
                     d "No. Nothing"
+                    hide gabe_conc
+                    show gabe_conf
                     g "Maybe all of this is just a weird coincidence."
                     d "You think?"
+                    hide gabe_conf
+                    show gabe_neut
                     g "Could be. I mean can you think of someone who would want to hurt you?"
                     d "Not really..."
                     g "But those dreams do sound strange."
@@ -1662,18 +1812,26 @@ label start:
                     g "Yeah something like that."
                     d "Maybe. I usually don't remember my dreams all that well."
                     g "You know, sometimes when we think about something a lot during the day or something is bothering us it can show up in our dreams." 
+                    hide gabe_neut
+                    show gabe_happy
                     g "I've definitely had that before."
+                    hide gabe_happy
+                    show gabe_neut
                     g "I was so worked up about something the entire day that I even dreamed about it that night."
                     d "You think this knocking yesterday might've just scared me enough so I dreamt about it?"
                     g "Exactly! That doesn't explain how you've been dreaming about her the past few days though..."
                     d "I'm sorry Gabriel, this is so stupid. You're probably right. I'm blowing this way too out of proportion."
                     g "No, no it's ok. Really."
                     g "But how about you try to relax a bit the next couple of days to see if it gets better."
+                    hide gabe_neut
+                    show gabe_happy
                     g "And if you want I can come over more often so you won't have to be as sacred that someone is going to follow you while you're alone."
                     d "Thank you so much Gabe. I think I would really appreciate that."
                     g "Any day! Besides then I'll get to see [catname] a little more"
                     g "They look adorable!"
                     d "Haha. They are!"
+                    hide gabe_happy
+                    show gabe_neut
                     g "You just let me know whenever you feel like something strange or creepy is going on ok?"
                     d "Yes. Thank you, Gabriel."
 
@@ -1685,36 +1843,52 @@ label start:
                     g "I think you've had a lot to deal with yesterday and a lot of stress on top of that lately."
                     g "For what it's worth I would be scared too if I felt like someone was watching me and heard knocks on my door that night."
                     d "Yeah..."
+                    hide gabe_neut
+                    show gabe_conc
                     g "Did you see anything weird when you checked the door?"
                     d "No. Nothing"
+                    hide gabe_conc
+                    show gabe_neut
                     g "I'm sure this is all just a weird coincidence."
                     d "I know. Sorry"
                     g "Don't be! It's ok to get scared. You don't have to be ashamed of getting spooked."
+                    hide gabe_neut
+                    show gabe_happy
                     g "But If you want I can come over a bit more in the next couple of days so you don't have to be in here all alone."
                     g "Well."
                     g "Other than with [catname] of course."
                     g "They look adorable!"
                     d "Haha. They are!"
+                    hide gabe_happy
+                    show gabe_neut
                     g "You just let me know whenever you feel like something strange or creepy is going on ok?"
                     d "Yes. Thank you, Gabriel."
 
             g "Do you think you've calmed down enough to get ready for work?"
             d "Oh right. Yeah I think so."
+            hide gabe_neut
+            show gabe_happy
             g "Great. Because I haven't had time to put on my shoes yet... so I'll head back now if that's ok."
             d "Huh?"
             d "HAH! you came here in your socks?"
+            hide gabe_happy
+            show gabe_neut
             g "Maybe..."
             g "Hey, those 3 minutes wouldn't have been enough for shoes."
             d "Alright alright. Go get ready too. I'm glad you came over."
             scene bg_d_corridor
             show a_day3
+            show gabe_neut
             g "And remember Destiny. If you feel like you're being watched again feel free to call me."
             d "I will. Thanks. I don't know if I would have been able to calm down all by myself."
+            hide gabe_neut
+            show gabe_happy
             g "Glad to have helped."
             g "See you later?"
             d "See you later."
             scene bg_d_kitchen
             show a_day3
+            show cat_happy
             c_n "Mrrrr"
             d "Oh hey there [catname]."
             d "Did you at least sleep a little better than I did?"
@@ -1725,6 +1899,7 @@ label start:
 
         label callpolice:
             "Click"
+            show phone_p
             o "Hello? Officer Rogan speaking. How may I help you today?"
             d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I'm very sorry to bother you with something like this."
             d "But I have the feeling someone might have followed me to my apartment yesterday."
@@ -1758,13 +1933,17 @@ label start:
             d "Yes."
             d "Again, thank you so much officer. Goodbye."
             "Click"
+            hide phone_p
             d_t "..."
             d_t "Wow..."
             d_t "I think I need a minute."
             d "!"
+            show cat_neut
             c_n "Mrrrr"
             d "Oh hey there [catname]."
             d "Did you at least sleep a little better than I did?"
+            hide cat_neut
+            show cat_happy
             c_n "Prrrrrrrr"
             d "Well at least one of us did..."
             d "Don't worry I promise I'll go looking for your home today."
@@ -1775,6 +1954,8 @@ label start:
                 
         label achievements3:
             d_t "One more look at today's achievements..."
+            hide a_day3
+            show a_day3_b
             d_t "I can't avoid these can I?"
             d_t "The theory's been thoroughly tested by now I'd say."
             d_t "I didn't have too much time to look at them the past two days though."
@@ -1895,20 +2076,33 @@ label start:
         label work3:
             scene bg_office_hallway
             show a_day3
+            show simon_neut
             d "Hey Simon!"
             s "Oh! Hi there, Destiny!"
+            hide simon_neut
+            show simon_happy
             s "Wow, you came in real early. I think you've got to be the first one here today."
             s "It's only your first day and you're already outdoing the entire team!"
             d "Haha, no no it's nothing like that. I just didn't want to be late on my first day on the team that's all."
             d "And besides I woke up really early today anyways. Might as well just go to work you know."
+            hide simon_happy
+            show simon_neut
             s "I see. I'm just teasing you don't worry."
             d "You're here too! You look a little tired though. Do you always get here so early."
+            hide simon_neut
+            show simon_conf
             s "Well I did get home quite late yesterday, so I am a bit tired. But yes I usually try to come in a little earlier than everyone so I can plan out the meetings and such for the day."
+            hide simon_conf
+            show simon_neut
             s "I just got here though. You almost beat me to it!"
             s "I have to admit I am quite impressed. It's great having such an ambitious personality on our team again."
+            hide simon_neut
+            show simon_happy
             s "I'm sure your fresh motivation will rub off on the others."
             s "You're very similar to Kai in that way actually."
             d "Really?"
+            hide simon_happy
+            show simon_neut
             s "Yeah. She was also usually the first one to come in funnily enough. And she always had this relentless optimism."
             s "It's like something's been missing since she left..."
             s "But I see Matthew found the perfect replacement for me!"
@@ -1916,27 +2110,43 @@ label start:
             d "It sounds like everyone really liked her. I'll try my best to live up to the expectations haha."
             d "The more I hear about her the more I'm getting curious why she's quit. It sounds like she really found her place here."
             s "Yeah, it was a shock to us all. She just came in one morning and told me she was done."
+            hide simon_neut
+            show simon_conf
             s "I tried asking her why but the next day she didn't come in anymore."
             d "Strange."
+            hide simon_conf
+            show simon_neut
             s "I heard she went to talk to Matthew but it doesn't look like he was able to change her mind."
             s "We still have her desk set up and everything..."
             s "Actually! That brings me to our next to do."
+            hide simon_neut
+            show simon_happy
             s "It's no use to dwell on the past now."
             s "Since Kai already started on the designs you will be working on I thought it would be a good idea for you to take over her desk."
             s "You can pick up right where she left off!"
+            hide simon_happy
+            show simon_neut
             s "She still has all of her files and notes over there. You should be able to find everything on her computer or somewhere on the desk."
             s "I haven't really had time to take a look at everything yet but since you'll be working on those designs anyways I thought it would be a perfect way to start for you."
             s "That way you can jump right in by taking a look at everything and familiarizing yourself with the style of work she's done so far."
+            hide simon_neut
+            show simon_happy
             s "From what I've seen you should be able to pull it off with ease."
             d "You want me to take her desk? I can still work at my old one that's fine I have everything set up there it's really not a problem."
+            hide simon_happy
+            show simon_neut
             s "No no. Please I insist. It'd be easier. She's got everything you need."
             d "If you say so! That sounds great."
             d "I'm sure looking at her work will help me to get a clear idea of what it is I have to do."
             d "I have to admit, I don't think I've seen any of her work yet. So I'm really looking forward to finding out what she's done already."
+            hide simon_neut
+            show simon_happy
             s "Fantastic!"
             s "In that case what are we waiting for!"
             s "I'll show you to your new desk and you can get cracking at it."
             s "It's just over there. Right next to my office."
+            hide simon_happy
+            show simon_neut
             s "I'll be here almost the entire day so if you have any questions or any trouble feel free to come over and let me know."
             s "I am busy over lunch but I'll stop by in the afternoon again to see how things are going."
             s "Does that sound alright with you?"
@@ -1980,12 +2190,15 @@ label start:
             label deskfolder:
                 d_t "Simon said she kept some of her designs in this folder."
                 d_t "I'm curious to see what her style is like."
+                show sketch3
+                show sketch2
+                show sketch1
                 "Shuffle"
                 d_t "Wow! These are amazing!"
                 d_t "She's really talented. Man I have big shoes to fill."
                 d_t "No wonder everyone on the team was so fond of her."
                 "Flip"
-                #CHange drawing
+                hide sketch1
                 d_t "Whoa. This one looks, different..."
                 d_t "I-"
                 d_t "This wasn't for work."
@@ -1993,7 +2206,7 @@ label start:
                 d_t "I shouldn't be looking at this. These are her personal sketches."
                 d_t "But..."
                 "Shuffle"
-                #CHange drawing
+                hide sketch2
                 d_t "Did Simon look at these before telling me to look at them?"
                 d_t "No. He wouldn't tell me to look at something like this."
                 d_t "This doesn't fit the Kai they've been describing at all."
@@ -2002,6 +2215,7 @@ label start:
                 d_t "This one is dated to the last day Simon said she'd come to work..."
                 d_t "Poor Kai."
                 d_t "I should put this back. I think I've seen enough. Maybe there are some other designs on the computer."
+                hide sketch3
                 
 
             label deskcomputer:
@@ -2090,7 +2304,8 @@ label start:
                         d_t "She didn't leave."
                         d_t "She was taken!"
                         d_t "Kai is the one the police are looking for!"
-                        #Ignorance is bliss glitches to was bliss
+                        hide a_day3
+                        show a_day3_ignorance
                         d_t "!"
                         d_t "So it's true."
                         d_t "But how-"
@@ -2122,7 +2337,8 @@ label start:
                         d_t "Kai didn't know she wouldn't be coming back."
                         d_t "She didn't leave."
                         d_t "She was taken!"
-                        #Ignorance is bliss glitches to was bliss
+                        hide a_day3
+                        show a_day3_ignorance
                         d_t "!"
                         d_t "So it's true."
                         d_t "But how-"
@@ -2200,21 +2416,31 @@ label start:
 
             label afternoon3:
                 scene bg_office_hallway
+                show a_day3_ignorance
+                show gabe_neut
                 d "Gabe!"
                 d "Where were you at lunch? I didn't see you anywhere."
                 g "Sorry I totally forgot to tell you. I brought something to eat today."
                 g "The stuff they were serving at the cafeteria today looked wretched."
                 d "Yeah..."
                 d "Have you seen Simon anywhere?"
+                hide gabe_neut
+                show gabe_conf
                 g "Simon?"
                 g "I saw him leave around lunch time. But since then? No."
+                hide gabe_conf
+                show gabe_neut
                 d "Oh ok. Thank you."
                 d "Well he did say he was going to be busy..."
+                hide gabe_neut
+                show gabe_conf
                 g "Did you want to talk to him?"
                 d "Yeah. I wanted to ask him about something."
                 d "But I'll just have to wait until he's back."
                 g "What do you want to ask him?"
                 d "I'll tell you later ok? I think I should get back to work."
+                hide gabe_conf
+                show gabe_neut
                 g "Oh."
                 g "Sure. Don't want to be caught slacking on your first day."
                 d "Yeah."
@@ -2225,22 +2451,30 @@ label start:
            
         label party:
             scene bg_office_cafeteria
+            show a_day3_ignorance
             if open_door == True and call_police == False:
+                show gabe_happy
                 g "Destiny!"
                 g "There you are!"
                 g "I've been looking for you. And? How was your first day in the new Team?"
                 d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
+                hide gabe_happy
+                show gabe_conc
                 g "Was something wrong with them? You don't look too pleased."
                 g "I thought something was off before too. What's wrong?"
                 d "No, no the drawings were great. I just found some of her other things too."
                 d "And... She didn't seem too happy before she left."
                 d "Something seemed off."
                 g "Oh"
+                hide gabe_conc
+                show gabe_conf
                 g "What did you see?"
                 d "There were some notes and drawings..."
                 g "Did she not clear her computer before she left?"
                 d "No..."
                 d "It all seemed quite sudden. All of her things were still there."
+                hide gabe_conf
+                show gabe_conc
                 g "What!?"
                 g "She didn't take anything with her?"
                 d "No."
@@ -2249,15 +2483,21 @@ label start:
                 d "No that's why I was looking for him. I wanted to go talk to him about it but he wasn't there."
                 d "He said he'd be there almost the entire day but I guess something must have come up."
                 g "Aw man. That sucks."
+                hide gabe_conc
+                show gabe_neut
                 g "Were you at least able to start on the designs they want you to do?"
                 d "A little bit yeah."
                 d "..."
                 g "Come on Destiny. Relax, it's going to go great."
                 g "A little bump in the road isn't going to mean the end of this Project."
                 d "That's not what I'm worried about..."
+                hide gabe_neut
+                show gabe_conf
                 g "Oh?"
                 g "What's the matter?"
                 d "I don't feel safe here."
+                hide gabe_conf
+                show gabe_conc
                 d "Those things I saw on her computer and her just disappearing leaving everything behind."
                 d "It just doesn't sit right with me."
                 d "I shouldn't just be replacing her."
@@ -2272,6 +2512,8 @@ label start:
                 g "This isn't an obligatory event. And even work isn't worth being in danger for."
                 d "I'm scared to go alone."
                 g "Who said you'd be going alone."
+                hide gabe_conc
+                show gabe_neut
                 g "I'll keep you company until you're home."
                 g "Do you want to call the police?"
                 d "No. Not tonight. Maybe tomorrow morning but right now I just want to go home."
@@ -2279,59 +2521,102 @@ label start:
                 g "Let's get you Home. And once you're there you'll lock the door and try to get some sleep."
                 g "If you want I can come over and we can call the police tomorrow."
                 d "Thank you, Gabriel."
+                hide gabe_neut
+                show gabe_happy
                 g "Don't worry about it. I'd be scared too if I was in your position."
+                hide gabe_happy
+                show gabe_neut
                 g "Now let's go."
                 jump catmissing
 
 
 
             else: 
+                show gabe_happy
                 g "Destiny!"
                 g "There you are!"
                 g "I've been looking for you. And? How was your first day in the new Team?"
                 d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
+                hide gabe_happy
+                show gabe_conc
                 g "Was something wrong with them? You don't look too pleased."
                 g "I thought something was off before too. What's wrong?"
                 d "No, no the drawings were great. I just found some of her other things too."
                 d "And... She didn't seem too happy before she left."
                 d "Something seemed off."
                 g "Oh"
+                hide gabe_conc
+                show gabe_conf
                 g "What did you see?"
                 d "There were some notes and drawings..."
                 g "Did she not clear her computer before she left?"
                 d "No..."
                 d "It all seemed quite sudden. All of her things were still there."
+                hide gabe_conf
+                show gabe_conc
                 g "What!?"
                 g "She didn't take anything with her?"
                 d "No."
                 g "That does sound weird."
                 d "That's not all. She had-"
                 "Bump!"
+                hide gabe_conc
+                show gabe_neut_l
+                show simon_neut_r
                 s "Oh sorry! Didn't see you there."
+                hide gabe_neut_l
+                show gabe_happy_l
                 g "No worries! You're Simon am I right?"
                 s "Yes. How did you know? I don't think we've been introduced yet."
                 g "I'm Gabriel! Destiny here told me she'd be working with you from now on."
+                hide simon_neut_r
+                show simon_happy_r
+                hide gabe_happy_l
+                show gabe_neut_l
                 s "Ah, Destiny! Lucky seeing you here!"
                 s "I didn't take you as much of a party person."
                 d "Eh, every once in a while is fine."
+                hide simon_happy_r
+                show simon_neut_r
                 s "I'm glad I ran into you again actually!"
                 s "I was hoping we'd get to talk a bit more during the day but the meeting eh- took a little longer than expected..."
                 s "I wanted to stop by afterwards. But it was already so late then. I'm terribly sorry."
                 d "Don't worry. I was able to settle in fairly well."
+                hide gabe_neut_l
+                show gabe_happy_l
                 g "Destiny has told me all about your generous offer to let her take up the task of designing for your team."
+                hide gabe_happy_l
+                show gabe_neut_l
                 g "I heard it had to be quite a hasty decision"
+                hide simon_neut_r
+                show simon_conf_r
                 s "Oh yeah. It's a shame. The woman that was working for us before quit recently. We're still trying to figure everything out." 
+                hide simon_conf_r
+                show simon_happy_r
                 s "But I'm sure Destiny will be a fine replacement as far as I'm concerned."
+                hide simon_happy_r
+                show simon_conf_r
                 s "Did you find Kai's designs?"
+                hide simon_conf_r
+                show simon_neut_r
                 d "Actually about that. Gabe could you give us a moment? I have something I'd like to ask Simon."
+                hide gabe_neut_l
+                show gabe_happy_l
                 g "Sure go ahead I'll be waiting over by the snacks if you need me."
                 d "Thank you."
+                hide gabe_happy_l
+                hide simon_neut_r
+                show simon_conf
                 s "Oh? What the matter? You sound rather serious."
                 d "Maybe. I wanted to ask you about the time before Kai left."
+                hide simon_conf
+                show simon_neut
                 s "Oh?"
                 s "Go ahead."
                 d "The thing is, I found some of her old notes on her computer. They were kind of... unnerving."
                 d "There was also a message she wanted to send to Matthew right before she quit I think."
+                hide simon_neut
+                show simon_conc
                 s "You found what?"
                 d "Yeah. In the message she was requesting time off from work."
                 s "..."
@@ -2339,21 +2624,33 @@ label start:
                 d "Yeah. You seem surprised."
                 s "Well yes. That's the first I've heard of it."
                 d "Matthew never mentioned anything to you?"
+                hide simon_conc
+                show simon_conf
                 s "No. I'd remember something like that."
                 s "I really should have taken a closer look before..."
+                hide simon_conf
+                show simon_neut
                 s "I'm sorry."
                 d "Do you think Matt knows why she quit?"
                 s "I know she went to talk to him the day before. But he never said anything about such a request."
+                hide simon_neut
+                show simon_conf
                 s "He never told me anything about their conversation at all actually. Said it was private."
                 s "I don't get it. She should have come to me first. What went wrong?"
                 d "I'm sure she had a reason."
+                hide simon_conf
+                show simon_neut
                 s "Oh sorry. Did I say that out loud?"
                 s "It's just so unusual for her."
+                hide simon_neut
+                show simon_conc
                 s "If she'd wanted time off I'd have been glad to negotiate the terms with her."
                 s "She was one of the most hardworking members on our team. Of course I'd have given her time off."
                 s "Are you sure that's what you read?"
                 d "Pretty sure yes. But I don't think she ever sent it."
                 d "I just thought, since you mentioned she went to talk to Matt, he knew about her request."
+                hide simon_conc
+                show simon_neut
                 s "Hmm. Possible."
                 s "Did she write why she wanted time off?"
                 d "There was something about someone making her uncomfortable."
@@ -2362,8 +2659,12 @@ label start:
                 d "No. It was really vague. I don't think she wanted Matthew to know who it was."
                 s "I'll go talk to him about it."
                 s "If he knows something about why she quit so suddenly or where she went then I should know about it as well."
+                hide simon_neut
+                show simon_conf
                 s "I'm a bit shocked he didn't tell me."
                 d "Yeah, I don't know why he wouldn't."
+                hide simon_conf
+                show simon_happy
                 s "Thank you for letting me know!"
                 s "I'll have to confront him about it. I think he's here too tonight."
                 d "Of course."
@@ -2376,10 +2677,12 @@ label start:
                     s "Take it. I'll go talk to Matthew while you're busy."
                     d "Thanks!"
                     "Click"
+                    show phone_p
                     d "Destiny Sullivan. Who is this?"
                     o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
                     d "One second please."
                     scene bg_office_hallway
+                    show a_day3_ignorance
                     d "So, you were saying?"
                     o "Yes. Sorry for disturbing you madam."
                     o "But we felt it was necessary to inform that a suspicious individual has been spotted wandering around your apartment today."
@@ -2423,6 +2726,7 @@ label start:
                     o "We will likely have to call you again. But until then, goodbye miss Sullivan."
                     d "Goodbye officer Rogan."
                     "Click"
+                    hide phone_p
                     d_t "He was there again!"
                     d_t "He was at my apartment again!"
                     d_t "The knocking was real."
@@ -2436,7 +2740,8 @@ label start:
                     d_t "Will the message to Matt and the drawings really be able to help them?"
                     d_t "I hope so. I can't really do anything else right now."
                     d_t "What's left for today?"
-                    #look at achievements
+                    hide a_day3_ignorance
+                    show a_day3_ignorance_b
                     d_t "I think this call must've been the hands up."
                     d_t "So that means..."
                     d_t "Only the where is Waldo one is left."
@@ -2449,17 +2754,22 @@ label start:
                     d_t "That doesn't really make my sample size that much smaller now that I think about it."
                     d_t "Oh well it's worth keeping in mind."
                     d_t "I should go back in."
+                    hide a_day3_ignorance_b
                     jump mattconvop
                 else: 
+                    hide simon_happy
+                    show simon_neut
                     s "If you'll excuse me I think I just saw him over there."
                     d "Good luck!"
                     d_t "I need a moment away from these people."
                     scene bg_office_hallway
+                    show a_day3_ignorance
                     d_t "Much better."
                     d_t "Jeez I hate crowds."
                     d_t "Oh! Now that I have a moment to myself."
                     d_t "What's left for today?"
-                    #look at achievements
+                    hide a_day3_ignorance
+                    show a_day3_ignorance_b
                     d_t "Well the ignorance was definitely bliss."
                     d_t "Ouch. But after that?"
                     d_t "Nothing police related has happened yet. Is this really just the party then?"
@@ -2480,67 +2790,106 @@ label start:
 
             label mattconvo:
                 scene bg_office_cafeteria
+                show a_day3_ignorance
+                show matt_neut
                 m "Well if it isn't miss Sullivan."
                 d "Oh. E- Evening Matthew."
                 m "{i}Evening.{/i} I heard you settled in fine in your new position."
                 d "Uhm. Yeah I have. Simon gave me Kai's old desk."
+                hide matt_neut
+                show matt_mad
                 m "That much is apparent."
                 d "Did. Ehm, Simon come to talk to you about her?"
+                hide matt_mad
+                show matt_conf
                 m "Just now? Yes."
+                hide matt_conf
+                show matt_neut
                 m "Not that that's any of your business. Thank you for that."
                 d "But her message to you-"
+                hide matt_neut
+                show matt_mad
                 m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such important manners?"
                 d "What?"
                 m "I don't know what you are talking about, but the situation with Kai is something between Simon and me."
                 m "I don't know what motivated him to interrogate me again about the conversation we had just before she quit. Because that's behind us now. I thought it was done the first time it came up."
                 m "But since you're just there to fill her place I don't know why you should be concerned with any of it."
                 d "Sorry. I just-"
+                hide matt_mad
+                show matt_conf
                 m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know?"
+                hide matt_conf
+                show matt_mad
                 m "Has it ever occurred to you that some things are not meant to be read by others?"
                 m "It seems you two really similar. Only difference was that Kai knew when to be professional." 
+                hide matt_mad
+                show matt_conf
                 m "Trying to make a good first impression are we? That does not excuse you making up stories and throwing dirt on my name."
                 m "I don't know why Simon didn't correct you on your unacceptable behavior."
+                hide matt_conf
+                show matt_neut
                 m "I can somewhat understand his frustration about her coming to talk to me instead of him. But I thought we settled that. You should leave your nose out of it."
                 d "I-"
                 m "If you were still under my supervision snooping in others personal data would not slide."
                 d "I wasn't trying to. I- I was just looking for more information about the current project."
                 d "I didn't think this would turn into such a big thing."
                 m "Of course you didn't."
+                hide matt_neut
+                show matt_mad
                 m "That seems to be a reoccurring theme with you."
                 m "And don't think I've forgotten about our little mishap."
                 m "If I hear about one more action against my name. You'd better be sure the consequences will be grave."
+                hide matt_mad
+                show matt_neut
                 m "If you would excuse me. I would like to preserve my nerves tonight and grab a bite to eat."
                 m "{i}For which I will definitely not need your help.{/i}"
+                hide matt_neut
                 menu:
                     "Leave and join Gabe":
+                        show gabe_neut
                         g "Jeez what was that? First Simon now you?"
                         g "Matt's on a killing spree tonight."
                         d "Yeah..."
                         d "Something's strange about this whole situation."
                         g "Really? What's up?"
                         d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
+                        hide gabe_neut
+                        show gabe_conf
                         g "Yeah what about it?"
                         d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it."
                         g "She wrote one directly to Matt?"
+                        hide gabe_conf
+                        show gabe_neut
                         g "That's some nerves!"
                         d "Yeah. But the weird thing is Matt is denying ever having known about any of that even though she went to talk to him right before she quit."
+                        hide gabe_neut
+                        show gabe_conf
                         g "Wait they talked?"
                         d "Yep."
                         g "She must have changed her mind then."
                         d "Maybe..."
+                        hide gabe_conf
+                        show gabe_conc
                         g "Simon seemed stressed too though. What was his problem with Matt?"
                         d "Really?"
                         g "Yeah. After they talked he stormed off into the hallway."
                         d "Well, he also went to Matt to ask about that message. But I think in the end he was more interested in what they actually talked about that day."
+                        hide gabe_conc
+                        show gabe_conf
                         g "Why would he get so worked up about that?"
                         d "I don't know. I guess he thought she should have told him first. But it didn't look like it bothered him that much when I told him about it."
                         d "Maybe he told him something but I'm not sure. Must be something between him and Matt I guess."
+                        hide gabe_conf
+                        show gabe_happy
                         g "It's probably some form of rivalry."
                         g "Who knows, maybe he secretly wants Matts position and doesn't like people choosing Matt over him."
                         d "Oh shut up, he's not like that at all."
+                        hide gabe_happy
+                        show gabe_neut
                         d "Besides. If anyone chose to talk to Matt over me I'd be pretty offended too."
                         g "Want to go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk running into him again."
+                        hide gabe_neut
                         if call_police==True:
                             jump simonconvop
                         else:
@@ -2549,37 +2898,58 @@ label start:
 
                     "Press on":
                         d "Did you even get a message form Kai?"
+                        hide matt_neut
+                        show matt_conf
                         m "Excuse me?"
                         d "Did Kai ever ask for time off?"
+                        hide matt_conf
+                        show matt_neut
                         m "Neither did I get a message from Kai nor do I know of her ever asking for time off."
                         m "She came to me on the day that she quit saying that she didn't want to work here anymore. And that I should wait to tell Simon until the next day."
                         m "Whatever sentimental messages she wrote on her computer, I never saw any. All I did was do my job."
+                        hide mat_neut
+                        show matt_mad
                         m "I don't know why you are both now accusing me of having withheld important information. But like I already told Simon she had no obligation to inform him in the first place. And neither did I."
                         d "Oh."
                         m "I'll be going now thank you."
                         d "..."
+                        hide matt_mad
+                        show gabe_neut
                         #goes over to gabe
                         g "Jeez what was that? First Simon now you?"
                         g "Matt's on a killing spree tonight."
                         d "Yeah..."
                         d "Something's strange about this whole situation."
+                        hide gabe_neut
+                        show gabe_conf
                         g "Really? What's up?"
                         d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
+                        hide gabe_conf
+                        show gabe_neut
                         g "Yeah what about it?"
                         d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it"
+                        hide gabe_neut
+                        show gabe_conf
                         g "She wrote one directly to Matt?"
                         g "That's some nerves!"
                         d "Yeah. But the weird thing is Matt is saying she never mentioned any of that."
+                        hide gabe_conf
+                        show gabe_conc
                         g "Wait they talked?"
                         d "Yep. She went to go talk to him before she quit but it seems like he doesn't want anyone to know what they actually talked about."
                         g "That is weird."
                         d "He says we're accusing him of something, but he's the one making such a big deal out of us asking him."
                         d "All I wanted to know was if she'd sent the message."
+                        hide gabe_conc
+                        show gabe_neut
                         g "Well, I wouldn't put it past Matt to take you two both asking him about something he doesn't know as a personal offence. But I admit, this is a little extreme even for him."
                         d "Yeah..."
+                        hide gabe_neut
+                        show gabe_happy
                         g "Hey! You know what will cheer you up?"
                         g "Let's go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk running into him again."
+                        hide gabe_happy
                         if call_police==True:
                             jump simonconvop
                         else:
@@ -2587,13 +2957,22 @@ label start:
                         
 
             label simonconvo:
+                show simon_neut
                 s "Ah, Destiny! I'm glad I caught you again tonight."
+                hide simon_neut
+                show simon_conc
                 s "Is something the matter? You look tense."
                 d "Don't worry it's nothing. I'm just a little exhausted that's all."
+                hide simon_conc
+                show simon_neut
                 s "Had a long day huh?"
                 d "Yeah. I can't wait to just get home and relax."
+                hide simon_neut
+                show simon_conf
                 s "You live on Parker-street right?"
                 d "Oh! Yeah we talked about it briefly at the beginning of the week, right. I'm surprised you remembered that."
+                hide simon_conf
+                show simon_happy
                 s "It's a lovely area. I think I looked at some apartments there too once. That's why I was so interested."
                 s "Isn't that the one with the really bad bus connection?"
                 d "Well, it's not that bad. I just have to walk to the next bus stop from the office since my bus doesn't go all the way here."
