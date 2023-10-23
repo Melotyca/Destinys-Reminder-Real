@@ -54,6 +54,7 @@ label start:
                 # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
                 d_t "Oh come on. Just let me sleep."  
                 show phone_day1_1
+                with moveinbottom
                 d_t "Why can't it be like 4am."
                 d_t "Pleaseee... If I stay in bed now, I'll be late."
                 d_t "I guess I've got no other choice."  
@@ -83,6 +84,7 @@ label start:
 
                 hide a_day1
                 show a_day1_b
+                with Dissolve
                 d  "Heh. Heh he..."  
                 d_t "A display. Really?"  
                 d_t "Oh god. No more games before bed."
@@ -225,6 +227,9 @@ label start:
                 g "Before we actually end up being late." 
                 jump Work1 
             label Work1:
+                scene later
+                with Dissolve(1.0)
+                pause 2
                 scene bg_office_computer
                 show a_day1
                 d_t "And yet another conspiracy theory..."
@@ -435,6 +440,9 @@ label start:
                 m "How-"
                 d "I'm sorry I have to go!"
             label printer1:
+                scene later
+                with Dissolve(1.0)
+                pause 2
                 scene bg_office_computer
                 show a_day1
                 #later during the day
@@ -888,6 +896,9 @@ label start:
                 d_t "Ughh. Time to get ready for work I guess."
                 jump work2
             label work2:
+                scene later
+                with Dissolve(1.0)
+                pause 2
                 scene bg_office_computer
                 show a_day2
                 d_t "Okay! I'm almost done with this darn poster!"
@@ -903,7 +914,11 @@ label start:
                 d_t "Who knows maybe this will all clear up today."
                 d "No more procrastinating Destiny!"
                 d "Time to get this all out of my head and this project done!"
-                #htransitiones to after she's done
+                scene later
+                with Dissolve(1.0)
+                pause 2
+                scene bg_office_computer
+                show a_day2
                 d_t "Phew that's it I think. It's not getting better than this."
                 d_t "Alright! Time to print this baby and drop it off over in the meeting room."
                 d_t "Oh shoot! It's already 5:00PM. Darn. Time really flew by me today."
@@ -1323,12 +1338,14 @@ label start:
                 d_t "Alright time to drop this poster off at the conference room!"
                 jump running
             label running:
-                scene bg_black
+                scene later
+                with Dissolve(1.0)
+                pause 2
                 scene bg_office_computer
                 show a_day2
                 d_t "Whew. Glad I got that done now. I feel liberated. And I dropped it off on time too for once!"
                 d_t "Oh yeah, time. What time is it?" 
-                d_t "6:30PM already?! Wow! I really thought I'd be done earlier today."
+                d_t "6:15PM already?! Wow! I really thought I'd be done earlier today."
                 if dinner_plans== True:
                     d_t "Oh no! I have to hurry. I almost forgot."
                     d_t "I told Gabe he could be at my place at 7."
@@ -1464,9 +1481,8 @@ label start:
                 d "Tell me about it. I always hear them screaming and running around when I get back from work."
                 d "Hey! The soup's almost done! Want to hand me those spring onions you chopped?"
                 g "Here. I'll go set the table."
-                #skips to after they've eaten.
-                
-    
+                scene bg_black
+                with Dissolve(1.0)
                 jump day3
             label dinnerfor2cat:
                 scene bg_d_kitchen
@@ -1749,7 +1765,9 @@ label start:
             g "Alright be right there."
             "Click"
             hide phone_g
-            #A couple minutes later
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_d_kitchen
             show a_day3
             show gabe_conc
@@ -2093,6 +2111,9 @@ label start:
                 pass
             jump work3
         label work3:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_hallway
             show a_day3
             show simon_neut
@@ -2436,6 +2457,9 @@ label start:
                 jump afternoon3
 
             label afternoon3:
+                scene later
+                with Dissolve(1.0)
+                pause 1
                 scene bg_office_hallway
                 show a_day3_ignorance
                 show gabe_neut
@@ -2471,6 +2495,9 @@ label start:
 
            
         label party:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_cafeteria
             show a_day3_ignorance
             if open_door == True and call_police == False:
@@ -2937,6 +2964,10 @@ label start:
                         m "I'll be going now thank you."
                         d "..."
                         hide matt_mad
+                        scene bg_black
+                        pause 0.5
+                        scene bg_office_cafeteria
+                        show a_day3_ignorance
                         show gabe_neut
                         #goes over to gabe
                         g "Jeez what was that? First Simon now you?"
@@ -3080,6 +3111,7 @@ label start:
                 g "I'll go check in the hallway."
                 d "Thank you, Gabe"
                 scene bg_black
+                pause 1
                 #couple minutes later
                 g "Found it!"
                 scene bg_office_cafeteria
@@ -3100,6 +3132,9 @@ label start:
 
         label night:
         label catmissing:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_d_corridor
             show a_day3_ignorance
             show gabe_neut
@@ -3137,6 +3172,7 @@ label start:
             d "Where-"
             d "AHHH!"
             scene bg_black
+            with vpunch
             "Thud"
             d "MHHHM"
             s_k "Stop squealing you little brat."
@@ -3377,6 +3413,9 @@ label start:
                     "Start the day":
                         jump work4track
         label work4track: 
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_hallway
             show a_day4
             show simon_happy
@@ -3543,6 +3582,9 @@ label start:
             
 
         label trackmatt:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #later that morning
             scene bg_office_hallway
             show a_day4
@@ -3607,6 +3649,9 @@ label start:
             jump work4
 
         label tracksimon:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #later that morning
             scene bg_office_hallway
             show a_day4
@@ -3666,6 +3711,9 @@ label start:
             jump work4
             
         label trackgabe:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_hallway
             d "Gabe?"
             g "Over here!"
@@ -3775,6 +3823,9 @@ label start:
             else:
                 pass
             #later that day
+            scene later
+            with Dissolve(1.0)
+            pause 2
             d_t "It's getting late..."
             if track_who == 0:
                 d_t "I'd usually leave in about an hour to catch my bus. But it's possible Matt knows that and will still try to get me on my way home"
@@ -3798,6 +3849,9 @@ label start:
         
 
         label work4doubt:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_hallway
             show a_day4
             show simon_happy
@@ -3871,6 +3925,9 @@ label start:
             #Achievements start to glitch
 
         label night4stalk:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #Later that day
             show gabe_neut
             d "Gabe! There you are!"
@@ -3915,6 +3972,8 @@ label start:
             d "Thank you, Gabriel..."
             g "Don't worry about it. I don't mind at all. Besides, I'd be scared too if those things happened to me."
             g "Now let's go."
+            scene bg_black
+            pause 0.5
             scene bg_d_corridor
             show a_day4
             show gabe_neut
@@ -3962,6 +4021,7 @@ label start:
                 d_t "There's no breeze-"
             d "AHHH!"
             scene bg_black
+            with vpunch
             "Thud"
             d "MHHHM"
             s_k "Stop squealing you little brat."
@@ -3972,6 +4032,9 @@ label start:
             jump worst
         
         label night4:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_d_kitchen
             show a_day4
             d_t "That worked like a charm."
@@ -4173,6 +4236,9 @@ label start:
 
 
         label work5:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_hallway
             show a_day5
             show simon_neut
@@ -4237,6 +4303,9 @@ label start:
                 jump trickgabe
                 
         label trickgabe:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #Later that day
             scene bg_office_hallway
             show a_day5
@@ -4271,8 +4340,12 @@ label start:
 
 
         label trickmatt:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #Later that day
             scene bg_office_hallway
+            show a_day5
             d "Uhm. Matthew?"
             m "Again? What is it this time? Can't make it on that day?"
             d "No, no it's nothing like that. I actually wanted to ask if it's possible I come here to work tomorrow?"
@@ -4304,6 +4377,11 @@ label start:
 
             
         label tricksimon:
+            scene later
+            with Dissolve(1.0)
+            pause 2
+            scene bg_office_hallway
+            show a_day5
             d "Hey, Simon. You got a minute?"
             s "Yeah sure what's up?"
             d "I started on that idea I showed you yesterday. I'll be on it for a while though."
@@ -4326,6 +4404,7 @@ label start:
         label allies:
             if call_police==True:
                 scene bg_office_computer_kai
+                show a_day5
                 d_t "I have everything I need now. The plan is set up."
                 d_t "I should try to get officer Rogan on my side now."
                 d_t "I'm sure that if I tell him everything that's happened and why I didn't tell him right away he'll help me."
@@ -4336,6 +4415,11 @@ label start:
                 "Ring"
                 o "Miss Sullivan! This is officer Rogan speaking. How may I assist you?"
                 d "I have something I need to tell you..."
+                scene later
+                with Dissolve(1.0)
+                pause 2
+                scene bg_office_computer_kai
+                show a_day5
                 #after explaining everything    
                 o "I see. So you felt you had to act this way to ensure the location of miss Amari could be found..."
                 d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's disappearence and where he is keeping her."
@@ -4376,15 +4460,22 @@ label start:
                     d_t "I hope he believes me."
                     d_t "I'm going to sound absolutely crazy. But I have to at least try!"
                     scene bg_office_hallway
+                    show a_day5
                     d "Gabe? Can I talk to you for a minute. It's important."
                     g "What is it? You look worried."
                     d "Can we go somewhere else to talk.? Somewhere more private."
                     g "Uhm, Y-yeah. Sure."
                     scene bg_office_printer
+                    show a_day5
                     g "What's going on. What do you want to talk to me about?"
                     d "I have something to admit to you."
                     d "About what's been happening this week. With Kai and also some other things..."
-                    #after explaining everything  
+                    #after explaining everything 
+                    scene later
+                    with Dissolve(1.0)
+                    pause 2 
+                    scene bg_office_printer
+                    show a_day5
                     g "Ok ok wait!"
                     g "You have been seeing this floating screen the entire week. Telling you what is going to happen on that day."
                     g "And you've been seeing Kai in your dreams telling you she was kidnapped and helping you figure out who it is?"
@@ -4469,6 +4560,7 @@ label start:
                         d "See you later Gabe."
                         g "See you Destiny..."
                         scene bg_office_computer_kai
+                        show a_day5
                         d_t "I have to do this on my own."
                         d_t "That was so stupid!"
                         d_t "I should have known he wouldn't believe me!"
@@ -4481,6 +4573,7 @@ label start:
         label trustgabe:
             scene bg_office_computer_kai
             #check phone
+            show phone_day5_1
             d_t "It's about time I prepare to go..."
             d_t "4:30PM. Yeah, it's go time."
             d_t "I'll text gabe I'm going now"
@@ -4499,6 +4592,9 @@ label start:
                 jump apartmentpolice
 
         label trustnoone:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_cafeteria
             #at lunch
             d_t "I need to slip my phone to someone that will stay here for a little longer than I'd usually work."
@@ -4510,6 +4606,9 @@ label start:
             d_t "I'll slip him the phone and then go back to my desk. Leaving now would be too suspicious. I can't risk getting caught not being here while my phone is here."
             d_t "I'll have to wait until the afternoon to start the plan."
             #later that day
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_office_computer_kai
             #check computer
             d_t "It's about time I prepare to go..."
@@ -4530,6 +4629,9 @@ label start:
         
         
         label storagealone:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_ally
             d_t "It's back here."
             d_t "Jeez this place is even creepier than the first time..."
@@ -4574,6 +4676,8 @@ label start:
             d "They can make sure you're safe there."
             d "They can even get the police involved. But first we have to get you somewhere safe."
             d "Let's go!"
+            scene bg_black
+            pause 0.5
             #after calling a cab
             scene bg_street
             d "I'm sorry Kai they said I can't ride along. But I've already called a cab and I'll be there with you soon. I promise."
@@ -4589,6 +4693,7 @@ label start:
             d_t "I'll be there soon."
             d_t "Don't worr-"
             scene bg_black
+            with vpunch
             "Wrap"
             d "MHHHM"
             s_k "{i}Stop squealing you little brat.{/i} We can handle this nice and quiet."
@@ -4602,6 +4707,9 @@ label start:
             jump bad
 
         label storagegabe:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene bg_ally
             d_t "It's back here."
             d_t "Jeez this place is even creepier than the first time..."
@@ -4647,6 +4755,8 @@ label start:
             d "They can make sure you're safe there."
             d "They can even get the police involved. But first we have to get you somewhere safe."
             d "Let's go!"
+            scene bg_black
+            pause 0.5
             #after calling a cab
             scene bg_street
             "Ring"
@@ -4694,6 +4804,9 @@ label start:
             jump best
             
         label storagepolice:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #at the scene with the cops.
             scene bg_ally
             "*Police radio noises*"
@@ -4752,6 +4865,9 @@ label start:
             jump best
 
         label apartmentalone:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene street
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
@@ -4791,6 +4907,7 @@ label start:
             d "I don't know where he took her."
             d "I-"
             scene bg_black
+            with vpunch
             "Wrap"
             d "MHHHM"
             s_k "{i}Stop squealing you little brat.{/i} We can handle this nice and quiet."
@@ -4804,6 +4921,9 @@ label start:
             jump worst
 
         label apartmentpolice:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #at the scene with the cops.
             scene bg_street
             "*Police radio noises*"
@@ -4865,6 +4985,9 @@ label start:
             jump good
 
         label studioalone:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene street
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
@@ -4904,6 +5027,7 @@ label start:
             d "I don't know where he took her."
             d "I-"
             scene bg_black
+            with vpunch
             "Wrap"
             d "MHHHM"
             s_k "{i}Stop squealing you little brat.{/i} We can handle this nice and quiet."
@@ -4917,7 +5041,9 @@ label start:
             jump worst
 
         label studiogabe:
-
+            scene later
+            with Dissolve(1.0)
+            pause 2
             scene street
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
@@ -5002,6 +5128,9 @@ label start:
             jump good
 
         label studiopolice:
+            scene later
+            with Dissolve(1.0)
+            pause 2
             #at the scene with the cops.
             scene bg_street
             "*Police radio noises*"
