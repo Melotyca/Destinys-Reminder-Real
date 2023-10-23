@@ -1,17 +1,17 @@
 ﻿#Destinys Reminder
 #Fonts
 #Characters
-define d = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5", what_size=38)
-define d_t = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb", what_size=38)
-define g = Character("Gabriel",who_font="Hey Comic.ttf", color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b",what_size=33)
-define m = Character("Matthew",who_font="DraftingMono-Bold.otf", color="#1346a0",what_font="DraftingMono-Bold.otf", what_color="#4c77c1",what_size=33)
-define s = Character("Simon",who_font="coolvetica rg.otf", color= "#b01d1d",what_font="coolvetica rg.otf", what_color="#c64e48",what_size=35)
-define x = Character("?",who_font="KGRedHands.ttf",who_size=45, color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5",what_size=30 )
-define k = Character("Kai",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b",what_size=33)
-define c = Character("Cat",who_font="gabriele-bad.ttf", color="#444444",what_font="gabriele-bad.ttf", what_color="#7b7b7b",what_size=33 )
-define c_n = Character("[catname]",who_font="gabriele-bad.ttf", color="#673b05",what_font="gabriele-bad.ttf", what_color="#aa811a",what_size=33 )
-define o = Character("Officer R.",who_font="texgyrecursor-bold.otf", color="#001f55", what_font="texgyrecursor-bold.otf", what_color="#315089",what_size=33)
-define s_k = Character("-",who_font="coolvetica rg.otf", color= "#6c4848",what_font="coolvetica rg.otf", what_color="#9f706e",what_size=35)
+define d = Character("Destiny",color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5", what_size=38)
+define d_t = Character("Destiny",color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb", what_size=38)
+define g = Character("Gabriel",color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b",what_size=33)
+define m = Character("Matthew", color="#1346a0",what_font="DraftingMono-Bold.otf", what_color="#4c77c1",what_size=33)
+define s = Character("Simon",color= "#b01d1d",what_font="coolvetica rg.otf", what_color="#c64e48",what_size=35)
+define x = Character("?",color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5",what_size=30 )
+define k = Character("Kai",color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b",what_size=33)
+define c = Character("Cat",color="#444444",what_font="gabriele-bad.ttf", what_color="#7b7b7b",what_size=33 )
+define c_n = Character("[catname]",color="#673b05",what_font="gabriele-bad.ttf", what_color="#aa811a",what_size=33 )
+define o = Character("Officer R.",color="#001f55", what_font="texgyrecursor-bold.otf", what_color="#315089",what_size=33)
+define s_k = Character("-",color= "#6c4848",what_font="coolvetica rg.otf", what_color="#9f706e",what_size=35)
 
 #Variables
 default fix_printer = False
