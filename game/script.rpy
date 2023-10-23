@@ -30,6 +30,7 @@ label start:
         label day1:
             label dream1:
                 scene bg_black
+                pause 1
                 scene dream1
                 with Dissolve(1.0)
                 x "Destiny..."
