@@ -68,6 +68,7 @@ label start:
                 #(phone appears, time now 07:30)
                 #unlock)   
                 show phone_day1_2
+                with moveinbottom
                 #(home screen, a couple apps, no notifications waits a little). 
                 #(gets a message from Gabriel (Omw! Hope you didn’t oversleep again ;))). 
                 d_t "Shoot! I totally forgot about time!"
@@ -84,7 +85,7 @@ label start:
 
                 hide a_day1
                 show a_day1_b
-                with Dissolve
+                with dissolve
                 d  "Heh. Heh he..."  
                 d_t "A display. Really?"  
                 d_t "Oh god. No more games before bed."
@@ -788,6 +789,7 @@ label start:
                 d_t "Arrgh. Why can't I remember. My head feels like it's spinning."
                 d_t "I have to go get something to drink. What time is it even?"
                 show phone_day2
+                with moveinbottom
                 d_t "Whoa. That's unusually early. No wonder my head feels like a truck ran over it."
                 d_t "So much for getting more sleep today. I still have almost an hour until I have to get up."
                 d_t "But I doubt I'll be able to ignore this headache and go back to sleep. I have to go get a glass of water"
@@ -799,6 +801,7 @@ label start:
                 d_t "Hold on! It's changed. There's different achievements today."
                 hide a_day2
                 show a_day2_b
+                with dissolve
                 d_t "This can't just be from over working myself anymore."
                 d_t "There's no way fatigue can cause something like this."
                 d_t "That screen was there the whole time yesterday too. That's not even the worst of it." 
@@ -1679,6 +1682,7 @@ label start:
                 d "The achievements!"
                 hide a_day3
                 show a_day3_b
+                with dissolve
                 d_t "\"Make the right call\""
                 d_t "The girl in my dream said I should get help. Does that mean call for help?"
                 d_t "Are these achievements and those strange dreams connected?"
@@ -1724,6 +1728,7 @@ label start:
                 d_t "Let's see here."
                 hide a_day3
                 show a_day3_b
+                with dissolve
                 d_t "\"Make the right call\""
                 d_t "Well I was planning on calling Gabriel anyways. Sounds like that's exactly the right idea!"
                 hide a_day3_b
@@ -1732,6 +1737,7 @@ label start:
         label callgabedinner:
             "Click"
             show phone_g
+            with moveinbottom
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1758,6 +1764,7 @@ label start:
             $ gabe_hints + 1
             "Click"
             show phone_g
+            with moveinbottom
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1943,6 +1950,7 @@ label start:
         label callpolice:
             "Click"
             show phone_p
+            with moveinbottom
             o "Hello? Officer Rogan speaking. How may I help you today?"
             d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I'm very sorry to bother you with something like this."
             d "But I have the feeling someone might have followed me to my apartment yesterday."
@@ -1999,6 +2007,7 @@ label start:
             d_t "One more look at today's achievements..."
             hide a_day3
             show a_day3_b
+            with dissolve
             d_t "I can't avoid these can I?"
             d_t "The theory's been thoroughly tested by now I'd say."
             d_t "I didn't have too much time to look at them the past two days though."
@@ -2216,7 +2225,7 @@ label start:
                 else:
                     menu:
                         "Folder":
-                            $ deskfolder_c = True
+                            $ deskfold_c = True
                             jump deskfold
                         "Computer":
                             $ deskcomp_c = True
@@ -2412,7 +2421,7 @@ label start:
                 
 
             label donewithdesk:
-                if dinner_plans == true:
+                if dinner_plans == True:
                     d_t "I can't get the thought out of my head that she didn't just quit."
                     d_t "I feel kind of uneasy sitting at this girl's desk. Something's telling me it's not safe here..."
                     d_t "Was she stalked?"
@@ -2422,7 +2431,7 @@ label start:
                     d_t "I have to be a more careful. That knocking that we heard yesterday. Gabe said no one was there."
                     d_t "But the fact that Kai hasn't shown up and lived really close to me is giving me the shivers."
                     d_t "Maybe this whole thing is connected somehow."
-                elif call_police == true:
+                elif call_police == True:
                     d_t "Someone here wanted to hurt Kai."
                     d_t "It doesn't feel right sitting at this her desk. She disappeared and now I'm taking her place."
                     d_t "I'm next."
@@ -2736,6 +2745,7 @@ label start:
                     d "Thanks!"
                     "Click"
                     show phone_p
+                    with moveinbottom
                     d "Destiny Sullivan. Who is this?"
                     o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
                     d "One second please."
@@ -2801,6 +2811,7 @@ label start:
                     d_t "What's left for today?"
                     hide a_day3_ignorance
                     show a_day3_ignorance_b
+                    with dissolve
                     d_t "I think this call must've been the hands up."
                     d_t "So that means..."
                     d_t "Only the where is Waldo one is left."
@@ -2829,6 +2840,7 @@ label start:
                     d_t "What's left for today?"
                     hide a_day3_ignorance
                     show a_day3_ignorance_b
+                    with dissolve
                     d_t "Well the ignorance was definitely bliss."
                     d_t "Ouch. But after that?"
                     d_t "Nothing police related has happened yet. Is this really just the party then?"
@@ -4064,6 +4076,7 @@ label start:
             d_t "He's there! I have to see where he went."
             #Check screen
             show phone_track
+            with moveinbottom
             if track_who==0:
                 d_t "That's right behind the office!"
                 d_t "She was so close the entire time?"
@@ -4150,6 +4163,7 @@ label start:
             d_t "Thank you, Kai."
             hide a_day5
             show a_day5_b
+            with dissolve
             d_t "With your help I'll get you out of there today."
             #look at achievements
             d_t "\"This is it\""
@@ -4601,6 +4615,7 @@ label start:
             scene bg_office_computer_kai
             #check phone
             show phone_day5_1
+            with moveinbottom
             d_t "It's about time I prepare to go..."
             d_t "4:30PM. Yeah, it's go time."
             d_t "I'll text gabe I'm going now"
