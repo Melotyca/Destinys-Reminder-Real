@@ -229,6 +229,7 @@ label start:
             label Work1:
                 scene later
                 with Dissolve(1.0)
+                show 0826am
                 pause 2
                 scene bg_office_computer
                 show a_day1
@@ -442,6 +443,7 @@ label start:
             label printer1:
                 scene later
                 with Dissolve(1.0)
+                show 0430pm
                 pause 2
                 scene bg_office_computer
                 show a_day1
@@ -898,6 +900,7 @@ label start:
             label work2:
                 scene later
                 with Dissolve(1.0)
+                show 0848am
                 pause 2
                 scene bg_office_computer
                 show a_day2
@@ -916,6 +919,7 @@ label start:
                 d "Time to get this all out of my head and this project done!"
                 scene later
                 with Dissolve(1.0)
+                show 0502pm
                 pause 2
                 scene bg_office_computer
                 show a_day2
@@ -1340,6 +1344,7 @@ label start:
             label running:
                 scene later
                 with Dissolve(1.0)
+                show 0615pm
                 pause 2
                 scene bg_office_computer
                 show a_day2
@@ -1767,6 +1772,7 @@ label start:
             hide phone_g
             scene later
             with Dissolve(1.0)
+            show 0648am
             pause 2
             scene bg_d_kitchen
             show a_day3
@@ -2113,6 +2119,7 @@ label start:
         label work3:
             scene later
             with Dissolve(1.0)
+            show 0803am
             pause 2
             scene bg_office_hallway
             show a_day3
@@ -2459,7 +2466,9 @@ label start:
             label afternoon3:
                 scene later
                 with Dissolve(1.0)
-                pause 1
+                show 0304pm
+                pause 2
+
                 scene bg_office_hallway
                 show a_day3_ignorance
                 show gabe_neut
@@ -2497,6 +2506,7 @@ label start:
         label party:
             scene later
             with Dissolve(1.0)
+            show 0555pm
             pause 2
             scene bg_office_cafeteria
             show a_day3_ignorance
@@ -3134,6 +3144,7 @@ label start:
         label catmissing:
             scene later
             with Dissolve(1.0)
+            show 0704pm
             pause 2
             scene bg_d_corridor
             show a_day3_ignorance
@@ -3415,6 +3426,7 @@ label start:
         label work4track: 
             scene later
             with Dissolve(1.0)
+            show 0806am
             pause 2
             scene bg_office_hallway
             show a_day4
@@ -3584,6 +3596,7 @@ label start:
         label trackmatt:
             scene later
             with Dissolve(1.0)
+            show 1045am
             pause 2
             #later that morning
             scene bg_office_hallway
@@ -3651,6 +3664,7 @@ label start:
         label tracksimon:
             scene later
             with Dissolve(1.0)
+            show 1045am
             pause 2
             #later that morning
             scene bg_office_hallway
@@ -3713,6 +3727,7 @@ label start:
         label trackgabe:
             scene later
             with Dissolve(1.0)
+            show 1045am
             pause 2
             scene bg_office_hallway
             d "Gabe?"
@@ -3825,6 +3840,7 @@ label start:
             #later that day
             scene later
             with Dissolve(1.0)
+            show 0410pm
             pause 2
             d_t "It's getting late..."
             if track_who == 0:
@@ -3851,6 +3867,7 @@ label start:
         label work4doubt:
             scene later
             with Dissolve(1.0)
+            show 0806am
             pause 2
             scene bg_office_hallway
             show a_day4
@@ -3927,6 +3944,7 @@ label start:
         label night4stalk:
             scene later
             with Dissolve(1.0)
+            show 0457pm
             pause 2
             #Later that day
             show gabe_neut
@@ -4034,6 +4052,7 @@ label start:
         label night4:
             scene later
             with Dissolve(1.0)
+            show 0530pm
             pause 2
             scene bg_d_kitchen
             show a_day4
@@ -4238,6 +4257,7 @@ label start:
         label work5:
             scene later
             with Dissolve(1.0)
+            show 0815am
             pause 2
             scene bg_office_hallway
             show a_day5
@@ -4305,6 +4325,7 @@ label start:
         label trickgabe:
             scene later
             with Dissolve(1.0)
+            show 1112am
             pause 2
             #Later that day
             scene bg_office_hallway
@@ -4342,6 +4363,7 @@ label start:
         label trickmatt:
             scene later
             with Dissolve(1.0)
+            show 1112am
             pause 2
             #Later that day
             scene bg_office_hallway
@@ -4379,6 +4401,7 @@ label start:
         label tricksimon:
             scene later
             with Dissolve(1.0)
+            show 1112am
             pause 2
             scene bg_office_hallway
             show a_day5
@@ -4417,9 +4440,11 @@ label start:
                 d "I have something I need to tell you..."
                 scene later
                 with Dissolve(1.0)
+                show a_explain
                 pause 2
                 scene bg_office_computer_kai
                 show a_day5
+                
                 #after explaining everything    
                 o "I see. So you felt you had to act this way to ensure the location of miss Amari could be found..."
                 d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's disappearence and where he is keeping her."
@@ -4471,8 +4496,10 @@ label start:
                     d "I have something to admit to you."
                     d "About what's been happening this week. With Kai and also some other things..."
                     #after explaining everything 
+            
                     scene later
                     with Dissolve(1.0)
+                    show a_explain
                     pause 2 
                     scene bg_office_printer
                     show a_day5
@@ -4594,6 +4621,7 @@ label start:
         label trustnoone:
             scene later
             with Dissolve(1.0)
+            show 1234pm
             pause 2
             scene bg_office_cafeteria
             #at lunch
@@ -4608,6 +4636,7 @@ label start:
             #later that day
             scene later
             with Dissolve(1.0)
+            show 0428pm
             pause 2
             scene bg_office_computer_kai
             #check computer
@@ -4631,6 +4660,7 @@ label start:
         label storagealone:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             scene bg_ally
             d_t "It's back here."
@@ -4709,6 +4739,7 @@ label start:
         label storagegabe:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             scene bg_ally
             d_t "It's back here."
@@ -4806,6 +4837,7 @@ label start:
         label storagepolice:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             #at the scene with the cops.
             scene bg_ally
@@ -4867,6 +4899,7 @@ label start:
         label apartmentalone:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             scene street
             d_t "It's back here."
@@ -4923,6 +4956,7 @@ label start:
         label apartmentpolice:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             #at the scene with the cops.
             scene bg_street
@@ -4987,6 +5021,7 @@ label start:
         label studioalone:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             scene street
             d_t "It's back here."
@@ -5043,6 +5078,7 @@ label start:
         label studiogabe:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             scene street
             d_t "It's back here."
@@ -5130,6 +5166,7 @@ label start:
         label studiopolice:
             scene later
             with Dissolve(1.0)
+            show 0546pm
             pause 2
             #at the scene with the cops.
             scene bg_street
