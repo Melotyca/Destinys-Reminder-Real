@@ -2685,6 +2685,7 @@ label start:
                     d "One second please."
                     scene bg_office_hallway
                     show a_day3_ignorance
+                    show phone_p
                     d "So, you were saying?"
                     o "Yes. Sorry for disturbing you madam."
                     o "But we felt it was necessary to inform that a suspicious individual has been spotted wandering around your apartment today."
@@ -2788,6 +2789,7 @@ label start:
                     d_t "That doesn't really make my sample size that much smaller now that I think about it."
                     d_t "Oh well it's worth keeping in mind."
                     d_t "I should go back in."
+                    hide a_day3ignorance_b
                     jump mattconvo
 
             label mattconvo:
@@ -3310,8 +3312,6 @@ label start:
                     jump work4doubt
 
             label achievements4:
-                hide a_day4
-                show a_day4_b
                 menu:
                     "You remember me don't you?":
                         d_t "Yeah I do this time..."
@@ -3586,35 +3586,56 @@ label start:
         label tracksimon:
             #later that morning
             scene bg_office_hallway
-            show a_day
+            show a_day4
             "Knock"
             d "Simon?"
+            show simon_neut
             s "Oh! Destiny. What's up. Can I help you with anything?"
             d "Yeah. I actually wanted to ask you what your thoughts would be on an idea I had."
+            hide a_day4
+            show a_day4_now
             d "Can I sit there?"
             s "Sure let me just get my jacket-"
             d "Oh don't worry I'll do it."
             "Rustle"
+            hide a_day4_now
+            show a_day4
             d "There."
             d "So! What I wanted to know is how you think it would look if I combined the designs Kai already made and added onto some of them to create sort of a gradient between our styles?"
+            hide simon_neut
+            show simon_happy
             s "That sounds like a fantastic idea!"
             d "Wait I can just show-"
             d "Oh shoot I forgot."
+            hide simon_happy
+            show simon_conf
             s "?"
             d "I left my phone at home today!"
             s "You did?"
             d "Ah, I can quickly go get the designs if you want."
+            hide simon_conf
+            show simon_neut
             s "..."
             s "Sure."
+            scene bg_black
+            "Rustle"
+            scene bg_office_hallway
+            show a_day4
+            show simon_neut
             #goes to get the designs
             d "Alright. I started on this one already."
+            hide simon_neut
+            show simon_happy
             s "Looks great."
             s "Are you going to keep working on these today?"
             d "That was the plan. I can keep you updated if I make any significant changes."
+            hide simon_happy
+            show simon_neut
             s "Sure, I'm here all day again."
             d "Great! Then I'll probably see you again later."
             s "Of course whenever you need anything."
             scene bg_office_computer_kai
+            show a_day4
             d_t "That was nerve wrecking!"
             d_t "I hope he didn't see I slipped the chip in there when I hung up his jacket..."
             d_t "Now I'll just have to wait and pray everything works as planned."
@@ -3625,27 +3646,45 @@ label start:
             scene bg_office_hallway
             d "Gabe?"
             g "Over here!"
+            show gabe_neut
             g "What's up? Need help with something?"
             d "Kind of haha."
             g "What is it?"
             d "I really need some coffee right now. But I was in such a rush this morning that I forgot I hadn't packed my bag yet this morning..."
             d "I kind of left all of my things including my phone and wallet at home..."
+            hide gabe_neut
+            show gabe_conf
             g "You even forgot your phone?"
+            hide gabe_conf
+            show gabe_happy
             g "Second time in a row. That's a new record!"
             d "I know... Can I maybe borrow a bit of money to go get a coffee? I swear I'll pay you back."
             g "Don't worry about it. Of course!"
+            hide gabe_happy
+            show gabe_neut
+            hide a_day4
+            show a_day4_now
             g "One second. My wallet's in my jacket-"
             d "I got it!"
             "Rustle"
+            hide a_day4_now
+            show a_day4
             d "Thank you so much Gabe."
+            hide gabe_neut
+            show gabe_happy
             g "Any time!"
+            hide gabe_happy
+            show gabe_neut
             g "Do you want to go out to maybe go grab a coffee together again sometime next week?"
             g "I'd have time pretty much any day."
             d "Sure! We can go on Monday if you want."
+            hide gabe_neut
+            show gabe_happy
             g "Sweet! See you around today?"
             d "Probably. Thanks again. See you later Gabe."
             g "See ya!"
             scene bg_office_computer_kai
+            show a_day4
             d_t "That was nerve wrecking!"
             d_t "I hope he didn't see I slipped the chip in there when I took out his wallet..."
             d_t "Now I'll just have to wait and pray everything works as planned."
@@ -3655,8 +3694,10 @@ label start:
 
         label work4:
             scene bg_office_computer_kai
+            show a_day4
             d_t "I can check if the tracker works..."
             #Show tracker screen
+            show comp_track
             "Ping"
             d_t "It works!"
             d_t "That's him. That's where he's at right now!"
@@ -3666,8 +3707,10 @@ label start:
             d_t "I have to act as normal as possible."
             d_t "Might as well just get some work done then."
             d_t "Maybe I can distract myself a little."
+            hide comp_track
             if call_police== True:
                 scene bg_office_hallway
+                show a_day4
                 o "Excuse me Madam."
                 d "!"
                 o "You're miss Sullivan I presume. I'm officer Rogan. We talked yesterday on the phone."
@@ -3733,15 +3776,20 @@ label start:
 
         label work4doubt:
             scene bg_office_hallway
+            show a_day4
+            show simon_happy
             s "Good morning Destiny!"
             s "Here early again I see."
             d "Morning Simon."
             d "Yeah, I wanted to- ehm have enough time to look over what I did yesterday before we talk about it."
+            hide simon_happy
+            show simon_neut
             s "Oh, sure"
             s "Take your time. Just come over to my office once you're ready."
             d "Yes. See you then."
             s "See you later Destiny."
             scene bg_office_computer_kai
+            show a_day4
             d_t "I just have to get through this."
             d_t "Nothing bad is going to happen. I'm safe here"
             if call_police== Tue:
@@ -3779,15 +3827,20 @@ label start:
             s "Destiny?"
             d "Ah!"
             "Crash"
+            show simon_conc
             d "Sorry!"
             s "No I'm sorry! I didn't mean to startle you like that! Are you alright?"
             d "Oh! Simon? Yeah I'm ok."
             d "What is it?"
+            hide simon_conc
+            show simon_neut
             s "Well, I just wanted to ask if you could maybe send me what's left of previous projects on Kai's computer. I want to be able to archive and date all of it correctly."
             d "S-sure I can do that."
             d "Right now?"
             s "If you don't mind. That would be great thank you."
             d "Of course. I'll send it in a minute."
+            hide simon_neut
+            show simon_happy
             s "Fantastic. Thank you, Destiny."
             d "Any time..."
             d_t "I have to get my act together. No one's here to hurt me. This is still the same office I've worked at for the past year."
@@ -3796,15 +3849,22 @@ label start:
 
         label night4stalk:
             #Later that day
+            show gabe_neut
             d "Gabe! There you are!"
             d "Let's go."
             g "Whoa, why in such a hurry all of a sudden?"
             d "Today was awful. I just want to go home..."
+            hide gabe_neut
+            show gabe_conc
             g "What happened? Is there a problem with the project?"
             d "No, nothing like that."
             g "Oh?"
+            hide gabe_conc
+            show gabe_conf
             g "What's the matter then?"
             d "I don't feel safe here."
+            hide gabe_conf
+            show gabe_conc
             d "Those things I saw on her computer. They were all gone this morning."
             d "And no one knowing where she is..."
             d "It just doesn't sit right with me."
@@ -3812,14 +3872,20 @@ label start:
             d "She said someone from work was pressuring her and now these strange things are starting to happen to me too."
             d "I think I should just go home."
             d "I'm scared someone here wants to do the same things to me that they did to her."
+            hide gabe_conc
+            show gabe_conf
             g "What they did to her? What do you think happened?"
             g "Do you think she was kidnapped?"
             d "I don't know!"
+            hide gabe_conf
+            show gabe_conc
             g "Oh Destiny, I'm sorry."
             g "Why didn't you tell me about this sooner. If you don't feel comfortable being here, then there's no need to stay."
             g "It's just work. You can take a day off if that's what you need."
             g "You could have told Simon you weren't feeling well."
             d "But I'm scared to go alone."
+            hide gabe_conc
+            show gabe_neut
             g "I understand. How about I bring you home. I'll keep you company until you're in your apartment."
             g "I'll make sure no one does anything to you."
             g "Let's get you Home ok? And once you're there you can lock the door and try to get some sleep."
@@ -3827,6 +3893,8 @@ label start:
             g "Don't worry about it. I don't mind at all. Besides, I'd be scared too if those things happened to me."
             g "Now let's go."
             scene bg_d_corridor
+            show a_day4
+            show gabe_neut
             g "There we are. Feeling better?"
             d "Yeah. Thank you for bringing me home."
             g "Oh it's nothing. I want to know you're safe too."
@@ -3835,9 +3903,13 @@ label start:
             g "Double check it."
             d "Yeah yeah. I will."
             d "I'll Triple check it even."
+            hide gabe_neut
+            show gabe_happy
             g "I'm sure you'll feel a lot safer once you're in the comfort of your own 4 walls again."
             d "Get home safe too Gabe. Or I'll feel even worse for making you do all this."
             g "Don't worry about me. I'll be home in no time."
+            hide gabe_happy
+            show gabe_neut
             g "Night Destiny."
             d "Goodnight Gabe."
             "Lock"
@@ -3855,13 +3927,15 @@ label start:
                 d "?"
                 d "[catname]?"
                 d "You were so lively yesterday. Are you mad at me for leaving you all alone again for so long?"
-                scene bg_d_kitchen
+                scene bg_d_kitchen_n
+                show a_day4
                 d "[catname]?!"
                 d "Where-"
             else:
                 d_t "What?"
                 d_t "Did I leave the window open?"
-                scene bg_d_kitchen
+                scene bg_d_kitchen_n
+                show a_day4
                 d_t "There's no breeze-"
             d "AHHH!"
             scene bg_black
@@ -3876,12 +3950,15 @@ label start:
         
         label night4:
             scene bg_d_kitchen
+            show a_day4
             d_t "That worked like a charm."
-            #Achievement glitches to im not alone anymore
+            hide a_day4
+            show a_day4_alone
             d_t "!"
             d_t "It's Kai! The Achievement meant her!"
             d_t "He's there! I have to see where he went."
             #Check screen
+            show phone_track
             if track_who==0:
                 d_t "That's right behind the office!"
                 d_t "She was so close the entire time?"
@@ -3955,10 +4032,13 @@ label start:
             scene bg_black
             "Ping!"
             scene bg_d_window
+            show a_day5
             d_t "This is it!"
             d_t "It's all come to this. I can't mess this up."
             d_t "The screen's still here..."
             d_t "Thank you, Kai."
+            hide a_day5
+            show a_day5_b
             d_t "With your help I'll get you out of there today."
             #look at achievements
             d_t "\"This is it\""
@@ -3966,6 +4046,8 @@ label start:
             default a5_2= False
             default a5_3= False
             default a5_4= False
+            hide a_day5_b
+            show a_day5
             label achievements5:
                 if a5_1==True and a5_2==True and a5_3==True and a5_4==True:
                     d_t "It will work." 
@@ -4036,6 +4118,7 @@ label start:
             
         label getready5:
             scene bg_d_kitchen
+            show a_day5
             if dinner_plans ==True:
                 d_t "If there was ever a day for coffee then it's today."
                 d_t "We won't have any more stains this time around though. I'll make sure of that."
@@ -4043,13 +4126,18 @@ label start:
             else:
                 d "Good morning [catname]."
                 d "Today's going to be a stressful day..."
+                show cat_happy
                 c_n "Prrrrr"
                 d "Thank you [catname]. I know you don't really have a choice. But you being here makes me feel a little more secure."
                 d "You're just a little kitty but you've really grown on me. I'll miss you when we finally find your real owners."
+                hide cat_happy
+                show cat_neut
                 c_n "Meeauw"
                 d "We'll find them. Just like we'll find Kai today."
                 c_n "Mrrm"
                 d "Now let me get you some food. I bet you're hungry already."
+                hide cat_neut
+                show cat_happy
                 c_n "MEaUW!"
                 d "Haha now that's my little [catname]. Food really gets you going huh?"
                 jump work5
@@ -4057,20 +4145,31 @@ label start:
 
         label work5:
             scene bg_office_hallway
+            show a_day5
+            show simon_neut
             s "Morning!"
             d "Morning Simon. I see you're here early again as usual."
             s "Well, you too I suppose."
             s "Great work yesterday by the way! I saw what you sent in and it looks fantastic!"
+            hide simon_neut
+            show simon_happy
             s "I'm really looking forward to see what else you'll bring to the table."
             d "Thank you. I'm glad it's to your liking."
             d "And I'm glad I found a way to incorporate Kai's work into it too. {i}I hope she doesn't mind...{/i}"
+            hide gabe_happy
+            show simon_neut
             s "What was that?"
             d "Oh it's nothing. I'm just glad I can live up to the standard that Kai set. That's all."
+            hide simon_neut
+            show simon_happy
             s "We'll you're doing more than fine so far. Keep it up!"
             d "I will!"
+            hide gabe_happy
+            show simon_neut
             s "As always if you need anything or are unsure about anything you can always come to me for help."
             d "Thank you, Simon."
             scene bg_office_computer_kai
+            show a_day5
             if track_who== 0:
                 d_t "I have to find a reason to talk to Matt again. I have to somehow subtly let him know that today's the day he should make his move."
                 d_t "Without it seeming weird or completely out of left field..."
@@ -4111,6 +4210,7 @@ label start:
         label trickgabe:
             #Later that day
             scene bg_office_hallway
+            show a_day5
             d "Hey, Gabe."
             g "Oh! Destiny. What are you doing here? Need a break from work?"
             d "After the last couple of days definitely. But no, that'll have to wait for the weekend."
