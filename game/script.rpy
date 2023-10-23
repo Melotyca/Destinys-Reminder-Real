@@ -3,15 +3,15 @@
 #Characters
 define d = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_color="#1db7a5", what_size=38)
 define d_t = Character("Destiny",who_font="Minako-Regular.ttf",who_size=53, color="#067b6d", what_font="Minako-Regular.ttf", what_italic=True, what_color="#79b0a3cb", what_size=38)
-define g = Character("Gabriel",who_font="Hey Comic.ttf", color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b")
-define m = Character("Matthew",who_font="DraftingMono-Bold.otf", color="#1346a0",what_font="DraftingMono-Bold.otf", what_color="#4c77c1")
-define s = Character("Simon",who_font="Typo_Round_Bold_Demo.otf", color= "#b01d1d",what_font="Typo_Round_Bold_Demo.otf", what_color="#c64e48")
+define g = Character("Gabriel",who_font="Hey Comic.ttf", color="#627e05",what_font="Hey Comic.ttf", what_color="#84a41b",what_size=33)
+define m = Character("Matthew",who_font="DraftingMono-Bold.otf", color="#1346a0",what_font="DraftingMono-Bold.otf", what_color="#4c77c1",what_size=33)
+define s = Character("Simon",who_font="Typo_Round_Bold_Demo.otf", color= "#b01d1d",what_font="Typo_Round_Bold_Demo.otf", what_color="#c64e48",what_size=33)
 define x = Character("?",who_font="KGRedHands.ttf",who_size=45, color="#444444",what_font="KGRedHands.ttf", what_italic=True, what_color="#7b7b7bb5",what_size=30 )
-define k = Character("Kai",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b")
-define c = Character("Cat",who_font="gabriele-bad.ttf", color="#444444",what_font="gabriele-bad.ttf", what_color="#7b7b7b" )
-define c_n = Character("[catname]",who_font="gabriele-bad.ttf", color="#673b05",what_font="gabriele-bad.ttf", what_color="#aa811a" )
-define o = Character("Officer R.",who_font="texgyrecursor-bold.otf", color="#001f55", what_font="texgyrecursor-bold.otf", what_color="#315089")
-define s_k = Character("-",who_font="Typo_Round_Bold_Demo.otf", color= "#6c4848",what_font="Typo_Round_Bold_Demo.otf", what_color="#9f706e")
+define k = Character("Kai",who_font="KGRedHands.ttf", color="#444444",what_font="KGRedHands.ttf", what_color="#7b7b7b",what_size=33)
+define c = Character("Cat",who_font="gabriele-bad.ttf", color="#444444",what_font="gabriele-bad.ttf", what_color="#7b7b7b",what_size=33 )
+define c_n = Character("[catname]",who_font="gabriele-bad.ttf", color="#673b05",what_font="gabriele-bad.ttf", what_color="#aa811a",what_size=33 )
+define o = Character("Officer R.",who_font="texgyrecursor-bold.otf", color="#001f55", what_font="texgyrecursor-bold.otf", what_color="#315089",what_size=33)
+define s_k = Character("-",who_font="Typo_Round_Bold_Demo.otf", color= "#6c4848",what_font="Typo_Round_Bold_Demo.otf", what_color="#9f706e",what_size=33)
 
 #Variables
 default fix_printer = False
@@ -29,7 +29,9 @@ label start:
     #DAY 1
         label day1:
             label dream1:
+                scene bg_black
                 scene dream1
+                with Dissolve(1.0)
                 x "Destiny..."
                 x "Destiny!"
                 x "You have to listen to me."
@@ -37,16 +39,20 @@ label start:
                 x "Please."
                 x "Don't trust him. You're in danger"
                 x "I can help you."
+                scene morning1
+                with Dissolve(1.0)
+                pause 2
             label morning1:
                 scene bg_black
+                with Dissolve(1.0)
                 "Ping!"
                 d_t "Who, what was that?"
                 d_t "{i}Ugh{/i} What time is it? It feels like I've only just fallen asleep."
                 scene bg_d_window
-                show phone_day1_1
                 show a_day1  
                 # (phone appears(see Her reminder Project due tomorrow, Day and time: Mon 07:13). 
                 d_t "Oh come on. Just let me sleep."  
+                show phone_day1_1
                 d_t "Why can't it be like 4am."
                 d_t "Pleaseee... If I stay in bed now, I'll be late."
                 d_t "I guess I've got no other choice."  
@@ -742,7 +748,9 @@ label start:
     #DAY 2
         label day2:
             label dream2:
+                scene bg_black
                 scene dream2
+                with Dissolve(1.0)
                 x "Please Destiny I'm trying to help you. You have to listen to me"
                 d "What?"
                 x "I'm not an illusion. I'm here to help you."
@@ -753,9 +761,13 @@ label start:
                 d "Who?"
                 x "D0n*T oq3n 1 T"
                 x "Do-* 4jT F0-_r g*3 T"
+                scene morning2
+                with Dissolve(1.0)
+                pause 2
                 jump morning2
             label morning2:
                 scene bg_black
+                with Dissolve(1.0)
                 "Ping!"
                 scene bg_d_window
                 show a_day2
@@ -1596,7 +1608,9 @@ label start:
     #DAY 3
     label day3:
         label dream3:
+            scene bg_black
             scene dream3
+            with Dissolve(1.0)
             x "He was here!" 
             d "Who was-"
             x "You can't trust him Destiny! You have to stay away from him. He's dangerous."
@@ -1614,9 +1628,13 @@ label start:
             x "I (an '7 e5c *p 3"
             d "No, don't go!"
             x "-"
+            scene morning3
+            with Dissolve(1.0)
+            pause 2
             jump morning3
         label morning3:
             scene bg_black
+            with Dissolve(1.0)
             "Ping!"
             if dinner_plans==False:
                 scene bg_d_window
@@ -3131,7 +3149,9 @@ label start:
 
     label day4:
         label dream4:
+            scene bg_black
             scene dream4
+            with Dissolve(1.0)
             k "Destiny!"
             k "I don't have much time."
             d "Kai! I can remember you! What happened to you?"
@@ -3162,10 +3182,12 @@ label start:
             k "_.*- ,"
             d "No! Stay!"
             d "Wait!"
-
-
+            scene morning4
+            with Dissolve(1.0)
+            pause 2
         label morning4:
             scene bg_black
+            with Dissolve(1.0)
             "Ping!"
             scene bg_d_window
             show a_day4
@@ -4000,7 +4022,9 @@ label start:
             
     label day5:
         label dream5:
+            scene bg_black
             scene dream5
+            with Dissolve(1.0)
             k "You listened!"
             d "I did. I tried my best. I did what you told me to."
             d "I remembered you Kai."
@@ -4026,10 +4050,14 @@ label start:
             k "I-"
             d "You'll be ok!"
             k "Thank you."
+            scene morning5
+            with Dissolve(1.0)
+            pause 2
             jump morning5
 
         label morning5:
             scene bg_black
+            with Dissolve(1.0)
             "Ping!"
             scene bg_d_window
             show a_day5
