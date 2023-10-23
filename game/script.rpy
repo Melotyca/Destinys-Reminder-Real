@@ -5246,9 +5246,133 @@ label start:
         
     label outro:
         label worst:
+            scene bg_black
+            d "What! Where am I!"
+            d "Hello?!"
+            d "Help I-"
+            "Tug"
+            d "I can't move!"
+            s_k "Of course you can't."
+            d "What!?"
+            d "Wh- who are you? Let me go!"
+            s_k "I can't do that."
+            s_k "You know that. Don't you?"
+            d "I-"
+            "Yank!"
+            scene bg_room2
+            d "Wha-"
+            d "Where-"
+            show simon_evil
+            s "Oh don't act like that. You know exactly what got you here sweetheart."
+            d "I-"
+            d "Simon!?"
+            s "What? Didn't think I would be able to pull off something like this?"
+            s "I'm flattered."
+            d "Why did you-"
+            hide simon_evil
+            show simon_mad
+            s "Oh come on. We're way past why at this point."
+            s "What do you care why you're here. I bet right now you just want to get out am I right?"
+            d "You!"
+            hide simon_mad
+            show simon_evil
+            s "Ha ha ha."
+            s "You really thought you could get her out of thid didn't you?"
+            s "God, you're so naive."
+            s "The both of you."
+            s "Some people really should learn when to abandon their principles and have a little bit of survival instinct."
+            s "But hey, who am I to complain. I'm not the one tied to a chair."
+            d "You can't do this Simon!"
+            hide simon_evil
+            show simon_mad
+            s "Oh? And who's stopping me?"
+            s "You?"
+            s "Don't make me laugh."
+            hide simon_mad
+            show simon_evil
+            s "You're going to end up just like Kai."
+            s "Now shut your pretty little mouth and watch how easily I can twist your story to look like another mysterious disappearence."
+            d "No! You can't-"
+            "Whack!"
+            scene bg_black
+            pause 2
+            scene good_night
+            with Dissolve(1.0)
+            pause 5
+
+
         label bad:
+            scene bg_black
+            d "What! Where am I!"
+            d "Hello?!"
+            d "Help I-"
+            "Tug"
+            d "I can't move!"
+            s_k "Of course you can't."
+            d "What!?"
+            d "Wh- who are you? Let me go!"
+            s_k "I can't do that."
+            s_k "You know that. Don't you?"
+            d "I-"
+            "Yank!"
+            scene bg_room2
+            d "Wha-"
+            d "Where-"
+            show simon_evil
+            s "Oh don't act like that. You know exactly what got you here sweetheart."
+            d "I-"
+            d "Simon!"
+            s "What? Thought you were safe now that she's free?"
+            s "Oh you poor child."
+            d "Why did you-"
+            hide simon_evil
+            show simon_mad
+            s "Oh come on. We're way past why at this point."
+            s "What do you care why you're here. I bet right now you just want to get out am I right?"
+            s "Just like Kai."
+            s "You little brat!"
+            d "You!"
+            hide simon_mad
+            show simon_evil
+            s "Ha ha ha."
+            s "You really thought you could just take her and run?"
+            s "God, you're so naive."
+            s "She might have gotten away but I'm not letting that happen agai."
+            s "Some people really should learn when to abandon their principles and have a little bit of survival instinct."
+            d "NGH!"
+            s "But hey, who am I to complain. I'm not the one tied to a chair."
+            d "You can't do this Simon!"
+            hide simon_evil
+            show simon_mad
+            s "Oh? And who's stopping me?"
+            s "You?"
+            s "Don't make me laugh."
+            hide simon_mad
+            show simon_evil
+            s "You're going to rott in this place for your pittiful little rescue attempt."
+            s "As soon as Kai's out of the hospital she'll come looking for you. And that's exactly where I'll be."
+            d "No! You can't-"
+            s "Oh shut your pretty little mouth. You can't do anything but watch how easily I can twist your story to look like another mysterious disappearence."
+            d "Simon!"
+            s "Urgh you're loud. Shut it!"
+            "Whack!"
+            scene bg_black
+            pause 2
+            scene good_night
+            with Dissolve(1.0)
+            pause 5
         label good:
+            scene bg_black
+            pause 2
+            scene its_over
+            with Dissolve(1.0)
+            pause 5
         label best:
+            scene bg_black
+            pause 2
+            scene see_you_soon
+            with Dissolve(1.0)
+            pause 5
 
         
 
