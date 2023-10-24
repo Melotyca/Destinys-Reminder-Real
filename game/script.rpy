@@ -2277,10 +2277,13 @@ label start:
 
             label deskcomp:
                 d_t "Let's see what she has saved on her computer."
+                show comp_empty
                 d_t "Wow, clean desktop. I'm impressed."
                 d_t "Alright. Most of this just looks like work in progresses for previous projects."
                 d_t "She does have some notes right here though."
                 "Click"
+                hide comp_empty
+                show kai_message
                 d_t "Hmm some about the Project they're working on. It looks like she was planning out some Ideas."
                 d_t "Oh and there are some messages she started to the others!"
                 d_t "Maybe she left some notes about her thoughts on the designs."
@@ -2311,6 +2314,7 @@ label start:
                 d_t "I got the notes I was looking for."
                 d_t "This is still her Computer. I shouldn't be looking for more than strictly work related stuff."
                 d_t "Maybe she quit to get away from it all..."
+                hide kai_message
                 jump kaidesk
                 
 
@@ -2319,6 +2323,7 @@ label start:
                 d_t "But..."
                 d_t "She did leave it here though..."
                 d_t "Screw it. Maybe this will tell me a little bit about her. I am curious to know what she was like as a person. Not just her work."
+                show kai_postcard
                 d_t "Wait. Is this her on the picture!?"
                 d_t "..."
                 d_t "But isn't that-"
@@ -2339,12 +2344,15 @@ label start:
                     d_t "Does she know about the achievements?"
                 d_t "-"
                 d_t "Hold on. What does it say on the back?"
+                hide kai_postcard
+                show kai_postcard_back
                 d_t "\"Have a great summer this year! Make sure you bring home lots of good memories when you visit again. -Love, Mom\""
                 d_t "Aw, Sweet."
                 d_t "!"
                 d_t "Hey! That's my street!"
                 d_t "The address."
                 d_t "She lives really close to me!"
+                hide kai_postcard_back
                 if dinner_plans ==True:
                     d_t "Whoa, it gets even more freaky. Jeez these weird coincidences keep piling up."
                     d_t "Did I maybe see her on my way home?"
@@ -2416,6 +2424,7 @@ label start:
                         d_t "That's not going to keep me safe."
                         d_t "Plus, I really need this job."
                         d_t "I have to figure this out alongside work somehow. I can't mess this up."
+                        
                 jump kaidesk
 
                 
@@ -3468,6 +3477,7 @@ label start:
             else:
                 pass
             "Click"
+            show comp_empty
             d_t "-"
             d_t "What?! But how can this be?"
             d_t "It was all right here yesterday!"
@@ -3482,6 +3492,7 @@ label start:
             d_t "Oh god, it was him."
             d_t "He deleted everything."
             d_t "He-"
+            hide comp_empty
             d_t "The only people that even know about the notes are Matt and Simon"
             d_t "And I told Gabe about them..."
             d_t "Nobody else knew about these notes-"
