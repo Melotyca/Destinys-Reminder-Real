@@ -4344,33 +4344,53 @@ label start:
             #Later that day
             scene bg_office_hallway
             show a_day5
+            show gabe_neut
             d "Hey, Gabe."
+            hide gabe_neut
+            show gabe_happy
             g "Oh! Destiny. What are you doing here? Need a break from work?"
             d "After the last couple of days definitely. But no, that'll have to wait for the weekend."
+            hide gabe_happy
+            show gabe_neut
             d "I actually just wanted to quickly pay you back for the coffee you paid for yesterday. You know. Because I forgot my wallet."
             g "Oh, right! You don't need to do that. Keep it! It's my treat."
             d "Are you sure? It's really no problem I have it right here."
+            hide gabe_neut
+            show gabe_happy 
             g "Yeah I'm being serious. You don't have to pay me back for that. See it as a token of our friendship."
+            hide gabe_happy
+            show gabe_neut
             g "Besides, it wasn't that much anyways. What was it? Like 3 bucks?"
             d "Thank you, Gabe that's so kind of you."
             g "It's my pleasure."
             d "Oh! By the way. I'll be working late again today. We probably won't see each other on our way home. I still have something I want to finish before the weekend."
+            hide gabe_neut
+            show gabe_conf
             g "Again? Wow, you're really putting in the work for this new Project."
             g "What time are you planning to leave then?"
             d "I don't know yet. But definitely later than usual."
+            hide gabe_conf
+            show gabe_neut
             g "Make sure you're not overdoing it ok?"
             d "Yeah I know. I'll take more time off next week. I just have to make sure I make a good first impression you know."
             g "I think they're all very impressed already. But I understand. Don't get home too late."
+            hide gabe_neut
+            show gabe_conc
             g "With everything you told me happened recently I just don't like the thought of you staying here so late..."
             d "It's going to be fine. I'll be around other people most of the time."
             d "And if something happens I'll call you."
+            hide gabe_conc
+            show gabe_neut
             g "Okay..."
             g "But only if you promise!"
             d "I promise!"
+            hide gabe_neut
+            show gabe_happy
             g "Alright. Then good luck tonight."
             d "Thanks. Have a good night too!"
             g "I sure will."
             d_t "We'll see about that."
+            hide gabe_happy
             jump allies
 
 
@@ -4382,9 +4402,14 @@ label start:
             #Later that day
             scene bg_office_hallway
             show a_day5
+            show matt_neut
             d "Uhm. Matthew?"
+            hide matt_neut
+            show matt_mad
             m "Again? What is it this time? Can't make it on that day?"
             d "No, no it's nothing like that. I actually wanted to ask if it's possible I come here to work tomorrow?"
+            hide matt_mad
+            show matt_conf
             m "Excuse me?"
             d "I have something to finish and I don't think I'll get it done today."
             d "I've already decided that I'll stay longer tonight but being able to come in tomorrow as well would really help to get this done."
@@ -4393,12 +4418,18 @@ label start:
             m "You, Destiny Sullivan. Always last-minute Sullivan want to come in on a Saturday?"
             d "Yes."
             m "..."
+            hide matt_conf
+            show matt_neut
             m "Sure. Be my guest. Simon must have really done a number on you if you're willing to work on your weekend."
             m "The doors lock at around 9 tonight but I would imagine by then you'll be gone already."
             m "Tomorrow morning the front door should be locked but I can give you a temporary code so you can get in."
             d "Fantastic!"
+            hide matt_neut
+            show matt_conf
             m "{i}What's up with you?{/i}"
             d "Huh?"
+            hide matt_conf
+            show matt_neut
             m "Nothing. Not that it matters. I'll send you the code tomorrow morning."
             m "Don't get yourself locked in tonight. What time are you planning to leave?"
             d "I won't. Don't worry. But I'm not quite sure yet. Thank you, Matthew."
@@ -4409,6 +4440,7 @@ label start:
             d "Yeah. Thanks again. I'll be going then."
             m "Bye."
             d_t "Oh no he senses something is up. I have to be really careful from now on."
+            hide matt_neut
             jump allies
 
             
@@ -4419,6 +4451,7 @@ label start:
             pause 2
             scene bg_office_hallway
             show a_day5
+            show simon_neut
             d "Hey, Simon. You got a minute?"
             s "Yeah sure what's up?"
             d "I started on that idea I showed you yesterday. I'll be on it for a while though."
@@ -4426,16 +4459,27 @@ label start:
             d "I just thought since the weekend is coming up and I want to get this done this week I'll be staying a bit later today."
             s "Oh?"
             d "Yeah. I'll send it to you once I'm finished but it will probably be a bit later than usual."
+            hide simon_neut
+            show simon_happy
             s "That's fine. I'll be here a little longer too. But even if I'm gone by then I'll have a look at it as soon as I get the chance."
             s "Around what time are you planning to leave?"
             d "I'm not quite sure yet but later than usual that's for certain."
+            hide simon_happy
+            show simon_neut
             s "Alright, thank you for letting me know."
+            hide simon_neut
+            show simon_conf
             s "I have to say you've been really throwing yourself into work these past few days. You've really got a fire for this it seems."
             d "It's just important to me to do this right. Since I'm picking up on someone else's work."
+            hide simon_conf
+            show simon_neut
             s "Ah, I understand. Don't worry I'm sure Kai would be very happy with the choices you've made so far."
             d_t "I'm sure she would..."
             d "Thanks. I'll get back to work then."
+            hide simon_neut
+            show simon_happy
             s "Good luck!"
+            hide simon_happy
             jump allies
 
         label allies:
@@ -4450,6 +4494,8 @@ label start:
                 d_t "I hope he believes me..."
                 d_t "I have to at least try!"
                 "Ring"
+                show phone_p
+                with moveinup
                 o "Miss Sullivan! This is officer Rogan speaking. How may I assist you?"
                 d "I have something I need to tell you..."
                 scene later
@@ -4458,7 +4504,7 @@ label start:
                 pause 2
                 scene bg_office_computer_kai
                 show a_day5
-                
+                show phone_p
                 #after explaining everything    
                 o "I see. So you felt you had to act this way to ensure the location of miss Amari could be found..."
                 d "I'm sorry I wasn't completely honest before but I believe I have figured out who is the cause of Kai's disappearence and where he is keeping her."
@@ -4486,6 +4532,7 @@ label start:
                 o "We will have to be very cautious."
                 d "Understood. I'll be waiting."
                 "Click"
+                hide phone_p
                 jump trustpolice
             else:
                 if track_who==2:
@@ -4500,23 +4547,29 @@ label start:
                     d_t "I'm going to sound absolutely crazy. But I have to at least try!"
                     scene bg_office_hallway
                     show a_day5
+                    show gabe_neut
                     d "Gabe? Can I talk to you for a minute. It's important."
+                    hide gabe_neut
+                    show gabe_conc
                     g "What is it? You look worried."
                     d "Can we go somewhere else to talk.? Somewhere more private."
                     g "Uhm, Y-yeah. Sure."
                     scene bg_office_printer
                     show a_day5
+                    show gabe_conc
                     g "What's going on. What do you want to talk to me about?"
                     d "I have something to admit to you."
+                    hide gabe_conc
+                    show gabe_conf
                     d "About what's been happening this week. With Kai and also some other things..."
                     #after explaining everything 
-            
                     scene later
                     with Dissolve(1.0)
                     show a_explain
                     pause 2 
                     scene bg_office_printer
                     show a_day5
+                    show gabe_conf
                     g "Ok ok wait!"
                     g "You have been seeing this floating screen the entire week. Telling you what is going to happen on that day."
                     g "And you've been seeing Kai in your dreams telling you she was kidnapped and helping you figure out who it is?"
@@ -4527,9 +4580,10 @@ label start:
                     else:
                         d "It's Simon. He did this to her. And I finally know where he took her."
                     d "I know how I can get her out of there but I don't know if I can do it on my own..."
-
+                    hide gabe_conf
                     if gabe_hints==3:
                         $ gabe_ally= True
+                        show gabe_conc
                         g "I- "
                         g "I believe you Destiny."
                         g "None of this makes any sense to me but I believe you. If you're telling me that's what you know then I have to trust that that's true."
@@ -4552,6 +4606,8 @@ label start:
                         g "Are you sure this is going to work?"
                         d "I- it has to. This is the only way I know to get Kai out of there. If we don't stop him I don't know what would happen to me-"
                         d "She's always been right so far. It's going to work!"
+                        hide gabe_conc
+                        show gabe_neut
                         g "I trust you Destiny."
                         if track_who==0:
                             g "If you need my help I'll be there. I'll try to stall for you as much as I can. I'll try to lead Matt away from where you're going."
@@ -4560,14 +4616,20 @@ label start:
                         g "But I can't keep him distracted forever."
                         g "Here take my phone. That way I can contact you if I think he's figured out it's not you he's following."
                         g "And as soon as you've freed Kai you call me. Ok? I'll let the police know where you are and tell them everything."
+                        hide gabe_neut
+                        show gabe_conc
                         g "Try to stay safe Destiny."
                         d "Thank you, Gabriel. I'll do my best. I don't know what I'd do without you."
                         g "Be careful out there."
                         d "I will."
+                        hide gabe_conc
                         jump trustgabe
 
                     else:
+                        show gabe_conc
                         g "I- "
+                        hide gabe_conc
+                        show gabe_conf
                         g "None of this makes any sense. Why are you telling me this all of a sudden?"
                         g "I can't believe this. Psychic dreams? A screen?"
                         g "I've never heard of anything like this."
@@ -4579,26 +4641,40 @@ label start:
                         d "I don't know!"
                         d "You have to believe me Gabe! I'm not crazy."
                         d "I've seen these things. They're real. Kai talked to me. I can get her out of there."
+                        hide gabe_conf
+                        show gabe_conc
                         g "Out of where? You don't even really know what is in that place."
                         g "Destiny, I don't think you're crazy but this isn't right. I think you're scared and overworked and have been for too long now."
                         g "These nightmares you're describing. They're making you paranoid. This sounds like some crazy movie plot. Do you have any evidence for what you're claiming he did?"
                         d "I-"
+                        hide gabe_conc
+                        show gabe_conf
                         g "Did you see him at the door? Or did you find the tracker she said he put on your phone?"
                         d "I don't-"
+                        hide gabe_conf
+                        show gabe_conc
                         g "This is all so sudden. I'm worried about you Destiny. I don't think you're ok."
                         g "If you really think someone is after you we can go to the police together. But I'm not helping you execute some crazy plan to free a woman you don't even know for certain was kidnapped."
                         d "Gabe..."
+                        hide gabe_conc
+                        show gabe_neut
                         g "I'll come to the police station with you tonight. Then we can figure this out with them."
                         g "I'm sorry Destiny but I don't think-"
                         d "You don't have to explain it to me. I understand. I know I sound crazy..."
+                        hide gabe_neut
+                        show gabe_conc
                         g "Destiny-"
                         d "No, you're right. It's probably just paranoia. I don't know why any of this is happening to me. I'm scared."
                         d "I think I need to go talk to someone about this..."
+                        hide gabe_conc
+                        show gabe_neut
                         g "Do you want me to take you home?"
                         d "No. It's fine. I'll stay here. I'm sorry I made you worry."
                         g "Please, Destiny. If you're not feeling well then take a break."
                         d "Yeah... I'll be fine."
                         d "See you later Gabe."
+                        hide gabe_neut
+                        show gabe_conc
                         g "See you Destiny..."
                         scene bg_office_computer_kai
                         show a_day5
@@ -4613,6 +4689,7 @@ label start:
         
         label trustgabe:
             scene bg_office_computer_kai
+            show a_day5
             #check phone
             show phone_day5_1
             with moveinbottom
@@ -4639,6 +4716,7 @@ label start:
             show 1234pm
             pause 2
             scene bg_office_cafeteria
+            show a_day5
             #at lunch
             d_t "I need to slip my phone to someone that will stay here for a little longer than I'd usually work."
             d_t "Someone that doesn't move around too much..."
@@ -4654,6 +4732,7 @@ label start:
             show 0428pm
             pause 2
             scene bg_office_computer_kai
+            show a_day5
             #check computer
             d_t "It's about time I prepare to go..."
             d_t "4:30PM. Yeah, it's go time."
@@ -4678,6 +4757,7 @@ label start:
             show 0546pm
             pause 2
             scene bg_ally
+            show a_day5
             d_t "It's back here."
             d_t "Jeez this place is even creepier than the first time..."
             d_t "I hope no one is here."
@@ -4685,23 +4765,31 @@ label start:
             d_t "I found it!"
             d_t "Shoot! There are so many..."
             d_t "Which one is he keeping her locked up in? I can't go through all of them."
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d_t "Unit one?"
             d_t "Are you here Kai?"
             d_t "I have to try unit one!"
+            hide a_day5_one
+            show a_day5
             "Creak"
             d "Urgh!"
             d_t "This stupid door won't-"
             "Crash!"
             d "Finally!"
             scene bg_room
+            show a_day5
             d "Kai?"
             k "Destiny!"
+            show kai_happy
             d "Kai!"
             k "You came!"
             k "You really came!"
             d "I found you!"
             d "You were right. All of it was right!"
+            hide kai_happy
+            show kai_neut
             k "I'm- Thank you. "
             d "So it really was you. You helped me. In those dreams"
             k "Dreams..."
@@ -4712,6 +4800,8 @@ label start:
             d "Yes, it worked!"
             d "I can get you out of here."
             d "We have to get you to a hospital! You're completely dehydrated."
+            hide kai_neut
+            show kai_conc
             k "I-"
             d "It's alright. I'll help you out of here."
             d "As soon as we're down at the street we can ask someone to call you an ambulance."
@@ -4721,18 +4811,26 @@ label start:
             d "They can make sure you're safe there."
             d "They can even get the police involved. But first we have to get you somewhere safe."
             d "Let's go!"
+            hide kai_conc
             scene bg_black
             pause 0.5
             #after calling a cab
             scene bg_street
+            show a_day5
+            show kai_neut
             d "I'm sorry Kai they said I can't ride along. But I've already called a cab and I'll be there with you soon. I promise."
             k "Destiny. Thank you."
             k "Thank you so much."
+            hide kai_neut
+            show kai_conc
             k "I don't know what I would have-"
             d "It's ok Kai. You're safe now. Simon can't hurt you anymore."
+            hide kai_conc
+            show kai_happy
             k "Just, thanks."
             d "I'll see you later."
             k "Bye Destiny."
+            hide kai_happy
             "Slam!"
             "*Siren*"
             d_t "I'll be there soon."
@@ -4757,6 +4855,7 @@ label start:
             show 0546pm
             pause 2
             scene bg_ally
+            show a_day5
             d_t "It's back here."
             d_t "Jeez this place is even creepier than the first time..."
             d_t "I hope no one is here."
@@ -4764,23 +4863,31 @@ label start:
             d_t "I found it!"
             d_t "Shoot! There are so many..."
             d_t "Which one is he keeping her locked up in? I can't go through all of them."
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d_t "Unit one?"
             d_t "Are you here Kai?"
             d_t "I have to try unit one!"
+            hide a_day5_one
+            show a_day5
             "Creak"
             d "Urgh!"
             d_t "This stupid door won't-"
             "Crash!"
             d "Finally!"
             scene bg_room
+            show a_day5
             d "Kai?"
             k "Destiny!"
+            show kai_happy
             d "Kai!"
             k "You came!"
             k "You really came!"
             d "I found you!"
             d "You were right. All of it was right!"
+            hide kai_happy
+            show kai_neut
             k "I'm- Thank you. "
             d "So it really was you. You helped me. In those dreams"
             k "Dreams..."
@@ -4791,6 +4898,8 @@ label start:
             d "Yes, it worked!"
             d "I can get you out of here."
             d "We have to get you to a hospital! You're completely dehydrated."
+            hide kai_neut
+            show kai_conc
             k "I-"
             d "It's alright. I'll help you out of here. I have to tell Gabe I found you!"
             #phone text gabe
@@ -4801,10 +4910,14 @@ label start:
             d "They can make sure you're safe there."
             d "They can even get the police involved. But first we have to get you somewhere safe."
             d "Let's go!"
+            hide gabe_conc
             scene bg_black
             pause 0.5
             #after calling a cab
             scene bg_street
+            show a_day5
+            show phone_g
+            with moveinbottom
             "Ring"
             d "Gabe!"
             d "Are you ok? What happened?"
@@ -4830,21 +4943,30 @@ label start:
             d "See you later tonight maybe. But just in case. Good night."
             g "You too Destiny. See ya."
             "Click"
+            hide phone_g
+            show kai_conc
             k "Who was that?"
             d "That was Gabe. My friend. He helped me get you out."
             d "Simon's gone now."
             k "What?"
             d "The police arrested Simon. He can't hurt you anymore."
+            hide kai_conc
+            show kai_neut
             k "You got him?"
             d "Yeah. He won't be able to do that to anyone anymore."
             k "Destiny. Thank you."
             k "Thank you so much."
+            hide kai_neut
+            show kai_conc
             k "I don't know what I would have-"
             d "It's ok Kai. You're safe now. It's over."
+            hide kai_conc
+            show kai_happy
             k "Just, thanks."
             d "I'll see you later."
             d "They said I can't ride along. But I've already called a cab and I'll be there with you again soon. I promise."
             k "Bye Destiny."
+            hide kai_happy
             "Slam!"
             "*Siren*"
             jump best
@@ -4856,13 +4978,18 @@ label start:
             pause 2
             #at the scene with the cops.
             scene bg_ally
+            show a_day5
             "*Police radio noises*"
             o "They're at the storage units now. Which unit is she in."
             d "I-"
             #achievements glitch to square ONE
+            hide a_day5
+            show a_day5_one
             d "It's unit one!"
             d "She's in unit one."
             o "Alright.{i} Unit one everyone. Be careful there could be traps or sensors.{/i}"
+            hide a_day5_one
+            show a_day5
             d "Are they going in now?"
             o "Yes they're entering the building now. It shouldn't take too long for them to get to the right unit."
             o "We'll have to be patient and wait for their response. As soon as they've found something they'll let us know."
