@@ -4979,6 +4979,7 @@ label start:
             #at the scene with the cops.
             scene bg_ally
             show a_day5
+            show officer_neut
             "*Police radio noises*"
             o "They're at the storage units now. Which unit is she in."
             d "I-"
@@ -4997,19 +4998,27 @@ label start:
             "{cps=1}...{/cps}"
             "*Radio noise*"
             d "Did they find her?!"
+            hide officer_neut
+            show officer_happy
             o "Yes she's there!"
             o "They were able to locate miss Amari! She looks exhausted and seems dehydrated but ultimately she seems to be in stable health."
             d "I have to talk to her!"
             d "Please! Can I go in?"
+            hide officer_happy
+            show officer_neut
             o "One moment. They're checking the rest of the unit right now."
             o "Once they're done it's safe for you to go in."
             d "I have to see her. I have to know she's safe."
             o "Alright. We can go in."
             scene bg_room
+            show a_day5
             d "Kai?"
+            show kai_happy
             k "Destiny!"
             k "You came!"
             k "You really came!"
+            hide kai_happy
+            show kai_neut
             k "Thank you..."
             d "So it really was you. You helped me. In those dreams"
             k "Dreams..."
@@ -5017,25 +5026,38 @@ label start:
             d "I did. I don't know how you did it but I saw you Kai. And the screen. It was you wasn't it."
             k "I don't know how-"
             k "It worked."
+            hide kai_neut
+            show officer_neut
             o "I'm sorry to interrupt your reunion but we should get miss Amari to a hospital to get her vitals checked and a forensics team here to take care of this place."
             d "Yes of course officer."
             k "Thanks."
             o "We'll take care of the rest."
             o "Miss Sullivan. We'll take you back to your apartment now."
             d "But-"
+            hide officer_neut
+            show officer_happy
             o "You'll be pleased to hear that our other team was able to arrest mister Harris."
             o "Your intuition was right. He followed us right into the trap."
             o "Thank you for your help miss Sullivan."
             d "They have him?"
+            hide officer_happy
+            show officer_neut
             o "Yes. He's in police custody now."
+            hide officer_neut
+            show kai_neut
             k "They got Simon-"
             d "He's not going to hurt anyone anymore."
+            hide kai_neut
+            show kai_happy
             k "I'm safe."
             o "You're safe miss Amari."
+            hide kai_happy
+            show officer_neut
             o "So, are you ready to go?"
             o "We will accompany you both to your destinations. And as for you miss Sullivan there will be an officer stationed at your apartment."
             o "For your safety and just in case any problems should arise."
             d "Let's get going then."
+            hide officer_neut
             jump best
 
         label apartmentalone:
@@ -5426,6 +5448,7 @@ label start:
             scene good_night
             with Dissolve(1.0)
             pause 5
+            jump end
 
 
         label bad:
@@ -5488,23 +5511,27 @@ label start:
             scene good_night
             with Dissolve(1.0)
             pause 5
+            jump end
         label good:
             scene bg_black
             pause 2
             scene its_over
             with Dissolve(1.0)
             pause 5
+            jump end
         label best:
             scene bg_black
             pause 2
             scene see_you_soon
             with Dissolve(1.0)
             pause 5
+            jump end
 
         
 
     
-
+        label end:
+            pass
     # This ends the game.
 
     return
