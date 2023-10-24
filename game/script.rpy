@@ -5066,6 +5066,7 @@ label start:
             show 0546pm
             pause 2
             scene street
+            show a_day5
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
             d_t "I hope no one is here."
