@@ -2366,6 +2366,7 @@ label start:
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
                         d_t "And that girl that went missing lived close to me..."
+                        hide kai_postcard_back
                         d_t "Kai didn't know she wouldn't be coming back."
                         d_t "She didn't leave."
                         d_t "She was taken!"
@@ -2401,6 +2402,7 @@ label start:
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
                         d_t "Kai didn't know she wouldn't be coming back."
+                        hide kai_postcard_back
                         d_t "She didn't leave."
                         d_t "She was taken!"
                         hide a_day3
