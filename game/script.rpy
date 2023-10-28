@@ -2283,13 +2283,16 @@ label start:
                 d_t "She does have some notes right here though."
                 "Click"
                 hide comp_empty
-                show kai_message
+                show kai_message_1
                 d_t "Hmm some about the Project they're working on. It looks like she was planning out some Ideas."
                 d_t "Oh and there are some messages she started to the others!"
                 d_t "Maybe she left some notes about her thoughts on the designs."
                 d_t "Oh yeah! I found Gold. She's describing what she thought she'd do for one of the designs that are still missing!"
                 d_t "Let's- oh! That sounds doable!"
                 d_t "For sure."
+                "Click"
+                hide kai_message_1
+                show kai_message_2
                 d_t "Huh?"
                 d_t "What's this about taking time off?"
                 d_t "\"Dear Matthew. I am writing this E-mail to request a two week leave starting at the end of this week. I apologize for the short notice but I have come to realize that this matter is much more pressing than I initially thought.\""
