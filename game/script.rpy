@@ -1734,10 +1734,10 @@ label start:
                 hide a_day3_b
                 show a_day3
                 jump callgabedinner
-        label callgabedinner:
-            "Click"
+        label callgabedinner: 
             show phone_g
             with moveinbottom
+            "Click"
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1762,9 +1762,9 @@ label start:
             jump achievements3
         label callgabealone:
             $ gabe_hints + 1
-            "Click"
             show phone_g
             with moveinbottom
+            "Click"
             g "Oh hi Destiny! What a surprise to hear from you so early. It's not even 7 yet."
             d "Hi Gabe. Sorry, I didn't realize it was still so early. Did I wake you?"
             g "No no, don't worry. What's up?"
@@ -1948,9 +1948,9 @@ label start:
             jump achievements3
 
         label callpolice:
-            "Click"
             show phone_p
             with moveinbottom
+            "Click"
             o "Hello? Officer Rogan speaking. How may I help you today?"
             d "H- Hello officer. My name is D-destiny Sullivan. I, Uhm, I'm very sorry to bother you with something like this."
             d "But I have the feeling someone might have followed me to my apartment yesterday."
@@ -2253,16 +2253,16 @@ label start:
                 d_t "Wow! These are amazing!"
                 d_t "She's really talented. Man I have big shoes to fill."
                 d_t "No wonder everyone on the team was so fond of her."
-                "Flip"
                 hide sketch1
+                "Flip"
                 d_t "Whoa. This one looks, different..."
                 d_t "I-"
                 d_t "This wasn't for work."
                 d_t "..."
                 d_t "I shouldn't be looking at this. These are her personal sketches."
                 d_t "But..."
-                "Shuffle"
                 hide sketch2
+                "Shuffle"
                 d_t "Did Simon look at these before telling me to look at them?"
                 d_t "No. He wouldn't tell me to look at something like this."
                 d_t "This doesn't fit the Kai they've been describing at all."
@@ -2281,18 +2281,18 @@ label start:
                 d_t "Wow, clean desktop. I'm impressed."
                 d_t "Alright. Most of this just looks like work in progresses for previous projects."
                 d_t "She does have some notes right here though."
-                "Click"
                 hide comp_empty
                 show kai_message_1
+                "Click"
                 d_t "Hmm some about the Project they're working on. It looks like she was planning out some Ideas."
                 d_t "Oh and there are some messages she started to the others!"
                 d_t "Maybe she left some notes about her thoughts on the designs."
                 d_t "Oh yeah! I found Gold. She's describing what she thought she'd do for one of the designs that are still missing!"
                 d_t "Let's- oh! That sounds doable!"
                 d_t "For sure."
-                "Click"
                 hide kai_message_1
                 show kai_message_2
+                "Click"
                 d_t "Huh?"
                 d_t "What's this about taking time off?"
                 d_t "\"Dear Matthew. I am writing this E-mail to request a two week leave starting at the end of this week. I apologize for the short notice but I have come to realize that this matter is much more pressing than I initially thought.\""
@@ -2759,9 +2759,9 @@ label start:
                     d "Oh! Sorry! That has to be mine."
                     s "Take it. I'll go talk to Matthew while you're busy."
                     d "Thanks!"
-                    "Click"
                     show phone_p
                     with moveinbottom
+                    "Click"
                     d "Destiny Sullivan. Who is this?"
                     o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
                     d "One second please."
@@ -3483,8 +3483,8 @@ label start:
                 d_t "I hope they can at least find something."
             else:
                 pass
-            "Click"
             show comp_empty
+            "Click"
             d_t "-"
             d_t "What?! But how can this be?"
             d_t "It was all right here yesterday!"
@@ -4960,9 +4960,9 @@ label start:
             d "I will."
             d "See you later tonight maybe. But just in case. Good night."
             g "You too Destiny. See ya."
-            "Click"
             hide phone_g
             show kai_conc
+            "Click"
             k "Who was that?"
             d "That was Gabe. My friend. He helped me get you out."
             d "Simon's gone now."
