@@ -2849,7 +2849,7 @@ label start:
                     d_t "Oh well it's worth keeping in mind."
                     d_t "I should go back in."
                     hide a_day3_ignorance_b
-                    jump mattconvop
+                    jump mattconvo
                 else: 
                     hide simon_happy
                     show simon_neut
