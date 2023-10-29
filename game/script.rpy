@@ -815,6 +815,8 @@ label start:
                 d_t "Maybe if I can figure out what they actually mean beforehand I'll be able to avoid ruining my day this time."
                 d_t "Let's see. They happened in the order they were written in right?"
                 d_t "What does my looming specter have to say about today?"
+                hide a_day2_b
+                show a_day2
                 default matt_excuse = 0
                 label achievements2: 
                     menu:
@@ -1378,7 +1380,7 @@ label start:
                     c "Prrrt"
                     d "Aww, aren't you a cute one!"
                     d "Oh but you're all scraggly looking. What happened to you?"
-                    hide cat neut
+                    hide cat_neut
                     show cat_happy
                     c "mEEEwr"
                     d "You don't have a collar do you?"
@@ -2014,6 +2016,8 @@ label start:
             d_t "Maybe third time's the charm."
             d_t "I've got more than enough time to figure out what they mean now anyways."
             d_t "Where should I start."
+            hide a_day3_b
+            show a_day3
         label achievements3menu:
             menu:               
                 "Restart":
@@ -4934,9 +4938,9 @@ label start:
             #after calling a cab
             scene bg_street
             show a_day5
+            "Ring"
             show phone_g
             with moveinbottom
-            "Ring"
             d "Gabe!"
             d "Are you ok? What happened?"
             g "You were right! Simon followed me. I tried leading him into a dead end and hiding the phone and it worked!"
@@ -5092,16 +5096,21 @@ label start:
             d_t "I found it!"
             d_t "Shoot! There are so many apartments..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d_t "Number one?"
             d_t "Are you here Kai?"
             d_t "I have to try apartment one!"
+            hide a_day5_one
+            show a_day5
             "Rattle"
             d "Urgh!"
             d_t "This stupid door won't-"
             "Crash!"
             d "Finally!"
             scene bg_room
+            show a_day5
             d "Kai!?"
             "..."
             d_t "She's not here?"
@@ -5119,6 +5128,7 @@ label start:
             d "If she's not here..."
             d "I have to go back!"
             scene bg_street
+            show a_day5
             d "What do I do?"
             d "I don't know where he took her."
             d "I-"
@@ -5143,13 +5153,19 @@ label start:
             pause 2
             #at the scene with the cops.
             scene bg_street
+            show a_day5
+            show officer_neut
             "*Police radio noises*"
             o "They're at the building now. Which apartment is she in."
             d "I-"
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d "It's number one!"
             d "She's in apartment one."
             o "Alright.{i} Apartment one everyone. Be careful there could be traps or sensors.{/i}"
+            hide a_day5_one
+            show a_day5
             d "Are they going in now?"
             o "Yes they're entering the apartment now. It shouldn't take too long for them to get to the right room."
             o "We'll have to be patient and wait for their response. As soon as they've found something they'll let us know."
@@ -5157,24 +5173,34 @@ label start:
             "{cps=1}...{/cps}"
             "*Radio noise*"
             d "Did they find her?!"
+            hide officer_neut
+            show officer_conc
             o "They said the place was empty..."
             o "No trace of miss Amari anywhere."
             d "Did Gabe move her? Was I not careful enough?"
             d "How could I let this happen!"
             d "I have to see for myself. Please, can I enter the apartment?"
+            hide officer_conc
+            show officer_neut
             o "Hmmm"
             o "I suppose since there is no one there it should be fine."
             scene bg_room
+            show a_day5
             d "Kai?!"
             "..."
+            show officer_neut
             o "She's not here miss Sullivan. They've checked everywhere. The place is empty."
             d "But that can't be- She has to be here!"
             "*Radio noise*"
+            hide officer_neut
+            show officer_conc
             o "{i}What?{/i}"
             d "What is it? What did they say?"
             o "They've arrested the person that was behind all of this. Your intuition was right. He followed us right into the trap."
             o "The only problem is it wasn't mister Anderson they caught..."
             d "What?"
+            hide officer_conc
+            show officer_neut
             o "It was Simon Harris"
             d "Simon?!"
             d "I-"
@@ -5190,15 +5216,20 @@ label start:
             o "We'll take care of the rest. But you should be brought back to your apartment now."
             o "An officer will drive you home and make sure you get there safely."
             d "But-"
+            hide officer_neut
+            show officer_happy
             o "Thank you for your help miss Sullivan."
             o "You won't need to worry about mister Harris anymore. He's in police custody now."
             d "He's not going to hurt anyone anymore?"
+            hide officer_happy
+            show officer_neut
             o "You're safe now miss Sullivan."
             d "He's gone.."
             o "Are you ready to go?"
             o "There will also be an officer stationed at your apartment tonight."
             o "For your safety and just in case any problems should arise."
             d "Let's go..."
+            hide officer_neut
             jump good
 
         label studioalone:
@@ -5207,6 +5238,7 @@ label start:
             show 0546pm
             pause 2
             scene street
+            show a_day5
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
             d_t "I hope no one is here."
@@ -5214,16 +5246,21 @@ label start:
             d_t "I found it!"
             d_t "Shoot! There are so many studios..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d_t "Number one?"
             d_t "Are you here Kai?"
             d_t "I have to try studio one!"
+            hide a_day5_one
+            show a_day5
             "Rattle"
             d "Urgh!"
             d_t "This stupid door won't-"
             "Crash!"
             d "Finally!"
             scene bg_room
+            show a_day5
             d "Kai!?"
             "..."
             d_t "She's not here?"
@@ -5241,6 +5278,7 @@ label start:
             d "If she's not here..."
             d "I have to go back!"
             scene bg_street
+            show a_day5
             d "What do I do?"
             d "I don't know where he took her."
             d "I-"
@@ -5264,6 +5302,7 @@ label start:
             show 0546pm
             pause 2
             scene street
+            show a_day5
             d_t "It's back here."
             d_t "Jeez this place is creepy..."
             d_t "I hope no one is here."
@@ -5271,16 +5310,21 @@ label start:
             d_t "I found it!"
             d_t "Shoot! There are so many apartments..."
             d_t "Which one is he keeping her locked up in? I can't go into all of them."
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d_t "Number one?"
             d_t "Are you here Kai?"
             d_t "I have to try apartment one!"
+            hide a_day5_one
+            show a_day5
             "Rattle"
             d "Urgh!"
             d_t "This stupid door won't-"
             "Crash!"
             d "Finally!"
             scene bg_room
+            show a_day5
             d "Kai!?"
             "..."
             d_t "She's not here?"
@@ -5300,10 +5344,13 @@ label start:
             d "And I have to tell Gabe."
             #phone text gabe
             scene bg_street
+            show a_day5
             d "What do I do?"
             d "I don't know where he took her."
             d "!"
             "Ring"
+            show phone_g
+            with moveinbottom
             d "Gabe!"
             d "Are you ok? What happened?"
             g "It's not Matt! Destiny, it's Simon!"
@@ -5344,6 +5391,7 @@ label start:
             g "Same here. See you later Destiny."
             d "See you."
             "Click"
+            hide phone_g
             jump good
 
         label studiopolice:
@@ -5353,13 +5401,19 @@ label start:
             pause 2
             #at the scene with the cops.
             scene bg_street
+            show a_day5
+            show officer_neut
             "*Police radio noises*"
             o "They're at the building now. Which studio is she in."
             d "I-"
+            hide a_day5
+            show a_day5_one
             #achievements glitch to square ONE
             d "It's number one!"
             d "She's in studio one."
             o "Alright.{i} Studio one everyone. Be careful there could be traps or sensors.{/i}"
+            hide a_day5_one
+            show a_day5
             d "Are they going in now?"
             o "Yes they're entering the corridor now. It shouldn't take too long for them to get to the right room."
             o "We'll have to be patient and wait for their response. As soon as they've found something they'll let us know."
@@ -5367,24 +5421,34 @@ label start:
             "{cps=1}...{/cps}"
             "*Radio noise*"
             d "Did they find her?!"
+            hide officer_neut
+            show officer_conc
             o "They said the place was empty..."
             o "No trace of miss Amari anywhere."
             d "Did Matt move her? Was I not careful enough?"
             d "How could I let this happen!"
             d "I have to see for myself. Please, can I enter the apartment?"
+            hide officer_conc
+            show officer_neut
             o "Hmmm"
             o "I suppose since there is no one there it should be fine."
             scene bg_room
+            show a_day5
             d "Kai?!"
             "..."
+            show officer_neut
             o "She's not here miss Sullivan. They've checked everywhere. The place is empty."
             d "But that can't be- She has to be here!"
             "*Radio noise*"
+            hide officer_neut
+            show officer_conc
             o "{i}What?{/i}"
             d "What is it? What did they say?"
             o "They've arrested the person that was behind all of this. Your intuition was right. He followed us right into the trap."
             o "The only problem is it wasn't mister Ledger they caught..."
             d "What?"
+            hide officer_conc
+            show officer_neut
             o "It was Simon Harris"
             d "Simon?!"
             d "I-"
@@ -5400,15 +5464,20 @@ label start:
             o "We'll take care of the rest. But you should be brought back to your apartment now."
             o "An officer will drive you home and make sure you get there safely."
             d "But-"
+            hide officer_neut
+            show officer_happy
             o "Thank you for your help miss Sullivan."
             o "You won't need to worry about mister Harris anymore. He's in police custody now."
             d "He's not going to hurt anyone anymore?"
+            hide officer_happy
+            show officer_neut
             o "You're safe now miss Sullivan."
             d "He's gone.."
             o "Are you ready to go?"
             o "There will also be an officer stationed at your apartment tonight."
             o "For your safety and just in case any problems should arise."
             d "Let's go..."
+            hide officer_neut
             jump good
         
         
@@ -5428,6 +5497,7 @@ label start:
             d "I-"
             "Yank!"
             scene bg_room2
+            show a_day5
             d "Wha-"
             d "Where-"
             show simon_evil
@@ -5485,6 +5555,7 @@ label start:
             d "I-"
             "Yank!"
             scene bg_room2
+            show a_day5
             d "Wha-"
             d "Where-"
             show simon_evil
