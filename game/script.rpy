@@ -142,10 +142,11 @@ label start:
                 scene bg_d_bathroom
                 show a_day1
                 #(Destiny in the mirror, dishevelled).
-                show destiny_neut 
-                d_t "Let's see how this fits." 
-                d_t "Anything it better than this disaster right now."
-                d_t "Jeez its worse than I thought. The coffee really went everywhere."
+                show destiny_m_happy
+                d_t "There we go. Much better" 
+                d_t "Anything iis bettr than that ruined shirt I guess."
+                hide destiny_m_happy
+                show destiny_m_neut
                 d_t "Better tidy this mess of a haircut up a bit too while I'm at it."
                 d_t "I have to find a brush."
                 #looks around
@@ -153,7 +154,11 @@ label start:
                 d_t "That screen's still here!? Did it seriously follow me?"
                 d_t "What even is that. I can't touch it. Just text."
                 d_t "It's saying something about a Stain."
+                hide destiny_m_neut
+                show destiny_m_happy
                 d_t "Hah! What a coincidence!"
+                hide destiny_m_happy
+                show destiny_m_neut
                 d_t "Kind of creepy though..."
                 d_t "Wasn't that text there before I even spilled my mug? But why would that be an achievement?"
                 d_t "Oh no I'm officially going insane."  
@@ -196,7 +201,6 @@ label start:
                 g "Where's the bin? I can't find it anywhere."  
                 d_t "Shoot! I have to hurry."  
                 d "It's next to the counter. Be there in a second!"  
-
                 scene bg_d_kitchen
                 show a_day1
                 show gabe_neut
