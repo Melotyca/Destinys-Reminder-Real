@@ -2296,7 +2296,7 @@ label start:
                 d_t "This one is dated to the last day Simon said she'd come to work..."
                 d_t "Poor Kai."
                 d_t "Does this have something to do with why she's gone?"
-                d_t "I should put this back. I think I've seen enough. Maybe there are some other designs on the computer."
+                d_t "I should put them back. I think I've seen enough. Maybe there are some other designs on the computer."
                 hide sketch3
                 jump kaidesk
                 
@@ -2305,13 +2305,13 @@ label start:
                 d_t "Let's see what she has saved on her computer."
                 show comp_empty
                 d_t "Wow, clean desktop. I'm impressed."
-                d_t "Alright. Most of this just looks like work in progresses for previous projects."
+                d_t "Alright. Mostly just work in progresses for previous projects."
                 d_t "She does have some notes right here though."
                 hide comp_empty
                 show kai_message_1
                 "Click"
-                d_t "Hmm some about the Project they're working on. It looks like she was planning out some Ideas."
-                d_t "Oh, and there are some messages she started to the others!"
+                d_t "Hmm, something about the Project they're working on. It looks like she was planning out some Ideas."
+                d_t "Oh, and there are some messages she started to the other team members!"
                 d_t "Maybe she left some notes about her thoughts on these designs too."
                 d_t "Oh yeah! I found Gold. She's describing what she thought she'd do for one of the designs that are still missing!"
                 d_t "Let's- oh! That sounds doable!"
@@ -2320,87 +2320,103 @@ label start:
                 show kai_message_2
                 "Click"
                 d_t "Huh?"
-                d_t "What's this about taking time off?"
-                d_t "\"Dear Matthew. I am writing this E-mail to request a two week leave starting on friday. I apologize for the short notice, but I have come to realize that this matter is much more pressing than I initially thought.\""
+                d_t "What's this? Taking time off?"
+                d_t "\"Dear Matthew. I am writing this E-mail to request a two week leave starting on friday. I apologize for the short notice, but I have come to realize that this matter is much more pressing than I initially anticipated.\""
                 d_t "It's addressed to Matt directly! She's bold."
-                d_t "Hold on. But didn't Simon say Kai quitting came out of nowhere?"
+                d_t "Hold on, but didn't Simon say Kai quitting came out of nowhere?"
                 d_t "Wait, there's more."
-                d_t "\"Due to some rather uncomfortable encounters involving people at this firm, I request either a vacation or an unpaid leave as I do not feel comfortable in the space at the moment.\""
-                d_t "This text would explain why she wanted to talk to Matt before leaving. But neither of them ever mentioned her wanting time off."
+                d_t "\"Due to some rather uncomfortable encounters involving people at this firm, I request either a vacation or an unpaid leave, as I do not feel comfortable in this space at the moment.\""
+                d_t "Whoa. Uncomfortable encounters?"
+                d_t "This text would explain why she wanted to talk to Matt before leaving. But it's strange that neither of them ever mentioned her wanting time off."
                 d_t "Did they lie?"
                 d_t "Matt said she quit. There was nothing about a known time off from work."
-                d_t "Why would he lie about that if he knew. I would have taken the position anyways."
+                d_t "Why would he lie about that if he knew? I would have taken the position anyways."
                 d_t "Did she change her mind?"
-                d_t "It doesn't look like she ever sent it. Did they talk about something else then?"
-                d_t "Why did she go directly to Matt? I'm sure Simon would have asked him for time off for her, if she'd told him about it."
+                d_t "It doesn't look like she ever sent it. They must have talked about something else then."
+                d_t "But why did she go directly to Matt?"
+                d_t "I'm sure Simon would have asked him to give her time off if she'd told him about it."
                 d_t "I'm sure he would have understood."
-                d_t "That's usually not something you go directly to the head of department for. I'm sure Matt would have been less than pleased."
+                d_t "Going to Matt for time off?"
+                d_t "That's usually not something you go directly to the head of department for. I would never hear the end of it if I did something like that."
                 d_t "What was going on?"
                 d_t "She seems so desperate."
-                d_t "It looks like someone from work was making her uncomfortable."
+                d_t "It looks like this someone from work was making her uncomfortable."
                 d_t "Very uncomfortable..."
-                d_t "Why didn't she just go talk to Simon about feeling unsafe? Something as serious as this should be reported immediately!"
-                d_t "No stop it Destiny!"
+                d_t "But then why didn't she just go talk to Simon about feeling unsafe? Something as serious as this should be reported to the team leader immediately!"
+                d_t "Did this person pressure-"
+                d_t "No, stop it Destiny!"
+                d_t "She quit. That's all there is to it."
                 d_t "I shouldn't even be looking into this. It's none of my business."
+                d_t "Matt and Simon have to take care of this."
                 d_t "I got the notes I was looking for."
-                d_t "This is still her Computer. I shouldn't be looking for more than strictly work related stuff."
-                d_t "Maybe she quit to get away from it all..."
+                d_t "Besides, this is still her Computer. I shouldn't be looking for more than strictly work related information."
+                d_t "Whatever her reasons were, she surely had them."
+                d_t "Though I'm beggining to think she quit to get away from it all..."
                 hide kai_message
-                jump kaidesk
-                
+                jump kaidesk    
 
             label deskcard:
-                d_t "Oh, a postcard. I probably shouldn't snoop in other people's things."
-                d_t "But..."
-                d_t "She did leave it here though..."
+                d_t "Oh, a postcard. That's cute."
+                d_t "I know I sould be looking for more important information, but a quick look won't hurt."
+                d_t "I mean, she did leave it here. It can't be anything too personal."
                 d_t "Screw it. Maybe this will tell me a little bit about her. I am curious to know what she was like as a person. Not just her work."
                 show kai_postcard
-                d_t "Wait. Is this her on the picture!?"
+                d_t "Wait..."
+                d_t "Is this her on the picture!?"
                 d_t "..."
                 d_t "But isn't that-"
-                d_t "It's the girl from my dreams!"
-                d_t "But how is that even possible? I can't remember ever seeing her before she started appearing in my sleep."
-                d_t "We've never even talked."
-                d_t "But she looks exactly like her..." 
-                d_t "No, that is her alright. I remember that Face."
-                d_t "Why is she suddenly haunting and telling me that someone is after me?"
+                d_t "That's the girl from my dreams!"
+                d_t "It-"
+                d_t "But how is that even possible? I don't think I've ever seen her before."
+                d_t "Well, before she started haunting me in my sleep."
+                d_t "She looks exactly like her..." 
+                d_t "No, that's her alright. I remember that Face."
+                d_t "Why is she suddenly popping up in my dreams, telling me that someone is after me?"
                 if dinner_plans ==True:
-                    d_t "I really do have a weird subconscious. It's kind of freaky."
+                    d_t "Is this my subconcious playing a trick on me?"
+                    d_t "But I've never even met her."
                 else:
                     d_t "Were they really just dreams?"
-                    d_t "Can they be? I mean, it's clearly her. Even though I've never seen her from so close before."
-                    d_t "I couldn't have possibly known what she'd look like until now."
+                    d_t "I mean, it's clearly her. Even though I've never seen her or heard her voice."
+                    d_t "I couldn't have possibly known what she'd look like in such detail until now."
+                    d_t "The dreams..."
                     d_t "Kai's the one warning me about all of this."
                     d_t "Is she-"
                     d_t "Does she know about the achievements?"
                 d_t "-"
+                d_t "This girl. Who is she?"
+                d_t "Oh!"
                 d_t "Hold on. What does it say on the back?"
                 hide kai_postcard
                 show kai_postcard_back
                 d_t "\"Have a great summer this year! Make sure you bring home lots of good memories when you visit again. -Love, Mom\""
-                d_t "Aw, Sweet."
+                d_t "Aw, at least that's really sweet."
                 d_t "!"
-                d_t "Hey! That's my street!"
-                d_t "The address."
+                d_t "Hey wait! That's my street!"
+                d_t "WHA-"
+                d_t "Her address."
                 d_t "She lives really close to me!"
                 hide kai_postcard_back
                 if dinner_plans ==True:
                     d_t "Whoa, it gets even more freaky. Jeez these weird coincidences keep piling up."
-                    d_t "Did I maybe see her on my way home?"
+                    d_t "If she lives so close, maybe I saw her on my way home?"
                     d_t "That would explain how I know what she looks like..."
-                    d_t "Maybe that's it. I mean it's possible I forgot I ever even saw her since I had nothing to do with her."
-                    d_t "The mind works in mysterious ways doesn't it."
+                    d_t "I mean it's possible I forgot I ever even saw her, since I had nothing to do with her before."
+                    d_t "If that's really the case then I might have even talked to her before."
+                    d_t "How come I can't remember?"
+                    d_t "The mind works in mysterious ways, doesn't it."
                 else:
                     if call_police == True:
                         d_t "Oh no."
                         d_t "She hasn't come into the office."
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
-                        d_t "And that girl that went missing lived close to me..."
+                        d_t "And that girl that went missing really close to me..."
                         hide kai_postcard_back
-                        d_t "Kai didn't know she wouldn't be coming back."
+                        d_t "It's all starting to make sense now."
+                        d_t "Kai didn't know she wouldn't be coming back. That's why all her things are still here."
                         d_t "She didn't leave."
-                        d_t "She was taken!"
+                        d_t "She disappeared!"
                         d_t "Kai is the one the police are looking for!"
                         hide a_day3
                         show a_day3_ignorance
@@ -2408,20 +2424,23 @@ label start:
                         d_t "So it's true."
                         d_t "But how-"
                         d_t "Why haven't they questioned Matthew and Simon yet? Shouldn't the police ask her employers? They're the ones in charge of this department."
-                        d_t "I'm sure the police has talked to them by now. Wouldn't they have to ask the team if anyone knew anything?"
-                        d_t "Simon said she suddenly wanted to quit and wouldn't talk about it. It has to have been someone from work."
+                        d_t "I'm sure the police have talked to them by now. Wouldn't they have to ask the team if anyone knew anything too?"
+                        d_t "Simon said she suddenly wanted to quit and wouldn't talk about it. It has to have been someone from his team."
                         d_t "Even talking to Matthew seemingly didn't change her mind."
-                        d_t "Is that \"he\" she keeps mentioning working here?"
                         d_t "..."
                         d_t "Is he after me now...?"
-                        d_t "He was at my apartment yesterday."
-                        d_t "Oh my god. She's been trying to warn me about this. It's happening to me too now."
+                        d_t "Is that what she meant?"
+                        d_t "He was here..."
+                        d_t "He was at my apartment yesterday!"
+                        d_t "Oh my god. She's been trying to warn me about this."
                         d_t "It's happening to me too now."
                         d_t "Maybe this is how it all started for her too."
+                        d_t "I-"
                         d_t "I have to find a way to change whatever it is she says is going to happen!"
-                        d_t "There has to be a way to get out of this."
-                        d_t "I can't just lock myself in at home"
-                        d_t "That's not going to keep me safe."
+                        d_t "There has to be a way to stop this."
+                        d_t "I'm in danger."
+                        d_t "But I can't just lock myself in at home. If he was already there then that won't protect me."
+                        d_t "That's not going to be enough to keep me safe."
                         d_t "Plus, I really need this job."
                         d_t "I have to tell the police about this."
                         d_t "I have to figure this out alongside work somehow. I can't mess this up."
@@ -2432,57 +2451,57 @@ label start:
                         d_t "She hasn't come into the office."
                         d_t "She didn't tell anyone why she was leaving."
                         d_t "She left all her things."
-                        d_t "Kai didn't know she wouldn't be coming back."
                         hide kai_postcard_back
-                        d_t "She didn't leave."
-                        d_t "She was taken!"
+                        d_t "It's all starting to make sense now."
+                        d_t "Kai didn't know she wouldn't be coming back. That's why all her things are still here."
                         hide a_day3
                         show a_day3_ignorance
                         d_t "!"
                         d_t "So it's true."
                         d_t "But how-"
                         d_t "She's been trying to warn me about someone."
-                        d_t "Simon said she suddenly wanted to quit and wouldn't talk about it. It has to have been someone from work."
+                        d_t "Simon said she suddenly wanted to quit and wouldn't talk about it. It has to have been someone from his team."
                         d_t "Even talking to Matthew seemingly didn't change her mind"
-                        d_t "Is that \"he\" she keeps mentioning working here?"
                         d_t "..."
                         d_t "Is he after me now...?"
-                        d_t "He was at my apartment yesterday."
+                        d_t "He was here..."
+                        d_t "He was at my apartment yesterday!"
                         d_t "Oh my god. She's been trying to warn me about this and I've ignored all of it." 
                         d_t "It's happening to me too now."
                         d_t "Maybe this is how it all started for her too."
                         d_t "I have to find a way to change whatever it is she says is going to happen!"
-                        d_t "There has to be a way to get out of this."
-                        d_t "I can't just lock myself in at home"
+                        d_t "There has to be a way to stop this."
+                        d_t "But, I can't just lock myself in at home. If he was really there yesterday then that's not going to work."
                         d_t "That's not going to keep me safe."
                         d_t "Plus, I really need this job."
-                        d_t "I have to figure this out alongside work somehow. I can't mess this up."
-                        
+                        d_t "I have to figure this out alongside work somehow. I can't mess this up."        
                 jump kaidesk
-
-                
 
             label donewithdesk:
                 if dinner_plans == True:
-                    d_t "I can't get the thought out of my head that she didn't just quit."
-                    d_t "I feel kind of uneasy sitting at this girl's desk. Something's telling me it's not safe here..."
+                    d_t "She didn't just quit. She can't have."
+                    d_t "All the signs are pointing at the fact that something awful happened."
+                    d_t "I-"
+                    d_t "It doesn't feel right sitting at this girl's desk. It's not safe here..."
                     d_t "Was she stalked?"
+                    d_t "It sounds like something from a TV-Show but then again..."
                     d_t "No one knows where she is. Almost like she just disappeared."
-                    d_t "It's possible someone from work did something to her."
+                    d_t "Someone from work did something to her."
+                    d_t "God, this doesn't help."
                     d_t "I'm sure whoever it was wouldn't like me taking her place."
-                    d_t "I have to be a more careful. That knocking that we heard yesterday. Gabe said no one was there."
-                    d_t "But the fact that Kai hasn't shown up and lived really close to me is giving me the shivers."
+                    d_t "Snooping through her things."
+                    d_t "I have to be a more careful. Especially with that knocking that we heard yesterday. Gabe said no one was there."
                     d_t "Maybe this whole thing is connected somehow."
                 elif call_police == True:
                     d_t "Someone here wanted to hurt Kai."
-                    d_t "It doesn't feel right sitting at this her desk. She disappeared and now I'm taking her place."
+                    d_t "It doesn't feel right sitting at this her desk like nothing happened. She disappeared and now I'm taking her place."
                     d_t "I'm next."
-                    d_t "What happened to her?"
+                    d_t "But what happened to her?"
                     d_t "The police are still looking for her."
                     d_t "No one knows where she is..."
-                    d_t "I don't believe that."
+                    d_t "I- I don't believe that."
                     d_t "Someone here knows."
-                    d_t "Someone did something to her"
+                    d_t "Someone did something to her."
                     d_t "I have to be a more careful. That knocking yesterday... I'm glad I called the police."
                     d_t "Maybe all of this will help them find her."
                     d_t "And find whoever did this to her..."
@@ -2492,11 +2511,11 @@ label start:
 
                 else:
                     d_t "Someone here wanted to hurt Kai."
-                    d_t "It doesn't feel right sitting at this her desk. She disappeared and now I'm taking her place."
+                    d_t "It doesn't feel right sitting at this her desk like nothing happened. She disappeared and now I'm taking her place."
                     d_t "I'm next."
-                    d_t "What happened to her?"
+                    d_t "But what happened to her?"
                     d_t "No one knows where she is..."
-                    d_t "I don't believe that."
+                    d_t "I- I don't believe that."
                     d_t "Someone here knows."
                     d_t "Someone did something to her"
                     d_t "I have to be a more careful. That knocking yesterday..."
@@ -2506,12 +2525,12 @@ label start:
                     d_t "I don't want to end up like Kai."
                     d_t "I have to figure out how to stop this."
                 
-                d_t "I don't know if it will help but I should go talk to Simon..."
+                d_t "I should go talk to Simon..."
                 d_t "I think he should know about these-"
                 d_t "Strange notes."
                 d_t "It doesn't look like she ever got the chance to tell him."
                 d_t "I'll go meet him over lunch."
-                d_t "For now all I can really do is just continue were she left off."
+                d_t "For now, all I can really do is just continue were she left off."
                 jump afternoon3
 
             label afternoon3:
@@ -2525,7 +2544,7 @@ label start:
                 show gabe_neut
                 d "Gabe!"
                 d "Where were you at lunch? I didn't see you anywhere."
-                g "Sorry I totally forgot to tell you. I brought something to eat today."
+                g "Sorry, I totally forgot to tell you. I brought something to eat today."
                 g "The stuff they were serving at the cafeteria today looked wretched."
                 d "Yeah..."
                 d "Have you seen Simon anywhere?"
@@ -2536,18 +2555,18 @@ label start:
                 hide gabe_conf
                 show gabe_neut
                 d "Oh ok. Thank you."
-                d "Well he did say he was going to be busy..."
+                d "Well, he did say he was going to be busy..."
                 hide gabe_neut
                 show gabe_conf
                 g "Did you want to talk to him?"
                 d "Yeah. I wanted to ask him about something."
                 d "But I'll just have to wait until he's back."
                 g "What do you want to ask him?"
-                d "I'll tell you later ok? I think I should get back to work."
+                d "I'll tell you later ok? I think I should get back to work now."
                 hide gabe_conf
                 show gabe_neut
-                g "Oh."
-                g "Sure. Don't want to be caught slacking on your first day."
+                g "Oh. Uhm."
+                g "Sure. Don't want to be caught slacking on your first day, eh?"
                 d "Yeah."
                 jump party
                    
@@ -2563,42 +2582,46 @@ label start:
             show a_day3_ignorance
             if open_door == True and call_police == False:
                 show gabe_happy
-                g "Destiny!"
-                g "There you are!"
-                g "I've been looking for you. And? How was your first day in the new Team?"
-                d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
+                g "Oh, hey there again Destiny."
+                g "I've been waiting for you. Did you manage to find Simon?"
+                d "No, not yet."
+                g "How was your first day in the new Team?"
+                d "Oh, it was fine. I got to- eh take a look at Kai's designs and style."
                 hide gabe_happy
                 show gabe_conc
-                g "Was something wrong with them? You don't look too pleased."
-                g "I thought something was off before too. What's wrong?"
-                d "No, no the drawings were great. I just found some of her other things too."
+                g "You don't seem too impressed. Is her style not your thing?"
+                g "Speaking of which, I thought something was off before too. Did something happen today?"
+                d "Oh, no, the drawings were great. I just, well, found some of her other things too."
+                g "And?"
                 d "And... She didn't seem too happy before she left."
                 d "Something seemed off."
-                g "Oh"
+                g "Oh."
                 hide gabe_conc
                 show gabe_conf
-                g "What did you see?"
-                d "There were some notes and drawings..."
+                g "What kind of off?"
+                d "There were some personal notes and drawings..."
                 g "Did she not clear her computer before she left?"
                 d "No..."
-                d "It all seemed quite sudden. All of her things were still there."
+                d "It seemed like it was quite sudden. All of her things were still there."
                 hide gabe_conf
                 show gabe_conc
-                g "What!?"
+                g "What!? All of it?"
                 g "She didn't take anything with her?"
                 d "No."
-                g "That does sound weird."
-                g "Have you told Simon about it?"
-                d "No that's why I was looking for him. I wanted to go talk to him about it but he wasn't there."
-                d "He said he'd be there almost the entire day but I guess something must have come up."
+                g "Nothing? That does sound weird."
+                g "Does Simon know?"
+                d "About her thing being there? Yeah he gave me her desk."
+                g "But about the notes, have you told him about it?"
+                d "No, that's why I was looking for him before. I wanted to go talk to him about it, but he wasn't there."
+                d "He said he'd be there almost the entire day, but I guess something must have come up."
                 g "Aw man. That sucks."
                 hide gabe_conc
                 show gabe_neut
                 g "Were you at least able to start on the designs they want you to do?"
                 d "A little bit yeah."
                 d "..."
-                g "Come on Destiny. Relax, it's going to go great."
-                g "A little bump in the road isn't going to mean the end of this Project."
+                g "Come on Destiny. Heads up, I'm sure there's an explanation for this."
+                g "A little bump in the road isn't going to mean the end of your career."
                 d "That's not what I'm worried about..."
                 hide gabe_neut
                 show gabe_conf
@@ -2607,32 +2630,33 @@ label start:
                 d "I don't feel safe here."
                 hide gabe_conf
                 show gabe_conc
-                d "Those things I saw on her computer and her just disappearing leaving everything behind."
+                d "Those things I saw on her computer and her just disappearing, leaving everything behind."
                 d "It just doesn't sit right with me."
-                d "I shouldn't just be replacing her."
+                d "I shouldn't be replacing her like this."
                 d "She said someone from work was pressuring her and now these strange things are starting to happen to me too."
                 d "I think I should just go home."
-                d "But with the things that happened yesterday..."
-                d "I'm scared someone here wants to do the same things to me that they did to her."
+                d "What if that person is here too tonight?"
+                d "I would have just left. But with the things that happened yesterday..."
+                d "I'm scared someone wants to do the same things to me that they did to her."
                 g "Do you think she was-"
                 g "Kidnapped?"
                 d "Maybe..."
                 g "Oh Destiny. Why didn't you tell me about this sooner. If you don't feel comfortable being here, then there's no need to stay."
-                g "This isn't an obligatory event. And even work isn't worth being in danger for."
-                d "I'm scared to go alone."
+                g "This isn't an obligatory event anyways. And even work isn't worth being in danger for."
+                d "I'm scared to go alone..."
                 g "Who said you'd be going alone."
                 hide gabe_conc
                 show gabe_neut
-                g "I'll keep you company until you're home."
+                g "I'll keep you company until you're safely home."
                 g "Do you want to call the police?"
-                d "No. Not tonight. Maybe tomorrow morning but right now I just want to go home."
-                g "That's ok."
+                d "No. Not tonight. Maybe tomorrow morning, but right now I just want to go home."
+                g "That's ok. We can do that."
                 g "Let's get you Home. And once you're there you'll lock the door and try to get some sleep."
-                g "If you want I can come over and we can call the police tomorrow."
+                g "If you want, I can come over and we can call the police together tomorrow."
                 d "Thank you, Gabriel."
                 hide gabe_neut
                 show gabe_happy
-                g "Don't worry about it. I'd be scared too if I was in your position."
+                g "Don't worry about it. I'd be scared too if I was you."
                 hide gabe_happy
                 show gabe_neut
                 g "Now let's go."
@@ -2642,31 +2666,33 @@ label start:
 
             else: 
                 show gabe_happy
-                g "Destiny!"
-                g "There you are!"
-                g "I've been looking for you. And? How was your first day in the new Team?"
-                d "Oh, It was fine. I got to- eh take a look at Kai's designs and style."
+                g "Oh, hey there again Destiny."
+                g "I've been waiting for you. Did you manage to find Simon?"
+                d "No, not yet."
+                g "How was your first day in the new Team?"
+                d "Oh, it was fine. I got to- eh take a look at Kai's designs and style."
                 hide gabe_happy
                 show gabe_conc
-                g "Was something wrong with them? You don't look too pleased."
-                g "I thought something was off before too. What's wrong?"
-                d "No, no the drawings were great. I just found some of her other things too."
+                g "You don't seem too impressed. Is her style not your thing?"
+                g "Speaking of which, I thought something was off before too. Did something happen today?"
+                d "Oh, no, the drawings were great. I just, well, found some of her other things too."
+                g "And?"
                 d "And... She didn't seem too happy before she left."
                 d "Something seemed off."
-                g "Oh"
+                g "Oh."
                 hide gabe_conc
                 show gabe_conf
-                g "What did you see?"
-                d "There were some notes and drawings..."
+                g "What kind of off?"
+                d "There were some personal notes and drawings..."
                 g "Did she not clear her computer before she left?"
                 d "No..."
-                d "It all seemed quite sudden. All of her things were still there."
+                d "It seemed like it was quite sudden. All of her things were still there."
                 hide gabe_conf
                 show gabe_conc
-                g "What!?"
+                g "What!? All of it?"
                 g "She didn't take anything with her?"
                 d "No."
-                g "That does sound weird."
+                g "Nothing? That does sound weird."
                 d "That's not all. She had-"
                 "Bump!"
                 hide gabe_conc
@@ -2675,7 +2701,7 @@ label start:
                 s "Oh sorry! Didn't see you there."
                 hide gabe_neut_l
                 show gabe_happy_l
-                g "No worries! You're Simon am I right?"
+                g "No worries! You're Simon, am I right?"
                 s "Yes. How did you know? I don't think we've been introduced yet."
                 g "I'm Gabriel! Destiny here told me she'd be working with you from now on."
                 hide simon_neut_r
@@ -2688,21 +2714,21 @@ label start:
                 hide simon_happy_r
                 show simon_neut_r
                 s "I'm glad I ran into you again actually!"
-                s "I was hoping we'd get to talk a bit more during the day but the meeting eh- took a little longer than expected..."
-                s "I wanted to stop by afterwards. But it was already so late then. I'm terribly sorry."
+                s "I was hoping we'd get to talk a bit more in the afternoon, but the meeting eh- took a little longer than expected..."
+                s "I wanted to stop by afterwards. But it was already so late by then. I'm terribly sorry, I'm sure you understand."
                 d "Don't worry. I was able to settle in fairly well."
                 hide gabe_neut_l
                 show gabe_happy_l
                 g "Destiny has told me all about your generous offer to let her take up the task of designing for your team."
                 hide gabe_happy_l
                 show gabe_neut_l
-                g "I heard it had to be quite a hasty decision"
+                g "But I heard it was quite a hasty decision."
                 hide simon_neut_r
                 show simon_conf_r
                 s "Oh yeah. It's a shame. The woman that was working for us before quit recently. We're still trying to figure everything out." 
                 hide simon_conf_r
                 show simon_happy_r
-                s "But I'm sure Destiny will be a fine replacement as far as I'm concerned."
+                s "But I'm sure Destiny will be a fine replacement, as far as I'm concerned."
                 hide simon_happy_r
                 show simon_conf_r
                 s "Did you find Kai's designs?"
@@ -2711,23 +2737,24 @@ label start:
                 d "Actually about that. Gabe could you give us a moment? I have something I'd like to ask Simon."
                 hide gabe_neut_l
                 show gabe_happy_l
-                g "Sure go ahead I'll be waiting over by the snacks if you need me."
+                g "Sure go ahead. I'll be waiting over by the snacks if you need me."
                 d "Thank you."
                 hide gabe_happy_l
                 hide simon_neut_r
                 show simon_conf
                 s "Oh? What the matter? You sound rather serious."
-                d "Maybe. I wanted to ask you about the time before Kai left."
+                d "Well, yeah. I wanted to ask you about the days right before Kai left."
                 hide simon_conf
                 show simon_neut
                 s "Oh?"
-                s "Go ahead."
-                d "The thing is, I found some of her old notes on her computer. They were kind of... unnerving."
-                d "There was also a message she wanted to send to Matthew right before she quit I think."
+                s "Unexpected. But sure, go ahead."
+                d "The thing is, I found some notes on her computer. They were kind of... unnerving."
+                s "Unnerving?"
+                d "There was also a draft of a message adressed to to Matthew, dated to right before she quit I think."
                 hide simon_neut
                 show simon_conc
-                s "You found what?"
-                d "Yeah. In the message she was requesting time off from work."
+                s "A what?"
+                d "Yeah, in the message she was requesting time off from work. For some uncomfortable reasons..."
                 s "..."
                 s "That was on her computer?"
                 d "Yeah. You seem surprised."
@@ -2735,102 +2762,104 @@ label start:
                 d "Matthew never mentioned anything to you?"
                 hide simon_conc
                 show simon_conf
-                s "No. I'd remember something like that."
+                s "No. Trust me, I'd remember something like that."
                 s "I really should have taken a closer look before..."
                 hide simon_conf
                 show simon_neut
                 s "I'm sorry."
                 d "Do you think Matt knows why she quit?"
-                s "I know she went to talk to him the day before. But he never said anything about such a request."
+                s "All I know is she went to talk to him the day before. But he never said anything about such a request."
                 hide simon_neut
                 show simon_conf
                 s "He never told me anything about their conversation at all actually. Said it was private."
-                s "I don't get it. She should have come to me first. What went wrong?"
-                d "I'm sure she had a reason."
+                s "I don't get it. She should have come to me first. What did I do wrong?"
+                d "I'm sure she had her reasons."
                 hide simon_conf
                 show simon_neut
-                s "Oh sorry. Did I say that out loud?"
+                s "Oh, sorry. I didn't mean to say that out loud."
                 s "It's just so unusual for her."
                 hide simon_neut
                 show simon_conc
-                s "If she'd wanted time off I'd have been glad to negotiate the terms with her."
-                s "She was one of the most hardworking members on our team. Of course I'd have given her time off."
+                s "If she'd wanted time off, I'd have been glad to negotiate the terms with her."
+                s "She was one of the most hardworking members on our team. Of course I'd would give her time off."
                 s "Are you sure that's what you read?"
-                d "Pretty sure yes. But I don't think she ever sent it."
+                d "Pretty sure, yes. But I don't think she ever sent it."
                 d "I just thought, since you mentioned she went to talk to Matt, he knew about her request."
                 hide simon_conc
                 show simon_neut
-                s "Hmm. Possible."
+                s "Hmm, possible."
                 s "Did she write why she wanted time off?"
-                d "There was something about someone making her uncomfortable."
-                s "Oh."
+                d "There was something about an individual here making her uncomfortable, pressuring her."
+                s "Oh..."
                 s "Did she say who?"
                 d "No. It was really vague. I don't think she wanted Matthew to know who it was."
-                s "I'll go talk to him about it."
-                s "If he knows something about why she quit so suddenly or where she went then I should know about it as well."
+                s "I have to go talk to him."
+                s "If he knows something about why she quit so suddenly or where she went, then I should know about it as well."
+                s "He can't keep this kind of information from me."
                 hide simon_neut
                 show simon_conf
-                s "I'm a bit shocked he didn't tell me."
+                s "I'm a shocked he didn't tell me."
                 d "Yeah, I don't know why he wouldn't."
                 hide simon_conf
                 show simon_happy
-                s "Thank you for letting me know!"
+                s "Thank you for letting me know Destiny."
                 s "I'll have to confront him about it. I think he's here too tonight."
                 d "Of course."
-                d "I was able to start picking up her work as well by the way."
-                s "Really! That's awesome. We'll take a look at it tomorrow morning ok?"
+                d "I was able to start picking up her work as well by the way. She had some notes on missing designs."
+                s "Really! That's awesome. We'll take a look at it tomorrow morning, ok?"
                 d "Sure."
                 if call_police == True:
                     "Ring!"
                     d "Oh! Sorry! That has to be mine."
-                    s "Take it. I'll go talk to Matthew while you're busy."
-                    d "Thanks!"
+                    s "Take it. I have to go talk to Matthew now anyways."
+                    d "Thanks! Good luck."
                     show phone_p
                     with moveinbottom
                     "Click"
                     d "Destiny Sullivan. Who is this?"
-                    o "Evening miss Sullivan. This is officer Rogan. Do you have a moment to talk?"
+                    o "Evening miss Sullivan. This is officer Rogan again. Do you have a moment to talk?"
                     d "One second please."
                     scene bg_office_hallway
                     show a_day3_ignorance
                     show phone_p
                     d "So, you were saying?"
                     o "Yes. Sorry for disturbing you madam."
-                    o "But we felt it was necessary to inform that a suspicious individual has been spotted wandering around your apartment today."
+                    o "But we felt it was necessary to inform you, that a suspicious individual was spotted wandering around your apartment today."
                     o "One of our officers caught sight of a hooded figure entering the building and inspecting the mailboxes, seemingly looking for something."
-                    o "They quickly left however as soon as the officer went to approach them."
-                    o "We believe it was a younger man but would confirm your suspicions miss Sullivan."
-                    d "Were they able to see who it was?"
+                    o "They quickly left however, as soon as the officer went to approach them."
+                    o "Judging from their frame we believe it was a man. That would confirm your suspicions miss Sullivan."
+                    d "Were they able to see who it was!?"
                     o "No. The person was wearing a facemask and had a hood on."
                     o "We will investigate this person further however."
-                    o "Going off accounts from neighbors we suspect this might the same individual responsible for the recent disappearance."
-                    o "Since we now have reason to believe these two cases are connected we would like to collect any information you have about a woman called Kai Amari."
+                    o "Going off accounts from neighbors, we suspect this might the same individual, responsible for the recent disappearance."
+                    o "Since we now have reason to believe these two cases are connected, we would like to collect any information you might have about the woman that disappeared."
+                    o "Her name is Kai Amari. Do you recognize her name?"
                     d_t "It is her!"
-                    o "Does the name sound familiar to you?"
                     d "Yes! We work at the same company. Well, she quit unexpectedly a few days ago."
-                    o "Did you know her?"
-                    d "No not really. I don't think I've heard of her before two days ago. I was offered to take her position since they needed someone to fill her place."
-                    o "And since then you've been noticing feeling followed?"
-                    d "Yes. It started when I was offered to switch to her team."
+                    o "Did you know her personally?"
+                    d "No, not really. I don't think I've heard of her before roughly around two days ago. I was offered to take her position, since they needed someone to fill her place."
+                    o "That would be close to the time you started noticing feeling followed?"
+                    d "Yes. It started when I was offered to switch to her former team."
                     d_t "The dreams started the day I heard the news from Matt."
-                    d_t "How can I tell him I think she's been captured without telling him about my crazy dreams."
+                    d_t "How can I tell him I think she's been captured without sounding absolutely crazy by telling him about my dreams."
                     o "You two never had any relations before that?"
                     d "No."
                     o "Did anyone you know ever talk about miss Amaris disappearence?"
                     d "Well, my boss and my new team leader both told me she quit suddenly and then never came in again."
-                    d "I was assigned her desk to look through her started work. When I looked through her notes I found some disturbing images."
+                    d "I was assigned her desk to look through her started work. But when I looked through her notes, I found some disturbing images."
                     o "Please, continue."
-                    d "She drew about s man stalking and pressuring her. She wrote about being uncomfortable around certain people in the office."
+                    d "She drew images of a man stalking and pressuring her. She also wrote about being uncomfortable around certain people in the office."
                     d "There was a message to one of the executives requesting time off because of it."
                     o "Such a request was never mentioned to you when you were offered her position?"
                     d "No."
-                    o "Did you ask any higherups about it?"
-                    d "I did, yes. He said that the person the message was for never mentioned anything about her request to him."
-                    d "That was just now actually. He said he is going to ask him about it."
-                    o "Thank you miss Sullivan. We would like to look into these drawings and individuals further. Could we have the names of you boss and team leader?"
+                    o "Did you ask any higherups about it since you've seen the message?"
+                    d "I did, yes. I talked to the team leader. He said that the person the message was for never mentioned anything about her request to him."
+                    d "That was just now actually. He said he was going to ask him about it."
+                    o "Thank you miss Sullivan. We would like to look into these drawings and individuals further. Could we have the names of you boss and team leader perhaps?"
                     d "Matthew Ledger and Simon Harris."
+                    o "Alright."
                     o "We will come collect the information early tomorrow and keep you informed about any happenings."
-                    o "There is a police officer stationed at your building but we would still advise you to have someone you trust accompany you home tonight."
+                    o "There is a police officer stationed at your building tonight, but we would still advise you to have someone you trust accompany you home."
                     d "I will."
                     o "If you notice anything strange alert us immediately."
                     d "Yes. Thank you, officer."
@@ -2842,14 +2871,18 @@ label start:
                     d_t "He was at my apartment again!"
                     d_t "The knocking was real."
                     d_t "Kai was right. He's after me now."
-                    d_t "God, I should have been listening to her"
+                    d_t "God, I should have listened to her. I can't remember what she said."
                     d_t "Did she leave any other hints?"
-                    d_t "She's been trying to talk to me. These achievements. They're her trying to talk to me."
-                    d_t "Urgh! Why can't I figure these out. Every time it's something completely different than I expected."
+                    d_t "She's been trying to talk to me... These achievements. They're her trying to talk to me!"
+                    d_t "They know what will happen."
+                    d_t "Urgh! Why can't I ever figure out what they're going to mean. Every time I think I have it figured out, it's something completely different."
                     d_t "What can I do?"
-                    d_t "The police will get her stuff tomorrow..."
+                    d_t "The police will come get her stuff tomorrow..."
                     d_t "Will the message to Matt and the drawings really be able to help them?"
-                    d_t "I hope so. I can't really do anything else right now."
+                    d_t "What if it's not enough? I can't really do anything else right now."
+                    d_t "I don't know anything."
+                    d_t "!"
+                    d_t "That's not true. I have the achievements!"
                     d_t "What's left for today?"
                     hide a_day3_ignorance
                     show a_day3_ignorance_b
@@ -2857,13 +2890,13 @@ label start:
                     d_t "I think this call must've been the hands up."
                     d_t "So that means..."
                     d_t "Only the where is Waldo one is left."
-                    d_t "Great of course. The one I was able to decipher the least."
-                    d_t "I haven't had to look for anyone yet."
-                    d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
-                    d_t "And if this Waldo is supposed to be him then I can technically find him tonight right?"
-                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight."
-                    d_t "Well."
-                    d_t "That doesn't really make my sample size that much smaller now that I think about it."
+                    d_t "Great, of course. The one I was able to decipher the least. This is exactly what I meant."
+                    d_t "I have no clue where to even begin with this one. I mean, I haven't had to look for anyone yet."
+                    d_t "Kai's notes do make it seem like the guy she kept warning me about works here."
+                    d_t "And if this Waldo is supposed to be him, then I could technically find him tonight, right?"
+                    d_t "If that's true, then I'd be able to narrow it down a bit by looking at who's here tonight."
+                    d_t "Well..."
+                    d_t "That doesn't really make my sample size that much smaller, now that I think about it."
                     d_t "Oh well it's worth keeping in mind."
                     d_t "I should go back in."
                     hide a_day3_ignorance_b
@@ -2871,33 +2904,34 @@ label start:
                 else: 
                     hide simon_happy
                     show simon_neut
-                    s "If you'll excuse me I think I just saw him over there."
+                    s "If you'll excuse me, I think I just saw him over there."
                     d "Good luck!"
-                    d_t "I need a moment away from these people."
+                    d_t "I need a moment away from all these people."
                     scene bg_office_hallway
                     show a_day3_ignorance
+                    d_t "Phew."
                     d_t "Much better."
-                    d_t "Jeez I hate crowds."
+                    d_t "Jeez, I hate crowds."
                     d_t "Oh! Now that I have a moment to myself."
-                    d_t "What's left for today?"
+                    d_t "What's left on the achievement front for today?"
                     hide a_day3_ignorance
                     show a_day3_ignorance_b
                     with dissolve
-                    d_t "Well the ignorance was definitely bliss."
-                    d_t "Ouch. But after that?"
+                    d_t "Well the ignorance was definitely bliss. I haven't been able to let go of this knowt in my stomach."
+                    d_t "But after that?"
                     d_t "Nothing police related has happened yet. Is this really just the party then?"
-                    d_t "Hmm it could also still happen later."
+                    d_t "Hmm, it could also still happen later."
                     d_t "I doubt it though. Especially because of that last one."
                     d_t "\"Where is Waldo\""
                     d_t "That one pretty much requires a crowd." 
-                    d_t "Great. The only one left is the one I was able to decipher the least."
-                    d_t "So far no one has stuck out to me. But maybe that's exactly the point."
-                    d_t "Kai's notes do make it seem the guy she kept warning me about in my dreams works here."
-                    d_t "And if this Waldo is supposed to be him then I can technically find him tonight right?"
-                    d_t "If that's true then I'd be able to narrow it down a bit by looking at who's here tonight."
-                    d_t "Well."
-                    d_t "That doesn't really make my sample size that much smaller now that I think about it."
-                    d_t "Oh well it's worth keeping in mind."
+                    d_t "Great. The only one left, is the one I was able to decipher the least."
+                    d_t "So far no one has stuck out to me. No red and white stripes either. But maybe that's exactly the point."
+                    d_t "Kai's notes do make it seem like the guy she kept warning me about works here."
+                    d_t "And if this Waldo is supposed to be him, then I can technically find him tonight, right?"
+                    d_t "If that's true, then I'd be able to narrow it down a bit by looking at who's here tonight."
+                    d_t "Well..."
+                    d_t "That doesn't really make my sample size that much smaller, now that I think about it."
+                    d_t "Oh well, it's worth keeping in mind."
                     d_t "I should go back in."
                     hide a_day3ignorance_b
                     jump mattconvo
@@ -2906,102 +2940,110 @@ label start:
                 scene bg_office_cafeteria
                 show a_day3_ignorance
                 show matt_neut
-                m "Well if it isn't miss Sullivan."
+                m "Well, if it isn't miss Sullivan."
                 d "Oh. E- Evening Matthew."
-                m "{i}Evening.{/i} I heard you settled in fine in your new position."
-                d "Uhm. Yeah I have. Simon gave me Kai's old desk."
+                m "{i}Evening.{/i} I heard you settled in just fine with your new team."
+                d "Uhm. Yeah, I have. Simon gave me Kai's old desk."
                 hide matt_neut
                 show matt_mad
-                m "That much is apparent."
-                d "Did. Ehm, Simon come to talk to you about her?"
+                m "That much was apparent."
+                d "Did, ehm, Simon come to talk to you about her?"
                 hide matt_mad
                 show matt_conf
-                m "Just now? Yes."
+                m "You mean that trial just now? Yes."
                 hide matt_conf
                 show matt_neut
-                m "Not that that's any of your business. Thank you for that."
+                m "Not that any of this should be your business. Thank you for that."
                 d "But her message to you-"
                 hide matt_neut
                 show matt_mad
-                m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my staff about such important manners?"
+                m "A Message! Now you're just insulting me. Do you really think I wouldn't inform my closest staff about such important manners?"
                 d "What?"
                 m "I don't know what you are talking about, but the situation with Kai is something between Simon and me."
-                m "I don't know what motivated him to interrogate me again about the conversation we had just before she quit. Because that's behind us now. I thought it was done the first time it came up."
-                m "But since you're just there to fill her place I don't know why you should be concerned with any of it."
+                m "Something that I thought was settled."
+                m "I don't know what motivated him to interrogate me again, about the conversation we had just before she quit. But I think I've made it fairly clear that that's behind us now."
+                m "I thought it was done with the first time it came up."
+                m "But since you're just there to fill her place, I don't know why you should even be concerned with any of it."
                 d "Sorry. I just-"
                 hide matt_mad
                 show matt_conf
-                m "You what? Thought you should be even more intrusive than reading the personal notes of a coworker you don't even know?"
+                m "You what? Thought you should be even more intrusive, than already reading the personal notes of a coworker you don't even know?"
                 hide matt_conf
                 show matt_mad
-                m "Has it ever occurred to you that some things are not meant to be read by others?"
-                m "It seems you two really similar. Only difference was that Kai knew when to be professional." 
+                m "Has it ever occurred to you, that some things are not meant to be read by others?"
+                m "It seems you two really are similar. So over eager. The only difference was, that Kai knew when to be professional and stop with the childish games." 
                 hide matt_mad
                 show matt_conf
-                m "Trying to make a good first impression are we? That does not excuse you making up stories and throwing dirt on my name."
+                m "I see you haven't learnt the importance of respect. No amount of made up concern excuses you making up stories and throwing dirt on my name."
                 m "I don't know why Simon didn't correct you on your unacceptable behavior."
                 hide matt_conf
                 show matt_neut
-                m "I can somewhat understand his frustration about her coming to talk to me instead of him. But I thought we settled that. You should leave your nose out of it."
+                m "I can atleast somewhat understand his frustration, about her coming to talk to me instead of him. But you should leave your nose out of it."
                 d "I-"
-                m "If you were still under my supervision snooping in others personal data would not slide."
-                d "I wasn't trying to. I- I was just looking for more information about the current project."
-                d "I didn't think this would turn into such a big thing."
+                m "If you were still under my supervision, snooping in others personal data would not slide in the slightest."
+                d "I wasn't trying to snoop! I- I was just looking for more information about the current project."
+                d "I didn't think this would turn into such a big deal either."
                 m "Of course you didn't."
                 hide matt_neut
                 show matt_mad
                 m "That seems to be a reoccurring theme with you."
-                m "And don't think I've forgotten about our little mishap."
-                m "If I hear about one more action against my name. You'd better be sure the consequences will be grave."
+                m "You make everything blow up."
+                m "And don't think I've forgotten about you other little mishap."
+                m "If I hear about one more hint of disrespect towards me, you'd better be sure the consequences will be grave."
                 hide matt_mad
                 show matt_neut
-                m "If you would excuse me. I would like to preserve my nerves tonight and grab a bite to eat."
+                m "Now, if you'll excuse me. I would like to preserve my nerves tonight and grab a bite to eat."
                 m "{i}For which I will definitely not need your help.{/i}"
                 hide matt_neut
                 menu:
                     "Leave and join Gabe":
+                        scene bg_black
+                        with dissolve(1.0)
+                        pause 1
+                        scene bg_office_cafeteria
+                        show a_day3_ignorance
                         show gabe_neut
                         g "Jeez what was that? First Simon now you?"
                         g "Matt's on a killing spree tonight."
                         d "Yeah..."
                         d "Something's strange about this whole situation."
-                        g "Really? What's up?"
+                        g "What happened just now?"
                         d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
                         hide gabe_neut
                         show gabe_conf
                         g "Yeah what about it?"
-                        d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it."
-                        g "She wrote one directly to Matt?"
+                        d "Well, she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it."
+                        g "She wrote that directly to Matt?"
                         hide gabe_conf
                         show gabe_neut
-                        g "That's some nerves!"
-                        d "Yeah. But the weird thing is Matt is denying ever having known about any of that even though she went to talk to him right before she quit."
+                        g "That's some confidence!"
+                        d "Yeah, but the weird thing is, Matt is denying ever having known about any of that, even though she went to talk to him right before she quit."
                         hide gabe_neut
                         show gabe_conf
-                        g "Wait they talked?"
+                        g "Wait, they talked?"
                         d "Yep."
-                        g "She must have changed her mind then."
+                        g "She must have changed her mind then. Maybe they talked about something else."
                         d "Maybe..."
                         hide gabe_conf
                         show gabe_conc
-                        g "Simon seemed stressed too though. What was his problem with Matt?"
+                        g "Simon seemed mad too though. What was his problem with Matt?"
                         d "Really?"
-                        g "Yeah. After they talked he stormed off into the hallway."
-                        d "Well, he also went to Matt to ask about that message. But I think in the end he was more interested in what they actually talked about that day."
+                        g "Yeah, after they talked he stormed off into the hallway."
+                        d "He also went to Matt to ask about that message. But I think in the end he was more interested in what they actually talked about that day."
                         hide gabe_conc
                         show gabe_conf
                         g "Why would he get so worked up about that?"
                         d "I don't know. I guess he thought she should have told him first. But it didn't look like it bothered him that much when I told him about it."
-                        d "Maybe he told him something but I'm not sure. Must be something between him and Matt I guess."
+                        d "Matt might have told him something, but I'm not sure. Must be something between him and Matt I guess."
                         hide gabe_conf
                         show gabe_happy
                         g "It's probably some form of rivalry."
-                        g "Who knows, maybe he secretly wants Matts position and doesn't like people choosing Matt over him."
-                        d "Oh shut up, he's not like that at all."
+                        g "Who knows, maybe he secretly wants doesn't like people choosing Matt over him."
+                        d "Secretly? Oh shut up, he's not like that at all."
                         hide gabe_happy
                         show gabe_neut
-                        d "Besides. If anyone chose to talk to Matt over me I'd be pretty offended too."
-                        g "Want to go grab something to eat? I saw some tasty treats over at the snack bar."
+                        d "Besides, if anyone chose to talk to Matt over me, I'd be pretty offended too."
+                        g "Oh yeah definitely. Want to go grab something to eat? I saw some tasty treats over at the snack bar."
                         d "Maybe in a minute. Matt's there right now and I don't want to risk running into him again."
                         hide gabe_neut
                         if call_police==True:
@@ -3018,12 +3060,13 @@ label start:
                         d "Did Kai ever ask for time off?"
                         hide matt_conf
                         show matt_neut
-                        m "Neither did I get a message from Kai nor do I know of her ever asking for time off."
+                        m "What is this?"
+                        m "Neither did I get a message from Kai, nor do I know of her ever asking for time off."
                         m "She came to me on the day that she quit saying that she didn't want to work here anymore. And that I should wait to tell Simon until the next day."
-                        m "Whatever sentimental messages she wrote on her computer, I never saw any. All I did was do my job."
+                        m "Whatever sentimental messages she wrote on her computer, I never saw them. All I did was do my job."
                         hide mat_neut
                         show matt_mad
-                        m "I don't know why you are both now accusing me of having withheld important information. But like I already told Simon she had no obligation to inform him in the first place. And neither did I."
+                        m "I don't know why you are both now accusing me of having withheld important information. But like I already told Simon, she had no obligation to inform him and neither did I."
                         d "Oh."
                         m "I'll be going now thank you."
                         d "..."
@@ -3033,34 +3076,33 @@ label start:
                         scene bg_office_cafeteria
                         show a_day3_ignorance
                         show gabe_neut
-                        #goes over to gabe
                         g "Jeez what was that? First Simon now you?"
                         g "Matt's on a killing spree tonight."
                         d "Yeah..."
                         d "Something's strange about this whole situation."
                         hide gabe_neut
                         show gabe_conf
-                        g "Really? What's up?"
+                        g "Really? What happened?"
                         d "You remember how I was telling you before that Kai didn't seem too happy before she left?"
                         hide gabe_conf
                         show gabe_neut
-                        g "Yeah what about it?"
-                        d "Well she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it"
+                        g "Yeah, what about it?"
+                        d "Well, she wrote a message to Matt about someone making her uncomfortable. But it seems she never sent it."
                         hide gabe_neut
                         show gabe_conf
                         g "She wrote one directly to Matt?"
-                        g "That's some nerves!"
-                        d "Yeah. But the weird thing is Matt is saying she never mentioned any of that."
+                        g "That's some confidence!"
+                        d "Yeah. But the weird thing is, Matt is saying she never mentioned any of that."
                         hide gabe_conf
                         show gabe_conc
                         g "Wait they talked?"
-                        d "Yep. She went to go talk to him before she quit but it seems like he doesn't want anyone to know what they actually talked about."
-                        g "That is weird."
-                        d "He says we're accusing him of something, but he's the one making such a big deal out of us asking him."
+                        d "Yep. She went to go talk to him before she quit, but it seems like he doesn't want anyone to know what they actually talked about."
+                        g "That's suspicious."
+                        d "He says we're accusing him of something, but he's the one making such a big deal out of us asking him about it."
                         d "All I wanted to know was if she'd sent the message."
                         hide gabe_conc
                         show gabe_neut
-                        g "Well, I wouldn't put it past Matt to take you two both asking him about something he doesn't know as a personal offence. But I admit, this is a little extreme even for him."
+                        g "Well, I wouldn't put it past Matt to take you two both asking him about something he doesn't know as a personal offence. But I admit, this is a little extreme, even for him."
                         d "Yeah..."
                         hide gabe_neut
                         show gabe_happy
