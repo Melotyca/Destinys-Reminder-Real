@@ -351,7 +351,7 @@ label start:
                 m "Being fussy about the food Sullivan?"
                 d "No no. It looks delicious. I just had to uhm, figure out what it was first..."
                 d_t "God, I hate mushrooms."
-                m "So, Sullivan. This Poster you're working on. How is it coming along? Do want to talk about what is hindering you form finishing it?"
+                m "So, Sullivan. This Poster you're working on. How is it coming along? Do want to talk about what is hindering you from finishing it?"
                 menu: 
                     "It's going great!":
                         d "Oh no, It's going great haha. I'm s-sorry about before. I'm actually almost done."
